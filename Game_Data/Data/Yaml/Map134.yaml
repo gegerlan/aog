@@ -6632,6 +6632,60 @@ root: !ruby/object:RPG::Map
           parameters: 
           - *id009
         - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - Skip scene?
+        - !ruby/object:RPG::EventCommand 
+          code: 102
+          indent: 0
+          parameters: 
+          - - "Yes"
+            - "No"
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 0
+          - "Yes"
+        - !ruby/object:RPG::EventCommand 
+          code: 119
+          indent: 1
+          parameters: 
+          - Skip
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 1
+          - "No"
+        - !ruby/object:RPG::EventCommand 
+          code: 119
+          indent: 1
+          parameters: 
+          - Scene
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 404
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 118
+          indent: 0
+          parameters: 
+          - Scene
+        - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 0
           parameters: 
@@ -7718,6 +7772,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - \nm[Garnet]AHHHHHH!!!!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 118
+          indent: 0
+          parameters: 
+          - Skip
         - !ruby/object:RPG::EventCommand 
           code: 313
           indent: 0
@@ -10946,7 +11005,7 @@ root: !ruby/object:RPG::Map
           - 1
           - -1
           - 0
-          - 400
+          - 50
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -10974,7 +11033,7 @@ root: !ruby/object:RPG::Map
           - 1
           - -1
           - 0
-          - 400
+          - 50
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -11002,7 +11061,7 @@ root: !ruby/object:RPG::Map
           - 1
           - -1
           - 0
-          - 400
+          - 50
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -11030,7 +11089,7 @@ root: !ruby/object:RPG::Map
           - 1
           - -1
           - 0
-          - 400
+          - 50
         - !ruby/object:RPG::EventCommand 
           code: 111
           indent: 0
@@ -11066,6 +11125,13 @@ root: !ruby/object:RPG::Map
           - 195
           - 195
           - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 121
+          indent: 1
+          parameters: 
+          - 77
+          - 77
+          - 1
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 1
