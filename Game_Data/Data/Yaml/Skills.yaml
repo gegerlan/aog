@@ -1,0 +1,5799 @@
+--- 
+root: 
+- 
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 15
+  atk_f: 0
+  common_event_id: 0
+  description: Restores HP to one ally.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 045-Skill02
+  id: 1
+  int_f: 50
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 105-Heal01
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Heal
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: -150
+  scope: 3
+  sp_cost: 40
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 16
+  atk_f: 0
+  common_event_id: 0
+  description: Restores HP to one ally.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 045-Skill02
+  id: 2
+  int_f: 50
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 106-Heal02
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Greater Heal
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: -300
+  scope: 3
+  sp_cost: 80
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 17
+  atk_f: 0
+  common_event_id: 0
+  description: Restores HP to all allies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 045-Skill02
+  id: 3
+  int_f: 50
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 107-Heal03
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Heal
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: -300
+  scope: 4
+  sp_cost: 160
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 24
+  atk_f: 0
+  common_event_id: 0
+  description: Restores states to one ally.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 045-Skill02
+  id: 4
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 113-Remedy01
+    pitch: 100
+    volume: 80
+  minus_state_set: 
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  name: Remedy
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 3
+  sp_cost: 30
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 24
+  atk_f: 0
+  common_event_id: 0
+  description: Restores states to all allies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 045-Skill02
+  id: 5
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 114-Remedy02
+    pitch: 100
+    volume: 80
+  minus_state_set: 
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  name: Greater Remedy
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 4
+  sp_cost: 120
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 26
+  atk_f: 0
+  common_event_id: 0
+  description: Revives one ally.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 045-Skill02
+  id: 6
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 116-Raise02
+    pitch: 100
+    volume: 80
+  minus_state_set: 
+  - 1
+  name: Raise
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: -50
+  scope: 5
+  sp_cost: 240
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 27
+  atk_f: 0
+  common_event_id: 0
+  description: Delas fire damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 1
+  eva_f: 0
+  hit: 90
+  icon_name: 044-Skill01
+  id: 7
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 117-Fire01
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Burning Passion
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 300
+  scope: 1
+  sp_cost: 25
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 28
+  atk_f: 0
+  common_event_id: 0
+  description: Delas fire damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 1
+  eva_f: 0
+  hit: 90
+  icon_name: 044-Skill01
+  id: 8
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 118-Fire02
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Blazing Passion
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 21
+  power: 500
+  scope: 1
+  sp_cost: 60
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 29
+  atk_f: 0
+  common_event_id: 0
+  description: Delas fire damage on all enemies.
+  dex_f: 0
+  element_set: 
+  - 1
+  eva_f: 0
+  hit: 80
+  icon_name: 044-Skill01
+  id: 9
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 119-Fire03
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Passion Inferno
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 21
+  power: 400
+  scope: 2
+  sp_cost: 120
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 30
+  atk_f: 0
+  common_event_id: 0
+  description: Delas ice damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 2
+  eva_f: 0
+  hit: 100
+  icon_name: 035-Item04
+  id: 10
+  int_f: 100
+  mdef_f: 75
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 120-Ice01
+    pitch: 100
+    volume: 80
+  minus_state_set: 
+  - 21
+  name: Frigid Glance
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 140
+  scope: 1
+  sp_cost: 15
+  str_f: 0
+  variance: 0
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 31
+  atk_f: 0
+  common_event_id: 0
+  description: Delas ice damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 2
+  eva_f: 0
+  hit: 100
+  icon_name: 035-Item04
+  id: 11
+  int_f: 100
+  mdef_f: 50
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 121-Ice02
+    pitch: 100
+    volume: 80
+  minus_state_set: 
+  - 21
+  name: Frigid Glare
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 7
+  - 10
+  - 11
+  power: 300
+  scope: 1
+  sp_cost: 40
+  str_f: 0
+  variance: 0
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 32
+  atk_f: 0
+  common_event_id: 0
+  description: Delas ice damage on all enemies.
+  dex_f: 0
+  element_set: 
+  - 2
+  eva_f: 0
+  hit: 100
+  icon_name: 035-Item04
+  id: 12
+  int_f: 100
+  mdef_f: 66
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 122-Ice03
+    pitch: 100
+    volume: 80
+  minus_state_set: 
+  - 21
+  name: Ice Queen
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 7
+  - 10
+  - 11
+  power: 225
+  scope: 2
+  sp_cost: 90
+  str_f: 0
+  variance: 0
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 33
+  atk_f: 0
+  common_event_id: 0
+  description: Delas thunder damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 3
+  eva_f: 0
+  hit: 80
+  icon_name: 044-Skill01
+  id: 13
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Shocking Rumor
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 300
+  scope: 1
+  sp_cost: 35
+  str_f: 0
+  variance: 50
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 34
+  atk_f: 0
+  common_event_id: 0
+  description: Delas thunder damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 3
+  eva_f: 0
+  hit: 80
+  icon_name: 044-Skill01
+  id: 14
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Shocking Revealation
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 2
+  - 8
+  power: 500
+  scope: 1
+  sp_cost: 75
+  str_f: 0
+  variance: 50
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 35
+  atk_f: 0
+  common_event_id: 0
+  description: Delas thunder damage on all enemies.
+  dex_f: 0
+  element_set: 
+  - 3
+  eva_f: 0
+  hit: 75
+  icon_name: 044-Skill01
+  id: 15
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Shocking Truth
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 2
+  - 8
+  power: 400
+  scope: 2
+  sp_cost: 150
+  str_f: 0
+  variance: 50
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 36
+  atk_f: 0
+  common_event_id: 0
+  description: Delas water damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 4
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 16
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Water
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 140
+  scope: 1
+  sp_cost: 75
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 37
+  atk_f: 0
+  common_event_id: 0
+  description: Delas water damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 4
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 17
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Greater Water
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 180
+  scope: 1
+  sp_cost: 150
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 38
+  atk_f: 0
+  common_event_id: 0
+  description: Delas water damage on all enemies.
+  dex_f: 0
+  element_set: 
+  - 4
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 18
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Water
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 180
+  scope: 2
+  sp_cost: 300
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 5
+  animation2_id: 39
+  atk_f: 0
+  common_event_id: 0
+  description: Digs a Hole as a trap for the enemy
+  dex_f: 0
+  element_set: 
+  - 5
+  eva_f: 0
+  hit: 100
+  icon_name: jianshuzhong
+  id: 19
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 129-Earth01
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Dirty Hole
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 175
+  scope: 1
+  sp_cost: 30
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 5
+  animation2_id: 40
+  atk_f: 0
+  common_event_id: 0
+  description: Puts something hard and long Inside the hole
+  dex_f: 0
+  element_set: 
+  - 5
+  eva_f: 0
+  hit: 100
+  icon_name: jianshuzhong
+  id: 20
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 130-Earth02
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Gaping Hole
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 2
+  - 4
+  - 14
+  - 23
+  power: 325
+  scope: 1
+  sp_cost: 65
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 5
+  animation2_id: 41
+  atk_f: 0
+  common_event_id: 0
+  description: My hole is big enough for everyone
+  dex_f: 0
+  element_set: 
+  - 5
+  eva_f: 0
+  hit: 100
+  icon_name: jianshuzhong
+  id: 21
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 131-Earth03
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Open Hole
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 2
+  - 4
+  - 14
+  - 23
+  power: 180
+  scope: 2
+  sp_cost: 140
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 42
+  atk_f: 0
+  common_event_id: 0
+  description: Delas wind damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 6
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 22
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Wind
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 140
+  scope: 1
+  sp_cost: 75
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 43
+  atk_f: 0
+  common_event_id: 0
+  description: Delas wind damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 6
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 23
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Greater Wind
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 180
+  scope: 1
+  sp_cost: 150
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 44
+  atk_f: 0
+  common_event_id: 0
+  description: Delas wind damage on all enemies.
+  dex_f: 0
+  element_set: 
+  - 6
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 24
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Wind
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 180
+  scope: 2
+  sp_cost: 300
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 45
+  atk_f: 0
+  common_event_id: 0
+  description: Delas light damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 7
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 25
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Light
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 160
+  scope: 1
+  sp_cost: 80
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 46
+  atk_f: 0
+  common_event_id: 0
+  description: Delas light damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 7
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 26
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Greater Light
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 200
+  scope: 1
+  sp_cost: 160
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 47
+  atk_f: 0
+  common_event_id: 0
+  description: Delas light damage on all enemies.
+  dex_f: 0
+  element_set: 
+  - 7
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 27
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Light
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 200
+  scope: 2
+  sp_cost: 320
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 48
+  atk_f: 0
+  common_event_id: 0
+  description: Delas darkness damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 8
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 28
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Darkness
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 160
+  scope: 1
+  sp_cost: 80
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 49
+  atk_f: 0
+  common_event_id: 0
+  description: Delas darkness damage on one enemy.
+  dex_f: 0
+  element_set: 
+  - 8
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 29
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Greater Darkness
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 200
+  scope: 1
+  sp_cost: 160
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 50
+  atk_f: 0
+  common_event_id: 0
+  description: Delas darkness damage on all enemies.
+  dex_f: 0
+  element_set: 
+  - 8
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 30
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Darkness
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 200
+  scope: 2
+  sp_cost: 320
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 51
+  atk_f: 0
+  common_event_id: 0
+  description: Delas non-elemental damage on one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 31
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Burst
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 180
+  scope: 1
+  sp_cost: 200
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 52
+  atk_f: 0
+  common_event_id: 0
+  description: Delas non-elemental damage on all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 044-Skill01
+  id: 32
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Radiate
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 220
+  scope: 2
+  sp_cost: 400
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 53
+  atk_f: 0
+  common_event_id: 0
+  description: Set Venom state to one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 33
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Venom
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 3
+  power: 0
+  scope: 1
+  sp_cost: 30
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 53
+  atk_f: 0
+  common_event_id: 0
+  description: Set Venom state to all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 34
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Venom
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 3
+  power: 0
+  scope: 2
+  sp_cost: 60
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 54
+  atk_f: 0
+  common_event_id: 0
+  description: Set Dazzle state to one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 35
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Dazzle
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 4
+  power: 0
+  scope: 1
+  sp_cost: 35
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 54
+  atk_f: 0
+  common_event_id: 0
+  description: Set Dazzle state to all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 36
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Dazzle
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 4
+  power: 0
+  scope: 2
+  sp_cost: 70
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 54
+  atk_f: 0
+  common_event_id: 0
+  description: Set Mute state to one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 37
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mute
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 5
+  power: 0
+  scope: 1
+  sp_cost: 40
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 54
+  atk_f: 0
+  common_event_id: 0
+  description: Set Mute state to all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 38
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Mute
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 5
+  power: 0
+  scope: 2
+  sp_cost: 80
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 56
+  atk_f: 0
+  common_event_id: 0
+  description: Set Confuse state to one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 39
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Confuse
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 6
+  power: 0
+  scope: 1
+  sp_cost: 45
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 56
+  atk_f: 0
+  common_event_id: 0
+  description: Set Confuse state to all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 40
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Confuse
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 6
+  power: 0
+  scope: 2
+  sp_cost: 90
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 57
+  atk_f: 0
+  common_event_id: 0
+  description: Set Sleep state to one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 41
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Sleep
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 7
+  power: 0
+  scope: 1
+  sp_cost: 50
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 57
+  atk_f: 0
+  common_event_id: 0
+  description: Set Sleep state to all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 42
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Sleep
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 7
+  power: 0
+  scope: 2
+  sp_cost: 100
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 58
+  atk_f: 0
+  common_event_id: 0
+  description: Set Paralyze state to one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 43
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Paralyze
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 8
+  power: 0
+  scope: 1
+  sp_cost: 55
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 58
+  atk_f: 0
+  common_event_id: 0
+  description: Set Paralyze state to all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 046-Skill03
+  id: 44
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Paralyze
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 8
+  power: 0
+  scope: 2
+  sp_cost: 110
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 59
+  atk_f: 0
+  common_event_id: 0
+  description: Down STR of one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 047-Skill04
+  id: 45
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Weaken
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 9
+  power: 0
+  scope: 1
+  sp_cost: 30
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 59
+  atk_f: 0
+  common_event_id: 0
+  description: Down STR of all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 047-Skill04
+  id: 46
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Weaken
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 9
+  power: 0
+  scope: 2
+  sp_cost: 65
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 60
+  atk_f: 0
+  common_event_id: 0
+  description: Down DEX of one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 047-Skill04
+  id: 47
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Clumsy
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 10
+  power: 0
+  scope: 1
+  sp_cost: 30
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 60
+  atk_f: 0
+  common_event_id: 0
+  description: Down DEX of all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 047-Skill04
+  id: 48
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Clumsy
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 10
+  power: 0
+  scope: 2
+  sp_cost: 65
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 61
+  atk_f: 0
+  common_event_id: 0
+  description: Down AGI of one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 047-Skill04
+  id: 49
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Delay
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 11
+  power: 0
+  scope: 1
+  sp_cost: 30
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 61
+  atk_f: 0
+  common_event_id: 0
+  description: Down AGI of all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 047-Skill04
+  id: 50
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Delay
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 11
+  power: 0
+  scope: 2
+  sp_cost: 65
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 62
+  atk_f: 0
+  common_event_id: 0
+  description: Down INT of one enemy.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 047-Skill04
+  id: 51
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Feeble
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 12
+  power: 0
+  scope: 1
+  sp_cost: 30
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 62
+  atk_f: 0
+  common_event_id: 0
+  description: Down INT of all enemies.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 047-Skill04
+  id: 52
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mass Feeble
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 12
+  power: 0
+  scope: 2
+  sp_cost: 65
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 63
+  atk_f: 0
+  common_event_id: 0
+  description: Up ATK of one ally.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 048-Skill05
+  id: 53
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Sharp
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 13
+  power: 0
+  scope: 3
+  sp_cost: 180
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 64
+  atk_f: 0
+  common_event_id: 0
+  description: Up PDEF of one ally.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 048-Skill05
+  id: 54
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Barrier
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 14
+  power: 0
+  scope: 3
+  sp_cost: 170
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 65
+  atk_f: 0
+  common_event_id: 0
+  description: Up MDEF of one ally.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 048-Skill05
+  id: 55
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Resist
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 15
+  power: 0
+  scope: 3
+  sp_cost: 160
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 66
+  atk_f: 0
+  common_event_id: 0
+  description: Up EVA of one ally.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 048-Skill05
+  id: 56
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Blink
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: 
+  - 16
+  power: 0
+  scope: 3
+  sp_cost: 150
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 67
+  atk_f: 100
+  common_event_id: 0
+  description: Fighter's special move. More effective to undeads.
+  dex_f: 0
+  element_set: 
+  - 9
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 57
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Cross Cut
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 20
+  scope: 1
+  sp_cost: 100
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 68
+  atk_f: 100
+  common_event_id: 0
+  description: "Fighter's special move. Add state: Stun."
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 58
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Feint Attack
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: 
+  - 2
+  power: 40
+  scope: 1
+  sp_cost: 150
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 69
+  atk_f: 100
+  common_event_id: 0
+  description: Fighter's special move. Wind damage.
+  dex_f: 0
+  element_set: 
+  - 6
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 59
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Hurricane
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 60
+  scope: 1
+  sp_cost: 200
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 70
+  atk_f: 120
+  common_event_id: 0
+  description: Fighter's final secret. Deals big damage.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 60
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Spiral Blade
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 80
+  scope: 1
+  sp_cost: 300
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 71
+  atk_f: 100
+  common_event_id: 0
+  description: "Lancer's special move. Add state: Stun."
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 61
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Leg Sweep
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: 
+  - 2
+  power: 20
+  scope: 1
+  sp_cost: 100
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 72
+  atk_f: 100
+  common_event_id: 0
+  description: Lancer's special move. More effective to beasts.
+  dex_f: 0
+  element_set: 
+  - 12
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 62
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Beast Slayer
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 40
+  scope: 1
+  sp_cost: 150
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 73
+  atk_f: 100
+  common_event_id: 0
+  description: Lancer's special move. Thunder damage.
+  dex_f: 0
+  element_set: 
+  - 3
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 63
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Thunder Pierce
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 60
+  scope: 1
+  sp_cost: 200
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 74
+  atk_f: 120
+  common_event_id: 0
+  description: Lancer's final secret. Deals big damage.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 64
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Screw Thrust
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 80
+  scope: 1
+  sp_cost: 300
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 75
+  atk_f: 100
+  common_event_id: 0
+  description: "Warrior's special move. Add state: Weaken."
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 65
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Power Break
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: 
+  - 9
+  power: 20
+  scope: 1
+  sp_cost: 100
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 76
+  atk_f: 100
+  common_event_id: 0
+  description: "Warrior's special move. Add state: Feeble."
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 66
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mind Break
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: 
+  - 12
+  power: 40
+  scope: 1
+  sp_cost: 150
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 77
+  atk_f: 100
+  common_event_id: 0
+  description: Warrior's special move. More effective to aquatics.
+  dex_f: 0
+  element_set: 
+  - 11
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 67
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Aqua Buster
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 60
+  scope: 1
+  sp_cost: 200
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 78
+  atk_f: 120
+  common_event_id: 0
+  description: Warrior's final secret. Deals big damage.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 68
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Rolling Axe
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 80
+  scope: 1
+  sp_cost: 300
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 79
+  atk_f: 100
+  common_event_id: 0
+  description: "Thief's special move. Add state: Venom."
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 69
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Poison Edge
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: 
+  - 3
+  power: 20
+  scope: 1
+  sp_cost: 100
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 80
+  atk_f: 100
+  common_event_id: 0
+  description: Thief's special move. More effective to snakes.
+  dex_f: 0
+  element_set: 
+  - 10
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 70
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Eagle Claw
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 40
+  scope: 1
+  sp_cost: 150
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 81
+  atk_f: 100
+  common_event_id: 0
+  description: "Thief's special move. Add state: Dazzle."
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 71
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Illusion
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: 
+  - 4
+  power: 60
+  scope: 1
+  sp_cost: 200
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 82
+  atk_f: 120
+  common_event_id: 0
+  description: Thief's final secret. Deals big damage.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 72
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Deadly Dance
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 80
+  scope: 1
+  sp_cost: 300
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 83
+  atk_f: 100
+  common_event_id: 0
+  description: Hunter's special move. More effective to birds.
+  dex_f: 0
+  element_set: 
+  - 14
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 73
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Bird Killer
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 20
+  scope: 1
+  sp_cost: 100
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 83
+  atk_f: 100
+  common_event_id: 0
+  description: "Hunter's special move. Add state: Mute."
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 74
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Mute Arrow
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: 
+  - 5
+  power: 40
+  scope: 1
+  sp_cost: 150
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 83
+  atk_f: 100
+  common_event_id: 0
+  description: "Hunter's special move. Add state: Paralyze."
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 75
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Paralyze Arrow
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: 
+  - 8
+  power: 60
+  scope: 1
+  sp_cost: 200
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 86
+  atk_f: 120
+  common_event_id: 0
+  description: Hunter's final secret. Deals big damage.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 76
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Sidewinder
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 80
+  scope: 1
+  sp_cost: 300
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 87
+  atk_f: 100
+  common_event_id: 0
+  description: Gunner's special move. More effective to goblins.
+  dex_f: 0
+  element_set: 
+  - 13
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 77
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Silver Bullet
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 20
+  scope: 1
+  sp_cost: 100
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 88
+  atk_f: 100
+  common_event_id: 0
+  description: Gunner's special move. Fire damage.
+  dex_f: 0
+  element_set: 
+  - 1
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 78
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Burinig Shot
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 40
+  scope: 1
+  sp_cost: 150
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 89
+  atk_f: 100
+  common_event_id: 0
+  description: Gunner's special move. Ice damage.
+  dex_f: 0
+  element_set: 
+  - 2
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 79
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Frost Shot
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 60
+  scope: 1
+  sp_cost: 200
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 90
+  atk_f: 120
+  common_event_id: 0
+  description: Gunner's final secret. Deals big damage.
+  dex_f: 0
+  element_set: []
+
+  eva_f: 100
+  hit: 100
+  icon_name: 050-Skill07
+  id: 80
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Crescent Force
+  occasion: 1
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 80
+  scope: 1
+  sp_cost: 300
+  str_f: 100
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 100
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 100
+  common_event_id: 0
+  description: Damages the body, but boost your abilities.
+  dex_f: 0
+  element_set: 
+  - 1
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 81
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Maito's Battle Aura
+  occasion: 0
+  pdef_f: 100
+  plus_state_set: []
+
+  power: 50
+  scope: 4
+  sp_cost: 10
+  str_f: 10
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: A strike that shatter rock but hurt enemies...
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 82
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Maito's Quake Fist
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 2
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: The Secret Healing Aura of the Maito Style
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 83
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: Kai - Delayed Gasp
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Maito's Secret Healing Aura
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: []
+
+  power: -3000
+  scope: 7
+  sp_cost: 1
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 52
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 12
+  description: Garnet only Special restores SP at a price...
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 1 (1)
+  id: 84
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: Breath
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Channel Lust
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 85
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 86
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 120
+  description: Restores Garnets health over time
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: 045-Skill02
+  id: 87
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Regen
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 24
+  power: 0
+  scope: 7
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 2
+  animation2_id: 48
+  atk_f: 0
+  common_event_id: 122
+  description: Suck your foe dry
+  dex_f: 0
+  element_set: 
+  - 8
+  eva_f: 0
+  hit: 95
+  icon_name: an
+  id: 88
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: 139-Darkness02
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Drain
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 25
+  power: 0
+  scope: 1
+  sp_cost: 60
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 89
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 90
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 91
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 92
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 93
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 94
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 95
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 96
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 97
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 98
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 99
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 6
+  atk_f: 0
+  common_event_id: 0
+  description: Rat skill deals minimum damage but ignores defence
+  dex_f: 100
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 100
+  int_f: 0
+  mdef_f: 0
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Nibble
+  occasion: 0
+  pdef_f: 0
+  plus_state_set: 
+  - 2
+  - 9
+  - 10
+  - 11
+  power: 10
+  scope: 1
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 1
+  animation2_id: 13
+  atk_f: 0
+  common_event_id: 0
+  description: Gobbo skill,  weak but ignores armour
+  dex_f: 0
+  element_set: 
+  - 17
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 101
+  int_f: 0
+  mdef_f: 5
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: Goblin Punch
+  occasion: 0
+  pdef_f: 5
+  plus_state_set: 
+  - 2
+  - 6
+  power: 15
+  scope: 1
+  sp_cost: 0
+  str_f: 50
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 102
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 103
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 104
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 105
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 106
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 107
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 108
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 109
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 110
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 111
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 112
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 113
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 114
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 115
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 116
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 117
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 118
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 119
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 120
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 121
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 122
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 123
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 124
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 125
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 126
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 127
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 128
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 129
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 130
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 131
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 132
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 133
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 134
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 135
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 136
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 137
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 138
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 139
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 140
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 141
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 142
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 143
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 144
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 145
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 146
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 147
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 148
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 149
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 150
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 151
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 152
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 153
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 154
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 155
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 156
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 157
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 158
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 159
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 160
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 161
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 162
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 163
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 164
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 165
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 166
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 167
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 168
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 169
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 170
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 171
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 172
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 173
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 174
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 175
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 176
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 177
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 178
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 179
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15
+- !ruby/object:RPG::Skill 
+  agi_f: 0
+  animation1_id: 0
+  animation2_id: 0
+  atk_f: 0
+  common_event_id: 0
+  description: ""
+  dex_f: 0
+  element_set: []
+
+  eva_f: 0
+  hit: 100
+  icon_name: ""
+  id: 180
+  int_f: 100
+  mdef_f: 100
+  menu_se: !ruby/object:RPG::AudioFile 
+    name: ""
+    pitch: 100
+    volume: 80
+  minus_state_set: []
+
+  name: ""
+  occasion: 1
+  pdef_f: 0
+  plus_state_set: []
+
+  power: 0
+  scope: 0
+  sp_cost: 0
+  str_f: 0
+  variance: 15

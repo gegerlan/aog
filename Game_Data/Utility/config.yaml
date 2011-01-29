@@ -1,0 +1,46 @@
+#===============================================================================
+# Filename:    config.yaml
+#
+# Developer:   Raku (rakudayo@gmail.com)
+#
+# Description: This file contains all configurable parameters for the RMXP 
+#    Importer/Exporter Utility.
+#===============================================================================
+---
+#-------------------------------------------------------------------------------
+#  Import/Export Directories
+#-------------------------------------------------------------------------------
+# NOTE: All paths in this file are relative to the project directory.
+#-------------------------------------------------------------------------------
+
+# Modify this path to specify where your .rxdata files reside
+rxdata_dir:   Data
+
+# Modify this path to specify where you want the game data emitted in YAML
+yaml_dir:     Data/Yaml
+
+# Modify this path to specify where you want the RGSS scripts exported to
+scripts_dir:  Data/Scripts
+
+#-------------------------------------------------------------------------------
+#  Miscellaneous Parameters
+#-------------------------------------------------------------------------------
+
+# This array specifies all .rxdata files which are to be ignored by the data
+# exporter script.  Note that the script exporter doesn't look at this array,
+# since it always exports the Scripts.rxdata file.  Add entries to this array
+# if you do not wish to version certain .rxdata files.
+rxdata_ignore_list: 	["Scripts.rxdata"]
+
+# This parameter determines whether the import/export scripts print verbose 
+# information such as each filename as it is imported or exported and timing 
+# information.  Errors are always printed.
+#   Valid values:  [true || false]
+verbose: true
+
+# This is the value always used for System object's magic_number field.  RMXP
+# changes this value whenever System.rxdata is modified, so having a default 
+# value prevents unnecessary conflicts when versioning the System.yaml file.
+# If, for any reason, this causes problems, you can disable the default magic
+# number functionality by setting the value -1.
+magic_number: 77323823
