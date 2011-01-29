@@ -1553,7 +1553,7 @@ module BlizzABS
       # utilities
       @util = Utility.new
       # refresh passability data
-      @util.check_map_data if $DEBUG
+      @util.check_map_data #if $DEBUG
       # create handler for player battle input
       @controls = Controls.new
       # AI instance
@@ -8244,7 +8244,7 @@ class Game_Map
     # setup enemies on the map
     $BlizzABS.battlers_refresh
     # if using the intelligent minimap system
-    if BlizzABS::Config::INTELLIGENT_PASSABILITY
+    if BlizzABS::Config::INTELLIGENT_PASSABILITY && File.exist?('Data/Map_Data.abs')
       # load virtual passability map from file
       @virtual_passability = load_data('Data/Map_Data.abs')[0][map_id]
     else
