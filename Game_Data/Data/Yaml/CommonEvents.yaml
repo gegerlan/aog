@@ -23073,6 +23073,66 @@ root:
     code: 118
     indent: 0
     parameters: 
+    - Shield
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - aid = $game_party.actors[0].armor1_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "$v['persona_shield'] = "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $data_armors[aid] ?"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $data_armors[aid].name.downcase :"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  \"\""
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 0
+    parameters: 
+    - Helmet
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - aid = $game_party.actors[0].armor2_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "$v['persona_helmet'] = "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $data_armors[aid] ?"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $data_armors[aid].name.downcase :"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  \"\""
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 0
+    parameters: 
     - Armor
   - !ruby/object:RPG::EventCommand 
     code: 355
@@ -23381,6 +23441,230 @@ root:
     indent: 0
     parameters: 
     - 12
+    - $v['persona_shield'] && !$v['persona_shield'].empty?
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - FileTest.exist?("Graphics/Pictures/"+$v['persona_shield']+".png")
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - $game_screen.pictures[6].show(
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  $v['persona_shield'],"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  100.0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  100.0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  255.0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  0"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - )
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "print(\"Couldn't find \" + "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  $v['persona_shield']) if $DEBUG"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - Default fallback
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $v.delete('persona_shield')
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - $v['persona_helmet'] && !$v['persona_helmet'].empty?
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - FileTest.exist?("Graphics/Pictures/"+$v['persona_helmet']+".png")
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - $game_screen.pictures[5].show(
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  $v['persona_helmet'],"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  100.0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  100.0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  255.0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  0"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - )
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "print(\"Couldn't find \" + "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "  $v['persona_helmet']) if $DEBUG"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - Default fallback
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $v.delete('persona_helmet')
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
     - $v['persona_armor'] && !$v['persona_armor'].empty?
   - !ruby/object:RPG::EventCommand 
     code: 111
@@ -23558,6 +23842,16 @@ root:
     indent: 1
     parameters: 
     - We need a better picture check & set!
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "print(\"Couldn't find \" + "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - "  $v['persona_accessories']) if $DEBUG"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 1
