@@ -531,13 +531,15 @@ root:
     parameters: 
     - Change to class level
   - !ruby/object:RPG::EventCommand 
-    code: 316
+    code: 355
     indent: 0
     parameters: 
-    - 1
-    - 0
-    - 1
-    - 24
+    - "$game_party.actors[0].level = "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $game_variables[24] #slave level"
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 0
@@ -863,13 +865,15 @@ root:
     parameters: 
     - Change to class level
   - !ruby/object:RPG::EventCommand 
-    code: 316
+    code: 355
     indent: 0
     parameters: 
-    - 1
-    - 0
-    - 1
-    - 25
+    - "$game_party.actors[0].level = "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $game_variables[25] #dog level"
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 0
@@ -1150,13 +1154,15 @@ root:
     parameters: 
     - Change to class level
   - !ruby/object:RPG::EventCommand 
-    code: 316
+    code: 355
     indent: 0
     parameters: 
-    - 1
-    - 0
-    - 1
-    - 23
+    - "$game_party.actors[0].level = "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $game_variables[23] #adv level"
   - !ruby/object:RPG::EventCommand 
     code: 115
     indent: 0
@@ -3348,19 +3354,6 @@ root:
     code: 108
     indent: 0
     parameters: 
-    - Reset Level
-  - !ruby/object:RPG::EventCommand 
-    code: 316
-    indent: 0
-    parameters: 
-    - 1
-    - 1
-    - 0
-    - 98
-  - !ruby/object:RPG::EventCommand 
-    code: 108
-    indent: 0
-    parameters: 
     - Remove all fixed equipment
   - !ruby/object:RPG::EventCommand 
     code: 355
@@ -3447,6 +3440,11 @@ root:
     - 4
     - 1
   - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - Exit
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -3511,6 +3509,11 @@ root:
     - 24
     - 1
   - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - Exit
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -3539,7 +3542,7 @@ root:
     code: 118
     indent: 0
     parameters: 
-    - exit
+    - Exit
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
