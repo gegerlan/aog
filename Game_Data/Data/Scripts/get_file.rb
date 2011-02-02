@@ -16,5 +16,5 @@ def get_picture_name(filename, exact = false, path="Graphics/Pictures", extensio
     return File.basename(f) unless !f || f.empty?
     filename.pop
   end while filename[0] && !exact
-  return ""
+  return nil
 end

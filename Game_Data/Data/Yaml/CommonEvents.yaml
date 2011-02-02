@@ -3361,7 +3361,7 @@ root:
     code: 108
     indent: 0
     parameters: 
-    - Remove all fixed equipment
+    - Remove all equipment fixations
   - !ruby/object:RPG::EventCommand 
     code: 355
     indent: 0
@@ -10402,11 +10402,21 @@ root:
     parameters: 
     - Check if image exists
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "$v['faceset_file'] = "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  get_picture_name($v['faceset'])"
+  - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
     - 12
-    - FileTest.exist?("Graphics/Pictures/"+$v['faceset']+".png")
+    - "!!$v['faceset_file']"
   - !ruby/object:RPG::EventCommand 
     code: 355
     indent: 1
@@ -10416,7 +10426,12 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - $v['faceset']
+    - $v['faceset_file']
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $v.delete('faceset_file')
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -10437,6 +10452,16 @@ root:
     indent: 1
     parameters: 
     - "\"Garnet_error_01\""
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "print(\"Can't find %s\" % "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - "  [$v['faceset']]) if $DEBUG"
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -23352,6 +23377,11 @@ root:
     parameters: 
     - )
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $v.delete('persona_body_file')
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -23445,11 +23475,6 @@ root:
     indent: 0
     parameters: 
     - $v.delete('persona_body')
-  - !ruby/object:RPG::EventCommand 
-    code: 355
-    indent: 0
-    parameters: 
-    - $v.delete('persona_body_file')
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 0
@@ -23658,6 +23683,11 @@ root:
     parameters: 
     - )
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $v.delete('persona_helmet_file')
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -23697,11 +23727,6 @@ root:
     indent: 0
     parameters: 
     - $v.delete('persona_helmet')
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - $v.delete('persona_helmet_file')
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 0
@@ -23783,6 +23808,11 @@ root:
     indent: 1
     parameters: 
     - )
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $v.delete('persona_armor_file')
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -23878,11 +23908,6 @@ root:
     parameters: 
     - $v.delete('persona_armor')
   - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - $v.delete('persona_armor_file')
-  - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 0
     parameters: 
@@ -23969,6 +23994,11 @@ root:
     parameters: 
     - )
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $v.delete('persona_accessories_file')
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -24008,11 +24038,6 @@ root:
     indent: 0
     parameters: 
     - $v.delete('persona_accessories')
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - $v.delete('persona_accessories_file')
   - !ruby/object:RPG::EventCommand 
     code: 118
     indent: 0
