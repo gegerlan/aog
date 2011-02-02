@@ -23269,7 +23269,7 @@ root:
     code: 355
     indent: 1
     parameters: 
-    - "$v['persona_persona_accessories'] << "
+    - "$v['persona_accessories'] << "
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 1
@@ -23315,6 +23315,16 @@ root:
     indent: 0
     parameters: 
     - "$v['persona_body_file'] = "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $v['persona_body'] == \"\" ?"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  \"\" :"
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
@@ -23400,7 +23410,12 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - "  $v['persona_body']) if $DEBUG"
+    - "  $v['persona_body']) if $DEBUG && "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - " !$v['persona_body'].empty?"
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 1
@@ -23499,7 +23514,22 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - get_picture_name($v['persona_shield'])
+    - "  $v['persona_shield'] == \"\" ?"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  \"\" :"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  get_picture_name("
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "    $v['persona_shield'])"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
@@ -23557,6 +23587,11 @@ root:
     parameters: 
     - )
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $v.delete('persona_shield_file')
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -23575,7 +23610,12 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - "  $v['persona_shield']) if $DEBUG"
+    - "  $v['persona_shield']) if $DEBUG &&"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - " !$v['persona_shield'].empty?"
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 1
@@ -23596,11 +23636,6 @@ root:
     indent: 0
     parameters: 
     - $v.delete('persona_shield')
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - $v.delete('persona_shield_file')
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 0
@@ -23625,7 +23660,22 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - get_picture_name($v['persona_helmet'])
+    - "  $v['persona_helmet'] == \"\" ?"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  \"\" :"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  get_picture_name("
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "    $v['persona_helmet'])"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
@@ -23706,7 +23756,12 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - "  $v['persona_helmet']) if $DEBUG"
+    - "  $v['persona_helmet']) if $DEBUG &&"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - " !$v['persona_helmet'].empty?"
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 1
@@ -23751,7 +23806,22 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - get_picture_name($v['persona_armor'])
+    - "  $v['persona_armor'] == \"\" ?"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  \"\" :"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  get_picture_name("
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "    $v['persona_armor'])"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
@@ -23832,7 +23902,12 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - "  $v['persona_armor_file']) if $DEBUG"
+    - "  $v['persona_armor']) if $DEBUG &&"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - " !$v['persona_armor'].empty?"
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 1
@@ -23931,12 +24006,22 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - get_picture_name(
+    - "  $v['persona_accessories'] == \"\" ?"
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
     parameters: 
-    - $v['persona_accessories'])
+    - "  \"\" :"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  get_picture_name("
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "    $v['persona_accessories'])"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
@@ -24017,7 +24102,17 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - "  $v['persona_accessories']) if $DEBUG"
+    - "  $v['persona_accessories']) if "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - "  $DEBUG && "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - "  !$v['persona_accessories'].empty?"
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 1
