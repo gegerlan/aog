@@ -2487,9 +2487,9 @@ root: !ruby/object:RPG::Map
     - 451
     - 0
     - 424
-    - 425
-    - 426
-    - 427
+    - 0
+    - 0
+    - 0
     - 448
     - 449
     - 424
@@ -2518,18 +2518,18 @@ root: !ruby/object:RPG::Map
     - 457
     - 458
     - 459
-    - 424
-    - 425
-    - 426
+    - 0
+    - 0
+    - 0
     - 456
     - 457
     - 458
     - 459
     - 543
-    - 432
-    - 433
-    - 434
-    - 435
+    - 0
+    - 0
+    - 0
+    - 0
     - 456
     - 457
     - 432
@@ -2555,23 +2555,23 @@ root: !ruby/object:RPG::Map
     - 450
     - 451
     - 424
-    - 425
-    - 426
+    - 0
+    - 0
     - 565
-    - 432
-    - 433
-    - 434
-    - 435
-    - 424
-    - 425
-    - 426
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 427
-    - 440
-    - 441
-    - 442
-    - 443
-    - 424
-    - 425
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 440
     - 441
     - 442
@@ -2594,24 +2594,24 @@ root: !ruby/object:RPG::Map
     - 457
     - 458
     - 459
-    - 432
-    - 433
-    - 434
-    - 435
-    - 440
-    - 441
-    - 442
-    - 443
-    - 432
-    - 433
-    - 434
-    - 435
-    - 448
-    - 449
-    - 450
-    - 451
-    - 432
-    - 433
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 448
     - 449
     - 450
@@ -2634,24 +2634,24 @@ root: !ruby/object:RPG::Map
     - 539
     - 530
     - 0
-    - 440
-    - 441
-    - 442
-    - 443
-    - 448
-    - 449
-    - 450
-    - 451
-    - 440
-    - 441
-    - 442
-    - 443
-    - 456
-    - 457
-    - 458
-    - 459
-    - 440
-    - 441
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 457
     - 458
@@ -2674,24 +2674,24 @@ root: !ruby/object:RPG::Map
     - 529
     - 0
     - 459
-    - 448
-    - 449
-    - 450
-    - 451
-    - 456
-    - 457
-    - 458
-    - 459
-    - 448
-    - 449
-    - 450
-    - 451
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
     - 549
-    - 448
-    - 449
+    - 0
+    - 0
     - 435
     - 432
     - 433
@@ -2714,24 +2714,24 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 456
-    - 457
-    - 458
-    - 459
     - 0
     - 0
     - 0
-    - 538
-    - 456
-    - 457
-    - 458
-    - 459
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 556
     - 0
     - 0
-    - 456
-    - 457
+    - 0
+    - 0
     - 443
     - 440
     - 441
@@ -7075,6 +7075,48 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
       x: 7
       y: 11
     8: !ruby/object:RPG::Event 
@@ -7540,15 +7582,10 @@ root: !ruby/object:RPG::Map
           parameters: 
           - *id051
         - !ruby/object:RPG::EventCommand 
-          code: 355
+          code: 117
           indent: 1
           parameters: 
-          - "$game_system.face_graphic = "
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 1
-          parameters: 
-          - "\"Garnet_normal_04\""
+          - 134
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
@@ -9052,7 +9089,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - "of potts needs to be escorted through "
+          - "of pots needs to be escorted through "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
