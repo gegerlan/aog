@@ -781,6 +781,66 @@ root:
     code: 108
     indent: 0
     parameters: 
+    - Update parameters
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "a = $game_party.actors[0] #leader"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "p = [ #params"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=>330, 'max'=> 4000},  #HP"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=>250, 'max'=> 1000},  #SP"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 41, 'max'=>  403},  #Str"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 73, 'max'=>  785},  #Dex"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 72, 'max'=>  774},  #Agi"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 32, 'max'=>  377}]  #Int"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "p.each_with_index { |v,i| "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  a.make_parameter_list(i,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "    v['min'],v['max'])}"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
     - Add and fixate collar
   - !ruby/object:RPG::EventCommand 
     code: 128
@@ -1115,6 +1175,66 @@ root:
     code: 108
     indent: 0
     parameters: 
+    - Update parameters
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "a = $game_party.actors[0] #leader"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "p = [ #params"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=>175, 'max'=> 5000}, #HP"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=>250, 'max'=> 5350},  #SP"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 50, 'max'=>  510},  #Str"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 79, 'max'=>  754},  #Dex"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 62, 'max'=>  662},  #Agi"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 73, 'max'=>  750}]  #Int"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "p.each_with_index { |v,i| "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  a.make_parameter_list(i,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "    v['min'],v['max'])}"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
     - Add and fixate collar
   - !ruby/object:RPG::EventCommand 
     code: 128
@@ -1400,6 +1520,66 @@ root:
     indent: 0
     parameters: 
     - "  $game_variables[23] #adv level"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Update parameters
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "a = $game_party.actors[0] #leader"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "p = [ #params"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=>300, 'max'=> 3000}, #HP"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=>200, 'max'=> 500},  #SP"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 20, 'max'=> 200},  #Str"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 30, 'max'=> 400},  #Dex"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 40, 'max'=> 400},  #Agi"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  {'min'=> 10, 'max'=> 400}]  #Int"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "p.each_with_index { |v,i| "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  a.make_parameter_list(i,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "    v['min'],v['max'])}"
   - !ruby/object:RPG::EventCommand 
     code: 115
     indent: 0
