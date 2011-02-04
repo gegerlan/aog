@@ -32,15 +32,230 @@ root:
     - 0
     - Attributes
   - !ruby/object:RPG::EventCommand 
-    code: 101
+    code: 118
     indent: 1
     parameters: 
-    - Not implemented
+    - attr1
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 1
+    parameters: 
+    - - MaxHP
+      - MaxSP
+      - STR
+      - More
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 0
+    - MaxHP
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 2
+    parameters: 
+    - 1
+    - 0
+    - 0
+    - 1
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 1
+    - MaxSP
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 2
+    parameters: 
+    - 1
+    - 1
+    - 0
+    - 1
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 2
+    - STR
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 2
+    parameters: 
+    - 1
+    - 2
+    - 0
+    - 1
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 3
+    - More
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 2
+    parameters: 
+    - attr2
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 2
+    parameters: 
+    - - DEX
+      - AGI
+      - INT
+      - Prev
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 0
+    - DEX
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 3
+    parameters: 
+    - 1
+    - 3
+    - 0
+    - 1
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 1
+    - AGI
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 3
+    parameters: 
+    - 1
+    - 4
+    - 0
+    - 1
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 2
+    - INT
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 3
+    parameters: 
+    - 1
+    - 5
+    - 0
+    - 1
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 3
+    - Prev
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - attr1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - no1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 2
+    parameters: 
+    - attr2
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 2
+    parameters: 
+    - no1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 1
+    parameters: []
+
   - !ruby/object:RPG::EventCommand 
     code: 119
     indent: 1
     parameters: 
-    - no1
+    - attr1
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -340,11 +555,6 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
-    code: 119
-    indent: 1
-    parameters: 
-    - exit
-  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -355,6 +565,11 @@ root:
     parameters: 
     - 3
     - more
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - no2
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -381,6 +596,11 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 0
+    parameters: 
+    - no1
+  - !ruby/object:RPG::EventCommand 
     code: 118
     indent: 0
     parameters: 
@@ -390,9 +610,9 @@ root:
     indent: 0
     parameters: 
     - - Gold
-      - Previous
-      - Next
       - Level
+      - Next
+      - Previous
     - 5
   - !ruby/object:RPG::EventCommand 
     code: 402
@@ -428,38 +648,6 @@ root:
     indent: 0
     parameters: 
     - 1
-    - Previous
-  - !ruby/object:RPG::EventCommand 
-    code: 119
-    indent: 1
-    parameters: 
-    - no1
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 402
-    indent: 0
-    parameters: 
-    - 2
-    - Next
-  - !ruby/object:RPG::EventCommand 
-    code: 119
-    indent: 1
-    parameters: 
-    - no3
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 402
-    indent: 0
-    parameters: 
-    - 3
     - Level
   - !ruby/object:RPG::EventCommand 
     code: 101
@@ -486,6 +674,38 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 2
+    - Next
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - no3
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 3
+    - Previous
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - no1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 403
     indent: 0
     parameters: []
@@ -505,6 +725,16 @@ root:
     indent: 0
     parameters: []
 
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 0
+    parameters: 
+    - no2
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 0
+    parameters: 
+    - no3
   - !ruby/object:RPG::EventCommand 
     code: 118
     indent: 0
@@ -1175,6 +1405,21 @@ root:
     indent: 0
     parameters: []
 
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "- Old Method"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "-"
   - !ruby/object:RPG::EventCommand 
     code: 319
     indent: 0
@@ -2496,6 +2741,227 @@ root:
     code: 111
     indent: 0
     parameters: 
+    - 1
+    - 40
+    - 1
+    - 41
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - \nm[] \face[]
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - Garnet has a violent orgasm.
+  - !ruby/object:RPG::EventCommand 
+    code: 225
+    indent: 1
+    parameters: 
+    - 5
+    - 5
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 224
+    indent: 1
+    parameters: 
+    - !ruby/object:Color 
+      alpha: 255.0
+      blue: 255.0
+      green: 255.0
+      red: 255.0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 1
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: "1"
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 224
+    indent: 1
+    parameters: 
+    - !ruby/object:Color 
+      alpha: 255.0
+      blue: 255.0
+      green: 255.0
+      red: 255.0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 1
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: 1-002
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 224
+    indent: 1
+    parameters: 
+    - !ruby/object:Color 
+      alpha: 255.0
+      blue: 255.0
+      green: 255.0
+      red: 255.0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 1
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: 1-022
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 224
+    indent: 1
+    parameters: 
+    - !ruby/object:Color 
+      alpha: 255.0
+      blue: 255.0
+      green: 255.0
+      red: 255.0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 1
+    parameters: 
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 1
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Cry
+      pitch: 90
+      volume: 100
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - \nm[] \face[]
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - She looses herself in waves of pleasure well past
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - the point of exaustion.
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 4
+    - 0
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 311
+    indent: 1
+    parameters: 
+    - 0
+    - 1
+    - 1
+    - 40
+    - false
+  - !ruby/object:RPG::EventCommand 
+    code: 312
+    indent: 1
+    parameters: 
+    - 0
+    - 1
+    - 1
+    - 41
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 1
+    parameters: 
+    - 1
+    - 1
+    - 0
+    - 0
+    - 11
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 1
+    - 0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 317
+    indent: 1
+    parameters: 
+    - 1
+    - 5
+    - 0
+    - 0
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "- Old Method"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 4
+    - 1
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 41
+    - 41
+    - 0
+    - 4
+    - 1
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
     - 0
     - 4
     - 0
@@ -2870,6 +3336,73 @@ root:
     indent: 0
     parameters: 
     - garnets perversion
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 76
+    - 76
+    - 0
+    - 4
+    - 1
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 77
+    - 77
+    - 0
+    - 4
+    - 1
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 76
+    - 76
+    - 3
+    - 0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 76
+    - 76
+    - 4
+    - 1
+    - 77
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 49
+    - 49
+    - 0
+    - 1
+    - 76
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "- Old method"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "-"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
@@ -6326,6 +6859,160 @@ root:
     - 0
     - 0
   - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 4
+    - 1
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 4
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 7
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 9
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 8
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 16
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 9
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 0
+    parameters: 
+    - She has learned \v[0041] spells from this book
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "- Old Method"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 0
+    parameters: 
+    - \nm[] \face[]  Garnet reads the spellbook
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 41
+    - 41
+    - 0
+    - 0
+    - 0
+  - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
@@ -6587,6 +7274,197 @@ root:
     - 0
     - 0
   - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 4
+    - 1
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 0
+    - 4
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 0
+    - -1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 0
+    - 24
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 0
+    - -1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 2
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 7
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 11
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 15
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 12
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 0
+    parameters: 
+    - She learns \v[0041] spells from this book
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 0
+    parameters: 
+    - \nm[] \face[]  Garnet reads the spellbook
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 41
+    - 41
+    - 0
+    - 0
+    - 0
+  - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
@@ -6791,6 +7669,186 @@ root:
 - !ruby/object:RPG::CommonEvent 
   id: 37
   list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 0
+    parameters: 
+    - \nm[] \face[]  Garnet reads the spellbook
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 41
+    - 41
+    - 0
+    - 0
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 4
+    - 1
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 0
+    - 24
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 0
+    - -1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 5
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 13
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 12
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 14
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 20
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 15
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 0
+    parameters: 
+    - She learns \v[0041] spells from this book
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "- Old Method"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "-"
   - !ruby/object:RPG::EventCommand 
     code: 101
     indent: 0
@@ -7046,69 +8104,22 @@ root:
     - 0
     - 0
   - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 4
+    - 1
+    - 0
+  - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
     - 0
     - 4
-    - 1
-  - !ruby/object:RPG::EventCommand 
-    code: 111
-    indent: 1
-    parameters: 
     - 0
-    - 24
-    - 1
-  - !ruby/object:RPG::EventCommand 
-    code: 122
-    indent: 2
-    parameters: 
-    - 40
-    - 40
-    - 0
-    - 4
-    - 1
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 411
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 122
-    indent: 2
-    parameters: 
-    - 40
-    - 40
-    - 0
-    - 4
-    - 5
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 411
-    indent: 0
-    parameters: []
-
   - !ruby/object:RPG::EventCommand 
     code: 122
     indent: 1
@@ -7116,9 +8127,8 @@ root:
     - 40
     - 40
     - 0
-    - 4
-    - 4
     - 0
+    - -1
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -7143,13 +8153,6 @@ root:
     indent: 1
     parameters: 
     - 1
-    - 0
-    - 1
-  - !ruby/object:RPG::EventCommand 
-    code: 318
-    indent: 1
-    parameters: 
-    - 5
     - 0
     - 1
   - !ruby/object:RPG::EventCommand 
@@ -7188,13 +8191,6 @@ root:
     - 0
     - 4
   - !ruby/object:RPG::EventCommand 
-    code: 318
-    indent: 1
-    parameters: 
-    - 5
-    - 0
-    - 4
-  - !ruby/object:RPG::EventCommand 
     code: 122
     indent: 1
     parameters: 
@@ -7227,13 +8223,6 @@ root:
     indent: 1
     parameters: 
     - 1
-    - 0
-    - 2
-  - !ruby/object:RPG::EventCommand 
-    code: 318
-    indent: 1
-    parameters: 
-    - 5
     - 0
     - 2
   - !ruby/object:RPG::EventCommand 
@@ -7272,13 +8261,6 @@ root:
     - 0
     - 6
   - !ruby/object:RPG::EventCommand 
-    code: 318
-    indent: 1
-    parameters: 
-    - 5
-    - 0
-    - 6
-  - !ruby/object:RPG::EventCommand 
     code: 122
     indent: 1
     parameters: 
@@ -7313,6 +8295,186 @@ root:
 - !ruby/object:RPG::CommonEvent 
   id: 39
   list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 0
+    parameters: 
+    - \nm[] \face[]  Garnet reads the spellbook
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 41
+    - 41
+    - 0
+    - 0
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 4
+    - 1
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 0
+    - 24
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 0
+    - -1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 2
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 19
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 9
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 20
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 1
+    - 40
+    - 0
+    - 16
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 318
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 21
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 0
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 0
+    parameters: 
+    - She has learned \v[0041] spells from this book
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "- Old Method"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "-"
   - !ruby/object:RPG::EventCommand 
     code: 101
     indent: 0
@@ -8439,6 +9601,70 @@ root:
     code: 111
     indent: 0
     parameters: 
+    - 4
+    - 1
+    - 5
+    - 24
+  - !ruby/object:RPG::EventCommand 
+    code: 311
+    indent: 1
+    parameters: 
+    - 1
+    - 0
+    - 0
+    - 1
+    - false
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 121
+    indent: 1
+    parameters: 
+    - 170
+    - 170
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "- Old Method"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
     - 0
     - 4
     - 0
@@ -8650,6 +9876,157 @@ root:
 - !ruby/object:RPG::CommonEvent 
   id: 123
   list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - $game_map.battlers.size>=0
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "$BlizzABS.is_enemy?($game_variables[75]) == true "
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 2
+    parameters: 
+    - 12
+    - $BlizzABS.enemy_has_state?($game_variables[75],25) == true
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 3
+    parameters: 
+    - "$BlizzABS.enemy_deal_damage($game_variables[75], CONSTANT, 2) "
+  - !ruby/object:RPG::EventCommand 
+    code: 311
+    indent: 3
+    parameters: 
+    - 1
+    - 0
+    - 0
+    - 1
+    - false
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 121
+    indent: 3
+    parameters: 
+    - 171
+    - 171
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 121
+    indent: 2
+    parameters: 
+    - 171
+    - 171
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 2
+    parameters: 
+    - 75
+    - 75
+    - 0
+    - 0
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 121
+    indent: 1
+    parameters: 
+    - 171
+    - 171
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 75
+    - 75
+    - 0
+    - 0
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "-"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "- Old Method"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "-"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
