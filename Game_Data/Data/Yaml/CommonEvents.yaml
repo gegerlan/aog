@@ -52,14 +52,36 @@ root:
     - 0
     - MaxHP
   - !ruby/object:RPG::EventCommand 
-    code: 317
+    code: 355
     indent: 2
     parameters: 
-    - 1
-    - 0
-    - 0
-    - 1
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - $game_variables[40] = a.maxhp
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 2
+    parameters: 
+    - \nm[]\face[]Set MaxHP
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 2
+    parameters: 
     - 40
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - v = $game_variables[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - $game_party.actors[0].maxhp = v
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 2
@@ -72,14 +94,36 @@ root:
     - 1
     - MaxSP
   - !ruby/object:RPG::EventCommand 
-    code: 317
+    code: 355
     indent: 2
     parameters: 
-    - 1
-    - 1
-    - 0
-    - 1
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - $game_variables[40] = a.maxsp
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 2
+    parameters: 
+    - \nm[]\face[]Set MaxSP
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 2
+    parameters: 
     - 40
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - v = $game_variables[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - $game_party.actors[0].maxsp = v
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 2
@@ -92,14 +136,36 @@ root:
     - 2
     - STR
   - !ruby/object:RPG::EventCommand 
-    code: 317
+    code: 355
     indent: 2
     parameters: 
-    - 1
-    - 2
-    - 0
-    - 1
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - $game_variables[40] = a.str
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 2
+    parameters: 
+    - \nm[]\face[]Set strength
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 2
+    parameters: 
     - 40
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - v = $game_variables[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - $game_party.actors[0].str = v
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 2
@@ -132,14 +198,36 @@ root:
     - 0
     - DEX
   - !ruby/object:RPG::EventCommand 
-    code: 317
+    code: 355
     indent: 3
     parameters: 
-    - 1
-    - 3
-    - 0
-    - 1
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - $game_variables[40] = a.dex
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - \nm[]\face[]Set Dexterity
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 3
+    parameters: 
     - 40
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 3
+    parameters: 
+    - v = $game_variables[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - $game_party.actors[0].dex = v
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 3
@@ -152,14 +240,36 @@ root:
     - 1
     - AGI
   - !ruby/object:RPG::EventCommand 
-    code: 317
+    code: 355
     indent: 3
     parameters: 
-    - 1
-    - 4
-    - 0
-    - 1
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - $game_variables[40] = a.agi
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - \nm[]\face[]Set Agility
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 3
+    parameters: 
     - 40
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 3
+    parameters: 
+    - v = $game_variables[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - $game_party.actors[0].agi = v
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 3
@@ -172,14 +282,36 @@ root:
     - 2
     - INT
   - !ruby/object:RPG::EventCommand 
-    code: 317
+    code: 355
     indent: 3
     parameters: 
-    - 1
-    - 5
-    - 0
-    - 1
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - $game_variables[40] = a.int
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - \nm[]\face[]Set Intelligence
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 3
+    parameters: 
     - 40
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 3
+    parameters: 
+    - v = $game_variables[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - $game_party.actors[0].int = v
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 3
@@ -225,7 +357,7 @@ root:
     code: 119
     indent: 2
     parameters: 
-    - attr2
+    - exit
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 2
@@ -255,7 +387,7 @@ root:
     code: 119
     indent: 1
     parameters: 
-    - attr1
+    - exit
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -471,6 +603,11 @@ root:
     - 2
     - Dog Sex
   - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 2
+    parameters: 
+    - \nm[]\face[]Set time Garnet has had sex with dogs
+  - !ruby/object:RPG::EventCommand 
     code: 122
     indent: 2
     parameters: 
@@ -505,6 +642,11 @@ root:
     parameters: 
     - 3
     - Work Progression
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 2
+    parameters: 
+    - \nm[]\face[]Set work progression
   - !ruby/object:RPG::EventCommand 
     code: 122
     indent: 2
@@ -599,7 +741,7 @@ root:
     code: 119
     indent: 0
     parameters: 
-    - no1
+    - exit
   - !ruby/object:RPG::EventCommand 
     code: 118
     indent: 0
@@ -621,23 +763,103 @@ root:
     - 0
     - Gold
   - !ruby/object:RPG::EventCommand 
-    code: 101
+    code: 102
     indent: 1
     parameters: 
-    - \nm[]\face[]How much gold do you add?
+    - - Increase
+      - Decrease
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 0
+    - Increase
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 2
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 0
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 2
+    parameters: 
+    - \nm[]\face[]\gHow much gold do you add?
   - !ruby/object:RPG::EventCommand 
     code: 103
-    indent: 1
+    indent: 2
     parameters: 
     - 40
     - 5
   - !ruby/object:RPG::EventCommand 
     code: 125
-    indent: 1
+    indent: 2
     parameters: 
     - 0
     - 1
     - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 1
+    - Decrease
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 2
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 0
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 2
+    parameters: 
+    - \nm[]\face[]\gHow much gold do you remove?
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 2
+    parameters: 
+    - 40
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 125
+    indent: 2
+    parameters: 
+    - 0
+    - 1
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 1
+    parameters: []
+
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -650,10 +872,20 @@ root:
     - 1
     - Level
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $game_variables[40] = a.level
+  - !ruby/object:RPG::EventCommand 
     code: 101
     indent: 1
     parameters: 
-    - \nm[]\face[]How many Levels do you add
+    - \nm[]\face[]Enter level
   - !ruby/object:RPG::EventCommand 
     code: 103
     indent: 1
@@ -661,13 +893,15 @@ root:
     - 40
     - 2
   - !ruby/object:RPG::EventCommand 
-    code: 316
+    code: 355
     indent: 1
     parameters: 
-    - 0
-    - 0
-    - 1
-    - 40
+    - v = $game_variables[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $game_party.actors[0].level = v
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -711,11 +945,6 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
-    code: 119
-    indent: 1
-    parameters: 
-    - exit
-  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -729,7 +958,7 @@ root:
     code: 119
     indent: 0
     parameters: 
-    - no2
+    - exit
   - !ruby/object:RPG::EventCommand 
     code: 118
     indent: 0
