@@ -2409,28 +2409,6 @@ root: !ruby/object:RPG::Map
             red: -150.0
           - 50
         - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 7
-          parameters: 
-          - -1
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id002 !ruby/object:RPG::MoveCommand 
-              code: 42
-              parameters: 
-              - 0
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 7
-          parameters: 
-          - *id002
-        - !ruby/object:RPG::EventCommand 
           code: 208
           indent: 7
           parameters: 
@@ -2441,8 +2419,8 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 0
           - 12
-          - 20
-          - 0
+          - 19
+          - 11
           - 2
           - 0
         - !ruby/object:RPG::EventCommand 
@@ -3039,7 +3017,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id003 !ruby/object:RPG::MoveCommand 
+            - &id002 !ruby/object:RPG::MoveCommand 
               code: 18
               parameters: []
 
@@ -3053,7 +3031,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 1
           parameters: 
-          - *id003
+          - *id002
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
@@ -3188,7 +3166,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id004 !ruby/object:RPG::MoveCommand 
+            - &id003 !ruby/object:RPG::MoveCommand 
               code: 17
               parameters: []
 
@@ -3202,7 +3180,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 1
           parameters: 
-          - *id004
+          - *id003
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
