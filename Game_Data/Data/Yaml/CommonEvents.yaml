@@ -24681,6 +24681,31 @@ root:
     parameters: 
     - $v = $v || {}
   - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $v['persona_body'] = ''
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $v['persona_helmet'] = ''
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $v['persona_shield'] = ''
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $v['persona_armor'] = ''
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $v['persona_accessories'] = ''
+  - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 0
     parameters: 
@@ -25065,7 +25090,7 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - "  $v['persona_body'] == \"\" ?"
+    - "  $v['persona_body'].empty? ?"
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
@@ -25260,7 +25285,7 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - "  $v['persona_shield'] == \"\" ?"
+    - "  $v['persona_shield'].empty? ?"
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
@@ -25406,7 +25431,7 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - "  $v['persona_helmet'] == \"\" ?"
+    - "  $v['persona_helmet'].empty? ?"
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
@@ -25552,7 +25577,7 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - "  $v['persona_armor'] == \"\" ?"
+    - "  $v['persona_armor'].empty? ?"
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
@@ -25752,7 +25777,7 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - "  $v['persona_accessories'] == \"\" ?"
+    - "  $v['persona_accessories'].empty? ?"
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
