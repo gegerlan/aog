@@ -11732,6 +11732,46 @@ root: !ruby/object:RPG::Map
           parameters: 
           - gamble
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - if !$v['rps_names']
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "  $v['rps_names'] = {"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "    0 => \"rock\""
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "    1 => \"paper\""
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "    2 => \"scissors\","
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "  }"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - end
+        - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 0
           parameters: 
@@ -11832,6 +11872,11 @@ root: !ruby/object:RPG::Map
           parameters: 
           - $game_variables[40] = RPS.result(x)
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - ""
+        - !ruby/object:RPG::EventCommand 
           code: 108
           indent: 0
           parameters: 
@@ -11883,17 +11928,42 @@ root: !ruby/object:RPG::Map
           code: 655
           indent: 1
           parameters: 
-          - if $game_party.gold < debt
+          - g = $game_party.gold
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 1
           parameters: 
-          - "  $game_variables[4] += debt"
+          - "if g < debt "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "  #if we don't have the money"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "  d = debt - g"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "  $game_variables[4] += d"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "  $game_party.lose_gold(g)"
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 1
           parameters: 
           - else
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "  #if we have the money at hand"
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 1
@@ -11908,7 +11978,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - Loss
+          - The pimp wins!
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - Garnet lost 100 gold
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -11982,7 +12057,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - Win
+          - \c[6]Garnet\c[0] wins!
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - Garnet recieved 100 gold!
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -12367,6 +12447,344 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
           self_switch_valid: false
+          switch1_id: 82
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 4
+          variable_valid: true
+          variable_value: 1000
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: modernguy05
+          direction: 6
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \face[]\nm[Pimp]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - Where's my money bitch!? you owe me
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - \v[4] from our games!
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 0
+          parameters: 
+          - 12
+          - $game_party.gold > $game_variables[4]
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "\"Garnet_normal_06\""
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - I'm sorry! Here's you money.
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - g = $game_variables[4]
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - $game_party.lose_gold(g)
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - $game_variables[4] = 0
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \face[]\nm[Pimp]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - That's right ho, you betta pay up!
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "\"Garnet_normal_06\""
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - "I'm sorry, I don't have have it "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - now, bu-
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \face[]\nm[Pimp]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - "No excuses bitch! If you're in debt to me "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - then you're my property until yo' pay it off!
+        - !ruby/object:RPG::EventCommand 
+          code: 224
+          indent: 1
+          parameters: 
+          - !ruby/object:Color 
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 225
+          indent: 1
+          parameters: 
+          - 5
+          - 5
+          - 5
+        - !ruby/object:RPG::EventCommand 
+          code: 224
+          indent: 1
+          parameters: 
+          - !ruby/object:Color 
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 225
+          indent: 1
+          parameters: 
+          - 5
+          - 5
+          - 5
+        - !ruby/object:RPG::EventCommand 
+          code: 224
+          indent: 1
+          parameters: 
+          - !ruby/object:Color 
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 225
+          indent: 1
+          parameters: 
+          - 5
+          - 5
+          - 5
+        - !ruby/object:RPG::EventCommand 
+          code: 224
+          indent: 1
+          parameters: 
+          - !ruby/object:Color 
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 225
+          indent: 1
+          parameters: 
+          - 5
+          - 5
+          - 5
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 1
+          parameters: 
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 122
+          indent: 1
+          parameters: 
+          - 26
+          - 26
+          - 0
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 1
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - "*Garnet has become a slave*"
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 1
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \face[]\nm[Pimp]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - Now wait here while I'll get the boys,
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - try and get away I'll fuck you up bitch.
+        - !ruby/object:RPG::EventCommand 
+          code: 121
+          indent: 1
+          parameters: 
+          - 22
+          - 22
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 322
+          indent: 1
+          parameters: 
+          - 1
+          - ""
+          - 0
+          - ""
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 322
+          indent: 1
+          parameters: 
+          - 4
+          - ""
+          - 0
+          - ""
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 1
+          parameters: 
+          - !ruby/object:Tone 
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 15
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 1
+          parameters: 
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 121
+          indent: 1
+          parameters: 
+          - 41
+          - 41
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 201
+          indent: 1
+          parameters: 
+          - 0
+          - 1
+          - 39
+          - 12
+          - 0
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 2
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
           switch1_id: 4
           switch1_valid: true
           switch2_id: 82
@@ -12580,7 +12998,7 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 2
+        numero: 3
         step_anime: false
         through: false
         trigger: 0
@@ -12849,7 +13267,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Pervet]
+          - \nm[Pervert]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
