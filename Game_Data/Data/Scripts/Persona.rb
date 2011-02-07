@@ -1,9 +1,41 @@
 class Persona
+  def self.switch 
+    return 128
+  end
+  def self.picture_index
+    return 2..6
+  end
+  def self.duration
+    return 10
+  end
+  def self.visible_opacity
+    return 255
+  end
+  def self.transparent_opacity
+    return 50
+  end
   def self.visibility=(visibility)
-    $game_switches[128] = !!visibility
+    $game_switches[self.switch] = !!visibility
+    self.update_persona
   end
   def self.is_visible?
-    return !!$game_switches[128]
+    return !!$game_switches[self.switch]
+  end
+  def self.update_persona
+    opacity = self.is_visible? ? self.visible_opacity : self.transparent_opacity
+    self.picture_index.each { |x|
+      p = $game_screen.pictures[x]
+      $game_screen.pictures[x].move(
+        self.duration,
+        p.origin,
+        p.x,
+        p.y,
+        p.zoom_x,
+        p.zoom_y,
+        opacity,
+        p.blend_type
+      );
+    }
   end
 end
 
@@ -15,108 +47,8 @@ module BlizzABS
       $game_variables[27] == $game_player.screen_y
       $game_variables[28] == $game_player.screen_x
       if Persona.is_visible? && $game_player.screen_x > 450
-        $game_screen.pictures[2].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          50.0,
-          0
-        )
-        $game_screen.pictures[3].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          50.0,
-          0
-        )
-        $game_screen.pictures[4].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          50.0,
-          0
-        )
-        $game_screen.pictures[5].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          50.0,
-          0
-        )
-        $game_screen.pictures[6].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          50.0,
-          0
-        )
         Persona.visibility = false
       elsif !Persona.is_visible? && $game_player.screen_x <= 450
-        $game_screen.pictures[2].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          255.0,
-          0
-        )
-        $game_screen.pictures[3].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          255.0,
-          0
-        )
-        $game_screen.pictures[4].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          255.0,
-          0
-        )
-        $game_screen.pictures[5].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          255.0,
-          0
-        )
-        $game_screen.pictures[6].move(
-          10,
-          0,
-          0,
-          0,
-          100.0,
-          100.0,
-          255.0,
-          0
-        )
         Persona.visibility = true          
       end
     end
