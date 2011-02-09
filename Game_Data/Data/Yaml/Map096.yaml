@@ -923,6 +923,7 @@ root: !ruby/object:RPG::Map
     1: !ruby/object:RPG::Event 
       id: 1
       name: EV001
+      numero: 1
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -946,16 +947,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - "$game_system.face_graphic = "
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - "\"Garnet_normal_01\""
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -1162,6 +1153,7 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
+        numero: 0
         step_anime: false
         through: false
         trigger: 2
@@ -1169,5 +1161,6 @@ root: !ruby/object:RPG::Map
       x: 9
       y: 7
   height: 15
+  numero: 96
   tileset_id: 50
   width: 20
