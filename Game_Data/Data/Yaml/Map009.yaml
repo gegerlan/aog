@@ -2274,7 +2274,7 @@ root: !ruby/object:RPG::Map
       y: 8
     6: !ruby/object:RPG::Event 
       id: 6
-      name: EV006
+      name: Bed
       numero: 6
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -2282,107 +2282,6 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
           self_switch_valid: false
-          switch1_id: 140
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \nm[Garnet] Hey there's some books under my bed
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \nm[Garnet] "6 Sensitive Muscular Hunks Romancing a
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - Generic Heroine,  Part 3"
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - "\"How to Score a Rich Husband without"
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - " Loosing your Boyfriend\""
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - "\\nm[Garnet]Uhhhh... I'm sort of glad nobody "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - caught me reading these.
-        - !ruby/object:RPG::EventCommand 
-          code: 126
-          indent: 0
-          parameters: 
-          - 53
-          - 0
-          - 0
-          - 2
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 32
-          - 32
-          - 1
-          - 0
-          - 2
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
           switch2_id: 1
@@ -2401,6 +2300,184 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v['sleep_hours'] = 0
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[]\face[]Your comfy bed.
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - Time for a nap?
+        - !ruby/object:RPG::EventCommand 
+          code: 102
+          indent: 0
+          parameters: 
+          - - Sleep for 3 hours
+            - Sleep for 6 hours
+            - Sleep for 9 hours
+            - Leave sleeping for the tired
+          - 4
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 0
+          - Sleep for 3 hours
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - $v['sleep_hours'] = 3
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 1
+          - Sleep for 6 hours
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - $v['sleep_hours'] = 6
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 2
+          - Sleep for 9 hours
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - $v['sleep_hours'] = 9
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 3
+          - Leave sleeping for the tired
+        - !ruby/object:RPG::EventCommand 
+          code: 119
+          indent: 1
+          parameters: 
+          - Exit
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 404
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 0
+          parameters: 
+          - !ruby/object:Tone 
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 0
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 0
+          parameters: 
+          - Change time
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $kts.hours($v['sleep_hours'])
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 0
+          parameters: 
+          - Change hp.
+        - !ruby/object:RPG::EventCommand 
+          code: 408
+          indent: 0
+          parameters: 
+          - 9 hours will rejuvenate a dead player
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - t = $v['sleep_hours']
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - mxhp = $game_party.actors[0].maxhp
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - chp = $game_party.actors[0].hp
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - hp = mxhp/9 * t
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $game_party.actors[0].hp = chp + hp
+        - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 0
+          parameters: 
+          - !ruby/object:Tone 
+            blue: 0.0
+            gray: 0.0
+            green: 0.0
+            red: 0.0
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 119
+          indent: 0
+          parameters: 
+          - Exit
+        - !ruby/object:RPG::EventCommand 
+          code: 115
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
           parameters: []
@@ -2416,7 +2493,6 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 1
         step_anime: false
         through: false
         trigger: 0
@@ -10407,6 +10483,221 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 16
       y: 8
+    8: !ruby/object:RPG::Event 
+      id: 8
+      name: 6 Sensitive Muscular Hunks Romancing aGeneric Heroine,  Part 3
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 140
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 5779
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Garnet] Hey there's some books under my bed
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Garnet] "6 Sensitive Muscular Hunks Romancing a
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - Generic Heroine,  Part 3"
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - "\"How to Score a Rich Husband without"
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - " Loosing your Boyfriend\""
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 140
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 5779
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Garnet] Hey there's some books under my bed
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Garnet] "6 Sensitive Muscular Hunks Romancing a
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - Generic Heroine,  Part 3"
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - "\"How to Score a Rich Husband without"
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - " Loosing your Boyfriend\""
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - "\\nm[Garnet]Uhhhh... I'm sort of glad nobody "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - caught me reading these.
+        - !ruby/object:RPG::EventCommand 
+          code: 126
+          indent: 0
+          parameters: 
+          - 53
+          - 0
+          - 0
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 122
+          indent: 0
+          parameters: 
+          - 32
+          - 32
+          - 1
+          - 0
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 0
+          parameters: 
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 140
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 11
+      y: 7
   height: 15
   numero: 9
   tileset_id: 56
