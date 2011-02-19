@@ -1039,10 +1039,10 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
         - !ruby/object:RPG::EventCommand 
-          code: 355
+          code: 117
           indent: 0
           parameters: 
-          - $game_system.name_window = true
+          - 136
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -1053,16 +1053,6 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - Do you really have to leave father?
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - $game_system.name_window = false
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_system.name = ""
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
@@ -1082,17 +1072,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - "\\face[]Garnet -- Sole daughter of Prometheus, the "
+          - "\\face[]\\nm[]Garnet, Sole daughter of Prometheus, the "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
-          - "great hero. Is 18 and a brave adventurer herself, "
+          - "great hero. Is 18 and a brave adventurer herself, but "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
-          - but headstrong and prone to rash decisions.
+          - headstrong and prone to rash decisions.
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
@@ -1158,11 +1148,6 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - $game_system.name_window = true
-        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -1188,16 +1173,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - break through and a full-scale war erupts.
         - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - $game_system.name_window = false
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_system.name = ""
-        - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
           parameters: 
@@ -1216,12 +1191,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - Prometheus -- One of the few men to ever travel
+          - "\\face[]\\nm[]Prometheus, One of the few men to ever "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
-          - "through Hells Gates and survive. Considered to "
+          - "travel through Hells Gates and survive. Considered to "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -1238,10 +1213,10 @@ root: !ruby/object:RPG::Map
             red: -125.0
           - 20
         - !ruby/object:RPG::EventCommand 
-          code: 355
+          code: 117
           indent: 0
           parameters: 
-          - $game_system.name_window = true
+          - 136
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -1343,6 +1318,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - *id006
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 137
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -1468,6 +1448,11 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 153
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -1507,6 +1492,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - I promise you that before you know I'll be back.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 153
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -1820,7 +1810,7 @@ root: !ruby/object:RPG::Map
           - 8
           - 2
           - 0
-          - 0
+          - 1
         - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
@@ -10660,7 +10650,7 @@ root: !ruby/object:RPG::Map
           self_switch_ch: A
           self_switch_valid: true
           switch1_id: 140
-          switch1_valid: true
+          switch1_valid: false
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
