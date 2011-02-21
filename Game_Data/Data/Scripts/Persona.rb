@@ -37,6 +37,22 @@ class Persona
       );
     }
   end
+  def refresh
+    actor_class_name = $data_classes[actor.id].name
+    [:armor1_id, :armor2_id, :armor3_id, :armor4_id].each do |attr|
+      begin
+        item_name = armor_data[actor.send :attr].name
+        bitmap = RPG::Cache.picture([@actor.name, actor_class_name, item_name].join(" "))
+        rect = new Rect(0,0,bitmap.width,bitmap.height)
+        self.canvas.blt(0,0,bitmap,rect)
+      rescue Exception => e
+        print e if $DEBUG
+      end
+    end
+  end
+  def initialize
+    self.canvas = Bitmap.new(0,0,640,480)
+  end
 end
 
 module BlizzABS
