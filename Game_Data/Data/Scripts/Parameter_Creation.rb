@@ -8,18 +8,12 @@ class Game_Actor
   # 4 : Agi
   # 5 : Int
   #--------------------------------------------------------------------------
-  def make_parameter_list(parameter=0, base=0, inflation=0)
+  def make_parameter_list(parameter=0, min=1, max=99)
     actor = $data_actors[@actor_id]
-    $data_actors[@actor_id].parameters[parameter, 1] = 0
-    pow_i = 2.4 + inflation / 100.0
+    $data_actors[@actor_id].parameters[parameter, 1] = min
+    step = (max - min) / 100
     for i in 2..100
-      if i > actor.final_level
-        $data_actors[@actor_id].parameters[parameter, i] = 0
-      else
-        n = base * ((i + 3) ** pow_i) / (5 ** pow_i)
-        $data_actors[@actor_id].parameters[parameter, i] = 
-          $data_actors[@actor_id].parameters[parameter, i-1] + Integer(n)
-      end
+      $data_actors[@actor_id].parameters[parameter, i] = Integer(step*i)
     end
   end
 end
