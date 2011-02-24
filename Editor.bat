@@ -47,8 +47,6 @@ REM #=======================
 REM #  Start RPG Maker XP
 REM #=======================
 
-rxdatav.exe logtime %PROJECT_DIR%
-
 CD %PROJECT_DIR%
 
 START /WAIT Game.rxproj
