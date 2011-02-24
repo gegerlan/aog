@@ -10,6 +10,13 @@ root:
     parameters: 
     - no1
   - !ruby/object:RPG::EventCommand 
+    code: 121
+    indent: 0
+    parameters: 
+    - 333
+    - 333
+    - 0
+  - !ruby/object:RPG::EventCommand 
     code: 102
     indent: 0
     parameters: 
@@ -10183,6 +10190,11 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - $v = $v || {}
+  - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
@@ -10198,7 +10210,7 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - $game_variables[40] = "Garnet_normal"
+    - $v['faceset'] = "Garnet_normal"
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -10225,7 +10237,7 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - $game_variables[40] = "Garnet_slave"
+    - $v['faceset'] = "Garnet_slave"
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -10252,7 +10264,7 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - $game_variables[40] = "Garnet_dog"
+    - $v['faceset'] = "Garnet_dog"
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -10286,7 +10298,7 @@ root:
     code: 655
     indent: 2
     parameters: 
-    - $game_variables[40] << "_nude"
+    - $v['faceset'] << "_nude"
   - !ruby/object:RPG::EventCommand 
     code: 119
     indent: 2
@@ -10353,7 +10365,7 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - $game_variables[40] = "Garnet_nude"
+    - $v['faceset'] = "Garnet_nude"
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -10383,7 +10395,7 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - $game_variables[40] << i.to_s
+    - $v['faceset'] << i.to_s
   - !ruby/object:RPG::EventCommand 
     code: 108
     indent: 0
@@ -10394,7 +10406,7 @@ root:
     indent: 0
     parameters: 
     - 12
-    - FileTest.exist?("Graphics/Pictures/"+$game_variables[40]+".png")
+    - FileTest.exist?("Graphics/Pictures/"+$v['faceset']+".png")
   - !ruby/object:RPG::EventCommand 
     code: 355
     indent: 1
@@ -10404,7 +10416,7 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - $game_variables[40]
+    - $v['faceset']
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -10435,6 +10447,11 @@ root:
     indent: 0
     parameters: []
 
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - $v.delete('faceset')
   - !ruby/object:RPG::EventCommand 
     code: 115
     indent: 0
