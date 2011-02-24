@@ -5989,7 +5989,7 @@ root: !ruby/object:RPG::Map
     - 2349
     - 2308
     - 2349
-    - 2349
+    - 2301
     - 2349
     - 0
     - 0
@@ -6019,7 +6019,7 @@ root: !ruby/object:RPG::Map
     - 2357
     - 2301
     - 0
-    - 2349
+    - 2311
     - 2349
     - 0
     - 0
@@ -6044,8 +6044,8 @@ root: !ruby/object:RPG::Map
     - 1887
     - 2494
     - 2495
+    - 5808
     - 5809
-    - 5810
     - 5808
     - 5809
     - 5810
@@ -6072,10 +6072,10 @@ root: !ruby/object:RPG::Map
     - 1918
     - 1918
     - 1918
-    - 5818
+    - 2502
+    - 2503
     - 5816
     - 5817
-    - 5818
     - 5816
     - 5817
     - 5818
@@ -7676,6 +7676,54 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 20
       y: 56
+    7: !ruby/object:RPG::Event 
+      id: 7
+      name: Transport Sign
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 193-Support01
+          direction: 4
+          opacity: 255
+          pattern: 1
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 9
+      y: 59
     8: !ruby/object:RPG::Event 
       id: 8
       name: EV008
@@ -7943,7 +7991,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[]\face[]Locked
+          - \nm[]\face[]Closed due to state of emergency
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -19409,6 +19457,59 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 3
       y: 67
+    104: !ruby/object:RPG::Event 
+      id: 104
+      name: 7 proxy
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 4
+          opacity: 255
+          pattern: 1
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[7].start
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 9
+      y: 60
   height: 70
   numero: 65
   tileset_id: 51
