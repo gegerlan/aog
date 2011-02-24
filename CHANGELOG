@@ -1,3 +1,181 @@
+2011-01-27
+    - Added fix for map related crashes in Goblin Cave West 2
+    - Taking the diary from Garnet's house 2nd floor, doesn't show the gagged face any more
+    - Backed up old Map75 Bramble Woods_west junction 2 [KTS] to Map97
+    - Removed bridge to nowhere on map75 Bramble Woods_west junction 2 [KTS]
+    - Added icon for Goblin King's Head icon
+    - Sped up KTS... again
+    - Created icon for goblin boss head
+    - goblin boss head item now use the goblin boss head icon
+    - Added missing sad/emotional/reluctant face as face 20
+    - Added Common Events: sad, emotional and reluctant
+    - Updated Garnet's house 2nd floor to use the old emotional face
+    - Made the background for all faces used transparent
+
+
+2011-01-26
+
+    - Another spellcheck run
+    - Changed switches used for \nm \face testing to 426-428
+    - Named S201 - Dog by Collar
+    - Named S202 - Dog by Smith
+    - Updated gargoyle in Garnet's house to use the correct switch range
+    - Fixed fading for bad end in swamp
+    - Changed how toning time is handled outdoors for KTS
+    - Fixed priority of top left hay (?) roof for tileset 56
+    - Changed KTS tone_timer to be take into account with changes and be reset after use.
+    - Updated passability for tiles used in dali barracks, 2nd floor
+
+    Added 3 new states on dbase:
+    -Gagged+ : Will be set when Garnet equips Ballgag+ accesory (Emertx)
+    -Dog Cosplay: Will be set when garnet equips Dog accesories (Emertx)
+    -Shame: Will be set when Garnet equips either the Latex outfit, apron, body suit, bunny suit, and whatever lewd outfit there is (only armors). (Emertx)
+    Created such conversations for all NPC on Map001 (Dalis' main) as an example. (Emertx)
+
+
+2011-01-25
+    - Fixed Guard spelling 
+    - Updated name and position of map 96 and 98
+    - "UMS autohide" now only removes name/face after main events (not parallel)
+    - Added ahoyturtle/Avi's alternative entrance to Carthage as a stowaway
+    - Changed ending for ahoyturtle/Avi's alternative entrance to Carthage, to be based on slave status
+    - Changed to use of chooseface event when executing ahoyturtle/Avi's scene
+    - Made ahoyturtle/Avi's scene not accessable if access has been gained to Carthage
+    - Updated Carthage East to have a real blocker for the pen if Slave=true
+    - Guards will not "find a stray" if you are teleported to Carthage East from ahoyturtle/Avi's scene
+    - replaced Dali Farm's outer fencing to something more organic
+    - Updated the Dali Farm's looks
+
+2011-01-24
+
+    - Fixed teleport from aSlimyHumiliation location to Dali inn
+    - Re-enabled Persona after aSlimyHumiliation scene
+    - aSlimyHumiliation now calls Update Persona 2
+    -went through Garnet_normal_XX, Garnet_nude_XX, Garnet_slave_XX, and Garnet_salve_nude_XX and made sure 01 through 19 and 99, the template, were all present and in the same order.(pictures) (Firehead184)
+    -created Garnet_dog_XX by pasting dog ears and collar from dog0090 onto Garnet_nude_XX pics, except for 12, 13, and 14 which are ballgag pics which dog garnet can't wear.(pictures) (Firehead184)
+    -added Garnet_error_01 a picture of a questionmark.(pictures) (Firehead184)
+    -altered common event [Choose Face] it now uses pics for moods from 01 to 19, Diferentiates between slave clothed and slave nude, and displayes Garnet_error_01 if mood is less than 1 more than 19 or if it returnes dog when mood is 12, 13, or 14.(common events) (Firehead184)
+    -added event to Garnets House Picture Guy will ask to select from one of 5 states and show you the entire pictures set for that state, left him in to allow players to make sure they have all the pictures in the right place and so other game makers can see how to use the event.(Map 008) (Firehead184)
+    -fixed state reset for Picture Guy (gegerlan)
+    -Hid Picture Guy unless S333 (Debug) is true (gegerlan)
+    -Added common events 130-152 to display faces (gegerlan)
+    -Did some refactoring of Firehead184's ChooseFace common event (CE193) (gegerlan)
+    - Patched UMS with UMS autohide to support the forgetting of face and name between dialog windows
+    - Added the ability to automatically set Garnet's name whenever chooseface (ce193) is called
+    - Added the ability to toggle automatic name setting (CE193) for Garnet by using S202
+    - Added the ability to forget previous \nm used by setting S201 = true
+    - Added the ability to forget previous \face used by setting S202 = true
+    - Added Gargoyle for testing and debuggin of the automatic name setting (CE193), and forgetting of name and face, to Garnet's house
+    - Updated "UMS autohide" to remove $game_system.name and $game_system.face_graphic when a root event (depth=0) finishes. Homefully this will fix lingering face and names crossing over to seperate events.
+
+2011-01-23
+    - Removed Map_Data.abs, it is generated automatically when the game starts for the first time. Old versions of this may cause issue with the game crashing.
+    - Fixed fading for bad end in crypt and cemetery
+    - Bad end in cemetery now only happen during night
+    - Removed Bad End Trigger in Bramble Wood junction and bramble woods forest
+    - Fixed fading for bad end prison scene
+    - Fixed fading for bad end boss scene
+    -event in Barracks for moving player to F2 changed to activate on touch rather then action button.(Map135) (Firehead184)
+    -event in Barracks for moving player to F2 moved one space up so characters leaving F2 spawn on space below it rather than on it.(Map135) (Firehead184)
+    -event in F2 for moving player to barracks moved one space down so characters spawn above it rather then on it.(Map137) (Firehead184)
+    -event sleeping Guard added to Dali Barracks F2, some appear only during day others at night they only sleep.(Map137) (Firehead184)
+    -event Restless Guard added to Dali Barracks F2, only available during day(Map137) (Firehead184)
+    -event Disturbed Guard added to Dali Barracks F2, only available during night(Map137) (Firehead184)
+
+
+2011-01-22
+    - Fixed issue with Jasper's dialog starting with :
+    - Fixed some missing use of \nm in dialogs
+    - fixed "recommended" spelling in intro
+    - Moved KTS' time tracking from update into a seperate method: update_time
+    - KTS' kts_setup now calls update_time instead of update to avoid issues with slow toning
+    - KTS::FADE_LENGTH set to 240 (default)
+    - fixed crash when player loaded an old save game
+    - Added emertex's persona changes
+    - Fixed issue with screen blacking out and not returning at puppy event
+    - Fixed some of the spelling
+    -Altered Common Event [Update Equipment] to turn Switch [Nude] off when garnet is a Dog - Several characters in Dalli respond to dog Garnet properly
+    -Changed Bath House event where switch [Nude] was checked to allow exception if switch [Dog] was on thus fixing a bug created by my previous change
+    -Altered Prisoner scene so the animation would play, Stop animation was unchecked, and Garnet dissappears properly rather than being in two places at once, Guard was coded to make Garnet transparent and then Immediately make her reappear. (Firehead184)
+    -Changed Dali Men's toilet scene to set player speed back up to 4 upon leaving (Firehead184)
+    -Changed Dog Transformation sequence at Dali Dog Trainer House to reset player speed back up to 4 (Firehead184)
+    -Changed John sex scenes at kenny house to turn speed back down to 4 after orgasm (Firehead184)
+    -Changed Carthage Alley Gangbang to raise player speed back up to 4 (Firehead184)
+
+
+2011-01-21
+    - I have added new images for some armors and accesories. (emertx)
+    - I have update the "update_persona_2" script to display the new images. (emertx)
+    - KTS now remembers the previous toning
+    - Updated KTS to support tone changes outdoor
+    - "Men" dialog in the intro now uses \nm
+    - fixed dialog in prison bad end (\nm)
+    - Removed player getting the dog collar in the intro
+    - Updated the readme to reflect the content of the repo
+
+
+2011-01-20
+
+    - Added old hut maps
+    - Added transfer from world map to old hut
+    - Added maze script
+    - Fixed tileset related to the old hut quest
+    - implemented Emertx's change to Update Persona 2, so the debug event in Garnet's house now uses Update Persona 2 again (moonblack)
+    - now it is possible to get the dream bad end - if Garnet has an orgasm during the dream the bad end is triggered. Also fixed a bug with said end - now it proceeds as expected (previously the game would freeze waiting for the completion of an impossible move) (moonblack)
+    - updated several texts to display the (N)PC name above the text instead of displaying it as part of text. Affected texts are all the NPC texts in the cursed dream (Garnet's lines were updated in my previous patch), the lone line of text (if it can be called that) on map 022, and EV003 on map 012 (Dali Inn Upstairs) - all three pages. If I missed any texts there - tell me. (moonblack)
+    - Based on the last changes of Moonblack, also I added some lines in the update_persona 2 script, so now when you equip a bronze armor and an iron armor, the avatar will display the pictures. Also, I have added some other armors wich despite of not having yet a picture, will display by default the cotton robe, but in this way when someone decides to create images for those armors, it will be easier just to change the line that specifies the image to display, instead of add several lines per armor through the script. (Emertx)
+    - Also I have added 2 accesories (Ballgag+ and Blindfold & Ballgag) in the database (Emertx)
+    - Fixed issue with player moving to wrong location on map
+    - Changed ground tiles around old hut
+    - KTS now lets you tune indoor scenes
+    - Updated intro to work better with the KTS changes
+
+
+2011-01-18
+
+- Renamed switch 351 from “” (it had no name) to “Cursed Dream” (Moonblack)
+- When Garnet is brought back to the inn after the dream the game now checks for the correct switch (353) (Moonblack)
+- The map where the dream takes place no longer uses the time system (it’s a dream – it shouldn’t follow the same logic as the normal village), allows for skipping to the end of scene and hides Garnet’s picture (Moonblack)
+- Fixed some issues with Garnet’s name during and after the dream event – previously it was displayed as part of the text, now it shows up above the text. The names of the other people are still shown as part of the text (Moonblack)
+
+
+2011-01-17
+    - Added script to check if there's armor in inventory or equipped (player_has_armor?) (gegerlan)
+    - Used the script in the CE check shame (gegerlan) to fix issues with never ending menu loop bug (gegerlan)
+    - Updated exit from dali baths to use the new armor checking script (gegerlan)
+
+2011-01-16
+    - all signs in Dali North now keep their original picture, no matter which direction Garnet reads them from (previously if you read it from the wrong direction the picture would change) (moonblack)
+    - fixed the bug (more like an oversight) that prevented you from getting the last book (moonblack)
+    - made it possible to get Garnet's training sword even AFTER getting the book quest - previously you could get (moonblack) her sword only BEFORE you received the quest (moonblack)
+    - made a few sex scenes skippable - at the start of the scene you are asked if you want to skip it (moonblack)
+    - Fixed issue with James missing from Carthage Alley event (Gegerlan)
+    - you can no longer get the sphere of Vahn if you have not accepted the Guild Quest (moonblack)
+    - You no longer get stuck in the shrine bad end if you touch the handle of the sword (moonblack)
+    - the Black-Robed Girl in the cemetery correctly disappears if you have given her what she wants (moonblack)
+    - I may have changed something else I don't remember right now (moonblack)
+    - Fixed Dean quest progression (Gegerlan)
+    - Fixed costs related to sexodrome Louis event (Gegerlan)
+    - Implemented Qwerty's piercing (Gegerlan)
+    - fixed a typo in the message you get when asked if you want to skip a particular sex scene (I had written "yo" instead of "to"). Since no one reported the typo does that mean that no one uses the skip option, or that people just don't read the warning message? (moonblack)
+    - Added skip option to the scene when Garnet buys a drink at the Dali bar (moonblack)
+    - Garnet can no longer buy a drink in the Dali bar if she doesn't have 10 gold (moonblack)
+    - Excentric old man and Adventurer now remember if they've spoken to you before (Gegerlan)
+    - Text is now formated depending on the size of the dialog window (gegerlan)
+    - Removed 4 line limit in dialog (gegerlan)
+    - Hardcoded tracking if Garnet's in water. (Gegerlan)
+    - Tiles with the tag 1 is now considered water in which Garnet swims (gegerlan)
+    - Updated the water tiles used in Dali baths and Garnets home to be of type 1 (swimming) (gegerlan)
+    - Fixed Village Idiot Left (ev39) to use the correct counter (gegerlan)
+    - Tweaked Village Idiot to remove both actors (gegerlan)
+    - Made it possible to select no for Village idiot left (ev39) (gegerlan)
+    - Removed the constant walking thingy in BlizzABS config
+    - Added script to check if there's armor in inventory or equipped (player_has_armor?) (gegerlan)
+    - Used the script in the CE check shame (gegerlan) to fix issues with never ending menu loop bug (gegerlan)
+    - Updated exit from dali baths to use the new armor checking script (gegerlan)
+
+????-??-??
+
 - Changed "Update persona" script to easily change armors, accesories and helmets. In this way you can easily add new armors or accesories/helmets to the Avatar
 (See instructions)
 
