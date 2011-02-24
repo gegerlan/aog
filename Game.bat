@@ -42,6 +42,12 @@ REM #======================
 
 data_importer.exe %PROJECT_DIR%
 
+REM #======================
+REM #  Remember when we last had our content imported
+REM #======================
+
+logtime.exe %PROJECT_DIR%
+
 REM #=======================
 REM #  Start Game
 REM #=======================
