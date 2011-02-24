@@ -1,0 +1,1700 @@
+- Changed "Update persona" script to easily change armors, accesories and helmets. In this way you can easily add new armors or accesories/helmets to the Avatar
+(See instructions)
+
+####################################################################
+Instructions of how to add a new armor/accesory/helmet to the avatar.
+####################################################################
+
+The update persona script I have created has the following structure:
+
+Picture 2 is used to show nude garnet (either normal, normal with slave collar, normal with handcuffs, and normal with handcuffs and slave collar)
+Picture 3 Is used to show armor (cotton robe, latex outfit, etc)
+Picture 4 is used to show accesories
+Picture 5 is used to show helmets
+
+Picture 3 will show up "in front" of picture 2. Picture 4 will display "in front of" picture 3, and so on, So the base
+picture will be always Garnet nude, adding layers of pictures depicting armor, accesories, etc
+
+The structure of the event is like this:
+
+- Delete all pictures to clean all stuff
+-If Garnet is a slave
+	-If Garnet is handcuffed
+		-show base picture of garnet nude and handcuffed (with collar)
+		-go to ARMORS (handcuffed)
+	-else
+		-show base picture of garnet nude (with collar)
+		-go to ARMORS
+
+		ARMORS (HANDCUFFED)
+		-Go to armor1
+		-if equiped armor1 
+			(show pic of armor1 handcuffed)
+		-else go to armor2
+
+		-if equiped armor2 
+			(show pic of armor2 handcuffed)
+		-else go to armor3
+		.
+		.
+		.
+		-if equiped armor_n 
+			(show pic of armor_n handcuffed)               <---armor n is the last one
+		-else go to ACCESORIES (HANDCUFFED)
+
+		ACCESORIES (HANDCUFFED)
+		-Go to accesory1
+		-if equiped accesory1 
+			(show pic of accesory1 handcuffed)
+		-else go to accesory2
+
+		-if equiped accesory2 
+			(show pic of accesory2 handcuffed)
+		-else go to accesory3
+		.
+		.
+		.
+		-if equiped accesory_n 
+			(show pic of accesory_n handcuffed)               <---accesory n is the last one
+		-else go to HELMETS (HANDCUFFED)
+
+		HELMETS (HANDCUFFED)
+		-Go to helmet1
+		-if equiped helmet1 
+			(show pic of helmet1 handcuffed)
+		-else go to helmet2
+
+		-if equiped helmet2 
+			(show pic of helmet2 handcuffed)
+		-else go to helmet3
+		.
+		.
+		.
+		-if equiped helmet_n 
+			(show pic of helmet_n handcuffed)               <---helmet n is the last one
+		-else END
+else
+	go to check if Garnet is normal
+
+
+-If Garnet is Normal
+		-if ()
+			RUN ALL THE STUFF ABOVE BUT WITHOUT SLAVE COLLAR PICTURE
+		-else END
+-else
+	go to check if garnet is a dog
+
+-If Garnet is a dog
+	run the dog event's stuff
+-else
+	END
+
+
+Basically, what you need to do in order to add a new armor/accesory/helmet to the game
+is:
+1.- Create the item
+2.- Create 2 images of the item, one used for handcuffed Garnet and other for normal (this is specially important
+    if creating an armor). You may use the same picture if creating an accesory or a helmet. Depends of the image
+    you create
+3.- Replace the last lines of all branches (Garnet slave (handcuffed and not), Garnet Normal(handcuffed and not) of the
+    items:
+	If adding a new armor, change it like this:
+
+		-if equiped armor2 
+			(show pic of armor2 handcuffed)
+		-else go to armor3
+		.
+		.
+		.
+		-if equiped armor_n 
+			(show pic of armor_n handcuffed)               <---armor n is the last one
+		-else go to ACCESORIES (HANDCUFFED)
+
+                 ################################
+                 
+		-if equiped armor2 
+			(show pic of armor2 handcuffed)
+		-else go to armor3
+		.
+		.
+		.
+		-if equiped armor_n 
+			(show pic of armor_n handcuffed)               <---armor n WAS the last one, NOW YOURS IS THE LAST ONE
+		-else go to YOUR ARMOR (HANDCUFFED)
+		
+		-if equiped YOUR ARMOR
+			(SHOW PIC OF YOUR ARMOR)
+		else go to ACCESORIES (HANDCUFFED)
+
+And that's it
+#######################################################################################################################################
+
+
+- Added some pictures to graphics directory:
+
+For armors: 	cotton robe, cotton robe when handcuff
+		latex outfit, latex outfit when handcuff
+		bunny suit, bunny suit when handcuff
+		apron, apron when handcuff
+
+For accesories: Dog accesories, dog accesories when handcuff
+		necklace
+		slave collar 
+		blindfold
+		gagball
+		gagball updated
+		blindfold + gagball
+
+
+- Added 2 armors (accesories) on the database:
+		042:ballgag updated
+		043: blindfold + ballgag
+- Added state 027: "Clumsy and Gagged" for the blindfold + ballgag item 
+
+
+- Modified the Kristal normal stand picture and Kristal handcuffed stand so accesories and helmets can match the sprites
+
+- Modified the Garnet the dog Character so she has fixed dog collar and dog accesories equiped
+		
+- Added Variable 201: Dog autocollar.
+	Used to set an event with Cerberus if you decide to equip the dog collar (After he has already turn you back to normal and you possess the collar). He will assume he has already helped you, but you equiped the collar
+again. So he tells you he can help you again for some stuff. This is so Garnet can use the collar for some events (maybe when needs unnoticed access for some areas).
+Of course the Cerberus Event should be copied on all towns so garnet can turn to normal.
+
+- Added Variable 202: Dog trained. 
+	Used to set a different dialogue if you find the mistress after she has trained garnet. (It could occur that you turn into a dog via the dog house and Mistress
+	does not know Garnet At all
+
+- Added event pages for dog's Mistress that will show different dialogues
+
+Changes in DOG EVENTS:
+
+-CHanged Dali's Soldiers dog event: If Garnet is a Dog, the dialogue changes
+
+
+
+
+-Added event page for the soldiers on the Dali's Bar: If Garnet is a Dog, the dialogue changes
+-Added event for Pimp on Dali's Bar:If Garnet is a Dog, the dialogue changes
+- Reviewed all normal character events, so if Garnet is a Dog, they have propper dialogue
+
+
+
+==========================================================================
+
+
+
+
+
+
+
+
+5.37.82 = 337
+6.53.20 = 413
+
+
+
+2011-01-16
+
+ - Picking up the debug item now set S333 to on
+ - Chinaware debug item now requires S333 to be ON
+ - Teddybear debug item now requires S333 to be ON
+ - Flowerpots (outside Garnet's house) now requires S333 to be on
+ - Added script to check if there's armor in inventory or equipped (player_has_armor?) (gegerlan)
+  - Used the script in the CE check shame (gegerlan) to fix issues with never ending menu loop bug (gegerlan)
+  - Updated exit from dali baths to use the new armor checking script (gegerlan)
+
+
+2011-01-15
+
+    - Removed the constant walking thingy in BlizzABS config (gegerlan)
+    - Fixed Village Idiot Left (ev39) to use the correct counter (gegerlan)
+    - Tweaked Village Idiot to remove both actors (gegerlan)
+    - Made it possible to select no for Village idiot left (ev39) (gegerlan)
+    - Text is now formated depending on the size of the dialog window (gegerlan)
+    - Removed 4 line limit in dialog (gegerlan)
+    - Hardcoded tracking if Garnet's in water. (Gegerlan)
+    - Tiles with the tag 1 is now considered water in which Garnet swims (gegerlan)
+    - Updated the water tiles used in Dali baths and Garnets home to be of type 1 (swimming) (gegerlan)
+    - Excentric old man and Adventurer now remember if they've spoken to you before (Gegerlan)
+    - fixed a typo in the message you get when asked if you want to skip a particular sex scene (I had written "yo" instead of "to"). Since no one reported the typo does that mean that no one uses the skip option, or that people just don't read the warning message? (moonblack)
+    - Added skip option to the scene when Garnet buys a drink at the Dali bar (moonblack)
+    - Garnet can no longer buy a drink in the Dali bar if she doesn't have 10 gold (moonblack)
+    - Fixed Dean quest progression (Gegerlan)
+    - Fixed costs related to sexodrome Louis event (Gegerlan)
+    - Implemented Qwerty's piercing (Gegerlan)
+    - you can no longer get the sphere of Vahn if you have not accepted the Guild Quest (moonblack)
+    - You no longer get stuck in the shrine bad end if you touch the handle of the sword (moonblack)
+    - the Black-Robed Girl in the cemetery correctly disappears if you have given her what she wants (moonblack)
+    - I may have changed something else I don't remember right now (moonblack)
+    - Fixed issue with James missing from Carthage Alley event (Gegerlan)
+    - all signs in Dali North now keep their original picture, no matter which direction Garnet reads them from (previously if you read it from the wrong direction the picture would change) (moonblack)
+    - fixed the bug (more like an oversight) that prevented you from getting the last book (moonblack)
+    - made it possible to get Garnet's training sword even AFTER getting the book quest - previously you could get (moonblack) her sword only BEFORE you received the quest (moonblack)
+    - made a few sex scenes skippable - at the start of the scene you are asked if you want to skip it (moonblack)
+
+
+2011-01-04
+
+Added Event in East Carthage/sexadrome If owned by the pimp.
+Slightly lowered Carthage guard combat stastics,  now possible for slave to hurt Them.
+Added Bad end in Haunted forest if certian easily avoidable conditions are met.
+Fixed Display bug when choosing "gold" from debug menu
+Added "Level" Option to debug item
+Added Drain and Regen effects added debug events outside house to test them untill i can get them into spellbooks.
+Fixed display bug in Dali inn.
+Removed Annoying animation when unable to cast due to having a shield
+Added Gerlan's bugfixes in the sexodrome and the goblin caves
+Added Gerlan's bugfix in the east carthage dungeon event.
+Some minor bugfixes in East carthage Auction event.
+Added Qwerty's Orphanage 2nd floor
+Added and bugfixed Qwerty's Orphanage events.
+Replaced Dog kennel event with qwerty's placeholders to make becoming a dog more difficult.
+Fixed Glitch where becoming a slave while already a slave would double your level
+Added more slave equipable Items to East Carthage shops
+Altered Auction trigger to not trigger if you are owned by a carthage citizen.
+
+
+
+2010-12-18
+
+Added additional controls:
+End/num1 = cancel
+Ctrl(both)= Cast selected spell
+RightShift = Run
+
+Slaves and Dogs now have a MUCH harder time entering Carthage, still possible, but
+have fun  >:D
+
+Guards now roam Carthage to look for those who entered Illegially, If they catch you they'll throw you out unless you sucessfully resist arrest.  
+
+Fixed bugged gameover event in goblin caves,  slaves and dogs no longer immortal.
+
+
+Pimp no longer gives free money
+
+Fixed whips,  now properly equipable by Slaves, weaker than swords and undead are resistant,  but its better than nothing, and the whips add status effects.
+
+Modded Check hypnosis common event,  it now ensures all garnets share the same hypnosis/curse status as the current active garnet.
+
+Modded Check for Orgasm Common event,  Now much more dramatic max SP gains and HP losses,  applied an INT gain upon climax and applied the stat changes to all 3 garnets
+
+Altered the "Slave" "Adventurer" and "Dog" Class change common events, It no longer Initalizes the garnets stats when called,  it also no longer removes the dog or slave Collars on accident (which was never seen since it also deleted the extra collars)
+
+Added 2 new spellbooks with 3 new spells.
+
+Work was done on the Library tentacle rape scene.
+
+
+2010-12-17
+
+Altered Updtate sprite common event, Now returns sprites of regular nude Garnet as a placeholder instead of the glitched Slave-nude garnet.
+
+Altered Check Shame common event, Garnet ignores the reequip requirement if Hypnotized A slave or a Dog
+
+Added "Goblin Punch" skill to goblins and hobgoblins,  Its weak but it inflicts stun and confusion and ignores armour.
+
+Fixed numerous text bugs and one game breaking bugs in the Various Library Book
+events around town including Game breaking bug in garnets bedroom (permanently lowered move speed to 1)
+
+Trippled garnets starting base HP but increased the HP of several monsters as well.
+
+Lowered the PhyDEF of the Bandit boss but raised his HP should be easier to hurt now but still hard to kill.
+
+Fixed Broken event at Dali Inn
+
+Retiled the sewers in an attempt to restore the ability to move in them.
+
+Added Bronze whip to Slave vendor in Dali
+
+Added Bronze Rod to chest somewhere in Dali
+
+
+
+2010-12-16
+
+Added 9 usable combat spells
+
+Added Library quest to learn spells, 18 books are now hidden around Dali village
+
+Commented out previous perversion script, created a constantly running common event to keep track of current pervision regardless of current class
+
+Modified "Sleep in bed" common event, now works differently when cursed
+
+Library H-event started but not completed
+
+Quadrupled the SP gain from Dog events for balance purposes
+
+Altered the Debug Common event to increase/decrease SP in addition to perversion
+
+
+To use spells.
+1) talk to the Librarian to start the library book quest
+
+2) Retrieve all 18 books either by searching town, or by using the temporary debug 
+events in the library
+
+3) Talk to the Librian with all 18 overdue books, and she'll let you check out spellbooks, you start only able to check out one book at a time, but this number can 
+easily be increased by quests, there is a debug event in the library that sets your max spellbooks to 2
+
+4) Use the spellbook in your inventory,  You'll learn between 0 and 3 spells right now depending on your class and level,  Currently Adventurer Can learn from all 3, Slave garnet from 2 books and Dog garnet only from one.
+
+5) Go to the Hotkeys menu, hit up and down to select a hotkey slot and hit confirm, then pick a spell to go in that hotkey
+
+6) Leave the menus, then hit the number corresponding to the hotkey slot you want to use (aka "1" for the first hotkey "2" for the second etc)
+
+7) get in range of an enemy and hit the "C" key to cast a spell
+
+8) The spells are strong, but SP is limited, and only refills from H-events or Items
+
+9) To change your spells talk to the librarian and return the books, you'll forget your old spells and get the book containing your new ones.
+
+
+
+commit 4ebe09114a9882760ad20c7485563d226f9fa3e7
+Merge: 0842c04 db73486
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Sep 10 19:06:00 2010 +0200
+
+    Merge branch 'Unstable' of git.assembla.com:aog into Unstable
+
+commit 0842c0498808f7a3de127553db3059315049c877
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Sep 10 17:58:44 2010 +0200
+
+    Added a condition to CE6 (Check Shame) to make sure the armor can be equipped before forcing the player to the menu. Fixes #75
+
+commit db734862a4a988cd96c6b7d964ccd952a5a15b0e
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Thu Sep 9 22:28:29 2010 +0100
+
+    Removed all variables set in the intro (crashed gambling). Removed variable check (debug) event from Garnets house
+    
+    Map008
+      EV17 Removed
+    Map014
+      EV1
+        V2,V3,V4,V5 and S7,S21 value set removed
+    Tileset
+      Made sure the cock keeps on top of Garnet
+
+commit 84ecf30030530f96981310d66cd004be917d6af4
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Wed Sep 8 19:39:10 2010 +0100
+
+    Reenabled \oi function of UMS but added checks to see if the item is valid (not nil)
+
+commit 8593acc0dfb4a442426878c45227b66981d9f2f6
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Wed Sep 8 19:16:40 2010 +0100
+
+    Removed \oi[] from UMS since it keeps crashing the game (we don't use it). Fixed spelling in Dali Farm Penn (Somthing->Something)
+
+commit 2b264f65d9b256a02ad2ae3dfaa6bf468930fede
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Mon Sep 6 22:24:10 2010 +0100
+
+    Fixed clipping in pen and rewrote some of the dialog. Pigs now only needs to be feed once, but there's more of them. Deprecated V Pig Food for a Pig Food Item.
+    Removed through for Rex once you leave the fenced area making him less prone to walk through walls. This may reintroduce bug which crashes the game _if_ he finds a way out and can collide with you. Rex may also start walking on/through walls if Garnet is within the fenced in area.
+
+commit efe0a5977267d028090aa2ee82d932bf1574559f
+Merge: 3bddf78 6647789
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Sep 5 14:47:28 2010 +0200
+
+    Merge branch 'Unstable' into KTS
+    
+    Conflicts:
+    	Data/Scripts/digest.txt
+
+commit 6647789c9a3424047da08f252c9bb0d92860c1a6
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Sep 5 14:43:22 2010 +0200
+
+    Added nil checks for Game_System script, added explicit nil check for Sexodrome script. test #69
+    Made the activator events work in Sexodrome again by removing switch check for time and adding conditional for timer.
+
+commit 167c4c71dc9a01c7bc5d81a8d28cec4b18429a20
+Merge: 2bc2667 14b3e7e
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Sep 5 13:41:17 2010 +0200
+
+    Merge branch 'Unstable' into PerversTrack
+
+commit 14b3e7e5c3fa04efa5724d6b5ee8a8d9c3835c3c
+Merge: 4997902 b9a595b
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Sep 5 13:37:31 2010 +0200
+
+    Merge branch 'master' into Unstable
+
+commit b9a595bdd7f35aabe135967302d0acf7df7c251c
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Sep 5 13:17:11 2010 +0200
+
+    Added content required to build the project from source. Added readme file to help the process.
+
+commit 2bc26677665046f985f2dfd9b2750bba626974bc
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Sep 3 20:57:58 2010 +0200
+
+    Added SP change (perversion) after sex
+    M1
+      EV50
+        A1 SP+20 after sex
+      EV56
+        A1 SP+10 after sex
+      EV57
+        A1 SP+10 after sex
+      EV58
+        A1 SP+10 after sex
+      EV59
+        A1 SP+10 after sex
+    M12
+      EV4 (Simon)
+        A1 SP+10 after sex
+      EV6
+        A1 SP+10 after sex
+    M9
+      EV6
+        A1 SP+10 after sex
+    M16
+      EV4
+        A1 SP+10 after sex
+    M29
+      E5
+        A1 SP+10 after bad seqence
+    M24
+      E7
+        A1 SP+15 after sex event
+    M62
+      E5
+        A1 SP+10 after sex
+      E9
+        A1 SP+5 after sex
+    M63
+      E3
+        A1 SP+20 after sex
+      E1
+        A1 SP+20 after sex
+      E2
+        A1 SP+20 after sex
+    M68
+      E3
+        A1 SP+25 after sex
+    M7
+      E1
+        A1 SP+30 after sex
+      E18
+        A1 SP+10 after sex
+      E20
+        A1 SP+30 after sex
+    M78
+      E1
+        A1 SP+30 after sex
+    M59
+      E6
+        A1 SP+20
+      E8
+        A1 SP+20
+    CE29
+      A1 SP+25 after brothel event
+
+commit 1660c64d5409fa3ca523269aae7cc8ea44f64af8
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Sep 3 20:11:42 2010 +0200
+
+    Added script perversion to track SP and change V49 appropriately (percentage/10). V49 should from now on only be seen as read-only, and SP is instead used to change perversion. Changes to v49 will become undone at a SP change.
+    Binding perversion to SP was the original intent (I gather) and can be quite fun. maybe you should be able to "channel" your perversion :D
+    
+    Script
+      Perversion
+        Hijacked Game_Battler's sp= call to see if Actor 1's (Garnets) SP was changed, and if so change V49 to one tenth of the percentage (valid range 0-10).
+    Map008
+      Removed SP change from dog house. (How come it changes HP +9999 when the Inn only gives you HP+200?)
+
+commit 3bddf7851bc13e4f839173b0b063d9f4ebea8db6
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Sep 2 19:46:16 2010 +0200
+
+    Updated Tiles used in Carthage, removed BGS after leaving Goblin Caves in Bramble Woods
+
+commit 3e3cc3f6b5729ae9a5c36c069e49f205c1bb3160
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Sep 2 15:18:54 2010 +0200
+
+    Added speedup of time. Fixed path in Bramble woods. Fixed some of the issues with KTS in Carthage East. Added KTS checks in Carthage Main Street.
+
+commit 48ffd75ee00cb40ec03334bab4ce617917068661
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Wed Sep 1 20:14:09 2010 +0100
+
+    Implemented the VX script KTS (Pokemon edition?) Originally intended to have the time locked to the players time, but remade it to the original internal tracker. Implemented some of the checks in Dali village and Carthage East (not tested), and renamed outside maps to have [KTS] to allow time tracker. Deprecated old CE and Variables and Switches for time tracking.
+    Uses S176-183
+    Uses V51-64
+
+commit 4997902d4aac4e23df15935d7d9501400ed11954
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Wed Sep 1 17:17:52 2010 +0100
+
+    Added BGS and BGM for intro (far from perfect).
+    Redid pathing for dad in intro (set to through)
+    Fixed spelling in intro your->you're
+    Fixed sprite check (game_actor->game_part as game_actors aren't updated when equipment is changed)
+    Removed actor 4 and 5 to get undressed in bath (gave the player an extra robe)
+    Set V89 (Nudity OK) as player enters/exits baths
+    Added call to CE Update Equipment after re-dressing call
+    Redid how equipment is checked (uses the switches, and defaults to cotton robe)
+    Moved to switch based system for dog house (Dali). Updated 2nd event that was previously missed
+
+commit c5fce67e00b03cacb6a6616575f5029b64930142
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Wed Sep 1 15:43:04 2010 +0100
+
+    Added CC BGM music to assets. Credits can be found in the CREDITS file
+    Kendra Springer: Hope
+    Loopmaster: Medieval Jester
+    Oscar Remius (Maverlyn Darkstar): Symphony of the forest - WIP
+    Tiara (smartpoetic): A Medieval Town-Loopable
+    
+    Added Symphony of the forest - WIP as the BGM for Bramble woods
+
+commit b302e9a87e4b006fddcd0ee5fae93f985c98f61b
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 31 23:41:42 2010 +0200
+
+    Fixes #63 removed the equip check for Class changes with regards to piercings.
+    Fixes #64 issue with Rex crashing the game, but he can now walk through walls :( made sure the right sprite is used after the 2nd event.
+    Fixes #65 modified CE for updating sprite and persona
+    Update the debug item to use the CE for changing slave/dog class.
+    Made a stub for ticket #33 with CE Show Persona & CE Image Cleanup
+    
+    CommonEvents
+      CE1
+        Calls CE2, CE3, CE4
+      CE196
+        Calls CE199
+      CE198
+        Actor changed to 1 for all events
+    Map016
+      EV1
+        SE2,4 : Through set to ON
+    System
+      S127 named Hide Persona
+      S128 named Hide Sprite
+
+commit 10e31be1436fe9bb065496ca93673f96489f6f3e
+Merge: 215c5ae 5db685f
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 31 18:47:08 2010 +0100
+
+    Merge branch 'Script_EqCheck' into Unstable
+    
+    Conflicts:
+    	Data/Scripts/digest.txt
+
+commit 215c5aeab78fb856f51ed3f77ead3b59d9cb86aa
+Merge: 0e067c0 db9bb59
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sun Aug 29 22:36:41 2010 +0100
+
+    Merge branch 'Unstable' of git.assembla.com:aog into Unstable
+
+commit 5db685fec0feb8113fe9c606117cd7604e7ae856
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 31 18:39:13 2010 +0100
+
+    Updated checks for dog/slave in Inn and adv. quest. Updated nude check. Reset start position.
+
+commit 958dc4668fad004e0c8d5f98c5c0605985bd1ec4
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 31 18:20:58 2010 +0100
+
+    Added a script based system for handling the timeout in Sexodrome. Added script for better check if armour is worn in the Check Equipment CE. Modified so that the changes to dog/slave uses CE, and is only checked through the relevant switches. Made changes to maps related to the checks of dog/slave.
+    Added script stubs for Time (Tracker) and Persona
+
+commit 40f1e1fb18868d72f434b6cc15098fccca1c3fd0
+Merge: 0e067c0 db9bb59
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sun Aug 29 22:36:41 2010 +0100
+
+    Merge branch 'Unstable' of git.assembla.com:aog into Unstable
+
+commit db9bb599a5cc0bf057e76134a58b5a41ac16bd1e
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Aug 27 01:56:44 2010 +0200
+
+    Fixed tileset related issues with Dali baths. Made the drawers accessible in womens side. Fixed bug with Garnet being reported nude while not.
+    CommonEvents
+      CE198
+        Sets S90 (Nude) to off before making checks
+    Map061
+      Redefined tileset use to avoid wall walking
+    Map062
+      Redefined tileset use to avoid wall walking
+      Added events for making it easy to change
+      Added check if Garnet's naked as she leaves
+    Tilesets
+      Updated tileset 1.2 passage and priority for tilesets used in Dali Baths (walls, desk, and that ball thingy)
+
+commit cba617445093647673e9039e185581a999967fc3
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Aug 27 01:13:53 2010 +0200
+
+    Rewrote Pimp in Dali pub gambling event. Moved drunk in Dali pub event back to original position when finished. Added a simple script to handle RPS gambling (return -1 = loss, 0 = draw, 1 = win). Fixed persona tracking.
+    
+    Map007
+      EV1 - Drunk Man
+        Transfers to 5,7 after SE2
+      EV17
+        Rewrote gambling and debt
+        deprecates V5, V6 and V7
+        Moved dog & slave checks into new SE
+    Common Events
+      CE195
+        Changed check for S127 to OFF
+
+commit ea669e19e699ec14287a59d95b0f42154703ffe6
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 26 20:23:23 2010 +0200
+
+    Added Blizz-ABS button-condition fix. Added piercing selection based on switches 151-.... Modified qwety's maps tileset and tileset use.
+
+commit 1caf598cb54e0b99026a2e2230ce3891bfe0a473
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 26 18:30:21 2010 +0200
+
+    Added most armors to sprite and persona update, default to cotton robe.
+
+commit 3e6c5885039af4140d9c6b9e417ee1d1dd91ff42
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 26 16:29:36 2010 +0200
+
+    Fixed minor clipping issues with roofs in Dali Village
+
+commit 2b1a2156683c765c448be7ef3bdb72069b403157
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 26 16:21:43 2010 +0200
+
+    Re-added the equip item check for Game_Actor, added debug item retrievable from Garnets house 1st floor.
+    Added some nude dialog choices and cleaned up events by placing dog/slave checks in seperate events.
+
+commit 760018e9f63063f985aab3f8ebc39075d15913ee
+Merge: 48741ce 0ccb4cb
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 26 15:37:25 2010 +0200
+
+    Merge remote branch 'remotes/origin/BlizzABS2_8' into Unstable
+
+commit 48741cead13fb12d2e93c7dad6b344a1158dc694
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 26 15:35:43 2010 +0200
+
+    Fixed issue with SexoDrome tilesets and missing customers
+    
+    CommonEvents
+      CE27 (Sexodrome - Cleanup)
+        V14 random (1...10)
+    Map066
+      Added inter-wall blocking of player
+      EV3 - Customer & EV8 - Customer
+        removed set graphics none
+        removed wait move to finish
+        sets V14 to 0
+      EV22 (copy of EV18) - Pimp reward trigger
+        added @ 12,25
+        Catches player with the new tileset passage
+        added extra step up & down for EV1 (Pimp)
+
+commit 624cf60914a062de02b26ecfda33cf921c78207f
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 26 14:53:08 2010 +0200
+
+    Fixed issue with Mistress Smiths capture of Slave Garnet freezing the game. Cause: pathing blocked for ev3 made the game reluctant to change maps.
+    closes #57
+    
+    Map002
+      EV003
+        Moved to 9,6
+      EV006
+        Changed EV003 movement to three steps right, ignore if can't.
+
+commit 0e067c0c96a1465b40cb2ecd9790b44e4bd00d4d
+Merge: fd04aa2 0ccb4cb
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 23:35:43 2010 +0100
+
+    Merge branch 'BlizzABS2_8' into Unstable
+
+commit 0ccb4cb5627ab7c3f7fa5f49e2973ef5f68a79cc
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 17:12:06 2010 +0100
+
+    Updated the Blizz_ABS keybindings to be closer to the one in prev. versions
+
+commit fd04aa214745cc36b89ca0574924e8ded3728b5f
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:47:56 2010 +0100
+
+    Set sprite and persona tracker to on by default
+
+commit fb077337fe32a8f2faa8d518f7bd75373cfb6936
+Merge: ff87ec9 35504f9
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:33:22 2010 +0100
+
+    Merge branch 'PiercingRUs' into Unstable
+
+commit ff87ec96e395f0b0f25cc42950354fc08d93e6b3
+Merge: 18a73b0 8c66b74
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:33:02 2010 +0100
+
+    Merge branch 'BlizzABS2_8' into Unstable
+
+commit 18a73b00498ef396fdba56925d7ef436f00cb627
+Merge: 6a74120 b98d6a7
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:32:50 2010 +0100
+
+    Merge branch 'Nude_Switch' into Unstable
+
+commit 6a741203f8a4f2d7ef2f19aa375d9def4810442c
+Merge: 8a0b7ec 53b66e5
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:32:32 2010 +0100
+
+    Merge branch 'CarthageEast' into Unstable
+
+commit 8a0b7ec29539e1c4a7c74667ea29173acbc11c72
+Merge: 6e397ca a673d12
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:32:21 2010 +0100
+
+    Merge branch 'tileset' into Unstable
+
+commit 6e397caa525e39d40e2780d45e493315fa1e4b05
+Merge: 8c02467 3af92f1
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:32:09 2010 +0100
+
+    Merge branch 'BG_events' into Unstable
+
+commit 3af92f1a0eab456de88660aeac220fae413240b7
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:30:16 2010 +0100
+
+    Removed repeating background in crypt (Dali)
+    
+    M026
+      EV10
+        Added erase event
+
+commit b98d6a70a2ba1ed8a4d82bf4f33c6073390af2eb
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 15:25:48 2010 +0100
+
+    Added a bunch of notices of Garnet being naked, and added support for some places being OK with nudity (bath)
+
+commit a673d1259407c200438f5f62a9091bb8c733c5a4
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Aug 24 14:15:37 2010 +0100
+
+    Updated tilesets and maps to fix clipping issues with Cemetery (Dali), Dali Village, Dali Pub, Church (Dali). Also closed off the sides in the Church (Dali) so it doesn't look like there are paths east and west.
+
+commit 35504f96400e18eaac0de654e3bc211b80dc3df9
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Aug 23 20:43:28 2010 +0200
+
+    Added qwertys piercing stuff
+
+commit ba8d8ed8c66121e28f3c5cd96fb72ba8ac565acc
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Mon Aug 23 15:10:19 2010 +0100
+
+    Removed autostart switches (Death, Embarrassing, Running) from Dali Village
+
+commit 24685ff705382a2474f060368b492a22b38a99ac
+Merge: df0e2b6 8c02467
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Mon Aug 23 10:28:55 2010 +0100
+
+    Merge branch 'master' into Nude_Switch
+
+commit 8c66b7490889383d8a821fe6436fefa525db1411
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Mon Aug 23 10:27:21 2010 +0100
+
+    Added running to Blizz-ABS with shift, removed loot and auto game over, added 8-way movement, removed minimap and hotkeys
+
+commit 53b66e5789be4a627aee86e351227cda8c943cf5
+Merge: c7231df 065cb85
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Mon Aug 23 10:10:35 2010 +0100
+
+    Merge branch 'tileset' into CarthageEast
+
+commit 065cb859b446d965918848dc1217511d76111041
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Mon Aug 23 10:08:55 2010 +0100
+
+    Fixed some of the Tileset related issues in Dali
+    Map001
+      Modified tilesets for buildings and fence
+      Added blocking events and added events for handling priority around street merchant
+      EV029
+        Moved to 34,35
+    Map021
+      Redid tiling for farmer's house. Moved most tiles to lvl 3, wouldn't work otherwise. Added events for windows as such
+      Added path to 5,3
+      EV004
+        moved to 5,22
+
+commit 8c02467b3d99c2adb9e8f457da8b9b6ef2372ec5
+Merge: f0b3b75 67bd280
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sun Aug 22 14:39:51 2010 +0100
+
+    Merge branch 'BG_events'
+
+commit f0b3b75f913193103c52492d1b89d2ed43c400b7
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sun Aug 22 14:39:39 2010 +0100
+
+    Update what map the west entrance in goblin caves leads to.
+    
+    Map037
+      EV001 - E2
+        appointment set to M048 @ 9,23
+
+commit 67bd28032441589d43fd5ff2a00480383524c17b
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sat Aug 21 20:53:46 2010 +0100
+
+    Added erase event to the events i found for the maps which contained parallel events for music (and other stuff) which damaged performance
+
+commit 6fa7e0eafa0080f7b92dc3bed1ea1677c61126c0
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sat Aug 21 20:31:45 2010 +0100
+
+    Reintroduced path to swamp, fixed map to goblin caves transfer, and made the goblin cave passable
+    
+    Map033
+      Fixed missing path to swamp west
+    Map045
+      EV003
+        Moved appointment to M047 @ 11,16
+    Tileset
+      Modified passage for rock walls used at Goblin Caves
+
+commit 140a041f7366fab106ce973ed42c1e33ca66d0f1
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sat Aug 21 18:56:38 2010 +0100
+
+    Fixed passage for drawer used in Garnets house, 2nd lvl.
+    
+    closes #38
+    
+    Tilesets
+      Drawer passage modified
+
+commit 3c041d5c19c0d92fbb8b7cf201a273fc75748fe6
+Merge: 09f266a c34fa39
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sat Aug 21 18:49:15 2010 +0100
+
+    Merge branch 'master' of git.assembla.com:aog
+
+commit 09f266a8a9add40f0e9ede978b78e67d480c39e8
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sat Aug 21 18:34:24 2010 +0100
+
+    Fixed issue with incorrect transfer from goblin caves to dungeon
+    
+    closes #37
+    
+    M037
+      EV002
+        Moved appointment to M039 @ 5,13
+    M039
+      EV001-3
+        Moved appointment to M037 @ 11,3
+
+commit c34fa39f49ac671cca5738b73b94a5e559e44385
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Sat Aug 21 18:34:24 2010 +0100
+
+    Fixed issue with incorrect transfer from goblin caves to dungeon
+    
+    closes #4
+    
+    M037
+      EV002
+        Moved appointment to M039 @ 5,13
+    M039
+      EV001-3
+        Moved appointment to M037 @ 11,3
+
+commit df0e2b6d003b459016c52f6ba93b90e81f80e030
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Wed Aug 18 20:02:26 2010 +0200
+
+    Removed deprecated sexodrome common events and switches (Common Events) and removed deprecated events on Map066 (Sexodrome). Changed nude switch to 90 (Nude) and update CE Shame to check for perverseness where < 5 will open the menu for equipping items.
+
+commit c7231dfa23bda3fe1284dad5ef048625488f5096
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Wed Aug 18 17:17:40 2010 +0200
+
+    Added basic time check for visitors at Carthage East. Modified transport to lower level and trip back from Carthage East. Fixed clipping with golden fence.
+
+commit 76e5c86ff0cab166f8cdb4b83eb48d13c6ff3ad3
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Wed Aug 18 15:48:26 2010 +0200
+
+    Updated Blizz-ABS to 2.8, the settings (Blizz_ABS_1.rb) still needs to be tweaked
+
+commit 1d76d7bea1345daf11f1015ec5d4d33b6227b2f2
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Aug 15 17:32:50 2010 +0200
+
+    Fixed issue with changing weapons would freeze the game. Made the Naga animation start after the sprite @ old lady house. Tweaked Garnets fathers walk in intro. Made Garnet (1) remove all equipment (except accessories) when transfered to OW event.
+    
+    CommonEvents
+      EV197 - sets S100 (Update Equipment) to OFF
+    Map008
+      Prometheus
+        Removed one down command
+    Map029
+      EV_Old_Woman
+        2 : sets Garnet(1) weapon, shild, helmet, body armor to none
+    Map031
+      Map031
+        2 : Moved S108 = ON to after relevant sprite has been set
+
+commit 42c5dabfb05b61fd79df7afb7d77a776b649341a
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Aug 15 14:25:42 2010 +0200
+
+    Implemented Zony's new resized images. Added tracker of Garnet's position and makes the avatar transparent if too close to the right screen border.
+    
+    Resources used:
+      CE195 (Track position) - Follows the players position relative to the screen and making the avatar transparent if needed
+      V027 (Garnet Y Screen Position) - Players position relative to the screen
+      V028 (Garnet X Screen Position) - Players position relative to the screen
+      S0112 (Track Position) - update v027 & v028, and updates avatar if S127 is ON
+      S128 (Persona transparent) - is the avatar transparent
+    
+    Armors
+      Added stub for bunny suit
+    CommonEvents
+      CE195 (Track position)
+        Uses V027 (Garnet Y Screen Position) and V028 (Garnet X Screen Position)
+        Updates screen position of player ib V027 (y) and V028 (x)
+        If S127 (Persona update) is ON, will make Picture 2 transparent if V028 >= 450, will return to normal opacity if not.
+        Tracks if transparent in S0128
+      CE199 (Update Persona)
+        Added images for dancing Garnet, Garnet in bunny suit
+    Map008
+      EV009
+        Added S112 (Track position) when settings persona
+    System
+      Fixed order of naming (merges seems to break these)
+    MapInfos
+      Moved Dali away from under intro to a root folder
+
+commit 01fe1e8e88e96fa9817ad51d2b19623a144d291a
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Aug 13 20:21:47 2010 +0200
+
+    Fixed clipping on Map079 and moved Bartender closer to the desk
+    Map079
+      EV005
+        Moved to 18,17
+    Tilesets
+      Modified tiles used @Map079 (walls, one stove, containers)
+
+commit 457f9efd03131cf042cdc3e525eadf118d5f28aa
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 12 22:30:49 2010 +0200
+
+    Added a bunch of empty maps
+    
+    Removed digest.txt
+    Added Map80-125
+    MapInfos
+      Added reference to maps 80-125
+      Added reference to Map051 (Barracks) that had prev. been removed
+
+commit 1b987bae2ff81299e8c510bebdff30215b902da9
+Merge: 8eadf92 d7519e8
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 12 19:46:45 2010 +0200
+
+    Merge branch 'op3'
+
+commit d7519e8541182415e6c582b9606a9db179c24e9e
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Aug 12 00:31:14 2010 +0200
+
+    CommonEvents
+      029
+        Set V16 to 5
+    Map001
+      EV025
+        Added check for Armor 38 (Apron) is equipped for Garnet 4
+      EV033
+        Appointment set to 12
+    Map002
+      EV003
+        Removed autorun from E#3
+    Map008
+      Added lvl 3 tiles
+      EV002
+        Appointment set to 9,10
+      EV003
+        Moved to 17,11
+      EV005
+        Set to cancel if can't move for Player and EV006
+      EV011 (Blocker)
+        Added @ 10,5
+      EV012 (Blocker)
+        Added @ 2,10
+      EV013 (Blocker)
+        Added @ 11,5
+      EV014 (Blocker)
+        Added @ 12,5
+      EV015 (Blocker)
+        Added @ 12,4
+    Map009
+      EV001
+        Appointment set to 17,12
+    Map038
+      EV005
+        added @ 29,10
+        Teleport Map043 @ 1,5
+      EV006
+        added @ 29,11
+        Teleport Map043 @ 1,6
+    Map042
+      EV002
+        Appointment set to 13,3
+      EV003
+        Appointment set to 13,3
+    Map043
+      Removed path to right
+      EV001
+        Added subEvent #2 -> default hidden
+      EV016
+        Added @ 0,5
+        Transfer Map038 @ 28,10
+      EV017
+        Added @ 0,6
+        Transfer Map038 @ 28,11
+    Map066
+      EV001
+        #2 Changed V16 check to 5
+        #3 Changed V16 check to 10
+      EV018
+        Change V16 check to 5 & 10
+    MapInfos
+      Goblin Caves - West ... removed???
+    System.
+      0135 Named swimming
+      0136 Named
+    Tilesets
+      Tried to fix clipping for 53 with piano, table, and added priority for wooden top walls
+
+commit c59ddd7b7c0629b5e006f6a73337b8d31b5776c5
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Wed Aug 11 01:40:31 2010 +0200
+
+    Attempt to merge Omerpaz uploaded files... again... third time's the charm... right?
+
+commit 8eadf9279e50a0256dbe68442712bb798effb96d
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 20:09:44 2010 +0200
+
+    Fixed width of Dali pub
+    Map007
+      Width set to 22
+
+commit a12ae5719a416dfd11efa89e3bbcd425481ab451
+Merge: 4b167ef 87b4ec2
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 11:49:33 2010 +0200
+
+    Merge branch 'CE'
+
+commit 87b4ec23fa5b7837e1c42d1e01c4f19b48cf8f55
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 11:47:59 2010 +0200
+
+    Updated Carthage East adventurer. renamed goto statements to Slave is for sex & added fading to alley transfer.
+
+commit 4b167efc00e40298c5bae32a332f33d5c88bedf3
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 11:07:06 2010 +0200
+
+    Fixed naming issue with Carthage Auctioned and Carthage Auctioned Adventurer
+    System:
+      S326 named Carthage Auctioned
+      S327 named Auctioned To Adventurer
+
+commit 45ed0e281a3cb2c6d8ec9025d17f1d86d69065ed
+Merge: 45e0aa4 decf851
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 11:02:56 2010 +0200
+
+    Merge branch 'CE'
+
+commit 45e0aa4aea9981a1caa3d8d416f3bc26666d3308
+Merge: 07f2b32 c3310c0
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 11:01:29 2010 +0200
+
+    Merge branch 'Omerpaz2'
+
+commit 07f2b323fe9282b2a6745f427421b4c630d278f6
+Merge: 9552acc 4c95f0a
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 11:00:42 2010 +0200
+
+    Merge branch 'CarthageEast'
+
+commit decf851d825b6827e5310fb238fc85d49fde8a1f
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 11:00:15 2010 +0200
+
+    meh
+
+commit 6889b3fe5f6dcdfec4985ec5e093101dcb19cc4d
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 10:36:38 2010 +0200
+
+    Map076
+      Transplanted content from the old CE branch
+    Map079
+      Updated to the old CE branch
+    MapInfos.yaml
+      Added reference to Map079
+
+commit d22564a3ca79349a2a961645622e01ed57060ac5
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 10:09:08 2010 +0200
+
+    Introduced Dog checks in Carthage East
+    Map076
+      Added a couple of dog checks. Most of them are stubs so the need content added to them
+
+commit 9552accaf15d9bd478bced2ebfa3b5ecbc100841
+Merge: d99e339 92555ae
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Aug 10 00:12:18 2010 +0200
+
+    Merge remote branch 'remotes/Assembla/Nude_switch'
+
+commit c3310c0a7a45ae32175761272a8df3642cd425e4
+Merge: a8db311 d99e339
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Aug 9 23:24:13 2010 +0200
+
+    Merge remote branch 'remotes/Assembla/master' into Omerpaz2
+
+commit a8db3113b29ef77dc6b93f93442fed31b5f5935c
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Aug 9 23:03:09 2010 +0200
+
+    Fixed some of the iffies with regards to old events with the new maps. Critical changes @ Felix house (lower & upper levels) as well as with Garnets storage room (placement and teleportation)
+    
+    Map001
+      EV009 - #4 - changed appointment to 9,13
+    Map008
+      EV002 - #4 - changed appointment to 9,10
+    Map010
+      EV001 - Moved to 9,11
+      EV002 - Moved to 12,7
+      EV003 - Moved to 9,3
+    Map018
+      EV005 - Moved to 6,11
+      Felix - Moved to 8,9
+      EV003 - Moved to 13,4
+        Changed appointment to 17,5
+    Map028
+      EV001 - Moved to 17,6
+        Changed appointment to 13,5
+
+commit acd4702acb30777a49a94396d9e068779ae9b165
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Aug 9 22:48:31 2010 +0200
+
+    Fixed the maps with missing tiles by changing tileset to 53. Moved all events in t Dali pub one tile right
+    
+    Map007
+      Moved all events one tile right
+    Map010
+      Changed tileset to 053
+    Map016
+      Changed tileset to 053
+    Map018
+      Changed tileset to 053
+    Map027
+      Changed tileset to 053
+    Map028
+      Changed tileset to 053
+    Map072
+      Changed tileset to 053
+
+commit 45bd7df8647d3c06a491188cc030e4b869452b4d
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Aug 9 22:37:50 2010 +0200
+
+    Attempt to mend the maps... again. May require some work with the location of events and the tileset's all fooked up on some maps.
+
+commit d3c8a4506be25177b27d91ff2c5c35c3f9787bf4
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Aug 9 17:00:05 2010 +0200
+
+    Added Zony's images and animated the Old Woman basement event. Added switch (135 - Swimming) and updated the persona CE to take this into account (if normal and nude)
+    
+    added /Graphics/Pictures/bath.png
+    added /Graphics/Pictures/cum 3.png
+    added /Graphics/Pictures/naga 1.png
+    added /Graphics/Pictures/naga 2.png
+    added /Graphics/Pictures/naga 3.png
+    
+    Map031 (OW_Basement_2)
+      EV_Controller
+        Added sub-event #2 (copy of original)
+        Sets S108 (Naga Sex) and S109 (Nage Sex Finish)
+    Map062 (bath in)
+      Added Swimming Trigger x 36 to set S135 (Swimming) to ON + CE199 (Update Persona)
+      Added Swimming OFF Trigger x 36 to set S135 (Swimming) to ON + CE199 (Update Persona)
+    CommonEvents
+      199 (Update Persona) - added check for S135 (Swimming) if normal and no cotton robe. Sets picture to bath it that's the case.
+      207 (Naga Sex) - Parallel S108(Naga Sex). Loop of Naga Sex.
+      208 (Naga Sex Finish) - Parallel S109 (Naga Sex Finish). Sets S108 to OFF. calls CE196 (Image Cleanup) Sets S109 to OFF. Naga sex finish with speedup and cum
+    System
+      S108 - named Naga Sex
+      S109 - named Naga Sex Finish
+      S135 - named Swimming
+
+commit d99e3399879194b5c38a7dd374ba499b8a084da3
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Aug 8 18:59:11 2010 +0200
+
+    Removed check for debt for pimp @ Carthage brothel making the pimp ignore Garnet.
+    Map066
+      EV001 (Pimp) - Removed sub-event 4 which had V004 (Debt) as a condition.
+
+commit 6c463ad495eeb1d488fddb58c6631ac5264b3039
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Aug 8 18:46:24 2010 +0200
+
+    Update Zony's images for transparency, added animation for pig and Rex.
+    Map016 (Dog Trainer - Back garden)
+      EV004 (Rex) - Added animation events. Sets S0106 (Dog Rex Sex) and S0107 (Dog Rex Sex Finish). Doesn't change the screen tone after the event finishes.
+    Map063 (pen)
+      EV001-3 (pigs) - Added animation. Sets S0105, calls CE196 (Image Cleanup).
+    
+    Common Events:
+    196 (Image Cleanup) - Moves picture 2 out of image, calls CE199 Update Persona
+    201 (Dog Sex Finish) - calls CE196 Image Cleanup. Removed set S0100 ON
+    203 (Dog Dog Sex Finish) - calls CE196 Image Cleanup. Removed set S0100 ON
+    204 (Pig Sex) - Parallel S0105 (Pig Sex). Basic sex loop based on 200 (Dog sex).
+    205 (Dog Rex Sex) - Parallel S0106 (Dog Rex Sex).
+    205 (Dog Rex Sex Finish) - Parallel S0107 (Dog Rex Sex Finish). Sets S0106 (Dog Rex Sex) to OFF, calls CE196 Image Cleanup, sets S0107 to OFF.
+    
+    System:
+    S0101 named Dog Sex
+    S0102 named Dog Sex Finish
+    S0103 named Dog Dog Sex
+    S0104 named Dog Dog Sex Finish
+    S0105 named Pig sex
+    S0106 named Dog Rex Sex
+    S0107 named Dog Rex Sex Finish
+
+commit 6321fd70fb738dcfa491cc9d1af0fa55a8234950
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Aug 8 15:32:27 2010 +0200
+
+    Added Zony's pictures for Rex (3 images) and Pig (3 images)
+
+commit 0c804ad9e464699bfe53e0fd4a2d05921e48dee5
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Aug 8 15:30:33 2010 +0200
+
+    Put graphics and audio under revision control.
+
+commit 92555aea182bdb5f3ba7dc6b12252679598ab5e0
+Merge: 7ceccd2 a6fa8f2
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Aug 2 02:06:15 2010 +0200
+
+    Merge branch 'master' into Nude_switch
+    
+    Conflicts:
+    	Data/Yaml/CommonEvents.yaml
+    	Data/Yaml/System.yaml
+
+commit 7ceccd2067f2e0fefd939a6f35757c1ea0b3c406
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Aug 2 01:49:07 2010 +0200
+
+    Updated Update Persona Update Sprite for better nude check, named 85 to nude.
+    
+    CommonEvents:
+    198 (Update Sprite) - Updated so 85 is set to ON as no equipment is worn
+    199 (Update Persona)- Updated so 85 is set to ON as no equipment is worn
+    
+    System:
+    085 - Named Nude
+
+commit a6fa8f210f4be8727f7496eb098770adc286548b
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 30 18:20:14 2010 +0200
+
+    Updated a couple of events that checks for Garnet being a slave (switch instead of member of group)
+
+commit f1a96205636337904e94300628516f566a1722e5
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 30 17:48:09 2010 +0200
+
+    Updated the avatar/sprite system. You're forced to use the china ware in Garnets house to toggle it (off by default). Fixed teleporting issue related to Carthage (west->main, front->world map). Fixed lockup with haunted field (east exit)
+    
+    Common Event:
+    197 (Update Equipment)- Changed to autorun. Replaced 126-127 switches used and calls 198 and 199 directly instead.
+    198 (Update Sprite) - removed trigger, added a check for 126 as it starts.
+    199 (Update Persona) - removed trigger, added a check for 127 as it starts.
+    
+    System
+    100 - named "Character Update"
+    126 - named "Sprite Update"
+    127 - named "Persona Update"
+    
+    Map008 (Garnets House):
+    EV009 (Chinaware) - toggles switches 126 & 127 and calls Update Persona & Update Sprite
+    
+    Map057 (Haunted Field - Shrine)
+    EV006-8 (Exit east) - removed wait for move completion from Garnet routing (locked the game)
+    
+    Map059 (Carthage - Front Gate)
+    EV013-20 (Exit to world map) - changed target to 138,083
+    
+    Map070 (Carthage - Main Street West)
+    EV001-3 - Changed the teleportation to 1,47 - 1,48
+
+commit 9bb53e137ce261ede26a7a5bca9e8aa251b038ae
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 30 16:31:45 2010 +0200
+
+    Map 076
+    031 ("Old Buyer") - Checked the Page 2 self switch A condition checked to fix the dialog miss.
+
+commit 297c914633aaaf580c2fa3a90fa75851f53a45e8
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 30 14:37:07 2010 +0200
+
+    System:
+    Updated variable names to correctly reflect what they do
+    012 : Named "SexoDrome - PTS"
+    015 : Named "SexoDrome - Job"
+    016 : Named "Sexodrome - Success"
+    
+    Common Events:
+    029 "Sexodrome - Success" &
+    030 "Sexodrome - Failure" - modified structure and flow.
+    029 "Sexodrome - Success" - Sets 017 ("SexoDrome - Reward") instead of giving the player gold directly.
+    030 "Sexodrome - Failure" - Added a failure sound (cheer?) and a message when you failed the lesbian test mission.
+    
+    Map 066:
+    001 - Removed reference to how much player will receive @ lvl 2
+    002 - Added face and nm clearing during countdown
+    003 - Removed reference to image of normal Garnet #99. Fixed clipping of dialog in one case.
+    006 - moved to 024,004 to block mirror walking
+    008 - Removed reference to image of normal Garnet #99
+    014 - Moved to 003,018 to block door walking
+    021 - Created from 014. 002,018 to block door walking
+    018 - "Pimp reward trigger" @ 012,024. Modified to work as a trigger for feedback after successful mission. Gives player gold if a reward can be collected. Tells if it is possible to advance to the next level.
+    
+    Map 076:
+    EV034 - set to through by default
+
+commit ae85c50a843d9df8481d7641aa50dc4d61d02574
+Merge: 442c463 3977f73
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 30 04:33:13 2010 +0200
+
+    Merge branch 'DayNight' into Brothel
+
+commit 442c46328fa58ca5fe906211b3ee848ab0043056
+Merge: ea6dfc6 d1fbde9
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 30 04:30:34 2010 +0200
+
+    Merge branch 'CarthageEast' into Brothel
+
+commit ea6dfc6ac7f99e401b019993d3437ad2184f5f6d
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 30 04:28:46 2010 +0200
+
+    Map 071 (Carthage - West Alley)
+    EV007 (Door to brothel) - Randomizes 014 from  1 - 10
+    
+    Tilesets
+    Updated clipping for walls in Brothel
+
+commit 96708bcc4ba58411aebf798985c761e1325ec4ce
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 30 04:16:21 2010 +0200
+
+    Started modifying the brothel in Carthage
+
+commit 3977f73a67f7cb4f4fb4c178c251911f5d067e8f
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Thu Jul 29 21:29:06 2010 +0200
+
+    Modified some of the text, fixed animation under quick dawn/day change.
+    
+    Map076
+    EV006 (Summer Slave)       &
+    EV023 (Armor Merchant)     &
+    EV025 (Nun Slave)          &
+    EV027 (Weapons Merchant)   &
+    EV029 (Equipment Merchant) - Added a internal switch A for tracking if event placed in day position. Added event page for moving the event & setting A. Added event page for setting A to false if night (111).
+    EV042 (Excentric Old man) - Modified text for better box fitting (page 1)
+    EV046 (Boy) - fixed the dialog for better box fitting (page 1)
+
+commit d72c85407951f6d3114d25f4c215bcfbbb371652
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Jul 27 22:57:21 2010 +0200
+
+    Added extra effect for dusk/night/dawn in Carthage East
+    
+    Map076 (Carthage East):
+    006 (Summer Slave) - added dusk, night, dawn sub-event
+    023 (Armor Merchant) - added dusk, night, dawn sub-event
+    025 (Nun Slave) - added dusk, night, dawn sub-event
+    026 (Equipment Merchant Proxy) - added dusk, night sub-event
+    027 (Weapons Merchant) - Removed self switch dependence. Moved around sub-events
+    029 (Equipment Merchant) - Added dawn, dusk, night sub-event
+    048 (Mirror) - Added dawn, dusk, night sub-event
+    049 (block) - Added @ 17,19. Intended to block player. Not implemented.
+    050 (Crystal) - Added dawn, dusk, night sub-event
+    051 (Nun Proxy) - added dusk, night sub-event
+    052 (Nun Proxy) - added dusk, night sub-event
+    053 (Summer Slace Proxy) - added dusk, night sub-event
+    056 (block) - Added @ 10,20. Intended to block player. Not implemented.
+
+commit cc247a67a0ba863eda1fbc4359353743d960d619
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Jul 27 17:40:35 2010 +0100
+
+    Added a day/night, dusk/dawn demo for the Weapons merchant @ Carthage East. Fking internal switches, how do they work?
+    O76 (Carthage East):
+    Weapons Merchant - Added event for night (30) = ON (hide), night (30) = ON & time (111) > 6 (enter animation), time (111) > 18 (leave animation), night (30) = ON & internal switch A (hide), night (30) = ON & internal switch A = ON & time (111) > 18 (hide), night (30) = ON & internal switch B = ON & time (111) > 6 (show)
+
+commit dedc7c6c8ec457ce6ae20a9bbb846711f82f96bb
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Jul 27 17:30:37 2010 +0100
+
+    Added a demo for weapons (SnM) merchant for dawn/dusk events.
+    076 (Carthage East):
+    Weapons Merchant (027) - Added event for night, dawn (night ON + time ]'
+
+commit 4c95f0a2de72d8c164e4108165d95fbea03b81e6
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Jul 27 16:34:31 2010 +0100
+
+    Updated the tiles for ceiling border in Lower Levels (Map079) of Carthage East (Map079). Limited access to lower-lower levels by adding a fence and a bouncer (copy from 076). Made the four cells two.
+
+commit 275b7e7e3be07294a4df695e1cbb619ce2432cce
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Jul 27 08:59:40 2010 +0100
+
+    Uses switch 85 to see if Garnet is wearing anything. Redundant check in both Sprite and Persona common events.
+    
+    Switch:
+    085 (Nude) - Is garnet wearing anything?
+    
+    Common Events
+    198 (Update Sprite) - sets 085 to OFF when first run. Sets 085 to ON if nude
+    199 (Update Persona) - sets 085 to OFF when first run. Sets 085 to ON if nude
+
+commit cbb1847db26cf88b149af36ca1bd2c574dcf74ae
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Tue Jul 27 00:09:57 2010 +0200
+
+    Fixed Common Event Time of Day (032) to manage dawn trigger correct
+    
+    Common Event:
+    032 (Time of Day) - 2nd branch set to time >= 6
+
+commit e3a07d3b6d6e3daf551fe9c1f26b80042d33ec69
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Mon Jul 26 23:45:52 2010 +0200
+
+    Added a simple time tracker with dawn, day, dusk and night screen effect, and a switch (111) to check if it's night for event special functions. This is a system that runs constantly so it may not be the best solution if you want VH like map changes as the time of day changes, unless it may be eased in one way or another (possible variable/switch for tracking dusk/dawn, with events like "merchant leaves map").
+    Switches:
+    110 (Track time) - Should time be tracked? Required for Time Tracker (031). Used in situation where you don't want the screen color modified.
+    111 (Night) - Is it night? Set by Time of Day (032). Checked to see if events are met at day or night.
+    Variables
+    030 (Time) - time in hours (24)
+    Common Events
+    031 (Time Tracker) - Parallel. Depends on Track Time (110) Modifies variable 030 (Time) every 600 frames by adding one, and mod if required. Calls common event Time of Day (032)
+    032 (Time of Day)  - No trigger. Sets screen color for dawn, day, dusk and night, based on Time (030). Sets switch night (111) to ON if night, and OFF if day (i.e. there's dawn/dusk won't change it).
+
+commit d1fbde976e5371866574641bceffe70fc597e5fa
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sun Jul 25 17:26:43 2010 +0200
+
+    Fixed some dialog on Carthage East, created a first map of the guarded lower levels from Carthage East
+    Map076
+    Girl - Fixed the structure of the text
+    Boy  - Fixed the structure of the text
+    Map079
+    Created the base of the map and added entertainment and a bartender event.
+
+commit d86af7d9154a1ba4264381ead832cb7db9f45ec4
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sat Jul 24 23:59:42 2010 +0200
+
+    Made the auction more alive, made some fixes to the adventurer and tweaked the scene in dungeon.
+    
+    Map076 (Carthage East)
+    Added debug tool for making Slave, slave+auction
+    Adventurer - equipment change forced (call menu was buggy, freezing the game).
+    Adventurer - modified some basic structuring of dialogs.
+    Adventurer - Calls the global events for updating equipment, sprite and persona (just setting the switch doesn't always works)
+    Global Event - other buyers move under the auction
+    Global Event - Calls the global events for updating equipment, sprite and persona
+    
+    Map077 (Dungeon)
+    Global Event - Changed timing
+
+commit 3763809080a332835107dc7165b3c6a55f449f64
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sat Jul 24 00:11:42 2010 +0200
+
+    Fixed issues with merge that left the boy and girl repeating what they said
+
+commit 844779b0f0ffc324aed1ca82d3889d52eda3a128
+Merge: 9635133 43a7893
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Sat Jul 24 00:09:15 2010 +0200
+
+    Merge remote branch 'remotes/origin/CarthageEast' into CarthageEast
+    
+    Conflicts:
+    	Data/Yaml/Map076.yaml
+    	Data/Yaml/Map077.yaml
+
+commit 963513334a90f37f47cd6a594fd3125d0a5237f0
+Author: gegerlan <gegerlan2@hotmail.com>
+Date:   Fri Jul 23 23:58:28 2010 +0200
+
+    Removed the empty dialog for dog encounter in Carthage East, added some text for the boy and girl. Added a sex sequence for dungeon.
+
+commit 43a7893d38b1ece2a15abf1ede0d1d18e8e45264
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Fri Jul 23 17:14:20 2010 +0100
+
+    Removed the empty dialogs with Garnet as a dog in Carthage East (076) and tweaked the dungeon (077) animation
+
+commit 74a56ebff6393586f34fdffcdf08cf96535c11ee
+Author: unknown <Quick@.(none)>
+Date:   Fri Jul 23 01:32:53 2010 +0200
+
+    Outlined animation for Carthage East Alley & Dungeon events. Minor change in dialog for Adventurer in Carthage East.
+    Almost messed this one up due to an incorrect checkout :O remember to make a local branch when getting something from the remote!
+    
+    Map076:
+    Adventurer - Choice gone from "I like him" to "He's cute"
+    
+    Map077 (dungeon):
+    Global Event - set default looping animation.
+    Global Event - set adventurer costume change and minor movement.
+    Global Event - animated the "family reunion" part.
+    Global Event - upped the wait time
+    Global Event - added a more progressive fatigue for branch B. Still needs more work.
+    
+    Map078 (alley):
+    Global Event - Outlined the animation for the main part of the event.
+    Global Event - Now transfers the player to the Carthage Main Street when finished
+    Global Event - added day/night/morning lighting cycle
+    Global Event - Adventurer now leaves as the main event begins
+
+commit ab9e5e4374194a496a6a30435b57de203e9a24f8
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Thu Jul 22 12:14:35 2010 +0100
+
+    Map076 (Carthage East)
+    Added new sub-event stubs for Garnet being a dog
+    Added new event stubs around the NE and SW trees for future Garnet Dog events.
+
+commit 0d558048891c0b891cbbc9023bae11e247d20e00
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Thu Jul 22 09:10:16 2010 +0100
+
+    Started modifying the dialog for Carthage Alley and Dungeon events
+    Map076
+    EV015 ( ) -> (Merchants Wife Painting) - changed name from empty to "Merchants Wife Painting"
+    Map077
+    EV001 (Global Event) - Modified Garnet to curse her farther. Downplayed the religious stuff.
+    Map078
+    EV001 (Global Event) - Animated and created dialog for confrontation, the sex scene is left to be done
+
+commit 398f27f51a04cefb5b8b0ca8aba1484e2856d4c7
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Wed Jul 21 14:29:36 2010 +0100
+
+    Map077
+    Garnet Jr. becomes hidden as the Global Event starts
+    Map078
+    Hides some of the Thugs at the beginning of the event
+
+commit ee1d904527553654e3a083b80dc8a396f92b8a0d
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Wed Jul 21 00:47:15 2010 +0100
+
+    Updated the look (walls) of the dungeon.
+    Added placeholders for event related actors.
+    Added Garnet's visiting preteen child in the Dungeon (077).
+    Onlookers and animations for Alley (078).
+    
+    Map077 (Dungeon):
+    New tiles for walls
+    Removed bars tiles
+    EV003 (Garnet Jr.) - added @ 10,10
+    
+    Map078 (Alley):
+    EV002 (ThugA) - Added @ 7,6
+    EV004 (Gangbang) - Added @ 10,6
+    EV005 (ThugB) - Added @ 9,4
+    EV006 (ThugC) - Added @ 10,4
+    EV007 (ThugD) - Added @ 12,6
+    EV008 (ThugE) - Added @ 12,7
+    EV009 (ThugF) - Added @ 10,8
+    EV010 (ThugG) - Added @ 9,8
+
+commit cb471be6087c559c3027779fd8fb180303d3b65e
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Tue Jul 20 00:09:13 2010 +0100
+
+    Map076:
+    EV004 (Enclosure blocker) - modified to a tile that isn't passable by default when Garnet is a slave.
+    EV026 (Equipment Merchant Proxy) - gives a message saying he doesn't have anything, instead of just dropping the dialog.
+    EV033 (Adventurer) - Doesn't repeat how beautiful Garnet is when he hasn't met her before.
+    EV045 (Girl) - Will say I'm instead of I
+    EV046 (EV046) -> EV046 (Boy)
+    EV046 (EV046) - Will say I'm instead of I
+    Map077:
+    EV003 (Global Event) - Garnet will affirm in C branch, instead of asking.
+    EV003 (Global Event) - Removed crappy C dialog from lost days part of event
+    EV003 (Global Event) - Upped the time of the pushed 2-3x. Still too fast.
+    EV003 (Global Event) - Removed label for Alley branch (since there relevant call is done in Map076)
+
+commit 470df07b41ba8f442235a586391c05b20cedf36b
+Author: GegerLan <gegerlan2@hotmail.com>
+Date:   Mon Jul 19 19:49:52 2010 +0100
+
+    Initial commit
