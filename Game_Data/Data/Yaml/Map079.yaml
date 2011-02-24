@@ -8443,7 +8443,7 @@ root: !ruby/object:RPG::Map
           code: 655
           indent: 0
           parameters: 
-          - sn = ('A'..'D').to_a
+          - sn = ('A'..'C').to_a
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 0
@@ -8464,6 +8464,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - end
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.refresh
         - !ruby/object:RPG::EventCommand 
           code: 116
           indent: 0
