@@ -35,19 +35,19 @@ REM #========================
 REM #  RGSS script Importer
 REM #========================
 
-script_importer.exe %PROJECT_DIR%
+rxdatav.exe script_importer %PROJECT_DIR%
 
 REM #======================
 REM #  RMXP Data Importer
 REM #======================
 
-data_importer.exe %PROJECT_DIR%
+rxdatav.exe data_importer %PROJECT_DIR%
 
 REM #=======================
 REM #  Start RPG Maker XP
 REM #=======================
 
-logtime.exe %PROJECT_DIR%
+rxdatav.exe logtime %PROJECT_DIR%
 
 CD %PROJECT_DIR%
 
@@ -59,13 +59,13 @@ REM #======================
 REM #  RMXP Data Exporter
 REM #======================
 
-data_exporter.exe %PROJECT_DIR%
+rxdatav.exe data_exporter %PROJECT_DIR%
 
 REM #========================
 REM #  RGSS Script Exporter
 REM #========================
 
-script_exporter.exe %PROJECT_DIR%
+rxdatav.exe script_exporter %PROJECT_DIR%
 
 REM #================================
 REM #  Return to Original Directory

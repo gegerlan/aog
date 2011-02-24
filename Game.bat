@@ -34,19 +34,19 @@ REM #========================
 REM #  RGSS script Importer
 REM #========================
 
-script_importer.exe %PROJECT_DIR%
+rxdatav.exe script_importer %PROJECT_DIR%
 
 REM #======================
 REM #  RMXP Data Importer
 REM #======================
 
-data_importer.exe %PROJECT_DIR%
+rxdatav.exe data_importer %PROJECT_DIR%
 
 REM #======================
 REM #  Remember when we last had our content imported
 REM #======================
 
-logtime.exe %PROJECT_DIR%
+rxdatav.exe logtime %PROJECT_DIR%
 
 REM #=======================
 REM #  Start Game
