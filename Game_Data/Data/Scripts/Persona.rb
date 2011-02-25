@@ -57,9 +57,11 @@ class Persona < Sprite
     end
     if armor_set != @old_armor_set || actor_class_name != @old_actor_class_name
       self.bitmap.clear
-      # Temp actor draw
+
+      actor_name = [@actor.name, actor_class_name].join("_")
+      
       begin
-        bitmap = RPG::Cache.picture(get_picture_name("stand nude"))
+        bitmap = RPG::Cache.picture(actor_name)
         rect = Rect.new(0,0,bitmap.width,bitmap.height)
         self.bitmap.blt(0,0,bitmap,rect)
       rescue Exception => e
