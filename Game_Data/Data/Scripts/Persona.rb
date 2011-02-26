@@ -50,42 +50,45 @@ class Persona < Sprite
   def update
     actor_class_name = $data_classes[@actor.class_id].name
     
-    
     armor_set = []
-    [:armor1_id, :armor2_id, :armor3_id, :armor4_id].each do |attr|
-        armor_set << $data_armors[@actor.send attr] || nil
+    
+    #Order: body armor (3), accessories (4), helmet (2), shield (1)
+    [:armor3_id, :armor4_id, :armor2_id, :armor1_id].each do |attr|
+      begin
+        armor_set << $data_armors[@actor.send attr].name
+      rescue
+        armor_set << nil
+      end
     end
+      
     if armor_set != @old_armor_set || actor_class_name != @old_actor_class_name
       self.bitmap.clear
 
-      actor_name = [@actor.name, actor_class_name].join("_")
+      layers = []
+      layers << [@actor.name, actor_class_name].join("_")
       
-      begin
-        bitmap = RPG::Cache.picture(actor_name)
-        rect = Rect.new(0,0,bitmap.width,bitmap.height)
-        self.bitmap.blt(0,0,bitmap,rect)
-      rescue Exception => e
-        print e if $DEBUG
-      end
+      layers += armor_set
       
-      armor_set.each do |armor|
-        next if armor == nil
-        #picture = get_picture_name([@actor.name, actor_class_name, armor.name].join(" "))
-        picture = get_picture_name(armor.name)
-        if picture != nil
-          begin
-            bitmap = RPG::Cache.picture(picture)
-            rect = Rect.new(0,0,bitmap.width,bitmap.height)
-            self.bitmap.blt(0,0,bitmap,rect)
-          rescue Exception => e
-            print e if $DEBUG
-          end
+      layers.each do |layer|
+        next if layer == nil
+        picture_path = get_picture_name(layer)
+        if picture_path != nil
+          draw(picture_path)
         else
-          print "Unable to find %s" % armor.name if $DEBUG
+          print "Unable to find %s" % layer if $DEBUG
         end
       end
       @old_armor_set = armor_set
       @old_actor_class_name = actor_class_name
+    end
+  end
+  def draw(image_path)
+    begin
+      bitmap = RPG::Cache.picture(image_path)
+      rect = Rect.new(0,0,bitmap.width,bitmap.height)
+      self.bitmap.blt(0,0,bitmap,rect)
+    rescue Exception => e
+      print e if $DEBUG
     end
   end
 end

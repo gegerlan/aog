@@ -2896,6 +2896,11 @@ root:
     code: 235
     indent: 5
     parameters: 
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 235
+    indent: 5
+    parameters: 
     - 3
   - !ruby/object:RPG::EventCommand 
     code: 235
@@ -2907,20 +2912,6 @@ root:
     indent: 5
     parameters: 
     - 5
-  - !ruby/object:RPG::EventCommand 
-    code: 231
-    indent: 5
-    parameters: 
-    - 2
-    - stand nude shy
-    - 0
-    - 0
-    - 0
-    - 0
-    - 100
-    - 100
-    - 255
-    - 0
   - !ruby/object:RPG::EventCommand 
     code: 101
     indent: 5
@@ -11995,192 +11986,55 @@ root:
     parameters: 
     - $v = $v || {}
   - !ruby/object:RPG::EventCommand 
-    code: 111
+    code: 355
     indent: 0
     parameters: 
-    - 4
-    - 1
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 355
-    indent: 1
-    parameters: 
-    - "#Character is Garnet"
+    - "#Character name"
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
-    parameters: 
-    - $v['faceset'] = "Garnet_normal"
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 0
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 111
     indent: 0
     parameters: 
-    - 0
-    - 4
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 355
-    indent: 1
-    parameters: 
-    - "#Character is Garnet as a slave"
+    - an = $game_party.actors[0].name
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
-    parameters: 
-    - $v['faceset'] = "Garnet_slave"
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 0
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 111
     indent: 0
     parameters: 
-    - 0
-    - 24
-    - 0
+    - $v['faceset'] = an
   - !ruby/object:RPG::EventCommand 
     code: 355
-    indent: 1
+    indent: 0
     parameters: 
-    - "#Character is Garnet dog"
+    - "#Class name"
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
-    parameters: 
-    - $v['faceset'] = "Garnet_dog"
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 0
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 111
     indent: 0
     parameters: 
-    - 0
-    - 90
-    - 0
+    - ci = $game_party.actors[0].class_id
   - !ruby/object:RPG::EventCommand 
-    code: 111
-    indent: 1
+    code: 655
+    indent: 0
     parameters: 
-    - 0
-    - 4
-    - 0
+    - cn = $data_classes[ci].name
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $v['faceset'] += "_" + cn
   - !ruby/object:RPG::EventCommand 
     code: 355
-    indent: 2
-    parameters: 
-    - "#Character is nude"
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - $v['faceset'] << "_nude"
-  - !ruby/object:RPG::EventCommand 
-    code: 119
-    indent: 2
-    parameters: 
-    - index
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 111
-    indent: 1
-    parameters: 
-    - 0
-    - 24
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 108
-    indent: 2
-    parameters: 
-    - Dogs are always nude
-  - !ruby/object:RPG::EventCommand 
-    code: 119
-    indent: 2
-    parameters: 
-    - index
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 118
-    indent: 1
-    parameters: 
-    - rebase nude
-  - !ruby/object:RPG::EventCommand 
-    code: 108
-    indent: 1
-    parameters: 
-    - "It should really have be Garnet_normal_nude rather "
-  - !ruby/object:RPG::EventCommand 
-    code: 408
-    indent: 1
-    parameters: 
-    - than Garnet_nude
-  - !ruby/object:RPG::EventCommand 
-    code: 355
-    indent: 1
-    parameters: 
-    - "#Character is nude"
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 1
-    parameters: 
-    - $v['faceset'] = "Garnet_nude"
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 412
-    indent: 0
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 118
     indent: 0
     parameters: 
-    - Index
+    - "#Nudity"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - n = $game_switches[90]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $v['faceset'] += "_nude" if n==TRUE
   - !ruby/object:RPG::EventCommand 
     code: 355
     indent: 0
@@ -12251,7 +12105,7 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - "\"Garnet_error_01\""
+    - "\"Faceset_error_01\""
   - !ruby/object:RPG::EventCommand 
     code: 355
     indent: 1
