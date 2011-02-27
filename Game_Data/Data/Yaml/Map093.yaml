@@ -658,13 +658,13 @@ root: !ruby/object:RPG::Map
     - 5190
     - 2494
     - 2495
-    - 3842
-    - 3843
+    - 1742
+    - 1743
     - 0
     - 5067
     - 0
-    - 3842
-    - 3843
+    - 1742
+    - 1743
     - 3842
     - 3843
     - 4883
@@ -678,13 +678,13 @@ root: !ruby/object:RPG::Map
     - 0
     - 2502
     - 2503
-    - 3850
-    - 3851
+    - 1750
+    - 1751
     - 2529
     - 2530
     - 2531
-    - 3850
-    - 3851
+    - 1750
+    - 1751
     - 3850
     - 3851
     - 0
@@ -946,6 +946,38 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 0
+          parameters: 
+          - -1
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id001 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id001
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - 22... 23... 24...
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
