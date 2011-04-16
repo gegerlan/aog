@@ -7692,7 +7692,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
@@ -7702,6 +7702,11 @@ root: !ruby/object:RPG::Map
           pattern: 1
           tile_id: 0
         list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Sign]Carthage transport service.
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -7721,7 +7726,7 @@ root: !ruby/object:RPG::Map
         step_anime: false
         through: false
         trigger: 0
-        walk_anime: true
+        walk_anime: false
       x: 9
       y: 59
     8: !ruby/object:RPG::Event 
@@ -7991,7 +7996,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[]\face[]Closed due to state of emergency
+          - \nm[]\face[]A sign can be found stuck to the door
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - "\\nm[Sign]\\face[]The Carthage transport service is "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - closed due to city-wide state of emergency.
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
