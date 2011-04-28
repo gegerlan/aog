@@ -4082,7 +4082,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 1876
+    - 0
     - 0
     - 0
     - 0
@@ -6182,7 +6182,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 1876
+    - 0
     - 0
     - 0
     - 0
@@ -19525,6 +19525,56 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 9
       y: 60
+    105: !ruby/object:RPG::Event 
+      id: 105
+      name: Blocker
+      numero: 49
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 80
+          switch1_valid: false
+          switch2_id: 80
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 97910f0c
+          direction: 2
+          opacity: 0
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 20
+      y: 66
   height: 70
   numero: 65
   tileset_id: 51
