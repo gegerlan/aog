@@ -1446,6 +1446,54 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 102-Civilian02
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Little Nicky] \face[]  Hi, Garnet.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 1
+        numero: 2
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
           self_switch_valid: false
           switch1_id: 140
           switch1_valid: true
@@ -1490,18 +1538,36 @@ root: !ruby/object:RPG::Map
           parameters: 
           - \nm[Garnet] Alright, I'll go up and ask him about it. Thanks.
         - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 195
-          - 195
-          - 0
-        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
           - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "ev = 2 #EID Billy"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "map = 68 #MID F2"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "sw = \"A\" #Self Switch"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - ""
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - switch_on(ev, sw, map)
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -1528,8 +1594,8 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
           self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
+          switch1_id: 140
+          switch1_valid: true
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -1546,10 +1612,46 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 101
+          code: 111
           indent: 0
           parameters: 
+          - 12
+          - switch_on?(2, "A", 68)
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 1
+          parameters: 
+          - If Garnet has yet to collect the book
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Little Nicky]Dad got the book with him upstairs.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
           - \nm[Little Nicky] \face[]  Hi, Garnet.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0

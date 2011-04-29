@@ -1143,11 +1143,11 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
-          self_switch_valid: false
+          self_switch_valid: true
           switch1_id: 140
           switch1_valid: true
           switch2_id: 195
-          switch2_valid: true
+          switch2_valid: false
           variable_id: 1
           variable_valid: false
           variable_value: 0
@@ -1707,9 +1707,8 @@ root: !ruby/object:RPG::Map
           code: 111
           indent: 0
           parameters: 
-          - 0
-          - 195
-          - 0
+          - 12
+          - $game_switches[140] and switch_on?(2, "A")
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 1
@@ -1817,6 +1816,11 @@ root: !ruby/object:RPG::Map
           - 0
           - 1
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - switch_off(2,"A")
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -1894,13 +1898,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 59
           - 59
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 195
-          - 195
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
