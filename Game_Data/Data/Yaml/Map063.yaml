@@ -968,7 +968,7 @@ root: !ruby/object:RPG::Map
     1: !ruby/object:RPG::Event 
       id: 1
       name: EV001
-      numero: 1
+      numero: 14
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -1082,7 +1082,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[]H-hey, calm down!
+          - \nm[Garnet]H-hey, calm down!
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 2
@@ -1120,11 +1120,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
           - Leave
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 2
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -1168,7 +1163,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters: 
-          - you'd like rather than food?
+          - "you'd "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - like rather than food?
         - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 2
@@ -1209,11 +1209,6 @@ root: !ruby/object:RPG::Map
           - 1
           - Leave
         - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
           parameters: []
@@ -1229,20 +1224,30 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 412
+          code: 411
           indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
+          indent: 2
           parameters: 
           - \nm[]\face[]Disappointed not to find any food,
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 2
           parameters: 
           - the pig moves away.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -1374,6 +1379,18 @@ root: !ruby/object:RPG::Map
           - 1
           - Continue
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -1435,7 +1452,7 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: B
           self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
@@ -1536,7 +1553,7 @@ root: !ruby/object:RPG::Map
           code: 123
           indent: 1
           parameters: 
-          - A
+          - B
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -1715,7 +1732,7 @@ root: !ruby/object:RPG::Map
     2: !ruby/object:RPG::Event 
       id: 2
       name: EV002
-      numero: 2
+      numero: 14
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -1829,7 +1846,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[]H-hey, calm down!
+          - \nm[Garnet]H-hey, calm down!
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 2
@@ -1867,11 +1884,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
           - Leave
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 2
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -1915,7 +1927,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters: 
-          - you'd like rather than food?
+          - "you'd "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - like rather than food?
         - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 2
@@ -1956,11 +1973,6 @@ root: !ruby/object:RPG::Map
           - 1
           - Leave
         - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
           parameters: []
@@ -1976,20 +1988,30 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 412
+          code: 411
           indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
+          indent: 2
           parameters: 
           - \nm[]\face[]Disappointed not to find any food,
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 2
           parameters: 
           - the pig moves away.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -2121,6 +2143,18 @@ root: !ruby/object:RPG::Map
           - 1
           - Continue
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -2182,7 +2216,7 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: B
           self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
@@ -2283,7 +2317,7 @@ root: !ruby/object:RPG::Map
           code: 123
           indent: 1
           parameters: 
-          - A
+          - B
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -2462,7 +2496,7 @@ root: !ruby/object:RPG::Map
     3: !ruby/object:RPG::Event 
       id: 3
       name: EV003
-      numero: 3
+      numero: 14
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -2576,7 +2610,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[]H-hey, calm down!
+          - \nm[Garnet]H-hey, calm down!
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 2
@@ -2614,11 +2648,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
           - Leave
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 2
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -2662,7 +2691,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters: 
-          - you'd like rather than food?
+          - "you'd "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - like rather than food?
         - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 2
@@ -2703,11 +2737,6 @@ root: !ruby/object:RPG::Map
           - 1
           - Leave
         - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
           parameters: []
@@ -2723,20 +2752,30 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 412
+          code: 411
           indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
+          indent: 2
           parameters: 
           - \nm[]\face[]Disappointed not to find any food,
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 2
           parameters: 
           - the pig moves away.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -2868,6 +2907,18 @@ root: !ruby/object:RPG::Map
           - 1
           - Continue
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -2929,7 +2980,7 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: B
           self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
@@ -3030,7 +3081,7 @@ root: !ruby/object:RPG::Map
           code: 123
           indent: 1
           parameters: 
-          - A
+          - B
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -4135,7 +4186,7 @@ root: !ruby/object:RPG::Map
     11: !ruby/object:RPG::Event 
       id: 11
       name: EV011
-      numero: 11
+      numero: 14
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -4249,7 +4300,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[]H-hey, calm down!
+          - \nm[Garnet]H-hey, calm down!
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 2
@@ -4287,11 +4338,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
           - Leave
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 2
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -4335,7 +4381,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters: 
-          - you'd like rather than food?
+          - "you'd "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - like rather than food?
         - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 2
@@ -4376,11 +4427,6 @@ root: !ruby/object:RPG::Map
           - 1
           - Leave
         - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
           parameters: []
@@ -4396,20 +4442,30 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 412
+          code: 411
           indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
+          indent: 2
           parameters: 
           - \nm[]\face[]Disappointed not to find any food,
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 2
           parameters: 
           - the pig moves away.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -4541,6 +4597,18 @@ root: !ruby/object:RPG::Map
           - 1
           - Continue
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -4602,7 +4670,7 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: B
           self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
@@ -4703,7 +4771,7 @@ root: !ruby/object:RPG::Map
           code: 123
           indent: 1
           parameters: 
-          - A
+          - B
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -4882,7 +4950,7 @@ root: !ruby/object:RPG::Map
     12: !ruby/object:RPG::Event 
       id: 12
       name: EV012
-      numero: 12
+      numero: 14
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -4996,7 +5064,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[]H-hey, calm down!
+          - \nm[Garnet]H-hey, calm down!
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 2
@@ -5034,11 +5102,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
           - Leave
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 2
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -5082,7 +5145,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters: 
-          - you'd like rather than food?
+          - "you'd "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - like rather than food?
         - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 2
@@ -5123,11 +5191,6 @@ root: !ruby/object:RPG::Map
           - 1
           - Leave
         - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
           parameters: []
@@ -5143,20 +5206,30 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 412
+          code: 411
           indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
+          indent: 2
           parameters: 
           - \nm[]\face[]Disappointed not to find any food,
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 2
           parameters: 
           - the pig moves away.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -5288,6 +5361,18 @@ root: !ruby/object:RPG::Map
           - 1
           - Continue
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -5349,7 +5434,7 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: B
           self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
@@ -5450,7 +5535,7 @@ root: !ruby/object:RPG::Map
           code: 123
           indent: 1
           parameters: 
-          - A
+          - B
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -6141,7 +6226,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[]H-hey, calm down!
+          - \nm[Garnet]H-hey, calm down!
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 2
@@ -6179,11 +6264,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
           - Leave
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 2
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -6273,11 +6353,6 @@ root: !ruby/object:RPG::Map
           - 1
           - Leave
         - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
           parameters: []
@@ -6293,20 +6368,30 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 412
+          code: 411
           indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
+          indent: 2
           parameters: 
           - \nm[]\face[]Disappointed not to find any food,
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 2
           parameters: 
           - the pig moves away.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -6438,6 +6523,18 @@ root: !ruby/object:RPG::Map
           - 1
           - Continue
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -6499,7 +6596,7 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: B
           self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
@@ -6600,7 +6697,7 @@ root: !ruby/object:RPG::Map
           code: 123
           indent: 1
           parameters: 
-          - A
+          - B
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -6779,7 +6876,7 @@ root: !ruby/object:RPG::Map
     15: !ruby/object:RPG::Event 
       id: 15
       name: EV015
-      numero: 15
+      numero: 14
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -6893,7 +6990,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[]H-hey, calm down!
+          - \nm[Garnet]H-hey, calm down!
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 2
@@ -6931,11 +7028,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
           - Leave
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 2
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -7014,11 +7106,6 @@ root: !ruby/object:RPG::Map
           - A
           - 0
         - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 3
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
           parameters: []
@@ -7029,11 +7116,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 1
           - Leave
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 3
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
@@ -7050,20 +7132,30 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 412
+          code: 411
           indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
+          indent: 2
           parameters: 
           - \nm[]\face[]Disappointed not to find any food,
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 2
           parameters: 
           - the pig moves away.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -7195,6 +7287,18 @@ root: !ruby/object:RPG::Map
           - 1
           - Continue
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -7256,7 +7360,7 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: B
           self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
@@ -7357,7 +7461,7 @@ root: !ruby/object:RPG::Map
           code: 123
           indent: 1
           parameters: 
-          - A
+          - B
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
