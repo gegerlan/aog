@@ -30043,12 +30043,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - "*\\c[6]Garnet\\c[0] finds nothing but straw and fecal "
+          - "\\nm[]*\\c[6]Garnet\\c[0] finds nothing but straw and "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
           parameters: 
-          - matter*
+          - fecal matter*
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -30073,12 +30073,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - "*\\c[6]Garnet\\c[0] finds a bag"
+          - "\\nm[]*\\c[6]Garnet\\c[0] finds a bag containing 3 "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
           parameters: 
-          - " containing 3 perfumes and 100G*"
+          - perfumes and 100G*
         - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 2
@@ -30100,6 +30100,26 @@ root: !ruby/object:RPG::Map
           - 0
           - 0
           - 3
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "ev = 43 #EID Right side of kennel"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "sw = \"A\" #Self Switch"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - ""
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - switch_on(ev, sw)
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -30196,12 +30216,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - It smells bad but I think I don't have
+          - \nm[Garnet]It smells bad, but I think
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
           parameters: 
-          - any choice.
+          - I don't have any choice.
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 1
@@ -30216,7 +30236,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - Garnet lies down in the kennel. She
+          - \nm[]Garnet lies down in the kennel. She
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -30515,16 +30535,6 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand 
           code: 412
           indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
@@ -45485,12 +45495,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - "*\\c[6]Garnet\\c[0] finds nothing but straw and fecal "
+          - "\\nm[]*\\c[6]Garnet\\c[0] finds nothing but straw and "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
           parameters: 
-          - matter*
+          - fecal matter*
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -45515,7 +45525,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - "*\\c[6]Garnet\\c[0] finds a bag"
+          - \nm[]*\c[6]Garnet\c[0] finds a bag
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
@@ -45542,6 +45552,26 @@ root: !ruby/object:RPG::Map
           - 0
           - 0
           - 3
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "ev = 35 #EID Right side of kennel"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "sw = \"A\" #Self Switch"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - ""
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - switch_on(ev, sw)
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -45638,7 +45668,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - It smells bad but I think I don't have
+          - \nm[Garnet]It smells bad but I think I don't have
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -45658,7 +45688,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - Garnet lies down in the kennel. She
+          - \nm[]Garnet lies down in the kennel. She
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -45957,16 +45987,6 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand 
           code: 412
           indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
