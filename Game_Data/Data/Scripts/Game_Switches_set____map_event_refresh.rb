@@ -8,7 +8,7 @@ class Game_Switches
     if switch_id <= 5000
       @data[switch_id] = value
     end
-    if @triggers[switch_id]
+    if @triggers[switch_id] != nil
       for event in @triggers[switch_id]
         event.refresh
       end
