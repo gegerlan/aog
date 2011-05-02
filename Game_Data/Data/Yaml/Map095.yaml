@@ -1233,6 +1233,50 @@ root: !ruby/object:RPG::Map
           parameters: 
           - to me? I feel so weak...
         - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[]Would you like to skip the rape scene?
+        - !ruby/object:RPG::EventCommand 
+          code: 102
+          indent: 0
+          parameters: 
+          - - Skip
+            - Don't Skip
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 0
+          - Skip
+        - !ruby/object:RPG::EventCommand 
+          code: 353
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 1
+          - Don't Skip
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 404
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 0
           parameters: 
@@ -2187,6 +2231,12 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - $game_map.refresh
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 0
+          parameters: 
+          - A
+          - 0
         - !ruby/object:RPG::EventCommand 
           code: 116
           indent: 0

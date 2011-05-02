@@ -398,6 +398,7 @@ class Game_Actor < Game_Battler
       return $data_actors[@actor_id].armor3_fix
     when 4  # Accessory
       return $data_actors[@actor_id].armor4_fix
+=begin
     when 5  # Accessory
       return $data_actors[@actor_id].piercing1_fix
     when 6  # Accessory
@@ -412,6 +413,7 @@ class Game_Actor < Game_Battler
       return $data_actors[@actor_id].piercing6_fix
     when 11  # Accessory
       return $data_actors[@actor_id].piercing7_fix
+=end
     end
     return false
   end

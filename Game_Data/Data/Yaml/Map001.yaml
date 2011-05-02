@@ -4218,7 +4218,7 @@ root: !ruby/object:RPG::Map
     - 1822
     - 1823
     - 0
-    - 2355
+    - 2609
     - 2168
     - 2169
     - 2169
@@ -5337,7 +5337,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 2640
-    - 1877
+    - 0
     - 0
     - 0
     - 1875
@@ -5422,7 +5422,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 2648
-    - 1877
+    - 0
     - 0
     - 0
     - 1883
@@ -6513,7 +6513,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 2600
-    - 2349
+    - 2355
     - 2183
     - 2640
     - 2183
@@ -6606,7 +6606,7 @@ root: !ruby/object:RPG::Map
     - 2183
     - 3025
     - 8397
-    - 2183
+    - 0
     - 3025
     - 2592
     - 1070
@@ -15003,6 +15003,16 @@ root: !ruby/object:RPG::Map
           parameters: 
           - *id011
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "\"Garnet_normal_04\""
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
           parameters: 
@@ -16899,6 +16909,16 @@ root: !ruby/object:RPG::Map
           indent: 2
           parameters: 
           - *id017
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "\"Garnet_normal_04\""
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
@@ -30023,12 +30043,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - "*\\c[6]Garnet\\c[0] finds nothing but straw and fecal "
+          - "\\nm[]*\\c[6]Garnet\\c[0] finds nothing but straw and "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
           parameters: 
-          - matter*
+          - fecal matter*
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
@@ -30053,12 +30073,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - "*\\c[6]Garnet\\c[0] finds a bag"
+          - "\\nm[]*\\c[6]Garnet\\c[0] finds a bag containing 3 "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
           parameters: 
-          - " containing 3 perfumes and 100G*"
+          - perfumes and 100G*
         - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 2
@@ -30176,12 +30196,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - It smells bad but I think I don't have
+          - \nm[Garnet]It smells bad, but I think
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
           parameters: 
-          - any choice.
+          - I don't have any choice.
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 1
@@ -30196,7 +30216,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - Garnet lies down in the kennel. She
+          - \nm[]Garnet lies down in the kennel. She
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -30404,6 +30424,16 @@ root: !ruby/object:RPG::Map
           parameters: 
           - be breaking the law, she's his.
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 3
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 3
+          parameters: 
+          - "\"Garnet_slave_nude_01\""
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 3
           parameters: 
@@ -30485,16 +30515,6 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand 
           code: 412
           indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
@@ -34944,6 +34964,16 @@ root: !ruby/object:RPG::Map
           parameters: 
           - I heard you're leaving the village, is it true?
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "\"Garnet_normal_01\""
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
           parameters: 
@@ -35008,6 +35038,16 @@ root: !ruby/object:RPG::Map
           indent: 2
           parameters: 
           - hang around them.
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "\"Garnet_normal_02\""
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
@@ -35364,6 +35404,16 @@ root: !ruby/object:RPG::Map
           parameters: 
           - I heard you're leaving the village, is it true?
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "\"Garnet_normal_01\""
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
           parameters: 
@@ -35429,6 +35479,16 @@ root: !ruby/object:RPG::Map
           parameters: 
           - hang around them.
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "\"Garnet_normal_02\""
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
           parameters: 
@@ -35473,6 +35533,16 @@ root: !ruby/object:RPG::Map
           indent: 1
           parameters: 
           - I heard you're leaving the village, is it true?
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "\"Garnet_normal_01\""
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
@@ -35538,6 +35608,16 @@ root: !ruby/object:RPG::Map
           indent: 1
           parameters: 
           - hang around them.
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 1
+          parameters: 
+          - "\"Garnet_normal_02\""
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
@@ -45126,6 +45206,16 @@ root: !ruby/object:RPG::Map
           - 0
           - 100
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "\"Garnet_normal_01\""
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -45347,132 +45437,10 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 101
+          code: 355
           indent: 0
           parameters: 
-          - \face[]\nm[]*Examine kennel?*
-        - !ruby/object:RPG::EventCommand 
-          code: 102
-          indent: 0
-          parameters: 
-          - - "Yes"
-            - "No"
-          - 2
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 0
-          parameters: 
-          - 0
-          - "Yes"
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 1
-          parameters: 
-          - 2
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 2
-          parameters: 
-          - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 2
-          parameters: 
-          - Ewww, it's dirty and smells bad.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 2
-          parameters: 
-          - "*\\c[6]Garnet\\c[0] finds nothing but straw and fecal "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 2
-          parameters: 
-          - matter*
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 2
-          parameters: 
-          - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 2
-          parameters: 
-          - Ewww, it's dirty and smells bad. What's this though?
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 2
-          parameters: 
-          - "*\\c[6]Garnet\\c[0] finds a bag"
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 2
-          parameters: 
-          - " containing 3 perfumes and 100G*"
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 2
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 125
-          indent: 2
-          parameters: 
-          - 0
-          - 0
-          - 100
-        - !ruby/object:RPG::EventCommand 
-          code: 126
-          indent: 2
-          parameters: 
-          - 4
-          - 0
-          - 0
-          - 3
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 0
-          parameters: 
-          - 1
-          - "No"
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 404
-          indent: 0
-          parameters: []
-
+          - $game_map.events[35].start
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -45489,555 +45457,6 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 4
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \face[]\nm[]*Sleep in the kennel?*
-        - !ruby/object:RPG::EventCommand 
-          code: 102
-          indent: 0
-          parameters: 
-          - - "Yes"
-            - "No"
-          - 2
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 0
-          parameters: 
-          - 0
-          - "Yes"
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - It smells bad but I think I don't have
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - any choice.
-        - !ruby/object:RPG::EventCommand 
-          code: 223
-          indent: 1
-          parameters: 
-          - !ruby/object:Tone 
-            blue: -255.0
-            gray: 0.0
-            green: -255.0
-            red: -255.0
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Garnet lies down in the kennel. She
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - could smell dog's urine and some other
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - disgusting stuff.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Gradually she falls into an uneasy sleep
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - ....
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 1
-          parameters: 
-          - 43
-          - 43
-          - 0
-          - 2
-          - 1
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 1
-          parameters: 
-          - 1
-          - 43
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 2
-          parameters: 
-          - 0
-          - 84
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - .........
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 3
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - "*Footsteps*"
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 1]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - Who does that bastard think he is, we're
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - his most loyal customers!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 2]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - Tell me about it.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - If there was another pub in this shithole
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - he wouldn't be seeing me again.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 3]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - "There's a bar in this inn, we could go "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - there before heading home.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 1]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - For a second then I thought I was gonna
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - have to see my- Hold on...
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - ...Now what do we have here?
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 3]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - Oh shit! Is that a woman in that kennel?
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 2]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - I think It's a slave.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - Don't remember anyone telling me about
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - Joe owning one though...
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 1]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - ...Anyone else want to have some fun
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - with her?
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 2]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - No! If she does belong to Joe then we'd
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - be breaking the law, she's his.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - ...Wha-, what's going on?
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \face[] \nm[Man 3]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - Great! Look what you guys have done
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - now. What if she tells him?!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Man 1]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - Hold on, we're getting ahead of ourselves.
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - Do you belong to Innkeeper Joe?
-        - !ruby/object:RPG::EventCommand 
-          code: 102
-          indent: 3
-          parameters: 
-          - - "Yes"
-            - "No"
-          - 2
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 3
-          parameters: 
-          - 0
-          - "Yes"
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 4
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 3
-          parameters: 
-          - 1
-          - "No"
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 4
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 404
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 223
-          indent: 1
-          parameters: 
-          - !ruby/object:Tone 
-            blue: 0.0
-            gray: 0.0
-            green: 0.0
-            red: 0.0
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 0
-          parameters: 
-          - 1
-          - "No"
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 404
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 24
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \face[]\nm[]*Sleep in the kennel?*
-        - !ruby/object:RPG::EventCommand 
-          code: 102
-          indent: 0
-          parameters: 
-          - - "*Woof*"
-            - ......
-          - 2
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 0
-          parameters: 
-          - 0
-          - "*Woof*"
-        - !ruby/object:RPG::EventCommand 
-          code: 223
-          indent: 1
-          parameters: 
-          - !ruby/object:Tone 
-            blue: -255.0
-            gray: 0.0
-            green: -255.0
-            red: -255.0
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 311
-          indent: 1
-          parameters: 
-          - 0
-          - 0
-          - 0
-          - 9999
-          - false
-        - !ruby/object:RPG::EventCommand 
-          code: 223
-          indent: 1
-          parameters: 
-          - !ruby/object:Tone 
-            blue: 0.0
-            gray: 0.0
-            green: 0.0
-            red: 0.0
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 0
-          parameters: 
-          - 1
-          - ......
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 404
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
         step_anime: false
         through: false
         trigger: 0
@@ -46078,7 +45497,7 @@ root: !ruby/object:RPG::Map
           - 0
           - 21
           - 38
-          - 15
+          - 14
           - 4
           - 0
         - !ruby/object:RPG::EventCommand 
@@ -46469,6 +45888,16 @@ root: !ruby/object:RPG::Map
             red: 0.0
           - 20
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_system.face_graphic = ""
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Pimp]
+        - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
@@ -46637,6 +46066,16 @@ root: !ruby/object:RPG::Map
             pitch: 85
             volume: 100
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "\"faceset0041\""
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -46732,6 +46171,16 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 30
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "\"faceset0041\""
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -46795,6 +46244,16 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "$game_system.face_graphic = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "\"faceset0039\""
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0

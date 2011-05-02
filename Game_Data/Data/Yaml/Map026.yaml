@@ -269,7 +269,7 @@ root: !ruby/object:RPG::Map
     - 8928
     - 2185
     - 2185
-    - 2185
+    - 8928
     - 8928
     - 0
     - 0
@@ -3561,7 +3561,7 @@ root: !ruby/object:RPG::Map
       y: 15
     15: !ruby/object:RPG::Event 
       id: 15
-      name: EV015
+      name: Crypt Entrance Door
       numero: 15
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -3618,7 +3618,7 @@ root: !ruby/object:RPG::Map
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 354
-          switch1_valid: true
+          switch1_valid: false
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -3635,13 +3635,20 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 106
+          code: 111
           indent: 0
+          parameters: 
+          - 6
+          - -1
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 1
           parameters: 
           - 4
         - !ruby/object:RPG::EventCommand 
           code: 209
-          indent: 0
+          indent: 1
           parameters: 
           - 0
           - !ruby/object:RPG::MoveRoute 
@@ -3661,17 +3668,17 @@ root: !ruby/object:RPG::Map
             skippable: false
         - !ruby/object:RPG::EventCommand 
           code: 509
-          indent: 0
+          indent: 1
           parameters: 
           - *id024
         - !ruby/object:RPG::EventCommand 
           code: 106
-          indent: 0
+          indent: 1
           parameters: 
           - 4
         - !ruby/object:RPG::EventCommand 
           code: 209
-          indent: 0
+          indent: 1
           parameters: 
           - 0
           - !ruby/object:RPG::MoveRoute 
@@ -3691,17 +3698,17 @@ root: !ruby/object:RPG::Map
             skippable: false
         - !ruby/object:RPG::EventCommand 
           code: 509
-          indent: 0
+          indent: 1
           parameters: 
           - *id025
         - !ruby/object:RPG::EventCommand 
           code: 106
-          indent: 0
+          indent: 1
           parameters: 
           - 4
         - !ruby/object:RPG::EventCommand 
           code: 209
-          indent: 0
+          indent: 1
           parameters: 
           - 0
           - !ruby/object:RPG::MoveRoute 
@@ -3721,20 +3728,45 @@ root: !ruby/object:RPG::Map
             skippable: false
         - !ruby/object:RPG::EventCommand 
           code: 509
-          indent: 0
+          indent: 1
           parameters: 
           - *id026
         - !ruby/object:RPG::EventCommand 
           code: 106
-          indent: 0
+          indent: 1
           parameters: 
           - 4
         - !ruby/object:RPG::EventCommand 
           code: 123
-          indent: 0
+          indent: 1
           parameters: 
           - A
           - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[]\face[]Locked
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4037,7 +4069,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
@@ -4351,5 +4383,5 @@ root: !ruby/object:RPG::Map
       y: 18
   height: 20
   numero: 26
-  tileset_id: 51
+  tileset_id: 56
   width: 20

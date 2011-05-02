@@ -478,7 +478,7 @@ root: !ruby/object:RPG::Map
     - 1562
     - 1563
     - 1564
-    - 1559
+    - 1017
     - 1544
     - 0
     - 1017
@@ -498,7 +498,7 @@ root: !ruby/object:RPG::Map
     - 1570
     - 1571
     - 1572
-    - 1567
+    - 0
     - 1552
     - 0
     - 0
@@ -562,8 +562,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 482
-    - 3289
-    - 3290
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -582,8 +582,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 3304
-    - 3297
-    - 3298
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -602,8 +602,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 496
     - 498
-    - 3305
-    - 3306
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -857,8 +857,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 3383
-    - 3383
-    - 1017
+    - 0
+    - 1559
     - 1595
     - 0
     - 0
@@ -877,8 +877,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3383
-    - 3383
+    - 0
+    - 1567
     - 0
     - 0
     - 0
@@ -898,7 +898,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3383
+    - 0
     - 0
     - 0
     - 0
@@ -943,7 +943,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 3365
     - 0
-    - 3366
+    - 0
     - 0
     - 0
     - 0
@@ -963,7 +963,7 @@ root: !ruby/object:RPG::Map
     - 3383
     - 3373
     - 0
-    - 3374
+    - 0
     - 0
     - 0
     - 0
@@ -1422,6 +1422,12 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 4 or 5 years. Unless I'm married by then.
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 0
+          parameters: 
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
           parameters: []
@@ -1438,6 +1444,54 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         move_type: 1
         numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 102-Civilian02
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Little Nicky] \face[]  Hi, Garnet.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 1
+        numero: 2
         step_anime: false
         through: false
         trigger: 0
@@ -1490,18 +1544,36 @@ root: !ruby/object:RPG::Map
           parameters: 
           - \nm[Garnet] Alright, I'll go up and ask him about it. Thanks.
         - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 195
-          - 195
-          - 0
-        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
-          - A
+          - B
           - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "ev = 2 #EID Billy"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "map = 68 #MID F2"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "sw = \"A\" #Self Switch"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - ""
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - switch_on(ev, sw, map)
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -1526,10 +1598,10 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: B
           self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
+          switch1_id: 140
+          switch1_valid: true
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -1546,10 +1618,46 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 101
+          code: 111
           indent: 0
           parameters: 
+          - 12
+          - switch_on?(2, "A", 68)
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 1
+          parameters: 
+          - If Garnet has yet to collect the book
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Little Nicky]Dad got the book with him upstairs.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
           - \nm[Little Nicky] \face[]  Hi, Garnet.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -1653,7 +1761,7 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      x: 12
+      x: 13
       y: 12
   height: 19
   numero: 64

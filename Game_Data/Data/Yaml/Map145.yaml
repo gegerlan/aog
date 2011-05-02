@@ -2333,6 +2333,70 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 10
         - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - "Would you like to skip to end of scene? Please note "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - that you won't be be able to change your mind later.
+        - !ruby/object:RPG::EventCommand 
+          code: 102
+          indent: 0
+          parameters: 
+          - - Skip to end
+            - Don't skip
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 0
+          - Skip to end
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - NOOOOOOOO!!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 1
+          parameters: 
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 353
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 1
+          - Don't skip
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 404
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
           code: 250
           indent: 0
           parameters: 
