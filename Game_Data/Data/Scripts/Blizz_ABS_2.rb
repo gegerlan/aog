@@ -9149,7 +9149,7 @@ class Game_Event
         $BlizzABS.util.rect_intersection(Rect.new(x * pix, y * pix, pix, pix),
         Rect.new($game_player.x, $game_player.y, pix, pix))
       # start
-      raise @trigger.to_s
+      #raise @trigger.to_s
       start
       # started
       return true
