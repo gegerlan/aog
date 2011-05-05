@@ -95,7 +95,8 @@ module BlizzABS
     NORMAL_SPEED = 4
     RUN_SPEED = 5
     SNEAK_SPEED = 3
-    JUMPING = 2
+    #JUMPING = 2
+    JUMPING = 0
     NO_JUMP_TAGS = []
     ALLOW_JUMP_TAGS = []
     NO_FLOOR_TAGS = []
