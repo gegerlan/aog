@@ -26521,6 +26521,16 @@ root:
     parameters: 
     - $v.delete('persona_accessories')
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - Persona.visibility =
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "    $game_player.screen_x <= 450 "
+  - !ruby/object:RPG::EventCommand 
     code: 118
     indent: 0
     parameters: 

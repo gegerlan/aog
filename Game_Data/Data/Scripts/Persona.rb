@@ -54,3 +54,11 @@ module BlizzABS
     end
   end
 end
+
+class Scene_Map
+  alias persona_transfer_player transfer_player
+  def transfer_player
+    persona_transfer_player
+    Persona.visibility = $game_player.screen_x <= 450
+  end
+end
