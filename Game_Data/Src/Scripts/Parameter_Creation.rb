@@ -13,7 +13,8 @@ class Game_Actor
     $data_actors[@actor_id].parameters[parameter, 1] = min
     step = (max - min) / 100
     for i in 2..100
-      $data_actors[@actor_id].parameters[parameter, i] = Integer(step*i)
+      $data_actors[@actor_id].parameters[parameter, i] = 
+        min + Integer(step*i)
     end
   end
 end
