@@ -542,55 +542,31 @@ root:
     - 1
     - Perversion
   - !ruby/object:RPG::EventCommand 
-    code: 102
+    code: 122
     indent: 2
     parameters: 
-    - - High
-      - Low
-    - 2
-  - !ruby/object:RPG::EventCommand 
-    code: 402
-    indent: 2
-    parameters: 
+    - 40
+    - 40
     - 0
-    - High
-  - !ruby/object:RPG::EventCommand 
-    code: 312
-    indent: 3
-    parameters: 
-    - 0
-    - 0
-    - 0
-    - 9999
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 3
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 402
-    indent: 2
-    parameters: 
+    - 4
     - 1
-    - Low
+    - 3
   - !ruby/object:RPG::EventCommand 
-    code: 312
-    indent: 3
-    parameters: 
-    - 0
-    - 1
-    - 0
-    - 9999
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 3
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 404
+    code: 103
     indent: 2
-    parameters: []
-
+    parameters: 
+    - 40
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - $game_party.actors[0].sp =
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "    $game_variables[40]"
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 2
@@ -606,7 +582,7 @@ root:
     code: 101
     indent: 2
     parameters: 
-    - \nm[]\face[]Set time Garnet has had sex with dogs
+    - \nm[]\face[]Set times Garnet has had sex with dogs
   - !ruby/object:RPG::EventCommand 
     code: 122
     indent: 2
@@ -763,103 +739,35 @@ root:
     - 0
     - Gold
   - !ruby/object:RPG::EventCommand 
-    code: 102
-    indent: 1
-    parameters: 
-    - - Increase
-      - Decrease
-    - 5
-  - !ruby/object:RPG::EventCommand 
-    code: 402
-    indent: 1
-    parameters: 
-    - 0
-    - Increase
-  - !ruby/object:RPG::EventCommand 
     code: 122
-    indent: 2
+    indent: 1
     parameters: 
     - 40
     - 40
     - 0
-    - 0
-    - 0
+    - 7
+    - 2
   - !ruby/object:RPG::EventCommand 
     code: 101
-    indent: 2
+    indent: 1
     parameters: 
-    - \nm[]\face[]\gHow much gold do you add?
+    - \nm[]\face[]Gold level
   - !ruby/object:RPG::EventCommand 
     code: 103
-    indent: 2
+    indent: 1
     parameters: 
     - 40
     - 5
   - !ruby/object:RPG::EventCommand 
-    code: 125
-    indent: 2
-    parameters: 
-    - 0
-    - 1
-    - 40
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 402
+    code: 355
     indent: 1
     parameters: 
-    - 1
-    - Decrease
+    - $game_party.gold =
   - !ruby/object:RPG::EventCommand 
-    code: 122
-    indent: 2
-    parameters: 
-    - 40
-    - 40
-    - 0
-    - 0
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 101
-    indent: 2
-    parameters: 
-    - \nm[]\face[]\gHow much gold do you remove?
-  - !ruby/object:RPG::EventCommand 
-    code: 103
-    indent: 2
-    parameters: 
-    - 40
-    - 5
-  - !ruby/object:RPG::EventCommand 
-    code: 125
-    indent: 2
-    parameters: 
-    - 0
-    - 1
-    - 40
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 403
+    code: 655
     indent: 1
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 0
-    indent: 2
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 404
-    indent: 1
-    parameters: []
-
+    parameters: 
+    - "    $game_variables[40]"
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -964,6 +872,136 @@ root:
     indent: 0
     parameters: 
     - no3
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 0
+    parameters: 
+    - - Change Variable
+      - Change Switch
+      - Next
+      - Previous
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 0
+    - Change Variable
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - \nm[]\face[]Enter variable to modify
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 1
+    parameters: 
+    - 40
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $gv = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $gv[41] = $gv[$gv[40]]
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - \nm[]\face[]Enter new value for \v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 1
+    parameters: 
+    - 41
+    - 8
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - $gv = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $gv[$gv[40]] = $gv[41]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 1
+    - Change Switch
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 2
+    - Next
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - no4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 3
+    - Previous
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - no2
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 0
+    parameters: 
+    - no4
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 0
+    parameters: 
+    - exit
   - !ruby/object:RPG::EventCommand 
     code: 118
     indent: 0
