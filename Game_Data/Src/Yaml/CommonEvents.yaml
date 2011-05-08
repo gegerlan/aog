@@ -1128,17 +1128,12 @@ root:
     code: 355
     indent: 0
     parameters: 
-    - id = $game_party.actors[0].id
+    - a = $game_party.actors[0]
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
     parameters: 
-    - "$data_actors[id].armor2_fix = "
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - "true"
+    - a.armor2_fix = true
   - !ruby/object:RPG::EventCommand 
     code: 121
     indent: 0
@@ -1522,12 +1517,7 @@ root:
     code: 355
     indent: 0
     parameters: 
-    - id = $game_party.actors[0].id
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - "$data_actors[id].armor2_fix = "
+    - "$game_party.actors[0].armor2_fix = "
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
@@ -1557,12 +1547,7 @@ root:
     code: 355
     indent: 0
     parameters: 
-    - id = $game_party.actors[0].id
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - "$data_actors[id].armor4_fix = "
+    - "$game_party.actors[0].armor4_fix = "
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
@@ -4337,47 +4322,27 @@ root:
     code: 355
     indent: 0
     parameters: 
-    - id = $game_party.actors[0].id
+    - a = $game_party.actors[0]
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
     parameters: 
-    - "$data_actors[id].armor1_fix = "
+    - a.armor1_fix = false
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
     parameters: 
-    - "false"
+    - a.armor2_fix = false
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
     parameters: 
-    - "$data_actors[id].armor2_fix = "
+    - a.armor3_fix = false
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
     parameters: 
-    - "false"
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - "$data_actors[id].armor3_fix = "
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - "false"
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - "$data_actors[id].armor4_fix = "
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 0
-    parameters: 
-    - "false"
+    - a.armor4_fix = false
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
