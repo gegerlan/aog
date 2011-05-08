@@ -1,3 +1,9 @@
+# TODO:
+#  * Add support for multiple actors
+#  * Fix naming scheme (use either under_score or spa ces) for files
+#  * Animation of fading
+#  * Easy hook for persona (maybe)
+#  * Fix issues with persona overlapping text
 class Persona < Sprite
   def initialize(viewport = nil)
     super
