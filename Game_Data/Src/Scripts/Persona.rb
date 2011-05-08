@@ -21,40 +21,25 @@ class Persona < Sprite
   def self.transparent_opacity
     return 50
   end
-  def self.visibility=(visibility)
-    if $game_switches[self.switch] != visibility
-      $game_switches[self.switch] = !!visibility
+  def visibility=(visibility)
+    if $game_switches[Persona.switch] != visibility
+      $game_switches[Persona.switch] = !!visibility
+      self.bitmap.clear if !visibility
       #self.update_persona
-      #update
+      update
     end
   end
-  def self.is_visible?
-    return !!$game_switches[self.switch]
+  def is_visible?
+    return !!$game_switches[Persona.switch]
   end
-=begin
-  def self.update_persona
-    opacity = self.is_visible? ? self.visible_opacity : self.transparent_opacity
-    self.picture_index.each { |x|
-      p = $game_screen.pictures[x]
-      $game_screen.pictures[x].move(
-        self.duration,
-        p.origin,
-        p.x,
-        p.y,
-        p.zoom_x,
-        p.zoom_y,
-        opacity,
-        p.blend_type
-      );
-    }
-  end
-=end
   def set_transparent(fade)
     self.opacity = !!fade ? 50 : 255
   end
   def update
-    
-    shy = !!$game_switches[88]
+    if !is_visible?
+      return
+    end
+    shy = @actor.is_shy?
     cuffs = @actor.weapon_id == 33
     
     actor_class_name = $data_classes[@actor.class_id].name
@@ -111,17 +96,12 @@ class Scene_Map
     main_persona
     $persona = Persona.new if $persona == nil
   end
-  #alias update_persona main
-  #def update
-  #  $persona.update
-  #  update_persona
-  #end
 end
 class Game_Actor < Game_Battler
   alias equip_persona equip
   def equip(equip_type, id)
     equip_persona(equip_type, id)
-    $persona.update
+    $persona.update if $persona != nil
   end
 end
 module BlizzABS
@@ -131,24 +111,19 @@ module BlizzABS
       persona_check_event_trigger_here(triggers)
       $game_variables[27] == $game_player.screen_y
       $game_variables[28] == $game_player.screen_x
-      #if Persona.is_visible? && $game_player.screen_x > 450
-      if $game_player.screen_x > 450
-      #  Persona.visibility = false
-        $persona.set_transparent(true) if $persona != nil
-      #elsif !Persona.is_visible? && $game_player.screen_x <= 450
-      elsif $game_player.screen_x <= 450
-      #  Persona.visibility = true          
-        $persona.set_transparent(false) if $persona != nil
-      end
-      
+      $persona.set_transparent($game_player.screen_x > 450) if $persona != nil
     end
   end
 end
-
 class Scene_Map
   alias persona_transfer_player transfer_player
   def transfer_player
     persona_transfer_player
-    Persona.visibility = $game_player.screen_x <= 450
+    $persona.set_transparent($game_player.screen_x > 450) if $persona != nil
+  end
+end
+class Game_Actor
+  def is_shy?
+    return armor3_id == 0 && $game_switches[89] == FALSE && $game_variables[49] < 5
   end
 end
