@@ -11735,16 +11735,41 @@ root:
   id: 191
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "$persona.visibility = true if "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $persona != nil
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Show Persona
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 192
   list: 
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "$persona.visibility = false if "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $persona != nil
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
   - !ruby/object:RPG::EventCommand 
     code: 232
     indent: 0
@@ -24980,36 +25005,6 @@ root:
   id: 209
   list: 
   - !ruby/object:RPG::EventCommand 
-    code: 115
-    indent: 0
-    parameters: []
-
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 0
-    parameters: 
-    - 2
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 0
-    parameters: 
-    - 3
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 0
-    parameters: 
-    - 4
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 0
-    parameters: 
-    - 5
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 0
-    parameters: 
-    - 6
-  - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
@@ -25017,30 +25012,10 @@ root:
     - 127
     - 0
   - !ruby/object:RPG::EventCommand 
-    code: 235
+    code: 117
     indent: 1
     parameters: 
-    - 2
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 1
-    parameters: 
-    - 3
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 1
-    parameters: 
-    - 4
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 1
-    parameters: 
-    - 5
-  - !ruby/object:RPG::EventCommand 
-    code: 235
-    indent: 1
-    parameters: 
-    - 6
+    - 192
   - !ruby/object:RPG::EventCommand 
     code: 119
     indent: 1
@@ -25052,10 +25027,60 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 1
+    parameters: 
+    - 191
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 412
     indent: 0
     parameters: []
 
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "#"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "#"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "#"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "#   Old persona script"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "#"
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "#"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
