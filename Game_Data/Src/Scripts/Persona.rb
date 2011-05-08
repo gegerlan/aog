@@ -2,7 +2,7 @@ class Persona < Sprite
   def initialize(viewport = nil)
     super
     self.bitmap = Bitmap.new(640,480)
-    self.visible = true
+    @visible = true
     self.z = 9999
     @actor = $game_party.actors[0]
   end
@@ -22,23 +22,27 @@ class Persona < Sprite
     return 50
   end
   def visibility=(visibility)
-    if $game_switches[Persona.switch] != visibility
-      $game_switches[Persona.switch] = !!visibility
-      self.bitmap.clear if !visibility
+    if @visible != visibility
+      @visible = !!visibility
+      self.bitmap.clear if !is_visible?
       #self.update_persona
-      update
+      update(true) if is_visible?
     end
   end
   def is_visible?
-    return !!$game_switches[Persona.switch]
+    return @visible
   end
   def set_transparent(fade)
     self.opacity = !!fade ? 50 : 255
   end
-  def update
-    if !is_visible?
+  def is_transparent?
+    return self.opacity != 255
+  end
+  def update(force=false)
+    if !is_visible? && !force
       return
     end
+    
     shy = @actor.is_shy?
     cuffs = @actor.weapon_id == 33
     
@@ -55,7 +59,7 @@ class Persona < Sprite
       end
     end
       
-    if armor_set != @old_armor_set || actor_class_name != @old_actor_class_name
+    if armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || force
       self.bitmap.clear
 
       layers = []
@@ -125,5 +129,37 @@ end
 class Game_Actor
   def is_shy?
     return armor3_id == 0 && $game_switches[89] == FALSE && $game_variables[49] < 5
+  end
+end
+class Scene_Menu
+  alias main_menu main
+  def main
+    if $persona != nil
+      visible = $persona.is_visible?
+      transparent = $persona.is_transparent?
+      $persona.set_transparent(true)
+      $persona.visibility = true
+      main_menu
+      $persona.set_transparent(transparent)
+      $persona.visibility = visible
+    else
+      main_menu
+    end
+  end
+end
+class Scene_Equip
+  alias main_equip main
+  def main
+    if $persona != nil
+      visible = $persona.is_visible?
+      transparent = $persona.is_transparent?
+      $persona.set_transparent(false)
+      $persona.visibility = true
+      main_equip
+      $persona.set_transparent(transparent)
+      $persona.visibility = visible
+    else
+      main_equip
+    end
   end
 end
