@@ -70,8 +70,8 @@ class Persona < Sprite
       layers.each do |layer|
         next if layer == nil
         
-        layer += "_shy" if shy
-        layer += "_cuffs" if cuffs
+        layer += " shy" if shy
+        layer += " cuffs" if cuffs
         
         picture_path = get_picture_name(layer)
         if picture_path != nil
