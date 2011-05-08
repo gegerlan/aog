@@ -952,9 +952,9 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 0
-          - 1
-          - 24
-          - 8
+          - 65
+          - 2
+          - 47
           - 2
           - 0
         - !ruby/object:RPG::EventCommand 
@@ -1012,9 +1012,9 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 0
-          - 1
-          - 24
-          - 8
+          - 65
+          - 2
+          - 47
           - 2
           - 0
         - !ruby/object:RPG::EventCommand 
@@ -1533,91 +1533,6 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 7
       y: 10
-    7: !ruby/object:RPG::Event 
-      id: 7
-      name: EV007
-      numero: 7
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 025-Cleric01
-          direction: 8
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \nm[Mage]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - "The easiest way to get to Avalon is to first travel to "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - Carthage.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - "It's a small city centred around a barracks that was "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - built during the last great war with the minotaurs.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - "To get to it travel through Bramble woods then head "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - east on the trade path
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 5
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 1
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 15
-      y: 7
   height: 15
   numero: 20
   tileset_id: 57
