@@ -22,12 +22,16 @@ class Persona < Sprite
     return 50
   end
   def self.visibility=(visibility)
-    $game_switches[self.switch] = !!visibility
-    self.update_persona
+    if $game_switches[self.switch] != visibility
+      $game_switches[self.switch] = !!visibility
+      #self.update_persona
+      #update
+    end
   end
   def self.is_visible?
     return !!$game_switches[self.switch]
   end
+=begin
   def self.update_persona
     opacity = self.is_visible? ? self.visible_opacity : self.transparent_opacity
     self.picture_index.each { |x|
@@ -44,10 +48,15 @@ class Persona < Sprite
       );
     }
   end
+=end
   def set_transparent(fade)
     self.opacity = !!fade ? 50 : 255
   end
   def update
+    
+    shy = !!$game_switches[88]
+    cuffs = @actor.weapon_id == 33
+    
     actor_class_name = $data_classes[@actor.class_id].name
     
     armor_set = []
@@ -71,6 +80,10 @@ class Persona < Sprite
       
       layers.each do |layer|
         next if layer == nil
+        
+        layer += "_shy" if shy
+        layer += "_cuffs" if cuffs
+        
         picture_path = get_picture_name(layer)
         if picture_path != nil
           draw(picture_path)
