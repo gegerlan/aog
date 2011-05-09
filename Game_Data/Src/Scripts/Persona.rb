@@ -1,4 +1,5 @@
 # TODO:
+#  * Fix fugly Dog class fix
 #  * Animation of fading
 #  * Easy hook for persona (maybe)
 #  * Fix issues with persona overlapping text
@@ -74,9 +75,9 @@ class Persona < Sprite
       layers = []
       layers << [@actor.name, actor_class_name].join(" ")
       
-      layers += weapon_set
+      layers += weapon_set if actor_class_name != "Dog" #FIXME!
       
-      layers += armor_set
+      layers += armor_set if actor_class_name != "Dog" #FIXME!
       
       layers.each do |layer|
         next if layer == nil
@@ -85,6 +86,9 @@ class Persona < Sprite
         layer += " cuffs" if cuffs
         
         picture_path = get_picture_name(layer)
+        
+        
+        
         if picture_path != nil
           draw(picture_path)
         else
@@ -186,5 +190,15 @@ class Scene_Equip
     else
       main_equip
     end
+  end
+end
+class Scene_Title
+  alias persona_main main
+  def main
+    $persona.visibility = false if $persona != nil
+    $persona = nil
+    persona_main
+    $persona.visibility = false if $persona != nil
+    $persona = nil
   end
 end
