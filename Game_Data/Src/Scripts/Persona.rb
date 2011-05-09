@@ -65,12 +65,16 @@ class Persona < Sprite
         armor_set << nil
       end
     end
-      
-    if armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || @actor != @old_actor
+    weapon_set = []
+    weapon_set << $data_weapons[@actor.weapon_id].name if @actor.weapon_id != 0
+    
+    if weapon_set != @old_weapon_set || armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || @actor != @old_actor
       self.bitmap.clear
 
       layers = []
       layers << [@actor.name, actor_class_name].join(" ")
+      
+      layers += weapon_set
       
       layers += armor_set
       
@@ -88,6 +92,7 @@ class Persona < Sprite
         end
       end
       @old_armor_set = armor_set
+      @old_weapon_set = weapon_set
       @old_actor_class_name = actor_class_name
       @old_actor = @actor
     end
