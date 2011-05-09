@@ -2146,7 +2146,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters: 
-          - $persona.update
+          - $persona.update if $persona != nil
         - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
