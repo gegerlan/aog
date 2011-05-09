@@ -1,10 +1,9 @@
 # TODO:
-#  * Add support for multiple actors
-#  * Fix naming scheme (use either under_score or spa ces) for files
 #  * Animation of fading
 #  * Easy hook for persona (maybe)
 #  * Fix issues with persona overlapping text
 class Persona < Sprite
+  attr_reader :actor
   def initialize(viewport = nil)
     super
     self.bitmap = Bitmap.new(640,480)
@@ -32,7 +31,8 @@ class Persona < Sprite
       @visible = !!visibility
       self.bitmap.clear if !is_visible?
       #self.update_persona
-      update(true) if is_visible?
+      @old_armor_set = nil if is_visible? #our old picture was nothing, do an update even if equipment is the same!
+      update if is_visible?
     end
   end
   def is_visible?
@@ -44,13 +44,14 @@ class Persona < Sprite
   def is_transparent?
     return self.opacity != 255
   end
-  def update(force=false)
-    if !is_visible? && !force
+  def update
+    super
+    if !is_visible?
       return
     end
     
     shy = @actor.is_shy?
-    cuffs = @actor.weapon_id == 33
+    cuffs = @actor.is_cuffed?
     
     actor_class_name = $data_classes[@actor.class_id].name
     
@@ -65,11 +66,11 @@ class Persona < Sprite
       end
     end
       
-    if armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || force
+    if armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || @actor != @old_actor
       self.bitmap.clear
 
       layers = []
-      layers << [@actor.name, actor_class_name].join("_")
+      layers << [@actor.name, actor_class_name].join(" ")
       
       layers += armor_set
       
@@ -88,6 +89,7 @@ class Persona < Sprite
       end
       @old_armor_set = armor_set
       @old_actor_class_name = actor_class_name
+      @old_actor = @actor
     end
   end
   def draw(image_path)
@@ -97,6 +99,12 @@ class Persona < Sprite
       self.bitmap.blt(0,0,bitmap,rect)
     rescue Exception => e
       print e if $DEBUG
+    end
+  end
+  def actor=(actor)
+    if @actor != actor
+      @actor = actor
+      update
     end
   end
 end
@@ -136,6 +144,9 @@ class Game_Actor
   def is_shy?
     return armor3_id == 0 && $game_switches[89] == FALSE && $game_variables[49] < 5
   end
+  def is_cuffed?
+    return weapon_id == 33
+  end
 end
 class Scene_Menu
   alias main_menu main
@@ -161,7 +172,10 @@ class Scene_Equip
       transparent = $persona.is_transparent?
       $persona.set_transparent(false)
       $persona.visibility = true
+      actor = $persona.actor
+      $persona.actor = $game_party.actors[@actor_index]
       main_equip
+      $persona.actor = actor
       $persona.set_transparent(transparent)
       $persona.visibility = visible
     else
