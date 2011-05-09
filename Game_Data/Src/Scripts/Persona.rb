@@ -124,6 +124,7 @@ class Scene_Map
     $persona = Persona.new if $persona == nil
   end
 end
+# Update persona as the equipment for the/any actor change
 class Game_Actor < Game_Battler
   alias equip_persona equip
   def equip(equip_type, id)
@@ -131,6 +132,7 @@ class Game_Actor < Game_Battler
     $persona.update if $persona != nil
   end
 end
+# Track players position, and make persona transparent if player's x-position is > 450, when the player moves a tile
 module BlizzABS
   class Controller
     alias persona_check_event_trigger_here check_event_trigger_here
@@ -142,6 +144,7 @@ module BlizzABS
     end
   end
 end
+# Make persona transparent if player's x-position is > 450 at map change
 class Scene_Map
   alias persona_transfer_player transfer_player
   def transfer_player
@@ -157,22 +160,22 @@ class Game_Actor
     return weapon_id == 33
   end
 end
+# Add persona to menu screen (transparent)
 class Scene_Menu
   alias main_menu main
   def main
     if $persona != nil
-      visible = $persona.is_visible?
-      transparent = $persona.is_transparent?
+      @old_visible = $persona.is_visible?
+      @old_transparent = $persona.is_transparent?
       $persona.set_transparent(true)
       $persona.visibility = true
-      main_menu
-      $persona.set_transparent(transparent)
-      $persona.visibility = visible
+      main_menu      
     else
       main_menu
     end
   end
 end
+# Add persona to equipment screen (fully visible)
 class Scene_Equip
   alias main_equip main
   def main
@@ -192,6 +195,7 @@ class Scene_Equip
     end
   end
 end
+#Remove garnet from title screen
 class Scene_Title
   alias persona_main main
   def main
