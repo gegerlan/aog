@@ -28661,27 +28661,27 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters: 
-          - id = $game_party.actors[0].id
+          - a = $game_party.actors[0]
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 0
           parameters: 
-          - $data_actors[id].armor3_fix = false
+          - a.armor3_fix = false
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 0
           parameters: 
-          - $data_actors[id].armor2_fix = false
+          - a.armor2_fix = false
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 0
           parameters: 
-          - $data_actors[id].armor1_fix = false
+          - a.armor1_fix = false
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 0
           parameters: 
-          - $data_actors[id].weapon_fix = false
+          - a.weapon_fix = false
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
