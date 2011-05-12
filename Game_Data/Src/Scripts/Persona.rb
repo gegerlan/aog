@@ -74,21 +74,19 @@ class Persona < Sprite
 
       layers = []
       layers << [@actor.name, actor_class_name].join(" ")
-      
+
       layers += weapon_set if actor_class_name != "Dog" #FIXME!
-      
+
       layers += armor_set if actor_class_name != "Dog" #FIXME!
-      
+
       layers.each do |layer|
         next if layer == nil
-        
+
         layer += " shy" if shy
         layer += " cuffs" if cuffs
-        
+
         picture_path = get_picture_name(layer)
-        
-        
-        
+
         if picture_path != nil
           draw(picture_path)
         else
@@ -129,7 +127,7 @@ class Game_Actor < Game_Battler
   alias equip_persona equip
   def equip(equip_type, id)
     equip_persona(equip_type, id)
-    $persona.update if $persona != nil
+    $persona.update if $persona != nil && $persona.actor == self
   end
 end
 # Track players position, and make persona transparent if player's x-position is > 450, when the player moves a tile
