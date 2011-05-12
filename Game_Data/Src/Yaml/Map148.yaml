@@ -18694,7 +18694,7 @@ root: !ruby/object:RPG::Map
         trigger: 0
         walk_anime: true
       x: 1
-      y: 7
+      y: 0
     5: !ruby/object:RPG::Event 
       id: 5
       name: EV005
@@ -18785,10 +18785,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -18812,7 +18832,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -18838,10 +18858,135 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 208
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 16
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 33
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 31
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 2
+        step_anime: true
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: B
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: USC (50)
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 11
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 4
+        move_type: 3
+        numero: 3
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 20
+      y: 38
+    6: !ruby/object:RPG::Event 
+      id: 6
+      name: DOG SEX ANIM
+      numero: 6
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 91
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 121
           indent: 0
           parameters: 
+          - 226
+          - 226
           - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 322
+          indent: 0
+          parameters: 
+          - 1
+          - Garnet - Cum
+          - 0
+          - ""
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 192
         - !ruby/object:RPG::EventCommand 
           code: 111
           indent: 0
@@ -18945,180 +19090,18 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 122
+          code: 121
           indent: 0
           parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
+          - 226
+          - 226
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 121
           indent: 0
           parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 16
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 33
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 31
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 3
-        numero: 2
-        step_anime: true
-        through: false
-        trigger: 4
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: USC (50)
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 11
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 4
-        move_type: 3
-        numero: 3
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 20
-      y: 38
-    6: !ruby/object:RPG::Event 
-      id: 6
-      name: DOG SEX ANIM
-      numero: 6
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 91
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 322
-          indent: 0
-          parameters: 
-          - 1
-          - Garnet - Cum
-          - 0
-          - ""
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 117
-          indent: 0
-          parameters: 
-          - 192
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 101
-          - 101
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 102
-          - 102
+          - 227
+          - 227
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 106
@@ -19144,107 +19127,44 @@ root: !ruby/object:RPG::Map
           - 0
           - 1
         - !ruby/object:RPG::EventCommand 
+          code: 122
+          indent: 0
+          parameters: 
+          - 70
+          - 70
+          - 1
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand 
           code: 208
           indent: 0
           parameters: 
           - 1
         - !ruby/object:RPG::EventCommand 
-          code: 209
+          code: 355
           indent: 0
           parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id002 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - white dog
-              - 0
-              - 2
-              - 0
-            - &id003 !ruby/object:RPG::MoveCommand 
-              code: 29
-              parameters: 
-              - 3
-            - &id004 !ruby/object:RPG::MoveCommand 
-              code: 34
-              parameters: []
-
-            - &id005 !ruby/object:RPG::MoveCommand 
-              code: 31
-              parameters: []
-
-            - &id006 !ruby/object:RPG::MoveCommand 
-              code: 36
-              parameters: []
-
-            - &id007 !ruby/object:RPG::MoveCommand 
-              code: 11
-              parameters: []
-
-            - &id008 !ruby/object:RPG::MoveCommand 
-              code: 11
-              parameters: []
-
-            - &id009 !ruby/object:RPG::MoveCommand 
-              code: 11
-              parameters: []
-
-            - &id010 !ruby/object:RPG::MoveCommand 
-              code: 11
-              parameters: []
-
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: true
+          - $v = $v || {}
         - !ruby/object:RPG::EventCommand 
-          code: 509
+          code: 655
           indent: 0
           parameters: 
-          - *id002
+          - eid = $v.delete("zony_last_wolf")
         - !ruby/object:RPG::EventCommand 
-          code: 509
+          code: 655
           indent: 0
           parameters: 
-          - *id003
+          - if eid != nil
         - !ruby/object:RPG::EventCommand 
-          code: 509
+          code: 655
           indent: 0
           parameters: 
-          - *id004
+          - "  switch_on (eid, \"B\")"
         - !ruby/object:RPG::EventCommand 
-          code: 509
+          code: 655
           indent: 0
           parameters: 
-          - *id005
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id006
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id007
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id008
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id009
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id010
+          - end
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 0
@@ -19497,7 +19417,7 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id011 !ruby/object:RPG::MoveCommand 
+            - &id002 !ruby/object:RPG::MoveCommand 
               code: 19
               parameters: []
 
@@ -19511,7 +19431,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 1
           parameters: 
-          - *id011
+          - *id002
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -19558,14 +19478,14 @@ root: !ruby/object:RPG::Map
         numero: 0
         step_anime: false
         through: false
-        trigger: 3
+        trigger: 0
         walk_anime: true
-      x: 5
-      y: 7
+      x: 3
+      y: 0
     7: !ruby/object:RPG::Event 
       id: 7
       name: EV007
-      numero: 7
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -19652,10 +19572,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -19679,7 +19619,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -19704,152 +19644,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this to be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -19877,11 +19671,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -19935,7 +19729,7 @@ root: !ruby/object:RPG::Map
     8: !ruby/object:RPG::Event 
       id: 8
       name: EV008
-      numero: 8
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -20022,10 +19816,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -20049,7 +19863,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -20074,152 +19888,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this to be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -20247,11 +19915,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -20300,12 +19968,12 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      x: 30
-      y: 76
+      x: 8
+      y: 102
     9: !ruby/object:RPG::Event 
       id: 9
       name: EV009
-      numero: 9
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -20392,10 +20060,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -20419,7 +20107,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -20444,152 +20132,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this to be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -20617,11 +20159,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -20670,12 +20212,12 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      x: 10
-      y: 77
+      x: 29
+      y: 76
     10: !ruby/object:RPG::Event 
       id: 10
       name: EV010
-      numero: 10
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -20762,10 +20304,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -20789,7 +20351,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -20814,152 +20376,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this to be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -20987,381 +20403,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
-        through: false
-        trigger: 4
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: USC (50)
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 11
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 4
-        move_type: 3
-        numero: 3
-        step_anime: false
         through: false
         trigger: 0
-        walk_anime: true
-      x: 10
-      y: 103
-    11: !ruby/object:RPG::Event 
-      id: 11
-      name: EV011
-      numero: 11
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: USC (50)
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - Why are there so many wolves?
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - Are they waiting for something?
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - They look very nervous...
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 6
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 10
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 2
-        move_type: 1
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 2
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 93
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: USC (50)
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 6
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 10
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 4
-        move_type: 3
-        numero: 1
-        step_anime: false
-        through: true
-        trigger: 2
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: true
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: Doggy 2
-          direction: 6
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 16
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 33
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 31
-            parameters: []
-
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 3
-        numero: 2
-        step_anime: true
-        through: false
-        trigger: 4
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -21411,11 +20457,11 @@ root: !ruby/object:RPG::Map
         trigger: 0
         walk_anime: true
       x: 21
-      y: 100
-    12: !ruby/object:RPG::Event 
-      id: 12
-      name: EV012
-      numero: 12
+      y: 98
+    11: !ruby/object:RPG::Event 
+      id: 11
+      name: EV011
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -21502,10 +20548,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -21529,7 +20595,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -21554,152 +20620,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -21727,11 +20647,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -21780,8 +20700,8 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      x: 6
-      y: 115
+      x: 35
+      y: 101
     13: !ruby/object:RPG::Event 
       id: 13
       name: EV013
@@ -26585,7 +25505,7 @@ root: !ruby/object:RPG::Map
     53: !ruby/object:RPG::Event 
       id: 53
       name: EV053
-      numero: 53
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -26672,10 +25592,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -26699,7 +25639,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -26724,152 +25664,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this to be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -26897,11 +25691,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -26950,12 +25744,12 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      x: 35
-      y: 103
+      x: 33
+      y: 114
     54: !ruby/object:RPG::Event 
       id: 54
       name: EV054
-      numero: 54
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -27042,10 +25836,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -27069,7 +25883,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -27094,152 +25908,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -27267,11 +25935,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -27320,12 +25988,12 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      x: 17
-      y: 119
+      x: 4
+      y: 112
     55: !ruby/object:RPG::Event 
       id: 55
       name: EV055
-      numero: 55
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -27412,10 +26080,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -27439,7 +26127,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -27464,152 +26152,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -27637,11 +26179,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -27690,8 +26232,8 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      x: 32
-      y: 113
+      x: 21
+      y: 119
     56: !ruby/object:RPG::Event 
       id: 56
       name: EV056
@@ -29652,7 +28194,7 @@ root: !ruby/object:RPG::Map
     90: !ruby/object:RPG::Event 
       id: 90
       name: EV090
-      numero: 90
+      numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -29739,10 +28281,30 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
           - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -29766,7 +28328,7 @@ root: !ruby/object:RPG::Map
         move_type: 3
         numero: 1
         step_anime: false
-        through: true
+        through: false
         trigger: 2
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
@@ -29791,152 +28353,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 2
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't take this any longer!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 1
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Please, not again!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - I can't let this be done to me.....
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "But he's too strong... "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - I can't pull him away while he's
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - grabbing me like this.....
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 1
-          - 70
-          - 0
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Ahhhhhhhh...... ahhhhh!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - Get off mee!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 70
-          - 70
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 200
-        - !ruby/object:RPG::EventCommand 
-          code: 208
-          indent: 0
-          parameters: 
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 91
-          - 91
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -29964,11 +28380,11 @@ root: !ruby/object:RPG::Map
           repeat: true
           skippable: false
         move_speed: 3
-        move_type: 3
+        move_type: 0
         numero: 2
         step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -31174,6 +29590,250 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 39
       y: 149
+    112: !ruby/object:RPG::Event 
+      id: 112
+      name: EV112
+      numero: 5
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: USC (50)
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - Why are there so many wolves?
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - Are they waiting for something?
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - They look very nervous...
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 6
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 10
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 2
+        move_type: 1
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 2
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 93
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: USC (50)
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v = $v || {}
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - $v["zony_last_wolf"] = @event_id
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 0
+          parameters: 
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 6
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 10
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 4
+        move_type: 3
+        numero: 1
+        step_anime: false
+        through: false
+        trigger: 2
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: true
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: Doggy 2
+          direction: 6
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 16
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 33
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 31
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 2
+        step_anime: true
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: B
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: USC (50)
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 11
+            parameters: []
+
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 4
+        move_type: 3
+        numero: 3
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 10
+      y: 76
   height: 150
   numero: 148
   tileset_id: 56
