@@ -1,13 +1,53 @@
-#==============================================================================
-# ** Scene_Equip
-#------------------------------------------------------------------------------
-#  This class performs equipment screen processing.
-#==============================================================================
-
 class Scene_Equip
-  #--------------------------------------------------------------------------
-  # * Refresh
-  #--------------------------------------------------------------------------
+  def main
+    # Get actor
+    @actor = $game_party.actors[@actor_index]
+    # Make windows
+    @help_window = Window_Help.new
+    @left_window = Window_EquipLeft.new(@actor.clone)
+    @right_window = Window_EquipRight.new(@actor)
+    @item_window1 = Window_EquipItem.new(@actor, 0)
+    @item_window2 = Window_EquipItem.new(@actor, 1)
+    @item_window3 = Window_EquipItem.new(@actor, 2)
+    @item_window4 = Window_EquipItem.new(@actor, 3)
+    @item_window5 = Window_EquipItem.new(@actor, 4)
+    # Associate help window
+    @right_window.help_window = @help_window
+    @item_window1.help_window = @help_window
+    @item_window2.help_window = @help_window
+    @item_window3.help_window = @help_window
+    @item_window4.help_window = @help_window
+    @item_window5.help_window = @help_window
+    # Set cursor position
+    @right_window.index = @equip_index
+    refresh
+    # Execute transition
+    Graphics.transition
+    # Main loop
+    loop do
+      # Update game screen
+      Graphics.update
+      # Update input information
+      Input.update
+      # Frame update
+      update
+      # Abort loop if screen is changed
+      if $scene != self
+        break
+      end
+    end
+    # Prepare for transition
+    Graphics.freeze
+    # Dispose of windows
+    @help_window.dispose
+    @left_window.dispose
+    @right_window.dispose
+    @item_window1.dispose
+    @item_window2.dispose
+    @item_window3.dispose
+    @item_window4.dispose
+    @item_window5.dispose
+  end
   def refresh
     # Set item window to visible
     @item_window1.visible = (@right_window.index == 0)
@@ -52,8 +92,8 @@ class Scene_Equip
         new_mdef = @actor.mdef
         # Return equipment
         #@actor.equip(@right_window.index, item1 == nil ? 0 : item1.id)
-        #@actor.hp = last_hp
-        #@actor.sp = last_sp
+        @actor.hp = @last_hp
+        @actor.sp = @last_sp
         
         @last_item = item2
         
@@ -97,6 +137,9 @@ class Scene_Equip
       @right_window.active = true
       @item_window.active = false
       @item_window.index = -1
+      
+      @left_window.actor = @actor.clone
+      @left_window.refresh
       # Remake right window and item window contents
       @right_window.refresh
       @item_window.refresh
