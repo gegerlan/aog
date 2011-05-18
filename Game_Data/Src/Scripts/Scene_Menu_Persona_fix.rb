@@ -1,3 +1,6 @@
+=begin
+Displays the persona in the menu as the player enters the main menu.
+=end
 class Scene_Menu
   def update_command
     # If B button was pressed
