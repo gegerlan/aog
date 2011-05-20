@@ -140,24 +140,24 @@ module BlizzABS
     UNSUMMON_ANIMATION_ID = 0
     
     # 2.7. # Sprite Control Configuration
-    A_ACTION_SPRITES = false
+    A_ACTION_SPRITES = true
     A_WEAPON_SPRITES = false
     A_DEFEND_SPRITES = false
     A_SKILL_SPRITES = false
     A_ITEM_SPRITES = false
-    A_IDLE_SPRITES = false
-    A_CHARGE_SPRITES = false
+    A_IDLE_SPRITES = true
+    A_CHARGE_SPRITES = true
     A_CHARGE_WEAPON_SPRITES = false
     A_CHARGE_SKILL_SPRITES = false
     A_CHARGE_ITEM_SPRITES = false
     E_ACTION_SPRITES = false
     E_SKILL_SPRITES = false
     E_IDLE_SPRITES = false
-    E_CHARGE_SPRITES = false
+    E_CHARGE_SPRITES = true
     E_CHARGE_SKILL_SPRITES = false
-    RUNNING_SPRITES = false
-    SNEAKING_SPRITES = false
-    JUMPING_SPRITES = false
+    RUNNING_SPRITES = true
+    SNEAKING_SPRITES = true
+    JUMPING_SPRITES = true
     
   end
   
