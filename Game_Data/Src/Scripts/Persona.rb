@@ -50,9 +50,8 @@ class Persona < Sprite
     if !is_visible?
       return
     end
-    
-    shy = false # @actor.is_shy?
-    cuffs = false #@actor.is_cuffed?
+    shy = @actor.is_shy?
+    cuffs = @actor.is_cuffed?
     
     actor_class_name = $data_classes[@actor.class_id].name
     
@@ -68,7 +67,7 @@ class Persona < Sprite
     end
     weapon_set = []
     weapon_set << $data_weapons[@actor.weapon_id].name if @actor.weapon_id != 0
-    
+
     #todo: make a proper hash
     if weapon_set != @old_weapon_set || armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || @actor != @old_actor
       self.bitmap.clear
@@ -120,40 +119,67 @@ class Spriteset_Map
   attr_reader :viewport1
   attr_reader :picture_sprites
 end
-class Scene_Map
-  def main
-    # Make sprite set
-    @spriteset = Spriteset_Map.new
-    $persona = Persona.new($scene.spriteset.viewport1) if $persona == nil
-    @spriteset.picture_sprites.push($persona) if $persona != nil
-    # Make message window
-    @message_window = Window_Message.new
-    # Transition run
-    Graphics.transition
-    # Main loop
-    loop do
-      # Update game screen
-      Graphics.update
-      # Update input information
-      Input.update
-      # Frame update
-      update
-      # Abort loop if screen is changed
-      if $scene != self
-        break
-      end
+=begin
+class Game_Actor < Game_Battler
+  alias equip_persona equip
+  def equip(equip_type, id)
+    equip_persona(equip_type, id)
+    if $persona != nil #&& $scene.is_a?(Scene_Map)
+      $persona.update if $persona.actor == self
     end
-    # Prepare for transition
-    Graphics.freeze
-    # Dispose of sprite set
-    @spriteset.dispose
-    # Dispose of message window
-    @message_window.dispose
-    # If switching to title screen
-    if $scene.is_a?(Scene_Title)
-      # Fade out screen
-      Graphics.transition
-      Graphics.freeze
+  end
+end
+=end
+class Scene_Map
+  alias persona_update update
+  def update
+    persona_update
+    if $persona == nil
+      add_persona
+    end
+  end
+  alias persona_main main  
+  def main
+    persona_main
+    $persona.dispose
+    $persona = nil
+  end
+  alias persona_transfer transfer_player
+  def transfer_player
+    persona_transfer
+    add_persona
+  end
+  def add_persona
+    $persona = Persona.new(@spriteset.viewport1)
+    @spriteset.picture_sprites.push($persona)
+    $persona.set_transparent($game_player.screen_x > 450)
+  end
+end
+class Scene_Equip
+  alias persona_main main
+  def main
+    persona_main
+    $persona.dispose
+    $persona = nil
+  end
+  alias persona_update update
+  def update
+    persona_update
+    if $persona == nil
+      add_persona
+    end
+    $persona.update
+  end
+  def add_persona
+    $persona = Persona.new
+  end
+end
+module BlizzABS
+  class Controller
+    alias persona_check_event_trigger_here check_event_trigger_here
+    def check_event_trigger_here(triggers)
+      persona_check_event_trigger_here(triggers)
+      $persona.set_transparent($game_player.screen_x > 450) if $persona != nil
     end
   end
 end
@@ -186,6 +212,7 @@ class Scene_Map
     $persona.set_transparent($game_player.screen_x > 450) if $persona != nil
   end
 end
+=end
 class Game_Actor
   def is_shy?
     return armor3_id == 0 && $game_switches[89] == FALSE && $game_variables[49] < 5
@@ -194,6 +221,7 @@ class Game_Actor
     return weapon_id == 33
   end
 end
+=begin
 # Add persona to menu screen (transparent)
 class Scene_Menu
   alias main_menu main
