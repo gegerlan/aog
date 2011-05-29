@@ -1,3 +1,4 @@
+=begin
 class Scene_Equip
   def main
     # Get actor
@@ -147,3 +148,4 @@ class Scene_Equip
     end
   end
 end
+=end

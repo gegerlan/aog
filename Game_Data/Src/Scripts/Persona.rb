@@ -6,7 +6,7 @@
 class Persona < Sprite
   attr_reader :actor
   def initialize(viewport = nil)
-    super
+    super(viewport)
     self.bitmap = Bitmap.new(640,480)
     @visible = true
     self.z = 9999
@@ -51,8 +51,8 @@ class Persona < Sprite
       return
     end
     
-    shy = @actor.is_shy?
-    cuffs = @actor.is_cuffed?
+    shy = false # @actor.is_shy?
+    cuffs = false #@actor.is_cuffed?
     
     actor_class_name = $data_classes[@actor.class_id].name
     
@@ -69,6 +69,7 @@ class Persona < Sprite
     weapon_set = []
     weapon_set << $data_weapons[@actor.weapon_id].name if @actor.weapon_id != 0
     
+    #todo: make a proper hash
     if weapon_set != @old_weapon_set || armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || @actor != @old_actor
       self.bitmap.clear
 
@@ -115,13 +116,48 @@ class Persona < Sprite
     end
   end
 end
+class Spriteset_Map
+  attr_reader :viewport1
+  attr_reader :picture_sprites
+end
 class Scene_Map
-  alias main_persona main
   def main
-    main_persona
-    $persona = Persona.new if $persona == nil
+    # Make sprite set
+    @spriteset = Spriteset_Map.new
+    $persona = Persona.new($scene.spriteset.viewport1) if $persona == nil
+    @spriteset.picture_sprites.push($persona) if $persona != nil
+    # Make message window
+    @message_window = Window_Message.new
+    # Transition run
+    Graphics.transition
+    # Main loop
+    loop do
+      # Update game screen
+      Graphics.update
+      # Update input information
+      Input.update
+      # Frame update
+      update
+      # Abort loop if screen is changed
+      if $scene != self
+        break
+      end
+    end
+    # Prepare for transition
+    Graphics.freeze
+    # Dispose of sprite set
+    @spriteset.dispose
+    # Dispose of message window
+    @message_window.dispose
+    # If switching to title screen
+    if $scene.is_a?(Scene_Title)
+      # Fade out screen
+      Graphics.transition
+      Graphics.freeze
+    end
   end
 end
+=begin
 # Update persona as the equipment for the/any actor change
 class Game_Actor < Game_Battler
   alias equip_persona equip
@@ -204,3 +240,4 @@ class Scene_Title
     $persona = nil
   end
 end
+=end

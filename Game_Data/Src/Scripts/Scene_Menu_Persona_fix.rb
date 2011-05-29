@@ -1,6 +1,7 @@
 =begin
 Displays the persona in the menu as the player enters the main menu.
 =end
+=begin
 class Scene_Menu
   def update_command
     # If B button was pressed
@@ -9,8 +10,10 @@ class Scene_Menu
       $game_system.se_play($data_system.cancel_se)
       # Switch to map screen
       $scene = Scene_Map.new
-      $persona.set_transparent(@old_transparent)
-      $persona.visibility = @old_visible
+      if $persona != nil
+        $persona.set_transparent(@old_transparent)
+        $persona.visibility = @old_visible
+      end
       return
     end
     # If C button was pressed
@@ -77,3 +80,4 @@ class Scene_Menu
     end
   end
 end
+=end
