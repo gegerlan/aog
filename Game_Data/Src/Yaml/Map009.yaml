@@ -788,8 +788,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 2458
-    - 8001
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -2066,7 +2066,7 @@ root: !ruby/object:RPG::Map
       y: 2
     5: !ruby/object:RPG::Event 
       id: 5
-      name: EV005
+      name: Diary
       numero: 5
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -2089,78 +2089,7 @@ root: !ruby/object:RPG::Map
           direction: 2
           opacity: 255
           pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id030 !ruby/object:RPG::MoveCommand 
-              code: 39
-              parameters: []
-
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id030
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: true
-        trigger: 3
-        walk_anime: false
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 185-Light02
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
+          tile_id: 8001
         list: 
         - !ruby/object:RPG::EventCommand 
           code: 117
@@ -2189,7 +2118,7 @@ root: !ruby/object:RPG::Map
           code: 123
           indent: 0
           parameters: 
-          - B
+          - A
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 101
@@ -2220,7 +2149,7 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
+          self_switch_ch: A
           self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
@@ -2237,7 +2166,7 @@ root: !ruby/object:RPG::Map
           direction: 2
           opacity: 255
           pattern: 0
-          tile_id: 7273
+          tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -2772,7 +2701,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id031 !ruby/object:RPG::MoveCommand 
+            - &id030 !ruby/object:RPG::MoveCommand 
               code: 33
               parameters: []
 
@@ -2786,7 +2715,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id031
+          - *id030
         - !ruby/object:RPG::EventCommand 
           code: 210
           indent: 0
@@ -2804,885 +2733,885 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id032 !ruby/object:RPG::MoveCommand 
+            - &id031 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id033 !ruby/object:RPG::MoveCommand 
+            - &id032 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id034 !ruby/object:RPG::MoveCommand 
+            - &id033 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id035 !ruby/object:RPG::MoveCommand 
+            - &id034 !ruby/object:RPG::MoveCommand 
               code: 44
               parameters: 
               - !ruby/object:RPG::AudioFile 
                 name: Suck02
                 pitch: 100
                 volume: 80
-            - &id036 !ruby/object:RPG::MoveCommand 
+            - &id035 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id036 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id037 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id038 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id039 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id040 !ruby/object:RPG::MoveCommand 
+            - &id039 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id040 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id041 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id042 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id043 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id044 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id045 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id046 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id047 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id048 !ruby/object:RPG::MoveCommand 
+            - &id047 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id049 !ruby/object:RPG::MoveCommand 
+            - &id048 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id050 !ruby/object:RPG::MoveCommand 
+            - &id049 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id050 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id051 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id052 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id053 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id054 !ruby/object:RPG::MoveCommand 
+            - &id053 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id054 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id055 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id056 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id057 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id058 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id059 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id060 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id061 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id062 !ruby/object:RPG::MoveCommand 
+            - &id061 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id063 !ruby/object:RPG::MoveCommand 
+            - &id062 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id064 !ruby/object:RPG::MoveCommand 
+            - &id063 !ruby/object:RPG::MoveCommand 
               code: 44
               parameters: 
               - !ruby/object:RPG::AudioFile 
                 name: Suck02
                 pitch: 100
                 volume: 80
-            - &id065 !ruby/object:RPG::MoveCommand 
+            - &id064 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id065 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id066 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id067 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id068 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id069 !ruby/object:RPG::MoveCommand 
+            - &id068 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id069 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id070 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id071 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id072 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id073 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id074 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id075 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id076 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id077 !ruby/object:RPG::MoveCommand 
+            - &id076 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id078 !ruby/object:RPG::MoveCommand 
+            - &id077 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id079 !ruby/object:RPG::MoveCommand 
+            - &id078 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id079 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id080 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id081 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id082 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id083 !ruby/object:RPG::MoveCommand 
+            - &id082 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id083 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id084 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id085 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id086 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id087 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id088 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id089 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id090 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id091 !ruby/object:RPG::MoveCommand 
+            - &id090 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id092 !ruby/object:RPG::MoveCommand 
+            - &id091 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id093 !ruby/object:RPG::MoveCommand 
+            - &id092 !ruby/object:RPG::MoveCommand 
               code: 44
               parameters: 
               - !ruby/object:RPG::AudioFile 
                 name: Suck02
                 pitch: 100
                 volume: 80
-            - &id094 !ruby/object:RPG::MoveCommand 
+            - &id093 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id094 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id095 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id096 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id097 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id098 !ruby/object:RPG::MoveCommand 
+            - &id097 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id098 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id099 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id100 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id101 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id102 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id103 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id104 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id105 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id106 !ruby/object:RPG::MoveCommand 
+            - &id105 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id107 !ruby/object:RPG::MoveCommand 
+            - &id106 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id108 !ruby/object:RPG::MoveCommand 
+            - &id107 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id108 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id109 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id110 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id111 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id112 !ruby/object:RPG::MoveCommand 
+            - &id111 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id112 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id113 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id114 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id115 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id116 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id117 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id118 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id119 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id120 !ruby/object:RPG::MoveCommand 
+            - &id119 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id121 !ruby/object:RPG::MoveCommand 
+            - &id120 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id122 !ruby/object:RPG::MoveCommand 
+            - &id121 !ruby/object:RPG::MoveCommand 
               code: 44
               parameters: 
               - !ruby/object:RPG::AudioFile 
                 name: Suck02
                 pitch: 100
                 volume: 80
-            - &id123 !ruby/object:RPG::MoveCommand 
+            - &id122 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id123 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id124 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id125 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id126 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id127 !ruby/object:RPG::MoveCommand 
+            - &id126 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id127 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id128 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id129 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id130 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id131 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id132 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id133 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id134 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id135 !ruby/object:RPG::MoveCommand 
+            - &id134 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id136 !ruby/object:RPG::MoveCommand 
+            - &id135 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id137 !ruby/object:RPG::MoveCommand 
+            - &id136 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id137 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id138 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 2
-            - &id139 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id140 !ruby/object:RPG::MoveCommand 
+            - &id139 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id141 !ruby/object:RPG::MoveCommand 
+            - &id140 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id141 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id142 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id143 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id144 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id145 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id146 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id147 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id148 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id149 !ruby/object:RPG::MoveCommand 
+            - &id148 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id150 !ruby/object:RPG::MoveCommand 
+            - &id149 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id151 !ruby/object:RPG::MoveCommand 
+            - &id150 !ruby/object:RPG::MoveCommand 
               code: 44
               parameters: 
               - !ruby/object:RPG::AudioFile 
                 name: Suck02
                 pitch: 100
                 volume: 80
-            - &id152 !ruby/object:RPG::MoveCommand 
+            - &id151 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id152 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id153 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id154 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id155 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id156 !ruby/object:RPG::MoveCommand 
+            - &id155 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id156 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id157 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id158 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id159 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id160 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id161 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id162 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id163 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id164 !ruby/object:RPG::MoveCommand 
+            - &id163 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id165 !ruby/object:RPG::MoveCommand 
+            - &id164 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id166 !ruby/object:RPG::MoveCommand 
+            - &id165 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id166 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id167 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id168 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id169 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id170 !ruby/object:RPG::MoveCommand 
+            - &id169 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id170 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id171 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
               - 2
             - &id172 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 1
             - &id173 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 1
+              - 2
             - &id174 !ruby/object:RPG::MoveCommand 
-              code: 15
+              code: 41
               parameters: 
-              - 2
+              - Male Adventurer XXX 1
+              - 0
+              - 4
+              - 0
             - &id175 !ruby/object:RPG::MoveCommand 
-              code: 41
+              code: 15
               parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 0
+              - 2
             - &id176 !ruby/object:RPG::MoveCommand 
-              code: 15
-              parameters: 
-              - 2
-            - &id177 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id178 !ruby/object:RPG::MoveCommand 
+            - &id177 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id179 !ruby/object:RPG::MoveCommand 
+            - &id178 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id180 !ruby/object:RPG::MoveCommand 
+            - &id179 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
+              - 2
+            - &id180 !ruby/object:RPG::MoveCommand 
+              code: 41
+              parameters: 
+              - Male Adventurer XXX 1
+              - 0
+              - 4
               - 2
             - &id181 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - Male Adventurer XXX 1
-              - 0
-              - 4
-              - 2
-            - &id182 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id183 !ruby/object:RPG::MoveCommand 
+            - &id182 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 3
-            - &id184 !ruby/object:RPG::MoveCommand 
+            - &id183 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id185 !ruby/object:RPG::MoveCommand 
+            - &id184 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 2
-            - &id186 !ruby/object:RPG::MoveCommand 
+            - &id185 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id187 !ruby/object:RPG::MoveCommand 
+            - &id186 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 1
-            - &id188 !ruby/object:RPG::MoveCommand 
+            - &id187 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
-            - &id189 !ruby/object:RPG::MoveCommand 
+            - &id188 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 4
               - 0
-            - &id190 !ruby/object:RPG::MoveCommand 
+            - &id189 !ruby/object:RPG::MoveCommand 
               code: 15
               parameters: 
               - 2
@@ -3692,6 +3621,11 @@ root: !ruby/object:RPG::Map
 
             repeat: false
             skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id031
         - !ruby/object:RPG::EventCommand 
           code: 509
           indent: 0
@@ -4483,11 +4417,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - *id189
         - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id190
-        - !ruby/object:RPG::EventCommand 
           code: 210
           indent: 0
           parameters: []
@@ -4504,14 +4433,14 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id191 !ruby/object:RPG::MoveCommand 
+            - &id190 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Male Adventurer XXX 1
               - 0
               - 8
               - 0
-            - &id192 !ruby/object:RPG::MoveCommand 
+            - &id191 !ruby/object:RPG::MoveCommand 
               code: 33
               parameters: []
 
@@ -4525,12 +4454,12 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id191
+          - *id190
         - !ruby/object:RPG::EventCommand 
           code: 509
           indent: 0
           parameters: 
-          - *id192
+          - *id191
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 0
@@ -4810,7 +4739,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id193 !ruby/object:RPG::MoveCommand 
+            - &id192 !ruby/object:RPG::MoveCommand 
               code: 33
               parameters: []
 
@@ -4824,7 +4753,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id193
+          - *id192
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -5105,7 +5034,7 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id194 !ruby/object:RPG::MoveCommand 
+            - &id193 !ruby/object:RPG::MoveCommand 
               code: 30
               parameters: 
               - 4
@@ -5119,7 +5048,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id194
+          - *id193
         - !ruby/object:RPG::EventCommand 
           code: 250
           indent: 0
@@ -5845,7 +5774,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id195 !ruby/object:RPG::MoveCommand 
+            - &id194 !ruby/object:RPG::MoveCommand 
               code: 34
               parameters: []
 
@@ -5859,7 +5788,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id195
+          - *id194
         - !ruby/object:RPG::EventCommand 
           code: 224
           indent: 0
@@ -5977,7 +5906,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id196 !ruby/object:RPG::MoveCommand 
+            - &id195 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Garnet - Cum
@@ -5994,7 +5923,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id196
+          - *id195
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
@@ -6117,7 +6046,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id197 !ruby/object:RPG::MoveCommand 
+            - &id196 !ruby/object:RPG::MoveCommand 
               code: 33
               parameters: []
 
@@ -6131,7 +6060,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id197
+          - *id196
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -6424,7 +6353,7 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id198 !ruby/object:RPG::MoveCommand 
+            - &id197 !ruby/object:RPG::MoveCommand 
               code: 30
               parameters: 
               - 4
@@ -6438,7 +6367,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id198
+          - *id197
         - !ruby/object:RPG::EventCommand 
           code: 250
           indent: 0
@@ -7179,7 +7108,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id199 !ruby/object:RPG::MoveCommand 
+            - &id198 !ruby/object:RPG::MoveCommand 
               code: 34
               parameters: []
 
@@ -7193,7 +7122,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id199
+          - *id198
         - !ruby/object:RPG::EventCommand 
           code: 224
           indent: 0
@@ -7330,7 +7259,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id200 !ruby/object:RPG::MoveCommand 
+            - &id199 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Garnet - Cum
@@ -7347,7 +7276,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id200
+          - *id199
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
@@ -7475,7 +7404,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id201 !ruby/object:RPG::MoveCommand 
+            - &id200 !ruby/object:RPG::MoveCommand 
               code: 33
               parameters: []
 
@@ -7489,7 +7418,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id201
+          - *id200
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -7852,7 +7781,7 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id202 !ruby/object:RPG::MoveCommand 
+            - &id201 !ruby/object:RPG::MoveCommand 
               code: 30
               parameters: 
               - 4
@@ -7866,7 +7795,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id202
+          - *id201
         - !ruby/object:RPG::EventCommand 
           code: 250
           indent: 0
@@ -8739,7 +8668,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id203 !ruby/object:RPG::MoveCommand 
+            - &id202 !ruby/object:RPG::MoveCommand 
               code: 34
               parameters: []
 
@@ -8753,7 +8682,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id203
+          - *id202
         - !ruby/object:RPG::EventCommand 
           code: 224
           indent: 0
@@ -8846,7 +8775,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id204 !ruby/object:RPG::MoveCommand 
+            - &id203 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Garnet - Cum
@@ -8863,7 +8792,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id204
+          - *id203
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
@@ -9060,7 +8989,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id205 !ruby/object:RPG::MoveCommand 
+            - &id204 !ruby/object:RPG::MoveCommand 
               code: 33
               parameters: []
 
@@ -9074,7 +9003,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id205
+          - *id204
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -9427,7 +9356,7 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id206 !ruby/object:RPG::MoveCommand 
+            - &id205 !ruby/object:RPG::MoveCommand 
               code: 30
               parameters: 
               - 4
@@ -9441,7 +9370,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id206
+          - *id205
         - !ruby/object:RPG::EventCommand 
           code: 250
           indent: 0
@@ -10203,7 +10132,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id207 !ruby/object:RPG::MoveCommand 
+            - &id206 !ruby/object:RPG::MoveCommand 
               code: 34
               parameters: []
 
@@ -10217,7 +10146,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id207
+          - *id206
         - !ruby/object:RPG::EventCommand 
           code: 224
           indent: 0
@@ -10300,7 +10229,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id208 !ruby/object:RPG::MoveCommand 
+            - &id207 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Garnet - Cum
@@ -10317,7 +10246,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id208
+          - *id207
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
