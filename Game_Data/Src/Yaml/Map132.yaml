@@ -1551,12 +1551,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Celine]\face[]No way. You are not allowed to borow
+          - "\\nm[Celine]\\face[]No way. You are not allowed to "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
-          - a book. You are already overdue for 18 books.
+          - borow
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - a book. You are already overdue for 19 books.
         - !ruby/object:RPG::EventCommand 
           code: 117
           indent: 0
@@ -1576,7 +1581,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Celine]\face[]Not one more book till you return all 18.
+          - "\\nm[Celine]\\face[]Not one more book till you return all "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - "19."
         - !ruby/object:RPG::EventCommand 
           code: 122
           indent: 0
@@ -1844,7 +1854,7 @@ root: !ruby/object:RPG::Map
           switch2_valid: false
           variable_id: 32
           variable_valid: true
-          variable_value: 18
+          variable_value: 19
         direction_fix: false
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
@@ -1883,7 +1893,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Garnet] I've got all 18 right here.
+          - \nm[Garnet] I've got all 19 right here.
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -4401,7 +4411,7 @@ root: !ruby/object:RPG::Map
           switch2_valid: false
           variable_id: 32
           variable_valid: true
-          variable_value: 17
+          variable_value: 18
         direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
