@@ -2,11 +2,10 @@
 #  * Fix fugly Dog class fix
 #  * Animation of fading
 #  * Easy hook for persona (maybe)
-#  * Fix issues with persona overlapping text
 class Persona < Sprite
   attr_reader :actor
   def initialize(viewport = nil)
-    super
+    super(viewport)
     self.bitmap = Bitmap.new(640,480)
     @visible = true
     self.z = 9999
@@ -14,9 +13,6 @@ class Persona < Sprite
   end
   def self.switch 
     return 128
-  end
-  def self.picture_index
-    return 2..6
   end
   def self.duration
     return 10
@@ -50,7 +46,6 @@ class Persona < Sprite
     if !is_visible?
       return
     end
-    
     shy = @actor.is_shy?
     cuffs = @actor.is_cuffed?
     
@@ -68,7 +63,8 @@ class Persona < Sprite
     end
     weapon_set = []
     weapon_set << $data_weapons[@actor.weapon_id].name if @actor.weapon_id != 0
-    
+
+    #todo: make a proper hash
     if weapon_set != @old_weapon_set || armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || @actor != @old_actor
       self.bitmap.clear
 
@@ -84,9 +80,14 @@ class Persona < Sprite
 
         layer += " shy" if shy
         layer += " cuffs" if cuffs
-
-        picture_path = get_picture_name(layer)
-
+        
+        # Try getting actor name + actor class + layer image
+        picture_path = get_picture_name([@actor.name, actor_class_name, layer].join(" "), true)
+        # Try getting actor name + layer image
+        picture_path = get_picture_name([@actor.name, layer].join(" "), true) if picture_path == nil
+        # Try getting layer image
+        picture_path = get_picture_name(layer) if picture_path == nil
+        
         if picture_path != nil
           draw(picture_path)
         else
@@ -115,92 +116,75 @@ class Persona < Sprite
     end
   end
 end
+# Extending the default spriteset class for getting the scene map viewport1
+class Spriteset_Map
+  attr_reader :viewport1
+  attr_reader :picture_sprites
+end
+# Present the persona as a map is loaded
 class Scene_Map
-  alias main_persona main
+  alias persona_update update
+  def update
+    persona_update
+    if $persona == nil
+      add_persona
+    end
+  end
+  alias persona_main main  
   def main
-    main_persona
-    $persona = Persona.new if $persona == nil
+    persona_main
+    $persona.dispose
+    $persona = nil
+  end
+  alias persona_transfer transfer_player
+  def transfer_player
+    persona_transfer
+    add_persona
+  end
+  def add_persona
+    $persona = Persona.new(@spriteset.viewport1)
+    @spriteset.picture_sprites.push($persona)
+    $persona.set_transparent($game_player.screen_x > 450)
   end
 end
-# Update persona as the equipment for the/any actor change
-class Game_Actor < Game_Battler
-  alias equip_persona equip
-  def equip(equip_type, id)
-    equip_persona(equip_type, id)
-    $persona.update if $persona != nil && $persona.actor == self
+# Add a persona to the equipment menu
+class Scene_Equip
+  alias persona_main main
+  def main
+    persona_main
+    $persona.dispose
+    $persona = nil
+  end
+  alias persona_update update
+  def update
+    persona_update
+    if $persona == nil
+      add_persona
+    end
+    $persona.update
+  end
+  def add_persona
+    $persona = Persona.new
+    $persona.actor = @actor
   end
 end
-# Track players position, and make persona transparent if player's x-position is > 450, when the player moves a tile
 module BlizzABS
   class Controller
     alias persona_check_event_trigger_here check_event_trigger_here
+    # Change the persona to transparent if the actor is over 450
     def check_event_trigger_here(triggers)
       persona_check_event_trigger_here(triggers)
-      $game_variables[27] == $game_player.screen_y
-      $game_variables[28] == $game_player.screen_x
       $persona.set_transparent($game_player.screen_x > 450) if $persona != nil
     end
   end
 end
-# Make persona transparent if player's x-position is > 450 at map change
-class Scene_Map
-  alias persona_transfer_player transfer_player
-  def transfer_player
-    persona_transfer_player
-    $persona.set_transparent($game_player.screen_x > 450) if $persona != nil
-  end
-end
 class Game_Actor
+  # Is the actor shy? Only if no body armor, nudity is not OK and perversion is less than 5
   def is_shy?
     return armor3_id == 0 && $game_switches[89] == FALSE && $game_variables[49] < 5
   end
+  # Is the actor cuffed? Only if the weapon worn is 33.
   def is_cuffed?
     return weapon_id == 33
-  end
-end
-# Add persona to menu screen (transparent)
-class Scene_Menu
-  alias main_menu main
-  def main
-    if $persona != nil
-      @old_visible = $persona.is_visible?
-      @old_transparent = $persona.is_transparent?
-      $persona.set_transparent(true)
-      $persona.visibility = true
-      main_menu      
-    else
-      main_menu
-    end
-  end
-end
-# Add persona to equipment screen (fully visible)
-class Scene_Equip
-  alias main_equip main
-  def main
-    if $persona != nil
-      visible = $persona.is_visible?
-      transparent = $persona.is_transparent?
-      $persona.set_transparent(false)
-      $persona.visibility = true
-      actor = $persona.actor
-      $persona.actor = $game_party.actors[@actor_index]
-      main_equip
-      $persona.actor = actor
-      $persona.set_transparent(transparent)
-      $persona.visibility = visible
-    else
-      main_equip
-    end
-  end
-end
-#Remove garnet from title screen
-class Scene_Title
-  alias persona_main main
-  def main
-    $persona.visibility = false if $persona != nil
-    $persona = nil
-    persona_main
-    $persona.visibility = false if $persona != nil
-    $persona = nil
   end
 end
