@@ -56,10 +56,10 @@ class Sprite_Character < RPG::Sprite
       @character_weapon = actor.weapon_id
       begin
         bitmap = Hash.new
-        
+        self.bitmap.clear if self.bitmap
           # If tile ID value is valid
         if @tile_id >= 384
-          bitmap["base"] << RPG::Cache.tile($game_map.tileset_name,
+          bitmap["base"] = RPG::Cache.tile($game_map.tileset_name,
             @tile_id, @character.character_hue)
           
           self.src_rect.set(0, 0, 32, 32)
@@ -79,7 +79,7 @@ class Sprite_Character < RPG::Sprite
         
         
         if @character_armor2 != 0
-          bitmap["accessories"] =
+          bitmap["accessory"] =
             RPG::Cache.character("Garnet Slave Collar.png", 
                 @character.character_hue)
         end
@@ -96,22 +96,49 @@ class Sprite_Character < RPG::Sprite
         
         draw_order = 
         {
-          2 => ["base", "accessories", "shield", "weapon"], #facing down
-          4 => ["weapon", "base", "accessories", "shield"], #facing left (shield in left hand)
-          6 => ["shield", "base", "accessories", "weapon"], #facing right (weapon in right hand)
-          8 => ["shield", "weapon", "accessories", "base"]  #facing up
+          2 => ["base", "accessory", "shield", "weapon"], #facing down
+          4 => ["weapon", "base", "accessory", "shield"], #facing left (shield in left hand)
+          6 => ["shield", "base", "accessory", "weapon"], #facing right (weapon in right hand)
+          8 => ["weapon", "accessory", "base", "shield"]  #facing up
         }
-
+=begin
         draw_order[@character.direction].each do |layer_name|
           layer = bitmap[layer_name]
           if layer != nil
+            
             rect = Rect.new(0,0,layer.width,layer.height)
             self.bitmap.blt(0,0,layer,rect)
           end
         end
-      rescue Exception => e
-        print e if $DEBUG
-      end
+=end
+        draw_order.each do |dir_index, layer_order|
+          row = dir_index / 2 - 1
+          
+          canvas_width = self.bitmap.width
+          canvas_height = self.bitmap.height
+          
+          canvas_row = canvas_height / 4 
+          
+          target_rectangle = Rect.new(0, row * canvas_row, canvas_width, canvas_row)
+          layer_order.each do |layer_name|
+            layer = bitmap[layer_name]
+            next if layer == nil 
+            layer_width = layer.width
+            layer_height = layer.height
+            
+            layer_row = layer_height / 4
+            
+            source_rectangle = Rect.new(0, row * layer_row, layer_width, layer_row)
+            
+            self.bitmap.stretch_blt(target_rectangle, layer, source_rectangle)
+            
+          end
+        end
+          
+        end
+#      rescue Exception => e
+#        print e if $DEBUG
+#      end
     end
 
     # Set visible situation
