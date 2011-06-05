@@ -17,13 +17,21 @@ class Spriteset_Map
     @darkness = Sprite.new(@viewport1)
     canvas = Bitmap.new(640,480)
     
-    ambiance = 100.0
+    ambiance = 200.0
     
-    canvas.fill_rect(0, 0, canvas.width, canvas.height, Color.new(255,255,255,ambiance)) 
+    canvas.fill_rect(0, 0, canvas.width, canvas.height, Color.new(ambiance,ambiance,ambiance,128)) 
     @darkness.bitmap = canvas
 
     @darkness.blend_type = 2
     @darkness.z = 101
+    
+    #canvas.fill_rect(0, 0, canvas.width, canvas.height, Color.new(ambiance,ambiance,ambiance,128)) 
+    @darkness2 = Sprite.new(@viewport1)
+    @darkness2.bitmap = canvas.clone
+
+    @darkness2.blend_type = 2
+    @darkness2.z = 103
+    
     
     
     @light = {}
@@ -48,44 +56,8 @@ class Spriteset_Map
       end
     end
     
-=begin
-    @fov = Sprite.new(@viewport1)
-    @fov.z = 999
-    
-    bx = $game_player.screen_x
-    by = $game_player.screen_y
-    
-    reach = 100
-    reach_modifier = 1
-    strength = 0.1
-    strength_modifier = 1
-    
-    reach *= reach_modifier
-    strength *= strength_modifier
-    
-    reach_diameter = reach * 2
-    reach_sqr = reach ** 2
-    
-    canvas = Bitmap.new(reach_diameter, reach_diameter)
-    canvas.fill_rect(0, 0, canvas.width, canvas.height, Color.new(0,0,0)) 
-    
-    for x in 0..reach_diameter do
-      for y in 0..reach_diameter do
-        dist_sqr = (reach - x)**2 + (reach - y)**2
-        if dist_sqr <= reach_sqr
-          alpha = 255 - (255 * (dist_sqr.to_f / reach_sqr.to_f))
-          alpha *= strength
-          color = Color.new(alpha, alpha, alpha)
-          canvas.set_pixel(bx + x - reach, by + y - reach, color)
-        end
-      end
-    end
-     
-    @fov.bitmap = canvas
-    @fov.blend_type = 1
-  
-    @light[$game_player] = [@fov]
-=end
+    @light[$game_player] = get_light_sprites(180, 0.4, 0, 0, 100)
+
     light_initialize 
   end
   alias light_update update
@@ -116,6 +88,10 @@ class Spriteset_Map
     alpha.blend_type = 1
     alpha.z = 100
     
+    alpha2 = Sprite.new(@viewport1)
+    alpha2.bitmap = canvas
+    alpha2.blend_type = 1
+    alpha2.z = 102
     
     r = red.to_i ^ 255
     g = green.to_i ^ 255
@@ -137,10 +113,10 @@ class Spriteset_Map
       green.to_f,
       blue.to_f
     )
-    color2.z = 102
+    color2.z = 104
     color2.blend_type = 1
     
-    return [alpha, color, color2]
+    return [alpha, alpha2, color, color2]
   end
   
   def make_light(reach, strength)
@@ -153,6 +129,8 @@ class Spriteset_Map
         if dist_sqr <= reach_sqr
           alpha = 255.0 * dist_sqr.to_f ** (-dist_sqr.to_f / (reach_sqr.to_f + dist_sqr.to_f))
           alpha *= strength
+          #alpha += 200
+          #alpha = 255
           alpha_color = Color.new(alpha, alpha, alpha)
           canvas.set_pixel(x, y, alpha_color)
         end
