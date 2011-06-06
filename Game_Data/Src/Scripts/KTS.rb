@@ -88,7 +88,7 @@
 module KTS
   # Sets the speed multiplier of the clock.  1 is real time.  A higher
   #   value will give you a faster clock.  Default is 100.
-  SPEED      = 180
+  SPEED      = 800
   #-----------------------------------------------------------------------
   # Settings for Time Periods
   #-----------------------------------------------------------------------
@@ -138,11 +138,18 @@ module KTS
   FADE_LENGTH = 240
   # Defines tones to be used in the corresponding time periods defined above.
   #              RED, GREEN, BLUE, GREY
+=begin
   C1 = Tone.new(-187,  -119,  -17,  68)
   C2 = Tone.new(  17,   -51, -102,   0)
   C3 = Tone.new(   0,     0,    0,   0)
   C4 = Tone.new( -68,  -136,  -34,   0)
   C5 = Tone.new(-187,  -119,  -17,  68)
+=end
+  C1 = Tone.new( 187,   119,   17, 220)
+  C2 = Tone.new(  17,    51,  102, 150)
+  C3 = Tone.new(   0,     0,    0, 255)
+  C4 = Tone.new(  68,   136,   34, 150)
+  C5 = Tone.new( 187,   119,   17, 220)
   # Defines anti-tones
   A1 = Tone.new( 187,   119,   17, -68)
   A2 = Tone.new( -17,    51,  102,   0)
@@ -439,7 +446,15 @@ class Kylock_Time_System
       end
     end
     if tone && @old_tone && tone != @old_tone
-      $game_screen.start_tone_change(tone,duration)
+      #$game_screen.start_tone_change(tone,duration)
+      @old_tone = @old_tone || Tone.new(255,255,255,0)
+      $light = Color.new(
+        (tone.red).to_i.abs ^ 255,
+        (tone.green).to_i.abs ^ 255,
+        (tone.blue).to_i.abs ^ 255,
+        (tone.gray).to_i.abs
+      )
+      print "tone change" + tone.to_s
       @old_tone = tone
       @tone_time = 0
     end
