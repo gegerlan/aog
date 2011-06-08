@@ -19,6 +19,23 @@ end
 #==============================================================================
 
 class Spriteset_Map
+  def create_alpha_layer(
+    viewport, 
+    blend_type = 0, 
+    z_index = 0, 
+    tone = Tone.new(0,0,0,0)
+  )
+    layer = Sprite.new(viewport)
+    viewport_rect = viewport.rect
+    layer.bitmap = Bitmap.new(
+      viewport_rect.width, 
+      viewport_rect.height
+    )
+    layer.tone = tone
+    layer.blend_type = blend_type
+    layer.z = z_index
+  end
+  
   alias light_initialize initialize
   def initialize
     
@@ -29,26 +46,21 @@ class Spriteset_Map
     @light_alpha.bitmap = Bitmap.new(640, 480)
     @light_alpha.blend_type = 2
     
-    @light_alpha.z  = 1
+    @light_alpha.z  = 2
     @color_layer = {}
     {
-      'red'   => Tone.new(   0, -255, -255), 
-      'green' => Tone.new(-255,    0, -255), 
-      'blue'  => Tone.new(-255, -255,    0)
+      'red'   => Tone.new(-255, 0, 0),
+      'green' => Tone.new(0, -255, 0), 
+      'blue'  => Tone.new(0, 0, -255)
     }.each do |color, tone|
-      color_alpha = Sprite.new(@light_viewport)
-      color_alpha.bitmap = Bitmap.new(640, 480)
-      color_alpha.tone = tone
-      color_alpha.blend_type = 1
-      color_alpha.z = 0
-      @color_layer[color] = color_alpha
+
     end  
 
     @light_beam_alpha = make_light(100, 1, Color.new(0, 0, 0))
-    @color_beam_alpha = make_light(100, 1)
+    @color_envrionment_alpha = make_light(100, 0.8)
+    @color_beam_alpha = make_light(50, 1)
     
     $light = Color.new(255, 255, 255, 0)
-    
     
     light_initialize
   end
@@ -68,54 +80,58 @@ class Spriteset_Map
         255
       )
     )
-    @color_layer.each do |name, layer|
-      layer.bitmap.fill_rect(
-        0, 
-        0, 
-        @light_alpha.bitmap.width, 
-        @light_alpha.bitmap.height, 
-        Color.new(
-          0,
-          0,
-          0,
-          255
+    @color_layer.each do |name, alpha_layer|
+      alpha_layer.each do |layer|
+        layer.bitmap.fill_rect(
+          0, 
+          0, 
+          layer.bitmap.width, 
+          layer.bitmap.height, 
+          Color.new(
+            0,
+            0,
+            0,
+            255
+          )
         )
-      )
-      layer.opacity = $light.alpha / 2
+        layer.opacity = $light.alpha / 2
+      end
     end
     
     
     @light_alpha.opacity = $light.alpha
     
     range = @light_beam_alpha.width / 2
-
+    
     $game_map.events.each do |idx, event|
       next if event.screen_x < -range || event.screen_x > range + 640 || event.screen_y < -range || event.screen_y > range + 480
       strength_match = event.name.scan(/\\strength\[([\d\.]+)\]/)
       strength = strength_match[0] == nil ? 1.0 : strength_match[0][0].to_f
       @light_alpha.bitmap.blt(
-        event.screen_x - range,
-        event.screen_y - range, 
+        event.screen_x - @light_beam_alpha.width / 2,
+        event.screen_y - @light_beam_alpha.width / 2 - 16, 
         @light_beam_alpha,
         Rect.new(0, 0, @light_beam_alpha.width, @light_beam_alpha.height),
         255.0 * strength
       )
-      @color_layer.each do |name, layer|
+      @color_layer.each do |name, alpha_layer|
         layer_match = event.name.scan(/\\#{Regexp.quote(name)}\[(\d+)\]/)
         next if layer_match[0] == nil
-        opacity = layer_match[0][0].to_i# if match.is_a?(Regex)
-        layer.bitmap.blt(
-          event.screen_x - range,
-          event.screen_y - range, 
-          @color_beam_alpha,
-          Rect.new(
-            0, 
-            0,
-            @color_beam_alpha.width,
-            @color_beam_alpha.height
-          ),
-          opacity
-        )
+        alpha_layer.each do |layer|
+          opacity = layer_match[0][0].to_i# if match.is_a?(Regex)
+          layer.bitmap.blt(
+            event.screen_x - @color_beam_alpha.width / 2,
+            event.screen_y - @color_beam_alpha.width / 2 - 16, 
+            @color_beam_alpha,
+            Rect.new(
+              0, 
+              0,
+              @color_beam_alpha.width,
+              @color_beam_alpha.height
+            ),
+            opacity * strength
+          )
+        end
       end
     end
     
