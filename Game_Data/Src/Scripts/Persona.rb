@@ -77,16 +77,18 @@ class Persona < Sprite
 
       layers.each do |layer|
         next if layer == nil
-
-        layer += " shy" if shy
-        layer += " cuffs" if cuffs
+        
+        modifiers = []
+        
+        modifiers << "shy" if shy
+        modifiers << "cuffs" if cuffs
         
         # Try getting actor name + actor class + layer image
-        picture_path = get_picture_name([@actor.name, actor_class_name, layer].join(" "), true)
+        picture_path = get_picture_name([@actor.name, actor_class_name, layer].join(" "), modifiers)
         # Try getting actor name + layer image
-        picture_path = get_picture_name([@actor.name, layer].join(" "), true) if picture_path == nil
+        picture_path = get_picture_name([@actor.name, layer].join(" "), modifiers) if picture_path == nil
         # Try getting layer image
-        picture_path = get_picture_name(layer) if picture_path == nil
+        picture_path = get_picture_name(layer, modifiers) if picture_path == nil
         
         if picture_path != nil
           draw(picture_path)

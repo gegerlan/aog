@@ -9,12 +9,13 @@ def file_exists?(filename, path, extension)
    return !!find_file(filename, path, extension).shift
 end
  
-def get_picture_name(filename, exact = false, path="Graphics/Pictures", extension=['png','gif','jpg','jpeg'])
-  filename = filename.split(/[\s]/)
-  begin
-    f = find_file(filename.join(" "), path, extension).shift
-    return File.basename(f) unless !f || f.empty?
-    filename.pop
-  end while filename[0] && !exact
+def get_picture_name(filename, variation = [], exact = false, path="Graphics/Pictures", extension=['png','gif','jpg','jpeg'])
+  if exact == false
+    filename_variation_points = variation.map { |text| sprintf("{ %s,}", text) }
+  else
+    filename_variation_points = variation
+  end
+  f = find_file(filename + filename_variation_points.join(" "), path, extension).shift
+  return File.basename(f) unless !f || f.empty?
   return nil
 end
