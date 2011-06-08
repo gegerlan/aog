@@ -13,9 +13,13 @@ def get_picture_name(filename, variation = [], exact = false, path="Graphics/Pic
   if exact == false
     filename_variation_points = variation.map { |text| sprintf("{ %s,}", text) }
   else
-    filename_variation_points = variation
+    variation = variation.is_a(Array) ? variation : [variation]
+    filename_variation_points = variation.map { |text|
+      sprintf(" %s", text)
+    }
   end
-  f = find_file(filename + filename_variation_points.join(" "), path, extension).shift
+  f = find_file(filename + filename_variation_points.join(""), path, extension)
+  f = f.is_a?(Array) ? f.shift : f
   return File.basename(f) unless !f || f.empty?
   return nil
 end
