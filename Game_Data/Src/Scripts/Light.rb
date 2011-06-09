@@ -92,60 +92,34 @@ class Spriteset_Map
   
   alias light_update update
   def update
-
-    @light_alpha.bitmap.fill_rect(
-      0, 
-      0, 
-      @light_alpha.bitmap.width, 
-      @light_alpha.bitmap.height, 
-      Color.new(
-        255,
-        255,
-        255,
-        255
-      )
-    )
+   
     @color_layer.each do |name, layer|
-#      alpha_layer.each do |layer|
-        layer.bitmap.fill_rect(
-          0, 
-          0, 
-          layer.bitmap.width, 
-          layer.bitmap.height, 
-          Color.new(
-            0,
-            0,
-            0,
-            255
-          )
-        )
-        layer.opacity = $light.tone.gray / 2
-  #    end
+      layer.opacity = $light.tone.gray / 2
     end
-
     @beam_layer.each do |name, layer|
-      layer.bitmap.fill_rect(
-        0, 
-        0, 
-        layer.bitmap.width, 
-        layer.bitmap.height, 
-        Color.new(
-          0,
-          0,
-          0,
-          255
-        )
-      )
       layer.opacity = $light.tone.gray
     end
-
     
     @light_alpha.opacity = $light.tone.gray
     
     range = @light_beam_alpha.width / 2
     
+    @old_position ||= {}
+    
+    layer_update = []
+    
     $game_map.events.each do |idx, event|
       next if event.screen_x < -range || event.screen_x > range + 640 || event.screen_y < -range || event.screen_y > range + 480
+      if @old_position[event] != nil
+        next if @old_position[event]["x"] == event.screen_x && @old_position[event]["y"] == event.screen_y
+      end
+      @old_position[event] = { 'x' => event.screen_x, 'y' => event.screen_y }
+      
+      if not layer_update.include?(@light_alpha.bitmap)
+        bitmap.fill_rect(0, 0, width, height, Color.new(255,255,255))
+        layer_update << @light_alpha.bitmap
+      end
+      
       strength_match = event.name.scan(/\\strength\[([\d\.]+)\]/)
       strength = strength_match[0] == nil ? 1.0 : strength_match[0][0].to_f
       @light_alpha.bitmap.blt(
@@ -158,40 +132,48 @@ class Spriteset_Map
       @color_layer.each do |name, layer|
         layer_match = event.name.scan(/\\#{Regexp.quote(name)}\[(\d+)\]/)
         next if layer_match[0] == nil
-  #      alpha_layer.each do |layer|
-          opacity = layer_match[0][0].to_i# if match.is_a?(Regex)
-          layer.bitmap.blt(
-            event.screen_x - @color_envrionment_alpha.width / 2,
-            event.screen_y - @color_envrionment_alpha.width / 2 - 16, 
-            @color_envrionment_alpha,
-            Rect.new(
-              0, 
-              0,
-              @color_envrionment_alpha.width,
-              @color_envrionment_alpha.height
-            ),
-            opacity * strength
-          )
-#        end
+        opacity = layer_match[0][0].to_i# if match.is_a?(Regex)
+        
+        if not layer_update.include?(layer.bitmap)
+          bitmap.fill_rect(0, 0, width, height, Color.new(0,0,0))
+          layer_update << layer.bitmap
+        end
+        
+        layer.bitmap.blt(
+          event.screen_x - @color_envrionment_alpha.width / 2,
+          event.screen_y - @color_envrionment_alpha.width / 2 - 16, 
+          @color_envrionment_alpha,
+          Rect.new(
+            0, 
+            0,
+            @color_envrionment_alpha.width,
+            @color_envrionment_alpha.height
+          ),
+          opacity * strength
+        )
       end
       @beam_layer.each do |name, layer|
         layer_match = event.name.scan(/\\#{Regexp.quote(name)}\[(\d+)\]/)
         next if layer_match[0] == nil
-  #      alpha_layer.each do |layer|
-          opacity = layer_match[0][0].to_i# if match.is_a?(Regex)
-          layer.bitmap.blt(
-            event.screen_x - @color_beam_alpha.width / 2,
-            event.screen_y - @color_beam_alpha.width / 2 - 16, 
-            @color_beam_alpha,
-            Rect.new(
-              0, 
-              0,
-              @color_beam_alpha.width,
-              @color_beam_alpha.height
-            ),
-            opacity * strength
-          )
-#        end
+        opacity = layer_match[0][0].to_i# if match.is_a?(Regex)
+        
+        if not layer_update.include?(layer.bitmap)
+          bitmap.fill_rect(0, 0, width, height, Color.new(0,0,0))
+          layer_update << layer.bitmap
+        end
+        
+        layer.bitmap.blt(
+          event.screen_x - @color_beam_alpha.width / 2,
+          event.screen_y - @color_beam_alpha.width / 2 - 16, 
+          @color_beam_alpha,
+          Rect.new(
+            0, 
+            0,
+            @color_beam_alpha.width,
+            @color_beam_alpha.height
+          ),
+          opacity * strength
+        )
       end
     end
     
@@ -207,8 +189,8 @@ class Spriteset_Map
       for y in 0..diameter do
         dist_sqr = (reach - x)**2 + (reach - y)**2
         if dist_sqr <= reach_sqr
-          alpha = 255.0 * dist_sqr.to_f ** (-dist_sqr.to_f / (reach_sqr.to_f + dist_sqr.to_f)) #(dist_sqr.to_f / reach_sqr.to_f)
-          #alpha = 255.0 - alpha 
+          alpha = 255.0 * (dist_sqr.to_f / reach_sqr.to_f) #dist_sqr.to_f ** (-dist_sqr.to_f / (reach_sqr.to_f + dist_sqr.to_f)) #(dist_sqr.to_f / reach_sqr.to_f)
+          alpha = 255.0 - alpha 
           color.alpha = alpha
           alpha_color = color
           canvas.set_pixel(x, y, alpha_color)
