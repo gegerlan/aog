@@ -22,17 +22,17 @@ class Light_Source
     @tone = Tone.new(red, green, blue, alpha)
     @black_ambiance_layer = Light_Manager.get_radiant(range, strength, Color.new(0,0,0))
     @white_ambiance_layer = Light_Manager.get_radiant(range, strength, Color.new(255,255,255))
-    @white_beam_layer = Light_Manager.get_radiant(range, strength, Color.new(255,255,255), false)
+    @white_beam_layer = Light_Manager.get_radiant(range*0.5, strength, Color.new(255,255,255), false)
   end
   def draw(bitmap, layer, opacity)
-    self_center_x = self.x - self.width / 2
-    self_center_y = self.y - self.height / 2
+    self_center_x = self.x #
+    self_center_y = self.y #+ 16
 
     layer_width = layer.width
     layer_height = layer.height
-    layer_center_x = self_center_x #- @layer.width / 2
-    layer_center_y = self_center_y #- @layer.height / 2
-    layer_rectangle = Rect.new(0, 0, width, height)
+    layer_center_x = self_center_x - (layer_width / 2)
+    layer_center_y = self_center_y - (layer_height / 2)
+    layer_rectangle = Rect.new(0, 0, layer_width, layer_height)
     bitmap.blt(
       layer_center_x,
       layer_center_y,
@@ -163,17 +163,17 @@ class Spriteset_Map
     @alpha_layer.z = 2
     #@alpha_layer.tone = Tone.new(255, 255, 255)
     
-    @red_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 0))
+    @red_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 0, 0))
     @red_layer.blend_type = 2
     @red_layer.tone = Tone.new(-255, 0, 0)
     @red_layer.z = 1
     
-    @green_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 0))
+    @green_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 0, 0))
     @green_layer.blend_type = 2
     @green_layer.tone = Tone.new(0, -255, 0)
     @green_layer.z = 1
     
-    @blue_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 0))
+    @blue_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 255))
     @blue_layer.blend_type = 2
     @blue_layer.tone = Tone.new(0, 0, -255)
     @blue_layer.z = 1
@@ -231,6 +231,7 @@ class Spriteset_Map
     blue_draw_stack = []
     green_draw_stack = []
     alpha_draw_stack = []
+    new_position = false
     light_sources.each do |light_source|
       light_source_x = light_source.x
       light_source_y = light_source.y
@@ -239,79 +240,81 @@ class Spriteset_Map
         range = light_source.range
         # if the event's light is on screen
         on_screen = light_source_x > -range &&
-                    light_source_x < 480 + range &&
+                    light_source_x < 640 + range &&
                     light_source_y > -range &&
                     light_source_y < 480 + range
         if on_screen
-          new_position = @event_last_position[light_source] == nil ||
-                         @event_last_position[light_source] != 
+          if not new_position
+            new_position = @event_last_position[light_source] != 
                                [light_source_x, light_source_y]
-          if new_position
-            if light_source.updates_alpha? 
-              alpha_draw_stack << light_source
-            end            
-            if light_source.updates_red?
-              red_draw_stack << light_source
-            end
-            if light_source.updates_green?
-              green_draw_stack << light_source
-            end
-            if light_source.updates_blue?
-              blue_draw_stack << light_source
-            end
           end
+          if light_source.updates_alpha? 
+            alpha_draw_stack << light_source
+          end            
+          if light_source.updates_red?
+            red_draw_stack << light_source
+          end
+          if light_source.updates_green?
+            green_draw_stack << light_source
+          end
+          if light_source.updates_blue?
+            blue_draw_stack << light_source
+          end
+
           @event_last_position[light_source] = [light_source_x, light_source_y]
         end #eif on_screen
       end #eif visible
     end #eeach light_source
-    return [red_draw_stack, green_draw_stack, blue_draw_stack, alpha_draw_stack]
+    return [new_position, red_draw_stack, green_draw_stack, blue_draw_stack, alpha_draw_stack]
   end
   
   alias light_update update
   def update
     
-    red_draw_stack,
-        blue_draw_stack,
+    redraw,
+        red_draw_stack,
         green_draw_stack,
+        blue_draw_stack,
         alpha_draw_stack = get_modified_light_source(@light_source)
+      
 =begin    
     update_layer([@alpha_layer], alpha_draw_stack) if not alpha_draw_stack.empty?
     update_layer([@red_layer, @red_beam_layer], alpha_draw_stack) if not red_draw_stack.empty?
     update_layer([@green_layer, @green_beam_layer], alpha_draw_stack) if not green_draw_stack.empty?
     update_layer([@blue_layer, @blue_beam_layer], alpha_draw_stack) if not blue_draw_stack.empty?
 =end
-
-    if not alpha_draw_stack.empty?
-      @alpha_layer.clear
-      @light_source.each do |light_source|
-        light_source.draw_alpha_ambiance(@alpha_layer.bitmap)
+    if redraw
+      if not alpha_draw_stack.empty?
+        @alpha_layer.clear
+        alpha_draw_stack.each do |light_source|
+          light_source.draw_alpha_ambiance(@alpha_layer.bitmap)
+        end
+      end
+      if not red_draw_stack.empty?
+        @red_layer.clear
+        @red_beam_layer.clear
+        red_draw_stack.each do |light_source|
+          light_source.draw_red_ambiance(@red_layer.bitmap)
+          light_source.draw_red_beam(@red_beam_layer.bitmap)
+        end
+      end
+      if not green_draw_stack.empty?
+        @green_layer.clear
+        @green_beam_layer.clear
+        green_draw_stack.each do |light_source|
+          light_source.draw_green_ambiance(@green_layer.bitmap)
+          light_source.draw_green_beam(@green_beam_layer.bitmap)
+        end
+      end
+      if not blue_draw_stack.empty?
+        @blue_layer.clear
+        @blue_beam_layer.clear
+        blue_draw_stack.each do |light_source|
+          light_source.draw_blue_ambiance(@blue_layer.bitmap)
+          light_source.draw_blue_beam(@blue_beam_layer.bitmap)
+        end
       end
     end
-    if not red_draw_stack.empty?
-      @red_layer.clear
-      @red_beam_layer.clear
-      @light_source.each do |light_source|
-        light_source.draw_red_ambiance(@red_layer.bitmap)
-        light_source.draw_red_beam(@red_beam_layer.bitmap)
-      end
-    end
-    if not green_draw_stack.empty?
-      @green_layer.clear
-      @green_beam_layer.clear
-      @light_source.each do |light_source|
-        light_source.draw_green_ambiance(@green_layer.bitmap)
-        light_source.draw_green_beam(@green_beam_layer.bitmap)
-      end
-    end
-    if not blue_draw_stack.empty?
-      @blue_layer.clear
-      @blue_beam_layer.clear
-      @light_source.each do |light_source|
-        light_source.draw_blue_ambiance(@blue_layer.bitmap)
-        light_source.draw_blue_beam(@blue_beam_layer.bitmap)
-      end
-    end
-    
     @light_viewport.update
     light_update
   end
