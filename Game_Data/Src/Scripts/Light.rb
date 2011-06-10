@@ -153,7 +153,7 @@ class Spriteset_Map
   def initialize
     @event_last_position = {}
     
-    $light = Tone.new(255, 255, 255, 100)
+    $light = Tone.new(255, 255, 255, 255)
     
     @light_viewport = Viewport.new(0,0,640,480)
     @light_viewport.z = 50
@@ -277,6 +277,10 @@ class Spriteset_Map
         blue_draw_stack,
         alpha_draw_stack = get_modified_light_source(@light_source)
       
+    @alpha_layer.opacity = $light.gray
+    @red_layer.opacity = $light.gray / 2
+    @green_layer.opacity = $light.gray / 2 
+    @blue_layer.opacity = $light.gray / 2
 =begin    
     update_layer([@alpha_layer], alpha_draw_stack) if not alpha_draw_stack.empty?
     update_layer([@red_layer, @red_beam_layer], alpha_draw_stack) if not red_draw_stack.empty?
