@@ -11,6 +11,103 @@ class Game_Event < Game_Character
   end
 end
 
+class Light_Source
+  attr_reader :event
+  attr_reader :range
+  attr_reader :strength
+  def initialize(event, range, strength, red, green, blue, alpha)
+    @event = event
+    @range = range
+    @strength = strength
+    @tone = Tone.new(red, green, blue, alpha)
+    @layer = Light_Manager.get_radiant(range, strength)
+  end
+  def draw(bitmap, opacity)
+    self_center_x = self.x + self.width / 2
+    self_center_y = self.y + self.height / 2
+
+    layer_width = @layer.width
+    layer_height = @layer.height
+    layer_center_x = self_center_x - @layer.width / 2
+    layer_center_y = self_center_y - @layer.height / 2
+    layer_rectangle = Rect.new(0, 0, width, height)
+    bitmap.blt(
+      layer_center_x,
+      layer_center_y,
+      @layer,
+      layer_rectangle, #This can be cashed!
+      opacity
+    )
+  end
+  def draw_alpha(bitmap)
+    draw(bitmap, @tone.gray) if @tone.gray != 0
+  end
+  def draw_red(bitmap)
+    draw(bitmap, @tone.red) if @tone.red != 0
+  end
+  def draw_green(bitmap)
+    draw(bitmap, @tone.green) if @tone.green != 0
+  end
+  def draw_blue(bitmap)
+    draw(bitmap, @tone.blue) if @tone.blue != 0
+  end
+  def x 
+    return @event.screen_x
+  end
+  def y 
+    return @event.screen_y
+  end
+  def width
+    return @range * 2
+  end
+  def height
+    return @range * 2
+  end
+end
+
+class Light_Manager
+  def self.get_radiant(range, strength)
+    @@radiant ||= {}
+    if @@radiant[[range, strength]] == nil
+      diameter = range * 2
+      canvas = Bitmap.new(diameter, diameter)
+      range_sqr = range ** 2
+      for x in 0..diameter do
+        for y in 0..diameter do
+          dist_sqr = (range - x)**2 + (range - y)**2
+          if dist_sqr <= range_sqr
+            alpha = 255.0 * strength * (dist_sqr.to_f / range_sqr.to_f) #dist_sqr.to_f ** (-dist_sqr.to_f / (reach_sqr.to_f + dist_sqr.to_f)) #(dist_sqr.to_f / reach_sqr.to_f)
+            alpha = 255.0 - alpha 
+            alpha_color = Color.new(alpha,alpha,alpha)
+            canvas.set_pixel(x, y, alpha_color)
+          end
+        end
+      end
+      @@radiant[[range, strength]] = canvas
+    end
+    return @@radiant[[range, strength]]
+  end
+end
+
+class Alpha_Layer < Sprite
+  def initialize(viewport, clear_color)
+    super(viewport)
+    @clear_color = clear_color
+    viewport_rect = viewport.rect
+    self.bitmap = Bitmap.new(viewport_rect.width, viewport_rect.height)
+    clear(clear_color)
+  end
+  def clear(color)
+    self.bitmap.fill_rect(
+      0,
+      0,
+      self.bitmap.width,
+      self.bitmap.height,
+      @clear_color
+    )
+  end
+end
+
 #==============================================================================
 # ** Spriteset_Map
 #------------------------------------------------------------------------------
@@ -19,6 +116,7 @@ end
 #==============================================================================
 
 class Spriteset_Map
+=begin
   def create_alpha_layer(
     viewport, 
     blend_type = 0, 
@@ -36,63 +134,100 @@ class Spriteset_Map
     layer.z = z_index
     return layer
   end
-  
+=end
   alias light_initialize initialize
   def initialize
+    @event_last_position = {}
+    
+    $light = Tone.new(255, 255, 255, 255)
     
     @light_viewport = Viewport.new(0,0,640,480)
     @light_viewport.z = 50
     
-    @light_alpha = Sprite.new(@light_viewport)
-    @light_alpha.bitmap = Bitmap.new(640, 480)
-    @light_alpha.blend_type = 2
+    @alpha_layer = Alpha_Layer.new(@light_viewport, Color.new(0,0,0))
+    @alpha_layer.blend_type = 2
+    @alpha_layer.z = 1
+    @alpha_layer.tone = Tone.new(-255, -255, -255)
     
-    @light_alpha.z  = 2
-    @color_layer = {}
-    {
-      'red'   => Tone.new(-255, 0, 0),
-      'green' => Tone.new(0, -255, 0), 
-      'blue'  => Tone.new(0, 0, -255)
-    }.each do |color, tone|
-      alpha_layer = create_alpha_layer(
-        @light_viewport,
-        2,
-        1,
-        tone
-      )
-      @color_layer[color] = alpha_layer
+    @red_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 0))
+    @red_layer.blend_type = 2
+    @red_layer.tone = Tone.new(-255, 0, 0)
+    @red_layer.z = 0
+    
+    @green_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 0))
+    @green_layer.blend_type = 2
+    @green_layer.tone = Tone.new(0, -255, 0)
+    @green_layer.z = 0
+    
+    @blue_layer = Alpha_Layer.new(@light_viewport, Color.new(0, 0, 0))
+    @blue_layer.blend_type = 2
+    @blue_layer.tone = Tone.new(0, 0, -255)
+    @blue_layer.z = 0
+
+    @light_source = []
+    @command = {
+      "range" => 50.0,
+      "strength" => 1.0,
+      "red" => 255.0,
+      "green" => 255.0,
+      "blue" => 255.0,
+      "alpha" => 255.0
+    }
+    $game_map.events.each do |index, event|
+      event_name = event.name
+      if event_name =~ /\\light\b/i
+        param = [event]
+        @command.each do |command, default|
+          cmd_search = event_name.scan(/\\#{Regexp.quote(command)}\[([\d\.]+)\]/i)
+          if cmd_search[0] && cmd_search[0][0]
+            param << cmd_search[0][0].to_f
+          else
+            param << default  
+          end
+        end
+        @light_source << Light_Source.new(*param)
+      end
     end
-    @beam_layer = {}
-
-    {
-      'red'   => Tone.new(0, -255, -255),
-      'green' => Tone.new(-255, 0, -255), 
-      'blue'  => Tone.new(-255, -255, 0)
-    }.each do |color, tone|
-      alpha_layer = create_alpha_layer(
-        @light_viewport,
-        1,
-        3,
-        tone
-      )
-      @beam_layer[color] = alpha_layer
-    end 
-
-    @light_beam_alpha = make_light(300, 0.5, Color.new(0, 0, 0))
-    @color_envrionment_alpha = make_light(300, 1)
-    @color_beam_alpha = make_light(50, 0.5)
-    
-    
-    @light_alpha.tone = Tone.new(0,0,0,255)
-    
-    $light = @light_alpha
-    
     light_initialize
   end
   
   alias light_update update
   def update
-   
+    # Update tint level (reflects time of day)
+    @alpha_layer.opacity = 100 #$light.gray
+    # Since we don't use ambient light we need to fake ambiance light during day
+    #@red_layer.tone.gray   = $light.gray / 2
+    #@green_layer.tone.gray = $light.gray / 2
+    #@blue_layer.tone.gray  = $light.gray / 2
+    
+    @light_source.each do |light_source|
+      light_source_x = light_source.x
+      light_source_y = light_source.y
+      visible = true #light_source.event.visible
+      if visible
+        range = light_source.range
+        # if the event's light is on screen
+        on_screen = light_source_x > -range &&
+                    light_source_x < 480 + range &&
+                    light_source_y > -range &&
+                    light_source_y < 480 + range
+        if on_screen
+          new_position = @event_last_position[light_source] == nil ||
+                         @event_last_position[light_source] != 
+                               [light_source_x, light_source_y]
+          if new_position
+            #print "draw!"
+            light_source.draw_alpha(@alpha_layer.bitmap)
+            light_source.draw_red(@red_layer.bitmap)
+            light_source.draw_green(@green_layer.bitmap)
+            light_source.draw_blue(@blue_layer.bitmap)
+          end
+          @event_last_position[light_source] = [light_source_x, light_source_y]
+        end #eif on_screen
+      end #eif visible
+    end #eeach light_source
+    
+=begin
     @color_layer.each do |name, layer|
       layer.opacity = $light.tone.gray / 2
     end
@@ -176,11 +311,12 @@ class Spriteset_Map
         )
       end
     end
+=end
     
     @light_viewport.update
     light_update
   end
-  
+=begin
   def make_light(reach, strength, color = Color.new(255, 255, 255))
     diameter = reach * 2
     canvas = Bitmap.new(diameter, diameter)
@@ -199,4 +335,5 @@ class Spriteset_Map
     end
     return canvas
   end
+=end
 end
