@@ -4,7 +4,7 @@
 #TODO: Add light center/source (focal point)
 #TODO: Change ranges for light circles (possibly blt-stretch)
 #TODO: Add pulsing effect (opacity/size) for light source
-
+=begin
 class Game_Event < Game_Character
   def name
     return @event.name
@@ -281,12 +281,7 @@ class Spriteset_Map
     @red_layer.opacity = $light.gray / 2
     @green_layer.opacity = $light.gray / 2 
     @blue_layer.opacity = $light.gray / 2
-=begin    
-    update_layer([@alpha_layer], alpha_draw_stack) if not alpha_draw_stack.empty?
-    update_layer([@red_layer, @red_beam_layer], alpha_draw_stack) if not red_draw_stack.empty?
-    update_layer([@green_layer, @green_beam_layer], alpha_draw_stack) if not green_draw_stack.empty?
-    update_layer([@blue_layer, @blue_beam_layer], alpha_draw_stack) if not blue_draw_stack.empty?
-=end
+
     if redraw
       if not alpha_draw_stack.empty?
         @alpha_layer.clear
@@ -322,21 +317,5 @@ class Spriteset_Map
     @light_viewport.update
     light_update
   end
-=begin
-  def update_layer(layer, stack)
-    if stack[0] != nil
-      layer.each do |alpha_layer|
-        alpha_layer.clear
-        layer.opacity = $light.gray
-      end
-    end
-    while(stack_item = stack.pop)
-      #alpha_layer.draw_blue_ambiance(@blue_layer.bitmap)
-      #alpha_.draw_blue_beam(@blue_beam_layer.bitmap)
-      layer.each do |alpha_layer|
-        stack_item.draw(alpha_layer)
-      end
-    end
-  end
-=end
 end
+=end
