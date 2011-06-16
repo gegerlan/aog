@@ -13,7 +13,7 @@ class Spriteset_Map
 
     
     $game_map.events.each do |idx, event|
-      get_light_passage(event,3 )
+      get_light_passage(event, 2)
       @old_event_pos[event] = [event.x, event.y]
     end
     
@@ -119,31 +119,31 @@ class Spriteset_Map
     
     #Create easier handles for top (t), right (r), bottom (b) and left (l)
     t, r, b, l = tc, cr, bc, cl
-    
+   
     map = [
       [ #First (top) row
-        (t & l) | (t & r & tl) | (l & t & r),
+        (t & l) | (t & r & tl) | (l & t & r) | (b & l & tl),
+        (t & l) | (l & t & b) | (t & r) | (l & t & r) | (b & t),
         (t & l) | (t & r) | (l & t & r) | (b & t),
-        (t & l) | (t & r) | (l & t & r) | (b & t),
-        (t & l & tr) | (t & r) | (l & t & r)
+        (t & l & tr) | (b & r & tr) | (t & r) | (l & t & r)
       ],
       [ #Second row
         (t & l) | (b & l) | (l & t & r) | (l & r),
-        (t & l) | (t & r) | (l & t & r) | (l & r) | (b & t),
-        (t & l) | (t & r) | (l & t & r) | (l & r) | (b & t),
+        (t & l) | (t & r) | (l & t & r) | (l & r) | (b & t) | (b & l),
+        (t & l) | (t & r) | (l & t & r) | (l & r) | (b & t) | (b & r),
         (b & r) | (t & r) | (l & t & r) | (l & r)
       ],
       [ #Third row
         (t & l) | (b & l) | (l & r),
-        (t & l) | (b & l) | (l & r) | (b & t),
-        (b & r) | (t & r) | (l & r) | (b & t),
+        (t & l) | (b & l) | (l & r) | (b & t) | (b & r),
+        (b & r) | (t & r) | (l & r) | (b & t) | (b & l),
         (b & r) | (t & r) | (l & r)
       ],
       [ #Forth (bottom) row
-        (t & l & bl) | (b & l),
+        (t & l & bl) | (b & l) | (b & r & bl),
         (b & r) | (b & l) | (b & t),
         (b & r) | (b & l) | (b & t),
-        (b & r) | (t & r & br)
+        (b & r) | (t & r & br) | (b & l & br)
       ]
     ]
 
