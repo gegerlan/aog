@@ -90,7 +90,7 @@ module BlizzABS
     # 2.2. # Movement Configuration
     PIXEL_MOVEMENT_RATE = 0
     REPAIR_MOVEMENT = true
-    EIGHT_WAY_MOVEMENT = false
+    EIGHT_WAY_MOVEMENT = true
     SNEAK_ON_CHARGE = false
     NORMAL_SPEED = 4
     RUN_SPEED = 5
