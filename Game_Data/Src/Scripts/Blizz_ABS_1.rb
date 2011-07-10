@@ -40,7 +40,7 @@ module BlizzABS
     PREVPAGE = "Key['Q']"
     NEXTPAGE = "Key['E']"
     CONFIRM = "Key['K'], Key['Enter'], Key['Z']"
-    CANCEL = "Key['F'], Key['X'], Key['Esc'], Key['End'] "
+    CANCEL = "Key['F'], Key['X'], Key['Esc'], Key['End'],  Key['NumberPad 0']"
     ATTACK = "Key['K'], Key['Z'], Key['Enter']"
     DEFEND = "Key['L']"
     SKILL = "Key['C'], Key['Ctrl']" 
