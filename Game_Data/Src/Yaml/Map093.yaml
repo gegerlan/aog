@@ -1057,6 +1057,16 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - 25.. 26...
+        - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 0
           parameters: 
@@ -1416,6 +1426,14 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 250
+          indent: 0
+          parameters: 
+          - !ruby/object:RPG::AudioFile 
+            name: 006-System06
+            pitch: 100
+            volume: 80
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -1979,7 +1997,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - Thirst, begone!
+          - Dry skin, begone!
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 0
@@ -2034,10 +2052,25 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[]\face[]You're supposed to be dead!
+        - !ruby/object:RPG::EventCommand 
           code: 355
           indent: 0
           parameters: 
           - $game_map.rename_event(4, '\\e[34]')
+        - !ruby/object:RPG::EventCommand 
+          code: 224
+          indent: 0
+          parameters: 
+          - !ruby/object:Color 
+            alpha: 255.0
+            blue: 0.0
+            green: 0.0
+            red: 255.0
+          - 5
         - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
