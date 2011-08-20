@@ -1,38 +1,67 @@
 # The Adventures of Garnet
 
-The Adventures of Garnet is a eroge game made in RPG Maker XP, created by qwerty123000. This is a binary build that tries to keep up-to-date with the Hongfire thread.
+The Adventures of Garnet is an adult eroge game made in RPG Maker XP, created by qwerty123000.
+
 
 ## Requirements
-* [RPG Maker XP RTP](http://www.rpgmakerweb.com/download/run-time-package#xp)
 
-## Playing
+* Windows 2000 or later.
 
-To launch the game run Game.bat
 
-## Developers
+## Getting the Adventures of Garnet
 
-If you have RPG Maker XP use the Editor.bat file to launch it
+Latest updates to the game can be downloaded from Github at http://github.com/gegerlan/aog
 
-## FAQ
+Archived (zip/tar) : https://github.com/gegerlan/aog/archives/master
 
-### How do I solve the 'rxdatav.exe: Couldn't change directory' issue?
+Git : git://github.com/gegerlan/aog.git
 
-This is probaly caused because you have non latin characters in your profile name. Create a new temporary user without these characters, and run the file again.
+SVN : http://svn.github.com/gegerlan/aog.git
 
-### How do I solve the 'RGSS102E.dll could not be found' error?
 
-Download and install the [RPG Maker XP Run Time Package (RTP)](http://www.rpgmakerweb.com/download/run-time-package#xp)
+## Installation
 
-### How do I solve the 'Failed to load script' error?
+1. Run Game.bat to convert the source files to the required format.
 
-Run the game.bat file.
 
-### How do I report issues?
+## Getting Started
 
-Visit our [development page](http://github.com/gegerlan/aog) to find out more on how to provide feedback.
+Navigation : Arrow-keys, WASD-keys
 
-### How can I help?
+Confirm/Action/Attack : Z, Enter, K
 
-You can help by playing the game and reporting possible issues you've experienced. You are also welcome to contribute content and ideas.
+Cancel/Abort : X, F, End, Esc
 
-Visit our [development page](http://github.com/gegerlan/aog) for more information.
+Settings : F1
+
+Full-screen/windowed : F4
+
+
+## Getting Involved
+
+We welcome criticism, suggestions and further involvement.
+
+Visit our project wiki at https://github.com/gegerlan/aog/wiki to get more information.
+
+
+## Known Issues and Workarounds
+
+### Game crashes with: 'Failed to load script' error.
+
+Run the Game.bat file. If the problem persists, contact a developer.
+
+### Error message during source file conversion: 'rxdatav.exe: Couldn't change directory'
+
+This is probably caused because you have non latin characters in your profile name. Create a new temporary user without these characters, and run the file again.
+
+
+## Contact Information
+
+Project Maintainer:
+
+Gegerlan (gegerlan2@hotmail.com) http://github.com/gegerlan
+
+
+General Discussions:
+
+http://www.hongfire.com/forum/showthread.php/156872-quot-Adventures-of-Garnet-quot-RPG-XP-game-over-rape
