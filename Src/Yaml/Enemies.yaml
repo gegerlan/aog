@@ -23,6 +23,16 @@ root:
     kind: 1
     rating: 5
     skill_id: 100
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 0
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 1
+    rating: 2
+    skill_id: 33
   agi: 7
   animation1_id: 0
   animation2_id: 6
@@ -227,22 +237,52 @@ root:
     skill_id: 1
   - !ruby/object:RPG::Enemy::Action 
     basic: 0
-    condition_hp: 100
+    condition_hp: 40
     condition_level: 1
     condition_switch_id: 0
     condition_turn_a: 0
     condition_turn_b: 1
     kind: 1
-    rating: 7
+    rating: 3
     skill_id: 101
-  agi: 50
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 1
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 0
+    rating: 3
+    skill_id: 1
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 1
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 0
+    rating: 3
+    skill_id: 1
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 2
+    condition_hp: 45
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 0
+    rating: 3
+    skill_id: 1
+  agi: 40
   animation1_id: 0
   animation2_id: 10
   armor_id: 0
   atk: 60
   battler_hue: 0
   battler_name: 068-Goblin02
-  dex: 75
+  dex: 40
   element_ranks: !ruby/object:Table 
     data: 
     - 0
@@ -274,11 +314,11 @@ root:
   id: 3
   int: 30
   item_id: 1
-  maxhp: 600
+  maxhp: 350
   maxsp: 3
   mdef: 25
   name: Goblin
-  pdef: 40
+  pdef: 100
   state_ranks: !ruby/object:Table 
     data: 
     - 0
@@ -316,8 +356,8 @@ root:
     xsize: 31
     ysize: 1
     zsize: 1
-  str: 35
-  treasure_prob: 25
+  str: 25
+  treasure_prob: 10
   weapon_id: 0
 - !ruby/object:RPG::Enemy 
   actions: 
@@ -333,13 +373,13 @@ root:
     skill_id: 1
   - !ruby/object:RPG::Enemy::Action 
     basic: 1
-    condition_hp: 100
+    condition_hp: 40
     condition_level: 1
     condition_switch_id: 0
     condition_turn_a: 0
     condition_turn_b: 1
     kind: 1
-    rating: 4
+    rating: 3
     skill_id: 53
   - !ruby/object:RPG::Enemy::Action 
     basic: 0
@@ -349,16 +389,36 @@ root:
     condition_turn_a: 0
     condition_turn_b: 1
     kind: 1
-    rating: 7
+    rating: 4
     skill_id: 101
-  agi: 50
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 1
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 0
+    rating: 5
+    skill_id: 101
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 2
+    condition_hp: 45
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 0
+    rating: 2
+    skill_id: 101
+  agi: 10
   animation1_id: 0
   animation2_id: 9
   armor_id: 0
   atk: 80
   battler_hue: 0
   battler_name: 069-Goblin03
-  dex: 90
+  dex: 70
   element_ranks: !ruby/object:Table 
     data: 
     - 0
@@ -388,13 +448,13 @@ root:
   exp: 30
   gold: 219
   id: 4
-  int: 60
-  item_id: 0
-  maxhp: 900
+  int: 40
+  item_id: 1
+  maxhp: 500
   maxsp: 50
   mdef: 50
   name: Big Goblin
-  pdef: 40
+  pdef: 90
   state_ranks: !ruby/object:Table 
     data: 
     - 0
@@ -432,9 +492,9 @@ root:
     xsize: 31
     ysize: 1
     zsize: 1
-  str: 80
-  treasure_prob: 10
-  weapon_id: 2
+  str: 30
+  treasure_prob: 35
+  weapon_id: 0
 - !ruby/object:RPG::Enemy 
   actions: 
   - !ruby/object:RPG::Enemy::Action 
