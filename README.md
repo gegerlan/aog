@@ -48,7 +48,7 @@ Visit our project wiki at https://github.com/gegerlan/aog/wiki to get more infor
 
 ### Game crashes with: 'Failed to load script' error.
 
-Run the Game.bat file. If the problem persists, contact a develope.
+Run the Game.bat file. If the problem persists, contact a developer.
 
 ### Error message during source file conversion: 'rxdatav.exe: Couldn't change directory'
 
