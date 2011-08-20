@@ -11,14 +11,14 @@ REM #========================================================
 REM #  Enter into game directory
 REM #========================================================
 
-CD Game_Data
+CD Game
 
 REM #========================================================
 REM #  Setup the Paths for the Importer/Exporter
 REM #========================================================
 
 REM # The path to the utility scripts relative to the project dir
-SET SCRIPTS_DIR="Utility"
+SET SCRIPTS_DIR="../Utility"
 
 REM # The path to the project dir relative to the utility scripts
 SET PROJECT_DIR=".."
