@@ -3015,6 +3015,54 @@ root:
     indent: 0
     parameters: 
     - 0
+    - 210
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 1
+    - 49
+    - 0
+    - 5
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 121
+    indent: 2
+    parameters: 
+    - 88
+    - 88
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 0
     - 89
     - 0
   - !ruby/object:RPG::EventCommand 
@@ -5164,13 +5212,128 @@ root:
   id: 25
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Timer to check if the battle is over.
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - "Does three checks, if there isn't a battle going on "
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "after these three checks, the map is considered "
+  - !ruby/object:RPG::EventCommand 
+    code: 408
+    indent: 0
+    parameters: 
+    - "'safe'."
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 30
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - $game_map.in_battle?
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 30
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - $game_map.in_battle?
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 30
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - $game_map.in_battle?
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 121
+    indent: 0
+    parameters: 
+    - 210
+    - 210
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Execute Post Battle stuff here
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 0
+    parameters: 
+    - 197
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
-  switch_id: 1
-  trigger: 0
+  name: "MapState: Battle"
+  switch_id: 210
+  trigger: 2
 - !ruby/object:RPG::CommonEvent 
   id: 26
   list: 
@@ -9723,13 +9886,51 @@ root:
   id: 70
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - call_event_by_name("knockout")
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 1
+    parameters: 
+    - 100
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 313
+    indent: 0
+    parameters: 
+    - 0
+    - 1
+    - 1
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
-  switch_id: 1
-  trigger: 0
+  name: "State: Knockout"
+  switch_id: 240
+  trigger: 1
 - !ruby/object:RPG::CommonEvent 
   id: 71
   list: 
@@ -10053,11 +10254,163 @@ root:
   id: 100
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 223
+    indent: 0
+    parameters: 
+    - !ruby/object:Tone 
+      blue: -255.0
+      gray: 0.0
+      green: -255.0
+      red: -255.0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 20
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 0
+    - 13
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - Remove half of the gold
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 7
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 4
+    - 0
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 125
+    indent: 1
+    parameters: 
+    - 1
+    - 1
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - Add half of possible health
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 4
+    - 1
+    - 4
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 40
+    - 40
+    - 4
+    - 0
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 311
+    indent: 1
+    parameters: 
+    - 0
+    - 0
+    - 1
+    - 40
+    - false
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - Move to adventurer guild
+  - !ruby/object:RPG::EventCommand 
+    code: 201
+    indent: 1
+    parameters: 
+    - 0
+    - 13
+    - 7
+    - 7
+    - 2
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - Remove knockout state, to remove flickering
+  - !ruby/object:RPG::EventCommand 
+    code: 313
+    indent: 1
+    parameters: 
+    - 0
+    - 1
+    - 1
+  - !ruby/object:RPG::EventCommand 
+    code: 223
+    indent: 1
+    parameters: 
+    - !ruby/object:Tone 
+      blue: 0.0
+      gray: 0.0
+      green: 0.0
+      red: 0.0
+    - 50
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 1
+    parameters: 
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 353
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Default Knockout manager
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 

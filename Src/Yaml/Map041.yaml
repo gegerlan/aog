@@ -2410,11 +2410,53 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 13
       y: 2
-    10: !ruby/object:RPG::Event 
-      id: 10
-      name: EV010
+    11: !ruby/object:RPG::Event 
+      id: 11
+      name: Knockout
       numero: 12
       pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 00 (124)
+          direction: 4
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
@@ -2438,105 +2480,51 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 4
-          - 1
-          - 5
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 119
-          indent: 1
-          parameters: 
-          - Bad End
-        - !ruby/object:RPG::EventCommand 
           code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
           indent: 0
           parameters: []
 
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 4
-          - 4
-          - 5
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 119
-          indent: 1
-          parameters: 
-          - Bad End
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
 
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 4
-          - 5
-          - 5
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 119
-          indent: 1
-          parameters: 
-          - Bad End
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 118
-          indent: 0
-          parameters: 
-          - Bad End
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 240
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
         - !ruby/object:RPG::EventCommand 
           code: 208
           indent: 0
           parameters: 
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 122
-          indent: 0
-          parameters: 
-          - 9
-          - 9
-          - 0
-          - 2
-          - 1
-          - 2
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 49
-          - 49
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 223
@@ -2564,6 +2552,21 @@ root: !ruby/object:RPG::Map
           - 0
           - 1
         - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 0
+          parameters: 
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 0
+          parameters: 
+          - !ruby/object:Tone 
+            blue: 0.0
+            gray: 0.0
+            green: 0.0
+            red: 0.0
+          - 60
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
           parameters: []
@@ -2582,10 +2585,10 @@ root: !ruby/object:RPG::Map
         numero: 0
         step_anime: false
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
-      x: 24
-      y: 9
+      x: 0
+      y: 0
   height: 18
   numero: 41
   tileset_id: 51
