@@ -1,3 +1,9 @@
+=begin
+  Iterate over the equipment the party leader has to make sure a body armor exists.
+  
+  Used when checking shame to make sure the player has something to get dressed
+  with, before forcing them into the menu to get dressed.
+=end
 class Game_Party
   attr_reader   :armors
   attr_reader   :weapons
