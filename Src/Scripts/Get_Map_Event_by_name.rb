@@ -43,7 +43,7 @@ class Interpreter
     if @@__map_events__[:map_id] != $game_map.map_id # create a new index in non exsist for the map
       index_events
     end
-    return @@__map_events__[event_name.downcase]
+    return @@__map_events__[event_name.downcase.strip]
   end
   # Get an event at the given index
   def get_event_by_index(index)
@@ -54,7 +54,7 @@ class Interpreter
     @@__map_events__[:map_id] = $game_map.map_id
     # Index map events based on name (note that names doesn't have to be unique for an event)
     $game_map.events.each do |index, map_event|
-      (@@__map_events__[map_event.name.downcase] ||= []) << map_event
+      (@@__map_events__[map_event.name.downcase.strip] ||= []) << map_event
     end
   end
   # execute event passed
@@ -125,7 +125,7 @@ class Game_Event
     if @page_names == nil
       index_page_names
     end
-    pages = @page_names[page_name.downcase]
+    pages = @page_names[page_name.downcase.strip]
     if meet_conditions
       pages.keep_if {  |v|
         condition_met?(v)
