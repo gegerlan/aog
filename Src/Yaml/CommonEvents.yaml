@@ -9729,10 +9729,45 @@ root:
     parameters: 
     - 197
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "# Put enemy name in variable 40"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - e = $game_map.events[@event_id]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - $gv[40] = e.battler.name
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "# Put armor name in variable 41"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - a3 = $t[:game_player][:last_armor3_id]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - a = $data_armors[a3]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
+    parameters: 
+    - "$gv[41]= a == nil ? \"clothes\" : a.name"
+  - !ruby/object:RPG::EventCommand 
     code: 101
     indent: 2
     parameters: 
-    - The enemy manages to tear off the clothes of \N[1]
+    - The \v[40] tears \N[1]'s \V[41] off her body.
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 2
