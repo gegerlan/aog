@@ -23,21 +23,27 @@ class Game_Battler
   include HookExtension
   register_hook :add_state do |callee, return_value, state_id, force|
     if callee == $game_party.actors[0] # If the state was changed to the party leader
-      # stea_name needs to be uppercase since constants may only be uppercase
-      state_name = $data_states[state_id].name.upcase \
-          if $data_states[state_id] != nil
-      if StateTracker.const_defined?(state_name)
-        $game_switches[StateTracker.const_get(state_name)] = callee.state?(state_id)
+      # state_name needs to be uppercase since constants may only be uppercase
+      state = $data_states[state_id]
+      if state != nil
+        # makes spaces _ to have valid constant names.
+        state_name = state.name.upcase.gsub(/[\s\t]/,"_")
+        if StateTracker.const_defined?(state_name)
+          $game_switches[StateTracker.const_get(state_name)] = callee.state?(state_id)
+        end
       end
     end
   end
   register_hook :remove_state do |callee, return_value, state_id, force|
     if callee == $game_party.actors[0] # If the state was changed to the party leader
-      # stea_name needs to be uppercase since constants may only be uppercase
-      state_name = $data_states[state_id].name.upcase \
-          if $data_states[state_id] != nil
-      if StateTracker.const_defined?(state_name)
-        $game_switches[StateTracker.const_get(state_name)] = callee.state?(state_id)
+      # state_name needs to be uppercase since constants may only be uppercase
+      state = $data_states[state_id]
+      if state != nil
+        # makes spaces _ to have valid constant names.
+        state_name = state.name.upcase.gsub(/[\s\t]/, '_')
+        if StateTracker.const_defined?(state_name)
+          $game_switches[StateTracker.const_get(state_name)] = callee.state?(state_id)
+        end
       end
     end
   end
