@@ -9573,64 +9573,148 @@ root:
     code: 355
     indent: 1
     parameters: 
-    - $t ||= {}
+    - "# Put the pdef in variable 40"
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 1
+    parameters: 
+    - aid = $game_party.actors[0].armor3_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $gv = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - da = $data_armors[aid]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - "$gv[40] = da == nil ? 0 : da.pdef"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "# Put the str of enemy in variable 41"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - e = $game_map.events[@event_id]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - eid = e.battler.id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - da = $data_enemies[eid]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $gv = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - "$gv[41] = da==nil ? 0 : da.str"
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 1
+    parameters: 
+    - 41
+    - 41
+    - 1
+    - 2
+    - 0
+    - 50
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 1
+    - 41
+    - 1
+    - 40
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - $t ||= {}
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 2
     parameters: 
     - $t[:game_player] ||= {}
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
-    - $t[:game_player][:last_armor3_id] = \
+    - aid = $game_party.actors[0].armor3_id
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
-    - " $game_party.actors[0].armor3_id"
+    - $t[:game_player][:last_armor3_id]=aid
   - !ruby/object:RPG::EventCommand 
     code: 319
-    indent: 1
+    indent: 2
     parameters: 
     - 1
     - 3
     - 0
   - !ruby/object:RPG::EventCommand 
     code: 355
-    indent: 1
+    indent: 2
     parameters: 
     - $t ||= {}
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - $t[:game_player] ||= {}
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - $t[:game_player][:last_armor3_id] ||=0
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - a3 = $t[:game_player][:last_armor3_id]
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - $game_party.lose_armor(a3, 1)
   - !ruby/object:RPG::EventCommand 
     code: 117
-    indent: 1
+    indent: 2
     parameters: 
     - 197
   - !ruby/object:RPG::EventCommand 
     code: 101
-    indent: 1
+    indent: 2
     parameters: 
     - The enemy manages to tear off the clothes of \N[1]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -9646,7 +9730,7 @@ root:
     indent: 0
     parameters: []
 
-  name: "Skill: Rape"
+  name: Skill:Rape
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
