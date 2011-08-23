@@ -4492,11 +4492,115 @@ root:
   id: 14
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Remove all equipment fixations
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - a.armor1_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - a.armor2_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - a.armor3_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - a.armor4_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Remove equipment fixations
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 0
+    - 4
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - a.armor2_fix = true
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 0
+    - 24
+    - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - a.armor2_fix = true
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - a.armor4_fix = true
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Set Class Equipment fixations
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
@@ -5220,6 +5324,26 @@ root:
     code: 108
     indent: 0
     parameters: 
+    - During battle
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "# Make it impossible to change armor"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "$game_party.actors[0].armor3_fix = "
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "true"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
     - "Does three checks, if there isn't a battle going on "
   - !ruby/object:RPG::EventCommand 
     code: 408
@@ -5235,7 +5359,7 @@ root:
     code: 106
     indent: 0
     parameters: 
-    - 30
+    - 10
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
@@ -5261,7 +5385,7 @@ root:
     code: 106
     indent: 0
     parameters: 
-    - 30
+    - 10
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
@@ -5287,7 +5411,7 @@ root:
     code: 106
     indent: 0
     parameters: 
-    - 30
+    - 10
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
@@ -5321,6 +5445,11 @@ root:
     indent: 0
     parameters: 
     - Execute Post Battle stuff here
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 0
+    parameters: 
+    - 14
   - !ruby/object:RPG::EventCommand 
     code: 117
     indent: 0
