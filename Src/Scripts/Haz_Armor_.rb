@@ -37,11 +37,12 @@ def player_has_armor?(kind=2) #defaults to check for body armor
   armor_fix_attr_name = sprintf('armor%d_fix', kind_id)
   return true unless $game_party.actors[party_actor_id].send(armor_id_attr_name) == 0
   return false if $game_party.actors[party_actor_id].equip_fix?(kind_id) == true
+
+  class_id = $game_party.actors[party_actor_id].class_id
   
-  for armor_hash in $game_party.armors
-    armor = $data_armors[armor_hash[0]]
-    amount = armor_hash[1]
-    if amount != 0 and armor.kind == kind and $game_party.actors[party_actor_id].equippable?(armor)
+  inventory_armors = $game_party.get_equippable_armors(class_id) || []
+  for armor in inventory_armors
+    if armor.kind == kind
       return true #armor in inventory
     end
   end

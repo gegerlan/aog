@@ -54,6 +54,17 @@ Run the Game.bat file. If the problem persists, contact a developer.
 
 This is probably caused because you have non latin characters in your profile name. Create a new temporary user without these characters, and run the file again.
 
+### Changing equipment may not update the list correctly
+
+Leave and return to the equipment view.
+
+### Piercing isn't working
+
+TBD
+
+### Shops looks weird
+
+TBD
 
 ## Contact Information
 
