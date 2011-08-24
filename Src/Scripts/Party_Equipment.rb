@@ -179,13 +179,13 @@ class Game_Party
   def get_equippable_armors(class_id)
     armor_set = $data_classes[class_id].armor_set
     return @armors.select { |armor| 
-      armor_set.include?(armor.id)
+      armor_set.include?(armor.id) && armor.condition > 0
     }
   end
   def get_equippable_weapons(class_id)
     weapon_set = $data_classes[class_id].weapon_set
     @weapons.select { |weapon| 
-      weapon_set.include?(weapon.id)
+      weapon_set.include?(weapon.id) && weapon.condition > 0
     }
   end
 end
