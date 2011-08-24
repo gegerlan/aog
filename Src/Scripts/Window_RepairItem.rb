@@ -53,7 +53,7 @@ class Window_RepairItem < Window_Selectable
     end
     
     # Add blank page
-    # @data.push(nil)
+    @data.push(nil)
     # Make a bit map and draw all items
     @item_max = @data.size
     self.contents = Bitmap.new(width - 32, row_max * 32)
