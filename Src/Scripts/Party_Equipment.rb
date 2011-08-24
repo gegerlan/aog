@@ -303,17 +303,32 @@ class Game_Actor < Game_Battler
   def weapon_id
     return @weapon != nil ? @weapon.id : 0
   end
+  def weapon
+    return @weapon
+  end
   def armor1_id
     return @armors[0] != nil ? @armors[0].id : 0
+  end
+  def armor1
+    return @armors[0]
   end
   def armor2_id
     return @armors[1] != nil ? @armors[1].id : 0
   end
+  def armor2
+    return @armors[1]
+  end
   def armor3_id
     return @armors[2] != nil ? @armors[2].id : 0
   end
+  def armor3
+    return @armors[2]
+  end
   def armor4_id
     return @armors[3] != nil ? @armors[3].id : 0
+  end
+  def armor4
+    return @armors[3]
   end
 
   def weapon_id=(id)
@@ -438,7 +453,29 @@ class Scene_Equip
     end
   end
 end
-
+class Window_EquipRight < Window_Selectable
+  def refresh
+    self.contents.clear
+    @data = []
+    @data.push(@actor.weapon)
+    @data.push(@actor.armor1)
+    @data.push(@actor.armor2)
+    @data.push(@actor.armor3)
+    @data.push(@actor.armor4)
+    @item_max = @data.size
+    self.contents.font.color = system_color
+    self.contents.draw_text(4, 32 * 0, 92, 32, $data_system.words.weapon)
+    self.contents.draw_text(4, 32 * 1, 92, 32, $data_system.words.armor1)
+    self.contents.draw_text(4, 32 * 2, 92, 32, $data_system.words.armor2)
+    self.contents.draw_text(4, 32 * 3, 92, 32, $data_system.words.armor3)
+    self.contents.draw_text(5, 32 * 4, 92, 32, $data_system.words.armor4)
+    draw_item_name(@data[0], 92, 32 * 0)
+    draw_item_name(@data[1], 92, 32 * 1)
+    draw_item_name(@data[2], 92, 32 * 2)
+    draw_item_name(@data[3], 92, 32 * 3)
+    draw_item_name(@data[4], 92, 32 * 4)
+  end
+end
 =begin
 Damage modifiers
 =end
