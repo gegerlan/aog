@@ -454,6 +454,15 @@ class Scene_Equip
   end
 end
 class Window_EquipRight < Window_Selectable
+  def draw_item_name(item, x, y)
+    if item == nil
+      return
+    end
+    bitmap = RPG::Cache.icon(item.icon_name)
+    self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24))
+    self.contents.font.color = normal_color
+    self.contents.draw_text(x + 28, y, 212, 32, "#{item.name} (#{item.condition})")
+  end
   def refresh
     self.contents.clear
     @data = []
