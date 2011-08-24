@@ -506,8 +506,6 @@ class Game_Battler
   end
   
   def do_damage_armor(attacker, modifier, damage, critical)
-    damage = self.damage # value
-    critical = self.critical # true/false
     if @armors[1] != nil # Shield
       d = damage - @armors[1].send(modifier)
       d -= @armors[1].send(modifier) if self.guarding? # Double the effect if guarding
@@ -519,7 +517,8 @@ class Game_Battler
       end
     end
     if @armors[2] != nil # Body armor
-      d = damage -= @armors[2].send(modifier)
+      d = damage 
+      d -= @armors[2].send(modifier)
       d = [0, d].max
       damage -= d
       # Damage modifiers
@@ -529,7 +528,8 @@ class Game_Battler
       end
     end
     if @armors[0] != nil # Helmet
-      d = damage -= @armors[0].send(modifier)
+      d = damage 
+      d -= @armors[0].send(modifier)
       d = [0, d].max
       damage -= d
       damage_armor1(d)
@@ -573,12 +573,12 @@ class Game_Battler
     return_value = pre_attack_durability_update(attacker)
     if self.is_a?(Game_Actor)
       if self.damage != "Miss" # If the attack wasn't a miss
-        do_damage_armor(attacker, :pdef, self.damage, self.critical)
+        do_damage_armor(attacker, :pdef, self.damage.to_i, !!self.critical)
       end
     end
     if attacker.is_a?(Game_Actor)
       if self.damage != "Miss" # If the attack wasn't a miss
-        attacker.do_damage_weapon(self, self.damage, self.critical)
+        attacker.do_damage_weapon(self, self.damage.to_i, !!self.critical)
       end
     end
     return return_value
@@ -588,7 +588,7 @@ class Game_Battler
     return_value = pre_skill_durability_update(user, skill)
     if self.is_a?(Game_Actor)
       if self.damage != "Miss" # If the attack wasn't a miss
-        do_damage_armor(user, :mdef, self.damage, self.critical)
+        do_damage_armor(user, :mdef, self.damage.to_i, !!self.critical)
       end
     end
     return return_value
