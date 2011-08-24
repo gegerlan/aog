@@ -25054,8 +25054,9 @@ root: !ruby/object:RPG::Map
           parameters: 
           - - Examine Armour
             - Examine Items
+            - Repair
             - Never mind
-          - 3
+          - 4
         - !ruby/object:RPG::EventCommand 
           code: 402
           indent: 0
@@ -25131,6 +25132,22 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 2
+          - Repair
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - $scene = Scene_Repair.new
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 3
           - Never mind
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -25216,8 +25233,9 @@ root: !ruby/object:RPG::Map
           parameters: 
           - - Examine Armour
             - Examine Items
+            - Repair
             - Never mind
-          - 3
+          - 4
         - !ruby/object:RPG::EventCommand 
           code: 402
           indent: 0
@@ -25293,6 +25311,22 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 2
+          - Repair
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - $scene = Scene_Repair.new
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 3
           - Never mind
         - !ruby/object:RPG::EventCommand 
           code: 0
@@ -25378,6 +25412,7 @@ root: !ruby/object:RPG::Map
           parameters: 
           - - Examine slave items
             - Examine items
+            - Repair
             - No thanks
           - 3
         - !ruby/object:RPG::EventCommand 
@@ -25479,6 +25514,22 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 2
+          - Repair
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - $scene = Scene_Repair.new
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 3
           - No thanks
         - !ruby/object:RPG::EventCommand 
           code: 0
