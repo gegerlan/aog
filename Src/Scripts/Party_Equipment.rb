@@ -6,28 +6,53 @@ class Condition_Item
     @id = id
     @hp = max_hp
   end
-  def quality
+  def condition
     return (@hp * 100) / max_hp
   end
   def method_missing(sym, *argz)
-    return data.__send__ sym, *argz
+    return data.__send__ sym, *argz if data != nil
   end
   def max_hp
     return 1
   end
   def data
-    return self
+    return nil
+  end
+  def price
+    return data.price * (condition/100.0)
+  end
+  def atk 
+    return data.atk * (condition/100.0)
+  end
+  def pdef 
+    return data.pdef * (condition/100.0)
+  end
+  def mdef 
+    return data.mdef * (condition/100.0)
+  end
+  def str_plus 
+    return data.str_plus * (condition/100.0)
+  end
+  def dex_plus
+    return data.dex_plus * (condition/100.0)
+  end
+  def agi_plus 
+    return data.agi_plus * (condition/100.0)
+  end
+  def int_plus
+    return data.int_plus * (condition/100.0)
   end
 end
 class Weapon_Condition < Condition_Item
   def initialize(weapon_id)
     super(weapon_id)
+    @data = $data_weapons[@id]
   end
   def hp=(hp)
     @hp = [[hp, 0].max, max_hp].min
   end
   def max_hp
-    return [data.pdef, 1].max * [price, 1].max
+    return [data.pdef, 1].max * [data.price, 1].max
   end
   def data
     return $data_weapons[@id]
@@ -41,14 +66,20 @@ class Armor_Condition < Condition_Item
     @hp = [[hp, 0].max, max_hp].min
   end
   def max_hp
-    return [data.pdef, 1].max * [price, 1].max
+    return [data.pdef, 1].max * [data.price, 1].max
   end
   def data
     return $data_armors[@id]
   end
+  def eva
+    return data.eva * (condition/100.0)
+  end
 end
 
 class Game_Party
+  attr_reader :weapons
+  attr_reader :armors
+  
   alias pre_inventory_objects_initialize initialize
   def initialize
     pre_inventory_objects_initialize
@@ -240,7 +271,7 @@ class Window_EquipItem < Window_Selectable
     x = 4 + index % 2 * (288 + 32)
     y = index / 2 * 32
     
-    number = item.is_a?(Condition_Item) ? "#{item.quality}%" : ""
+    number = item.is_a?(Condition_Item) ? "#{item.condition}%" : ""
     
     bitmap = RPG::Cache.icon(item.icon_name)
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24))
@@ -409,113 +440,6 @@ class Scene_Equip
 end
 
 =begin
-Modifiers for actor wearing the items
-=end
-class Game_Actor < Game_Battler
-  def get_quality_modifiers(sym)
-    n = 0
-    n -= get_weapon_quality_modifier(sym)
-    n -= get_armor1_quality_modifier(sym)
-    n -= get_armor2_quality_modifier(sym)
-    n -= get_armor3_quality_modifier(sym)
-    n -= get_armor4_quality_modifier(sym)
-    return n
-  end
-  def get_weapon_quality_modifier(sym)
-    return @weapon != nil ? (1 - @weapon.quality.to_f/100) * @weapon.send(sym) : 0
-  end
-  def get_armor_quality_modifiers(sym)
-    n = 0
-    n -= get_armor1_quality_modifier(sym)
-    n -= get_armor2_quality_modifier(sym)
-    n -= get_armor3_quality_modifier(sym)
-    n -= get_armor4_quality_modifier(sym)
-    return n
-  end
-  def get_armor1_quality_modifier(sym)
-    return @armors[0] != nil ? (1 - @armors[0].quality.to_f/100) * @armors[0].send(sym) : 0
-  end
-  def get_armor2_quality_modifier(sym)
-    return @armors[1] != nil ? (1 - @armors[1].quality.to_f/100) * @armors[1].send(sym) : 0
-  end
-  def get_armor3_quality_modifier(sym)
-    return @armors[2] != nil ? (1 - @armors[2].quality.to_f/100) * @armors[2].send(sym) : 0
-  end
-  def get_armor4_quality_modifier(sym)
-    return @armors[3] != nil ? (1 - @armors[3].quality.to_f/100) * @armors[3].send(sym) : 0
-  end
-  
-  alias quality_modifier_base_str_pre base_str
-  def base_str
-    n = quality_modifier_base_str_pre
-    n += get_quality_modifiers(:str_plus)
-    return [[n, 1].max, 999].min
-  end
-  #--------------------------------------------------------------------------
-  # * Get Basic Dexterity
-  #--------------------------------------------------------------------------
-  alias quality_modifier_base_dex_pre base_dex
-  def base_dex
-    n = quality_modifier_base_dex_pre
-    n += get_quality_modifiers(:dex_plus)
-    return [[n, 1].max, 999].min
-  end
-  #--------------------------------------------------------------------------
-  # * Get Basic Agility
-  #--------------------------------------------------------------------------
-  alias quality_modifier_base_agi_pre base_agi
-  def base_agi
-    n = quality_modifier_base_agi_pre
-    n += get_quality_modifiers(:agi_plus)
-    return [[n, 1].max, 999].min
-  end
-  #--------------------------------------------------------------------------
-  # * Get Basic Intelligence
-  #--------------------------------------------------------------------------
-  alias quality_modifier_base_int_pre base_int
-  def base_int
-    n = quality_modifier_base_int_pre
-    n += get_quality_modifiers(:int_plus)
-    return [[n, 1].max, 999].min
-  end
-  #--------------------------------------------------------------------------
-  # * Get Basic Attack Power
-  #--------------------------------------------------------------------------
-  alias quality_modifier_base_atk_pre base_atk
-  def base_atk
-    n = quality_modifier_base_atk_pre
-    n -= get_weapon_quality_modifier(:atk)
-    return n
-  end
-  #--------------------------------------------------------------------------
-  # * Get Basic Physical Defense
-  #--------------------------------------------------------------------------
-  alias quality_modifier_base_pdef_pre base_pdef
-  def base_pdef
-    n = quality_modifier_base_pdef_pre
-    n += get_quality_modifiers(:pdef)
-    return n
-  end
-  #--------------------------------------------------------------------------
-  # * Get Basic Magic Defense
-  #--------------------------------------------------------------------------
-  alias quality_modifier_base_mdef_pre base_mdef
-  def base_mdef
-    n = quality_modifier_base_mdef_pre
-    n += get_quality_modifiers(:mdef)
-    return n
-  end
-  #--------------------------------------------------------------------------
-  # * Get Basic Evasion Correction
-  #--------------------------------------------------------------------------
-  alias quality_modifier_base_eva_pre base_eva
-  def base_eva
-    n = quality_modifier_base_eva_pre
-    n += get_armor_quality_modifiers(:eva)
-    return n
-  end
-end
-=begin
 Damage modifiers
 =end
 class Game_Battler
@@ -607,5 +531,274 @@ class Game_Battler
       end
     end
     return return_value
+  end
+end
+class Window_ShopSell < Window_Selectable
+  def refresh
+    if self.contents != nil
+      self.contents.dispose
+      self.contents = nil
+    end
+    @data = []
+    for i in 1...$data_items.size
+      if $game_party.item_number(i) > 0
+        @data.push($data_items[i])
+      end
+    end
+    
+    @data += $game_party.weapons
+    @data += $game_party.armors
+    
+    
+    # If item count is not 0, make a bitmap and draw all items
+    @item_max = @data.size
+    if @item_max > 0
+      self.contents = Bitmap.new(width - 32, row_max * 32)
+      for i in 0...@item_max
+        draw_item(i)
+      end
+    end
+  end
+  #--------------------------------------------------------------------------
+  # * Draw Item
+  #     index : item number
+  #--------------------------------------------------------------------------
+  def draw_item(index)
+    item = @data[index]
+    case item
+    when RPG::Item
+      number = $game_party.item_number(item.id).to_s
+    when Weapon_Condition
+      number = "#{item.condition}%"
+    when Armor_Condition
+      number = "#{item.condition}%"
+    end
+    # If items are sellable, set to valid text color. If not, set to invalid
+    # text color.
+    if item.price > 0
+      self.contents.font.color = normal_color
+    else
+      self.contents.font.color = disabled_color
+    end
+    x = 4 + index % 2 * (288 + 32)
+    y = index / 2 * 32
+    rect = Rect.new(x, y, self.width / @column_max - 32, 32)
+    self.contents.fill_rect(rect, Color.new(0, 0, 0, 0))
+    bitmap = RPG::Cache.icon(item.icon_name)
+    opacity = self.contents.font.color == normal_color ? 255 : 128
+    self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
+    self.contents.draw_text(x + 28, y, 212, 32, item.name, 0)
+    self.contents.draw_text(x + 240, y, 16, 32, ":", 1)
+    self.contents.draw_text(x + 256, y, 24, 32, number, 2)
+  end
+end
+class Scene_Shop
+  #--------------------------------------------------------------------------
+  # * Frame Update (when sell window is active)
+  #--------------------------------------------------------------------------
+  def update_sell
+    # If B button was pressed
+    if Input.trigger?(Input::B)
+      # Play cancel SE
+      $game_system.se_play($data_system.cancel_se)
+      # Change windows to initial mode
+      @command_window.active = true
+      @dummy_window.visible = true
+      @sell_window.active = false
+      @sell_window.visible = false
+      @status_window.item = nil
+      # Erase help text
+      @help_window.set_text("")
+      return
+    end
+    # If C button was pressed
+    if Input.trigger?(Input::C)
+      # Get item
+      @item = @sell_window.item
+      # Set status window item
+      @status_window.item = @item
+      # If item is invalid, or item price is 0 (unable to sell)
+      if @item == nil or @item.price == 0
+        # Play buzzer SE
+        $game_system.se_play($data_system.buzzer_se)
+        return
+      end
+      # Play decision SE
+      $game_system.se_play($data_system.decision_se)
+      # Get items in possession count
+      case @item
+      when RPG::Item
+        number = $game_party.item_number(@item.id)
+      when Weapon_Condition # RPG::Weapon
+        number = 1 # $game_party.weapon_number(@item.id)
+      when Armor_Condition # RPG::Armor
+        number = 1 # $game_party.armor_number(@item.id)
+      end
+      # Maximum quanitity to sell = number of items in possession
+      max = number
+      # Change windows to quantity input mode
+      @sell_window.active = false
+      @sell_window.visible = false
+      @number_window.set(@item, max, @item.price / 2)
+      @number_window.active = true
+      @number_window.visible = true
+      @status_window.visible = true
+    end
+  end
+  #--------------------------------------------------------------------------
+  # * Frame Update (when quantity input window is active)
+  #--------------------------------------------------------------------------
+  def update_number
+    # If B button was pressed
+    if Input.trigger?(Input::B)
+      # Play cancel SE
+      $game_system.se_play($data_system.cancel_se)
+      # Set quantity input window to inactive / invisible
+      @number_window.active = false
+      @number_window.visible = false
+      # Branch by command window cursor position
+      case @command_window.index
+      when 0  # buy
+        # Change windows to buy mode
+        @buy_window.active = true
+        @buy_window.visible = true
+      when 1  # sell
+        # Change windows to sell mode
+        @sell_window.active = true
+        @sell_window.visible = true
+        @status_window.visible = false
+      end
+      return
+    end
+    # If C button was pressed
+    if Input.trigger?(Input::C)
+      # Play shop SE
+      $game_system.se_play($data_system.shop_se)
+      # Set quantity input window to inactive / invisible
+      @number_window.active = false
+      @number_window.visible = false
+      # Branch by command window cursor position
+      case @command_window.index
+      when 0  # buy
+        # Buy process
+        $game_party.lose_gold(@number_window.number * @item.price)
+        case @item
+        when RPG::Item
+          $game_party.gain_item(@item.id, @number_window.number)
+        when RPG::Weapon
+          $game_party.gain_weapon(@item.id, @number_window.number)
+        when RPG::Armor
+          $game_party.gain_armor(@item.id, @number_window.number)
+        end
+        # Refresh each window
+        @gold_window.refresh
+        @buy_window.refresh
+        @status_window.refresh
+        # Change windows to buy mode
+        @buy_window.active = true
+        @buy_window.visible = true
+      when 1  # sell
+        # Sell process
+        $game_party.gain_gold(@number_window.number * (@item.price / 2))
+        case @item
+        when RPG::Item
+          $game_party.lose_item(@item.id, @number_window.number)
+        when Weapon_Condition # RPG::Weapon
+          $game_party.lose_weapon(@item, @number_window.number) # @item.id -> @item
+        when Armor_Condition # RPG::Armor
+          $game_party.lose_armor(@item, @number_window.number) # @item.id -> @item
+        end
+        # Refresh each window
+        @gold_window.refresh
+        @sell_window.refresh
+        @status_window.refresh
+        # Change windows to sell mode
+        @sell_window.active = true
+        @sell_window.visible = true
+        @status_window.visible = false
+      end
+      return
+    end
+  end
+end
+class Window_ShopStatus < Window_Base
+  #--------------------------------------------------------------------------
+  # * Refresh
+  #--------------------------------------------------------------------------
+  def refresh
+    self.contents.clear
+    if @item == nil
+      return
+    end
+    case @item
+    when RPG::Item
+      number = $game_party.item_number(@item.id)
+    when Weapon_Condition
+      number = 1
+    when Armor_Condition
+      number = 1
+    end
+    self.contents.font.color = system_color
+    self.contents.draw_text(4, 0, 200, 32, "number in possession")
+    self.contents.font.color = normal_color
+    self.contents.draw_text(204, 0, 32, 32, number.to_s, 2)
+    if @item.is_a?(RPG::Item)
+      return
+    end
+    # Equipment adding information
+    for i in 0...$game_party.actors.size
+      # Get actor
+      actor = $game_party.actors[i]
+      # If equippable, then set to normal text color. If not, set to
+      # invalid text color.
+      if actor.equippable?(@item)
+        self.contents.font.color = normal_color
+      else
+        self.contents.font.color = disabled_color
+      end
+      # Draw actor's name
+      self.contents.draw_text(4, 64 + 64 * i, 120, 32, actor.name)
+      # Get current equipment
+      if @item.is_a?(Weapon_Condition)
+        item1 = $data_weapons[actor.weapon_id]
+      elsif @item.kind == 0
+        item1 = $data_armors[actor.armor1_id]
+      elsif @item.kind == 1
+        item1 = $data_armors[actor.armor2_id]
+      elsif @item.kind == 2
+        item1 = $data_armors[actor.armor3_id]
+      else
+        item1 = $data_armors[actor.armor4_id]
+      end
+      # If equippable
+      if actor.equippable?(@item)
+        # If weapon
+        if @item.is_a?(Weapon_Condition)
+          atk1 = item1 != nil ? item1.atk : 0
+          atk2 = @item != nil ? @item.atk : 0
+          change = atk2 - atk1
+        end
+        # If armor
+        if @item.is_a?(Armor_Condition)
+          pdef1 = item1 != nil ? item1.pdef : 0
+          mdef1 = item1 != nil ? item1.mdef : 0
+          pdef2 = @item != nil ? @item.pdef : 0
+          mdef2 = @item != nil ? @item.mdef : 0
+          change = pdef2 - pdef1 + mdef2 - mdef1
+        end
+        # Draw parameter change values
+        self.contents.draw_text(124, 64 + 64 * i, 112, 32,
+          sprintf("%+d", change), 2)
+      end
+      # Draw item
+      if item1 != nil
+        x = 4
+        y = 64 + 64 * i + 32
+        bitmap = RPG::Cache.icon(item1.icon_name)
+        opacity = self.contents.font.color == normal_color ? 255 : 128
+        self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
+        self.contents.draw_text(x + 28, y, 212, 32, item1.name)
+      end
+    end
   end
 end
