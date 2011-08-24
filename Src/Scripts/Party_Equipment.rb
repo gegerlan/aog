@@ -116,8 +116,7 @@ class Game_Party
   def gain_weapon(weapon_id, n)
     if weapon_id.is_a?(Numeric)
       return if weapon_id == 0
-      weapon_hp_max = 100
-      weapon_hp = weapon_hp_max
+      return if $data_weapons[weapon_id] == nil
       weapon = Weapon_Condition.new(weapon_id)
     elsif weapon_id.is_a?(Condition_Item)
       weapon = weapon_id
@@ -139,6 +138,7 @@ class Game_Party
   def gain_armor(armor_id, n)
     if armor_id.is_a?(Numeric)
       return if armor_id == 0
+      return if $data_armors[armor_id] == nil
       armor = Armor_Condition.new(armor_id)
     elsif armor_id.is_a?(Condition_Item)
       armor = armor_id
@@ -360,14 +360,14 @@ class Game_Actor < Game_Battler
   def equip_weapon(id)
     return if id == 0
     $game_party.lose_weapon(id, 1)
-    id = Weapon_Condition.new(id) if id.is_a?(Numeric)
+    id = Weapon_Condition.new(id) if id.is_a?(Numeric) && $data_weapons[id] != nil
     @weapon = id if id.is_a?(Condition_Item) #? id : Condition_Item.new(id, "weapon")
   end
   
   def equip_armor(id, armor_slot)
     return if id == 0
     $game_party.lose_armor(id, 1)
-    id = Armor_Condition.new(id) if id.is_a?(Numeric)
+    id = Armor_Condition.new(id) if id.is_a?(Numeric) && $data_armors[id] != nil
     if id.is_a?(Condition_Item) #? id : Condition_Item.new(id, "armor")
       @armors[armor_slot] = id 
     end
