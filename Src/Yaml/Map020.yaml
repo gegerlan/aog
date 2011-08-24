@@ -1081,20 +1081,21 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - in some weapons?
+          - in some weapons or repairs?
         - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 0
           parameters: 
-          - - "Yes"
-            - "No"
-          - 2
+          - - Weapons
+            - Repairs
+            - Leave
+          - 3
         - !ruby/object:RPG::EventCommand 
           code: 402
           indent: 0
           parameters: 
           - 0
-          - "Yes"
+          - Weapons
         - !ruby/object:RPG::EventCommand 
           code: 302
           indent: 1
@@ -1129,7 +1130,23 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 1
-          - "No"
+          - Repairs
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - $scene = Scene_Repair.new
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 2
+          - Leave
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -1333,20 +1350,26 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - Greetings, can I interest you in some armour?
+          - "Greetings, can I interest you in some armour or "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - repairs?
         - !ruby/object:RPG::EventCommand 
           code: 102
           indent: 0
           parameters: 
-          - - "Yes"
-            - "No"
-          - 2
+          - - Armour
+            - Repairs
+            - Leave
+          - 3
         - !ruby/object:RPG::EventCommand 
           code: 402
           indent: 0
           parameters: 
           - 0
-          - "Yes"
+          - Armour
         - !ruby/object:RPG::EventCommand 
           code: 302
           indent: 1
@@ -1429,7 +1452,23 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - 1
-          - "No"
+          - Repairs
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - $scene = Scene_Repair.new
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 2
+          - Leave
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
