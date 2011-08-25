@@ -791,13 +791,12 @@ class Window_ShopStatus < Window_Base
     if @item == nil
       return
     end
-    case @item
-    when RPG::Item
+    if @item.is_a?(RPG::Item)
       number = $game_party.item_number(@item.id)
-    when Weapon_Condition
-      number = 1
-    when Armor_Condition
-      number = 1
+    elsif @item.is_a?(Weapon_Condition) or @item.is_a?(RPG::Weapon)
+      number = $game_party.weapon_number(@item.id)
+    elsif @item.is_a?(Armor_Condition) or @item.is_a?(RPG::Armor)
+      number = $game_party.armor_number(@item.id)
     end
     self.contents.font.color = system_color
     self.contents.draw_text(4, 0, 200, 32, "number in possession")
@@ -817,30 +816,34 @@ class Window_ShopStatus < Window_Base
       else
         self.contents.font.color = disabled_color
       end
-      # Draw actor's name
-      self.contents.draw_text(4, 64 + 64 * i, 120, 32, actor.name)
+      
       # Get current equipment
       if @item.is_a?(Weapon_Condition)
-        item1 = $data_weapons[actor.weapon_id]
-      elsif @item.kind == 0
-        item1 = $data_armors[actor.armor1_id]
-      elsif @item.kind == 1
-        item1 = $data_armors[actor.armor2_id]
-      elsif @item.kind == 2
-        item1 = $data_armors[actor.armor3_id]
-      else
-        item1 = $data_armors[actor.armor4_id]
+        item1 = actor.weapon
+      elsif @item.is_a?(Armor_Condition)
+        if @item.kind == 0
+          item1 = actor.armor1
+        elsif @item.kind == 1
+          item1 = actor.armor2
+        elsif @item.kind == 2
+          item1 = actor.armor3
+        else
+          item1 = actor.armor4
+        end
       end
+      
+      # Draw actor's name
+      self.contents.draw_text(4, 64 + 64 * i, 120, 32, actor.name)
       # If equippable
       if actor.equippable?(@item)
         # If weapon
-        if @item.is_a?(Weapon_Condition)
+        if @item.is_a?(Weapon_Condition) or @item.is_a?(RPG::Weapon)
           atk1 = item1 != nil ? item1.atk : 0
           atk2 = @item != nil ? @item.atk : 0
           change = atk2 - atk1
         end
         # If armor
-        if @item.is_a?(Armor_Condition)
+        if @item.is_a?(Armor_Condition) or @item.is_a?(RPG::Armor)
           pdef1 = item1 != nil ? item1.pdef : 0
           mdef1 = item1 != nil ? item1.mdef : 0
           pdef2 = @item != nil ? @item.pdef : 0
