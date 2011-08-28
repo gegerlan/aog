@@ -3767,23 +3767,43 @@ root:
     kind: 0
     rating: 5
     skill_id: 1
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 0
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 1
+    rating: 3
+    skill_id: 90
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 0
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 1
+    rating: 3
+    skill_id: 16
   agi: 50
   animation1_id: 0
   animation2_id: 0
   armor_id: 0
   atk: 100
   battler_hue: 0
-  battler_name: ""
+  battler_name: 092-Monster06
   dex: 50
   element_ranks: !ruby/object:Table 
     data: 
     - 0
+    - 1
     - 3
     - 3
+    - 6
     - 3
-    - 3
-    - 3
-    - 3
+    - 2
     - 3
     - 3
     - 3
@@ -3805,11 +3825,11 @@ root:
   gold: 0
   id: 35
   int: 50
-  item_id: 0
-  maxhp: 500
-  maxsp: 500
+  item_id: 1
+  maxhp: 900
+  maxsp: 700
   mdef: 100
-  name: ""
+  name: Slime
   pdef: 100
   state_ranks: !ruby/object:Table 
     data: 
@@ -3848,8 +3868,8 @@ root:
     xsize: 31
     ysize: 1
     zsize: 1
-  str: 50
-  treasure_prob: 100
+  str: 70
+  treasure_prob: 10
   weapon_id: 0
 - !ruby/object:RPG::Enemy 
   actions: 
@@ -3863,23 +3883,33 @@ root:
     kind: 0
     rating: 5
     skill_id: 1
-  agi: 50
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 0
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 1
+    rating: 3
+    skill_id: 16
+  agi: 40
   animation1_id: 0
   animation2_id: 0
-  armor_id: 0
-  atk: 100
+  armor_id: 32
+  atk: 120
   battler_hue: 0
-  battler_name: ""
-  dex: 50
+  battler_name: 092-Monster06
+  dex: 40
   element_ranks: !ruby/object:Table 
     data: 
     - 0
+    - 1
     - 3
     - 3
+    - 6
     - 3
-    - 3
-    - 3
-    - 3
+    - 2
     - 3
     - 3
     - 3
@@ -3900,13 +3930,13 @@ root:
   exp: 0
   gold: 0
   id: 36
-  int: 50
+  int: 40
   item_id: 0
-  maxhp: 500
-  maxsp: 500
-  mdef: 100
-  name: ""
-  pdef: 100
+  maxhp: 1500
+  maxsp: 900
+  mdef: 80
+  name: Slime Boss
+  pdef: 120
   state_ranks: !ruby/object:Table 
     data: 
     - 0
@@ -3944,7 +3974,7 @@ root:
     xsize: 31
     ysize: 1
     zsize: 1
-  str: 50
+  str: 80
   treasure_prob: 100
   weapon_id: 0
 - !ruby/object:RPG::Enemy 
