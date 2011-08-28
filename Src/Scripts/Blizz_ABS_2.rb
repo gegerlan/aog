@@ -1553,7 +1553,7 @@ module BlizzABS
       # utilities
       @util = Utility.new
       # refresh passability data
-      #@util.check_map_data if $DEBUG
+      @util.check_map_data
       # create handler for player battle input
       @controls = Controls.new
       # AI instance
