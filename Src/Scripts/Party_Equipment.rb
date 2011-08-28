@@ -284,6 +284,8 @@ end
 
 
 class Game_Actor < Game_Battler
+  attr_reader :weapon
+  attr_reader :armors
   alias pre_object_inventory_initialize initialize
   def initialize(actor_id)
     pre_object_inventory_initialize(actor_id)
@@ -302,9 +304,6 @@ class Game_Actor < Game_Battler
   end
   def weapon_id
     return @weapon != nil ? @weapon.id : 0
-  end
-  def weapon
-    return @weapon
   end
   def armor1_id
     return @armors[0] != nil ? @armors[0].id : 0

@@ -51,18 +51,9 @@ class Persona < Sprite
     
     actor_class_name = $data_classes[@actor.class_id].name
     
-    armor_set = []
-    
-    #Order: body armor (3), accessories (4), helmet (2), shield (1)
-    [:armor3_id, :armor4_id, :armor2_id, :armor1_id].each do |attr|
-      begin
-        armor_set << $data_armors[@actor.send attr].name
-      rescue
-        armor_set << nil
-      end
-    end
-    weapon_set = []
-    weapon_set << $data_weapons[@actor.weapon_id].name if @actor.weapon_id != 0
+    armor_set = @actor.armors.clone || []
+
+    weapon_set = [@actor.weapon] || []
 
     #todo: make a proper hash
     if weapon_set != @old_weapon_set || armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || @actor != @old_actor
@@ -83,12 +74,26 @@ class Persona < Sprite
         modifiers << "shy" if shy
         modifiers << "cuffs" if cuffs
         
+        if layer.is_a?(String)
+          layer_name = layer
+        elsif layer.is_a?(Condition_Item)
+          layer_name = layer.name
+          # These are listed with the worst first, so when the files are
+          # searched for, the worst condition possible will come on top
+          # of the return list.
+          modifiers << "broken" if layer.condition < 25
+          modifiers << "torn" if layer.condition < 50
+          modifiers << "chipped" if layer.condition < 75
+        else
+          return false
+        end
+        
         # Try getting actor name + actor class + layer image
-        picture_path = get_picture_name([@actor.name, actor_class_name, layer].join(" "), modifiers)
+        picture_path = get_picture_name([@actor.name, actor_class_name, layer_name].join(" "), modifiers)
         # Try getting actor name + layer image
-        picture_path = get_picture_name([@actor.name, layer].join(" "), modifiers) if picture_path == nil
+        picture_path = get_picture_name([@actor.name, layer_name].join(" "), modifiers) if picture_path == nil
         # Try getting layer image
-        picture_path = get_picture_name(layer, modifiers) if picture_path == nil
+        picture_path = get_picture_name(layer_name, modifiers) if picture_path == nil
         
         if picture_path != nil
           draw(picture_path)
