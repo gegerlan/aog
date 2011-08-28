@@ -60,11 +60,9 @@ Leave and return to the equipment view.
 
 ### Piercing isn't working
 
-TBD
+### Character image doesn't update as the condition of items change.
 
-### Shops looks weird
-
-TBD
+Enter the equipment screen, and return to the game to update the persona.
 
 ## Contact Information
 
