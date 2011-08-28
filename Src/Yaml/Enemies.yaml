@@ -3989,23 +3989,43 @@ root:
     kind: 0
     rating: 5
     skill_id: 1
-  agi: 50
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 0
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 1
+    rating: 2
+    skill_id: 33
+  - !ruby/object:RPG::Enemy::Action 
+    basic: 0
+    condition_hp: 100
+    condition_level: 1
+    condition_switch_id: 0
+    condition_turn_a: 0
+    condition_turn_b: 1
+    kind: 1
+    rating: 3
+    skill_id: 90
+  agi: 70
   animation1_id: 0
   animation2_id: 0
   armor_id: 0
-  atk: 100
+  atk: 80
   battler_hue: 0
-  battler_name: ""
-  dex: 50
+  battler_name: 087-Monster01
+  dex: 60
   element_ranks: !ruby/object:Table 
     data: 
     - 0
+    - 2
+    - 2
     - 3
-    - 3
-    - 3
-    - 3
-    - 3
-    - 3
+    - 2
+    - 4
+    - 2
     - 3
     - 3
     - 3
@@ -4026,13 +4046,13 @@ root:
   exp: 0
   gold: 0
   id: 37
-  int: 50
+  int: 30
   item_id: 0
-  maxhp: 500
-  maxsp: 500
-  mdef: 100
-  name: ""
-  pdef: 100
+  maxhp: 900
+  maxsp: 1000
+  mdef: 80
+  name: Wasp
+  pdef: 80
   state_ranks: !ruby/object:Table 
     data: 
     - 0
@@ -4070,7 +4090,7 @@ root:
     xsize: 31
     ysize: 1
     zsize: 1
-  str: 50
+  str: 20
   treasure_prob: 100
   weapon_id: 0
 - !ruby/object:RPG::Enemy 
