@@ -2046,11 +2046,174 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 4
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 031-Cleric07
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \face[]\nm[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - With obvious distain, the priestess looks above
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - \N[1]'s head.
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \face[]\nm[Priestess]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - Shouldn't you be with your master?
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 24
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 031-Cleric07
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \face[]\nm[Priestess]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - Shoo, go somewhere else!
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 176
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
       x: 11
       y: 3
     6: !ruby/object:RPG::Event 
       id: 6
-      name: EV006
+      name: Priest
       numero: 6
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -2076,6 +2239,38 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 0
+          parameters: 
+          - 0
+          - 90
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \face[]\nm[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - With some obvious constraint, the priest
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - looks \N[1] in the eyes.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -2084,34 +2279,34 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - "Hello child, is there any illness which "
+          - "Hello child, is there any spiritual illness "
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
-          - plagues you?
+          - which plagues you?
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 0
+          parameters: 
+          - 4
+          - 1
+          - 5
+          - 20
         - !ruby/object:RPG::EventCommand 
           code: 102
-          indent: 0
+          indent: 1
           parameters: 
           - - "Yes"
             - "No"
           - 2
         - !ruby/object:RPG::EventCommand 
           code: 402
-          indent: 0
+          indent: 1
           parameters: 
           - 0
           - "Yes"
         - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 1
-          parameters: 
-          - 4
-          - 1
-          - 5
-          - 20
-        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
           parameters: 
@@ -2165,142 +2360,66 @@ root: !ruby/object:RPG::Map
           - 1
           - 20
         - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 111
+          code: 119
           indent: 2
           parameters: 
-          - 4
-          - 4
-          - 5
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Priest]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - Let the power of god heal you!
-        - !ruby/object:RPG::EventCommand 
-          code: 224
-          indent: 3
-          parameters: 
-          - !ruby/object:Color 
-            alpha: 255.0
-            blue: 255.0
-            green: 255.0
-            red: 255.0
-          - 10
-        - !ruby/object:RPG::EventCommand 
-          code: 224
-          indent: 3
-          parameters: 
-          - !ruby/object:Color 
-            alpha: 255.0
-            blue: 255.0
-            green: 255.0
-            red: 255.0
-          - 10
-        - !ruby/object:RPG::EventCommand 
-          code: 224
-          indent: 3
-          parameters: 
-          - !ruby/object:Color 
-            alpha: 255.0
-            blue: 255.0
-            green: 255.0
-            red: 255.0
-          - 10
-        - !ruby/object:RPG::EventCommand 
-          code: 207
-          indent: 3
-          parameters: 
-          - -1
-          - 24
-        - !ruby/object:RPG::EventCommand 
-          code: 313
-          indent: 3
-          parameters: 
-          - 0
-          - 1
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 3
-          parameters: 
-          - \nm[Priest]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 3
-          parameters: 
-          - It seems you are free of the devil's taint.
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 3
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 2
-          parameters: []
-
+          - Exit Event
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 402
-          indent: 0
+          indent: 1
           parameters: 
           - 1
           - "No"
         - !ruby/object:RPG::EventCommand 
           code: 0
-          indent: 1
+          indent: 2
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
           code: 404
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
           indent: 0
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
-          - \nm[Priest]
+          - \nm[\N[1]]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - No father.
+        - !ruby/object:RPG::EventCommand 
+          code: 118
+          indent: 0
+          parameters: 
+          - Exit Event
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Priest]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2323,6 +2442,187 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         move_type: 1
         numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 24
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 036-Mage04
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \face[]\nm[Priest]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - All creatures of this world, are the work
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - of our lord.
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 0
+          parameters: 
+          - 4
+          - 1
+          - 5
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Priest]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - Let the power of our Lord heal you!
+        - !ruby/object:RPG::EventCommand 
+          code: 224
+          indent: 1
+          parameters: 
+          - !ruby/object:Color 
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 224
+          indent: 1
+          parameters: 
+          - !ruby/object:Color 
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 224
+          indent: 1
+          parameters: 
+          - !ruby/object:Color 
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand 
+          code: 207
+          indent: 1
+          parameters: 
+          - -1
+          - 24
+        - !ruby/object:RPG::EventCommand 
+          code: 313
+          indent: 1
+          parameters: 
+          - 0
+          - 1
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Priest]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - Go in peace, beast.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 4
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 1
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 176
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
         step_anime: false
         through: false
         trigger: 0
@@ -2372,6 +2672,11 @@ root: !ruby/object:RPG::Map
           parameters: 
           - that pottymouth Marco again?
         - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -2396,6 +2701,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - "*Smile*"
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 134
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2455,6 +2765,11 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -2468,7 +2783,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Lady Grey]
+          - \nm[Lady Grey]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2479,6 +2794,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - you?
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2493,7 +2813,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Lady Grey]
+          - \nm[Lady Grey]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2519,6 +2839,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - we?
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2593,7 +2918,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Lady Grey]
+          - \nm[Lady Grey]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2612,6 +2937,11 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 0
           - I wish to marry you
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 1
+          parameters: 
+          - 133
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
@@ -2649,6 +2979,11 @@ root: !ruby/object:RPG::Map
           - 1
           - Sorry
         - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 1
+          parameters: 
+          - 154
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
           parameters: 
@@ -2667,12 +3002,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Lady Grey]
+          - \nm[Lady Grey]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
           parameters: 
           - Understood... Just come back to me...
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 1
+          parameters: 
+          - 133
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
@@ -2714,6 +3054,90 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 24
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 176
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
       x: 6
       y: 14
     8: !ruby/object:RPG::Event 
@@ -2747,7 +3171,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2758,6 +3182,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - We will be ever so good... as will you...
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 134
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2772,7 +3201,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2783,6 +3212,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - "happen last month... "
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 134
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2802,7 +3236,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2813,6 +3247,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - can show the town what kind of whore you are.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 135
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2832,7 +3271,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - "\\nm[Evans] "
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2843,6 +3282,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - horse in the mouth." Or a whore in a tree.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 134
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2857,7 +3301,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2872,7 +3316,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2883,6 +3327,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - perform for us if you wish.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2897,7 +3346,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2908,6 +3357,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - You will be well paid of course
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 154
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -2922,7 +3376,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -2937,7 +3391,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -3051,7 +3505,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3084,7 +3538,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3154,7 +3608,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3261,7 +3715,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -3276,7 +3730,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -3390,7 +3844,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3416,7 +3870,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3479,7 +3933,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3576,6 +4030,11 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 132
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -3589,7 +4048,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -3600,6 +4059,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - Is there problem, whore?
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 133
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -3614,7 +4078,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - "\\nm[Evans] "
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -3625,6 +4089,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - was getting worried that you would resist.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -3639,12 +4108,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
           - Yes. She been eager to rape you herself.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -3659,12 +4133,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
           - By the way, I decided to cancelled the show.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -3679,7 +4158,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -3744,12 +4223,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
-          - Well Whore my mother is waiting...
+          - Well, Whore, my mother is waiting...
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -3807,7 +4286,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -3831,7 +4310,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3857,7 +4336,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3915,7 +4394,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Evans]
+          - \nm[Evans]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -3989,6 +4468,90 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 24
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 176
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
       x: 15
       y: 16
     9: !ruby/object:RPG::Event 
@@ -4022,7 +4585,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4033,6 +4596,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - and Evans. Or you want a repeat of last week
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 135
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -4047,7 +4615,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4058,6 +4626,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - Garnet, the vine swinging whore.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 134
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -4077,7 +4650,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4088,6 +4661,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - can show the town what kind of whore you are.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 135
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -4107,7 +4685,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - "\\nm[Marco] "
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4118,6 +4696,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - "you got free. "
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 136
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -4137,7 +4720,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4148,6 +4731,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - Or maybe just me? Or maybe do a show?
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -4162,7 +4750,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4172,7 +4760,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - Father gone and all. You'll earn some money.
+          - father gone and all. You'll earn some money.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 155
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -4187,7 +4780,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4317,7 +4910,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -4350,7 +4943,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -4415,12 +5008,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
           parameters: 
           - Hot damn Cumbucket. Knew you were a slut.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 1
+          parameters: 
+          - 133
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
@@ -4458,7 +5056,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - "\\nm[Marco] "
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
@@ -4523,12 +5121,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
           parameters: 
           - You're a superslut.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 133
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
@@ -4628,7 +5231,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -4740,7 +5343,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4755,7 +5358,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -4780,7 +5383,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -4801,7 +5404,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -4859,7 +5462,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -4869,7 +5472,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -4892,7 +5495,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
@@ -4950,12 +5553,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
           parameters: 
           - A real Superslut you are.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 133
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
@@ -4975,7 +5583,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
@@ -5043,7 +5651,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -5143,12 +5751,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
           - They raped you good huh Cum Dump?
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -5163,12 +5776,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
           - Evan's idea. So you grateful whore now?
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -5183,7 +5801,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -5194,6 +5812,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - though...
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -5208,7 +5831,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -5235,15 +5858,20 @@ root: !ruby/object:RPG::Map
           parameters: 
           - for a fuck testing.
         - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 131
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
-          - \nm[Garnet]
+          - \nm[Garnet]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
           parameters: 
-          - Yes sir Master Marco
+          - Yes, sir, Master Marco!
         - !ruby/object:RPG::EventCommand 
           code: 121
           indent: 0
@@ -5298,7 +5926,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -5318,7 +5946,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - Yes Master Marco
+          - Yes, Master Marco!
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -5366,7 +5994,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -5381,7 +6009,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -5405,7 +6033,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -5426,7 +6054,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -5484,7 +6112,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -5494,7 +6122,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 1
@@ -5517,7 +6145,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
@@ -5575,12 +6203,17 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
           parameters: 
           - A real Superslut you are.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 133
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
@@ -5600,7 +6233,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters: 
-          - \nm[Marco]
+          - \nm[Marco]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 2
@@ -5680,6 +6313,90 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         move_type: 1
         numero: 4
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 24
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 176
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
         step_anime: false
         through: false
         trigger: 0
