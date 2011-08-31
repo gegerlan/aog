@@ -1,4 +1,4 @@
-class Game_Actor
+class Game_Actor < Game_Battler
   attr_reader   :parameters               # leveling parameters
   alias parameter_setup setup
   def setup(id)
