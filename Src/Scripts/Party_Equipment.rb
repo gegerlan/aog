@@ -152,7 +152,6 @@ class Game_Party
     @armors.uniq!
     armor
   end
-
   #--------------------------------------------------------------------------
   # * Lose Weapons
   #     weapon_id : weapon ID
@@ -161,6 +160,9 @@ class Game_Party
   def lose_weapon(weapon_id, n)
     if weapon_id.is_a?(Condition_Item)
       @weapons.delete(weapon_id)
+    elsif weapon_id.is_a?(Numeric)
+      weapon = @weapons.first { |weapon| weapon.id == weapon_id }
+      @weapons.delete(weapon) if weapon != nil
     end
     @weapons.uniq!
   end
@@ -172,6 +174,9 @@ class Game_Party
   def lose_armor(armor_id, n)
     if armor_id.is_a?(Condition_Item)
       @armors.delete(armor_id)
+    elsif armor_id.is_a?(Numeric)
+      armor = @armors.first { |armor| armor.id == armor_id }
+      @armors.delete(armor) if armor != nil
     end
     @armors.uniq!
   end
@@ -289,18 +294,33 @@ class Game_Actor < Game_Battler
   alias pre_object_inventory_initialize initialize
   def initialize(actor_id)
     pre_object_inventory_initialize(actor_id)
+    # Initialize actor and add default loadout (set by editor)
     @weapon = nil
-    @armors = Array.new(4)
+    @armors = []
     weapon = $game_party.gain_weapon(@weapon_id, 1)
     armor1 = $game_party.gain_armor(@armor1_id, 1)
     armor2 = $game_party.gain_armor(@armor2_id, 1)
     armor3 = $game_party.gain_armor(@armor3_id, 1)
     armor4 = $game_party.gain_armor(@armor4_id, 1)
+    pierce1 = $game_party.gain_armor(@pierce1_id, 1)
+    pierce2 = $game_party.gain_armor(@pierce2_id, 1)
+    pierce3 = $game_party.gain_armor(@pierce3_id, 1)
+    pierce4 = $game_party.gain_armor(@pierce4_id, 1)
+    pierce5 = $game_party.gain_armor(@pierce5_id, 1)
+    pierce6 = $game_party.gain_armor(@pierce6_id, 1)
+    pierce7 = $game_party.gain_armor(@pierce7_id, 1)
     equip(0, weapon)
     equip(1, armor1)
     equip(2, armor2)
     equip(3, armor3)
     equip(4, armor4)
+    equip(5, pierce1)
+    equip(6, pierce2)
+    equip(7, pierce3)
+    equip(8, pierce4)
+    equip(9, pierce5)
+    equip(10, pierce6)
+    equip(11, pierce7)
   end
   def weapon_id
     return @weapon != nil ? @weapon.id : 0
@@ -329,6 +349,27 @@ class Game_Actor < Game_Battler
   def armor4
     return @armors[3]
   end
+  def pierce1_id
+    return @armors[4] != nil ? @armors[4].id : 0
+  end
+  def pierce2_id
+    return @armors[5] != nil ? @armors[5].id : 0
+  end
+  def pierce3_id
+    return @armors[6] != nil ? @armors[6].id : 0
+  end
+  def pierce4_id
+    return @armors[7] != nil ? @armors[7].id : 0
+  end
+  def pierce5_id
+    return @armors[8] != nil ? @armors[8].id : 0
+  end
+  def pierce6_id
+    return @armors[9] != nil ? @armors[9].id : 0
+  end
+  def pierce7_id
+    return @armors[10] != nil ? @armors[10].id : 0
+  end
 
   def weapon_id=(id)
     equip(0, id)
@@ -345,12 +386,40 @@ class Game_Actor < Game_Battler
   def armor4_id=(id)
     equip(4, id)
   end
-
+  def pierce1_id=(id)
+    equip(5, id)
+  end
+  def pierce2_id=(id)
+    equip(6, id)
+  end
+  def pierce3_id=(id)
+    equip(7, id)
+  end
+  def pierce4_id=(id)
+    equip(8, id)
+  end
+  def pierce5_id=(id)
+    equip(9, id)
+  end
+  def pierce6_id=(id)
+    equip(10, id)
+  end
+  def pierce7_id=(id)
+    equip(11, id)
+  end
+  
+  # Add worn weapon to the party inventory, and remove from actor
   def unequip_weapon
     $game_party.gain_weapon(@weapon, 1) if @weapon != nil
     @weapon = nil
   end
   
+  # Add armor in the provided armor slot to the party inventory. Remove item in provided armor slot from the actor's inventory.
+  # 0 = helmet
+  # 1 = shield
+  # 2 = body armor
+  # 3 = accessories
+  # 4-11 = piercings
   def unequip_armor(armor_slot)
     $game_party.gain_armor(@armors[armor_slot], 1) if @armors[armor_slot] != nil
     @armors[armor_slot] = nil
@@ -379,12 +448,20 @@ class Game_Actor < Game_Battler
   #--------------------------------------------------------------------------
   def equip(equip_type, id)
     id = 0 if id == nil
+    return if equip_type == nil
     if equip_type == 0   # Weapon
       unequip_weapon
       equip_weapon(id) if id != 0
       @weapon_id = weapon_id()
-    elsif equip_type < 5 # Armor
+    elsif equip_type < 12 # Armor
       armor_slot = equip_type - 1
+      
+      if id.is_a?(Numeric)
+        update_auto_state(@armors[armor_slot], $data_armors[id])
+      elsif id.is_a?(Armor_Condition) or id.is_a?(RPG::Armor)
+        update_auto_state(@armors[armor_slot], id)
+      end
+      
       unequip_armor(armor_slot)
       equip_armor(id, armor_slot) if id != 0
       case armor_slot
@@ -396,12 +473,43 @@ class Game_Actor < Game_Battler
         @armor3_id = armor3_id()
       when 3
         @armor4_id = armor4_id()
+      when 4
+        @pierce1_id = pierce1_id()
+      when 5
+        @pierce2_id = pierce2_id()
+      when 6
+        @pierce3_id = pierce3_id()
+      when 7
+        @pierce4_id = pierce4_id()
+      when 8
+        @pierce5_id = pierce5_id()
+      when 9
+        @pierce6_id = pierce6_id()
+      when 10
+        @pierce7_id = pierce7_id()
       end
-    else
-      # "Piercing not implemented"
     end
-    $game_switches[100] = true
+    # Set switch 100 to ON (triggers update equipment CE)
+    $game_switches[100] = true # Inline call to equipment update if possible
   end
+  def equippable?(item)
+    # If weapon
+    if item.is_a?(RPG::Weapon) || item.is_a?(Weapon_Condition)
+      # If included among equippable weapons in current class
+      if $data_classes[@class_id].weapon_set.include?(item.id)
+        return true
+      end
+    end
+    # If armor
+    if item.is_a?(RPG::Armor) || item.is_a?(Armor_Condition)
+      # If included among equippable armor in current class
+      if $data_classes[@class_id].armor_set.include?(item.id)
+        return true
+      end
+    end
+    return false
+  end
+  
 end
 class Scene_Equip
    def refresh
@@ -863,5 +971,82 @@ class Window_ShopStatus < Window_Base
         self.contents.draw_text(x + 28, y, 212, 32, item1.name)
       end
     end
+  end
+end
+=begin
+Actor modifiers for equipment worn
+=end
+class Game_Actor < Game_Battler
+  def get_modifiers_armors(sym)
+    @armors.inject(0) { |prod, armor|
+      prod += armor.send(sym) if armor != nil
+      prod # pass on the prod
+    }
+  end
+  def get_modifiers_weapon(sym)
+    if @weapon != nil
+      return @weapon.send(sym)
+    else
+      return 0
+    end
+  end
+  def get_modifiers_equipment(sym)
+    return get_modifiers_armors(sym) + get_modifiers_weapon(sym)
+  end
+  #--------------------------------------------------------------------------
+  # * Get Basic Strength
+  #--------------------------------------------------------------------------
+  def base_str
+    n = @parameters[2, @level]
+    n += get_modifiers_equipment(:str_plus)
+    return [[n, 1].max, 999].min
+  end
+  #--------------------------------------------------------------------------
+  # * Get Basic Dexterity
+  #--------------------------------------------------------------------------
+  def base_dex
+    n = @parameters[3, @level]
+    n += get_modifiers_equipment(:dex_plus)
+    return [[n, 1].max, 999].min
+  end
+  #--------------------------------------------------------------------------
+  # * Get Basic Agility
+  #--------------------------------------------------------------------------
+  def base_agi
+    n = @parameters[4, @level]
+    n += get_modifiers_equipment(:agi_plus)
+    return [[n, 1].max, 999].min
+  end
+  #--------------------------------------------------------------------------
+  # * Get Basic Intelligence
+  #--------------------------------------------------------------------------
+  def base_int
+    n = @parameters[5, @level]
+    n += get_modifiers_equipment(:int_plus)
+    return [[n, 1].max, 999].min
+  end
+    #--------------------------------------------------------------------------
+  # * Get Basic Attack Power
+  #--------------------------------------------------------------------------
+  def base_atk
+    return get_modifiers_weapon(:atk)
+  end
+  #--------------------------------------------------------------------------
+  # * Get Basic Physical Defense
+  #--------------------------------------------------------------------------
+  def base_pdef
+    return get_modifiers_equipment(:pdef)
+  end
+  #--------------------------------------------------------------------------
+  # * Get Basic Magic Defense
+  #--------------------------------------------------------------------------
+  def base_mdef
+    return get_modifiers_equipment(:mdef)
+  end
+  #--------------------------------------------------------------------------
+  # * Get Basic Evasion Correction
+  #--------------------------------------------------------------------------
+  def base_eva
+    return get_modifiers_armors(:eva)
   end
 end
