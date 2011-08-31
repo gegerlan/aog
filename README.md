@@ -58,8 +58,6 @@ This is probably caused because you have non latin characters in your profile na
 
 Leave and return to the equipment view.
 
-### Piercing isn't working
-
 ### Character image doesn't update as the condition of items change.
 
 Enter the equipment screen, and return to the game to update the persona.
