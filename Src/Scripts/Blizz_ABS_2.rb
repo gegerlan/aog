@@ -1563,6 +1563,7 @@ module BlizzABS
       # counters for pets and monsters
       @summon_time = {}
     end
+
     #--------------------------------------------------------------------------
     # battlers
     #  Returns actors and all summons from the party.
@@ -7126,9 +7127,6 @@ module BlizzABS
   end
   
 end
-
-# load Blizz-ABS Processor
-$BlizzABS = BlizzABS::Processor.new
 
 #==============================================================================
 # module Input
