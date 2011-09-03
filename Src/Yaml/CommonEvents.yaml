@@ -9804,99 +9804,30 @@ root:
     code: 355
     indent: 2
     parameters: 
-    - $t ||= {}
+    - a = $game_party.actors[0]
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 2
     parameters: 
-    - $t[:game_player] ||= {}
+    - mhp = a.armors[2].max_hp
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 2
     parameters: 
-    - aid = $game_party.actors[0].armor3_id
+    - d = (mhp / 5) - a.armors[2].pdef
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 2
     parameters: 
-    - $t[:game_player][:last_armor3_id]=aid
+    - a.damage_armor3(d)
   - !ruby/object:RPG::EventCommand 
-    code: 319
+    code: 250
     indent: 2
     parameters: 
-    - 1
-    - 3
-    - 0
-  - !ruby/object:RPG::EventCommand 
-    code: 355
-    indent: 2
-    parameters: 
-    - $t ||= {}
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - $t[:game_player] ||= {}
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - $t[:game_player][:last_armor3_id] ||=0
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - a3 = $t[:game_player][:last_armor3_id]
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - $game_party.lose_armor(a3, 1)
-  - !ruby/object:RPG::EventCommand 
-    code: 117
-    indent: 2
-    parameters: 
-    - 197
-  - !ruby/object:RPG::EventCommand 
-    code: 355
-    indent: 2
-    parameters: 
-    - "# Put enemy name in variable 40"
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - e = $game_map.events[@event_id]
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - $gv[40] = e.battler.name
-  - !ruby/object:RPG::EventCommand 
-    code: 355
-    indent: 2
-    parameters: 
-    - "# Put armor name in variable 41"
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - a3 = $t[:game_player][:last_armor3_id]
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - a = $data_armors[a3]
-  - !ruby/object:RPG::EventCommand 
-    code: 655
-    indent: 2
-    parameters: 
-    - "$gv[41]= a == nil ? \"clothes\" : a.name"
-  - !ruby/object:RPG::EventCommand 
-    code: 101
-    indent: 2
-    parameters: 
-    - The \v[40] tears \N[1]'s \V[41] off her body.
+    - !ruby/object:RPG::AudioFile 
+      name: ""
+      pitch: 100
+      volume: 80
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 2
