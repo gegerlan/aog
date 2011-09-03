@@ -1139,6 +1139,1591 @@ root:
     parameters: 
     - no4
   - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 0
+    parameters: 
+    - - Equipment
+      - ""
+      - Next
+      - Previous
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 0
+    - Equipment
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 1
+    parameters: 
+    - - Weapon
+      - Armor
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 0
+    - Weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 2
+    parameters: 
+    - Weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 2
+    parameters: 
+    - 12
+    - $game_actors[1].weapon_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 3
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - w = $game_actors[1].weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - m = w.max_hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - n = w.name
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - i = w.id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - "v[40]=\"#{i}: #{n}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - v[41]="#{h}/#{m} hp"
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 3
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - v[40]="No weapon equipped."
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - v[41]=""
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 2
+    parameters: 
+    - \v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 2
+    parameters: 
+    - \v[41]
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 2
+    parameters: 
+    - - Set weapon
+      - Set HP
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 0
+    - Set weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 3
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - i = $game_actors[1].weapon_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - v[40]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - v[41]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - Enter the ID of the new weapon.
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - 0 = unequip
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 3
+    parameters: 
+    - 40
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 3
+    parameters: 
+    - 1
+    - 40
+    - 1
+    - 41
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - $game_actors[1].weapon_id = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - Weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 1
+    - Set HP
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 3
+    parameters: 
+    - 12
+    - $game_actors[1].weapon_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - w = $game_actors[1].weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]=h
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Enter HP of weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 4
+    parameters: 
+    - 40
+    - 8
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - $game_actors[1].weapon.hp = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - Weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 2
+    parameters: 
+    - no4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 1
+    - Armor
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 2
+    parameters: 
+    - - Helmet
+      - Shield
+      - Body Armor
+      - Accessories
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 0
+    - Helmet
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 3
+    parameters: 
+    - Armor2
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 3
+    parameters: 
+    - 12
+    - $game_actors[1].armor2_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - w = $game_actors[1].armor2
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - m = w.max_hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - n = w.name
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - i = w.id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[40]=\"#{i}: #{n}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]="#{h}/#{m} hp"
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]="No helmet equipped."
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]=""
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - \v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - \v[41]
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 3
+    parameters: 
+    - - Set helmet
+      - Set HP
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 0
+    - Set helmet
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - i = $game_actors[1].armor2_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Enter the ID of the new helmet.
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 4
+    parameters: 
+    - 0 = unequip
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 4
+    parameters: 
+    - 40
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 4
+    parameters: 
+    - 1
+    - 40
+    - 1
+    - 41
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor2_id = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor2
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 1
+    - Set HP
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 4
+    parameters: 
+    - 12
+    - $game_actors[1].armor2_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - w = $game_actors[1].armor2
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - v[40]=h
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 5
+    parameters: 
+    - Enter HP of helmet
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 5
+    parameters: 
+    - 40
+    - 8
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor2.hp = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor2
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - no4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 1
+    - Shield
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 3
+    parameters: 
+    - Armor1
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 3
+    parameters: 
+    - 12
+    - $game_actors[1].armor1_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - w = $game_actors[1].armor1
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - m = w.max_hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - n = w.name
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - i = w.id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[40]=\"#{i}: #{n}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]="#{h}/#{m} hp"
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]="No shield equipped."
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]=""
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - \v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - \v[41]
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 3
+    parameters: 
+    - - Set shield
+      - Set HP
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 0
+    - Set shield
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - i = $game_actors[1].armor1_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Enter the ID of the new shield.
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 4
+    parameters: 
+    - 0 = unequip
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 4
+    parameters: 
+    - 40
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 4
+    parameters: 
+    - 1
+    - 40
+    - 1
+    - 41
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor1_id = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 1
+    - Set HP
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 4
+    parameters: 
+    - 12
+    - $game_actors[1].armor1_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - w = $game_actors[1].armor1
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - v[40]=h
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 5
+    parameters: 
+    - Enter HP of shield.
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 5
+    parameters: 
+    - 40
+    - 8
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor1.hp = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - no4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 2
+    - Body Armor
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 3
+    parameters: 
+    - Armor3
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 3
+    parameters: 
+    - 12
+    - $game_actors[1].armor3_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - w = $game_actors[1].armor3
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - m = w.max_hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - n = w.name
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - i = w.id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[40]=\"#{i}: #{n}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]="#{h}/#{m} hp"
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]="No body armor equipped."
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]=""
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - \v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - \v[41]
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 3
+    parameters: 
+    - - Set body armor
+      - Set HP
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 0
+    - Set body armor
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - i = $game_actors[1].armor3_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Enter the ID of the new body armor.
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 4
+    parameters: 
+    - 0 = unequip
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 4
+    parameters: 
+    - 40
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 4
+    parameters: 
+    - 1
+    - 40
+    - 1
+    - 41
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor3_id = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor3
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 1
+    - Set HP
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 4
+    parameters: 
+    - 12
+    - $game_actors[1].armor3_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - w = $game_actors[1].armor3
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - v[40]=h
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 5
+    parameters: 
+    - Enter HP of body armor
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 5
+    parameters: 
+    - 40
+    - 8
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor3.hp = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor3
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - no4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 3
+    - Accessories
+  - !ruby/object:RPG::EventCommand 
+    code: 118
+    indent: 3
+    parameters: 
+    - Armor4
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 3
+    parameters: 
+    - 12
+    - $game_actors[1].armor4_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - w = $game_actors[1].armor4
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - m = w.max_hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - n = w.name
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - i = w.id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[40]=\"#{i}: #{n}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]="#{h}/#{m} hp"
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]="No accessories equipped."
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]=""
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - \v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - \v[41]
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 3
+    parameters: 
+    - - Set accessory
+      - Set HP
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 0
+    - Set accessory
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - i = $game_actors[1].armor4_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[40]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - v[41]=i
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Enter the ID of the new accessory.
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 4
+    parameters: 
+    - 0 = unequip
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 4
+    parameters: 
+    - 40
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 4
+    parameters: 
+    - 1
+    - 40
+    - 1
+    - 41
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor4_id = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 1
+    - Set HP
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 4
+    parameters: 
+    - 12
+    - $game_actors[1].armor4_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - w = $game_actors[1].armor4
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - h = w.hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - v[40]=h
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 5
+    parameters: 
+    - Enter HP of accessory
+  - !ruby/object:RPG::EventCommand 
+    code: 103
+    indent: 5
+    parameters: 
+    - 40
+    - 8
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - v = $game_variables
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor4.hp = v[40]
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - no4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - no4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 1
+    - ""
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 2
+    - Next
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - no5
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 0
+    parameters: 
+    - 3
+    - Previous
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - no3
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 1
+    parameters: 
+    - exit
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 119
     indent: 0
     parameters: 
