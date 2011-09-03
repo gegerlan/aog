@@ -597,20 +597,32 @@ Damage modifiers
 =end
 class Game_Battler
   def damage_weapon(damage)
-    @weapon.hp -= damage if @weapon != nil
+    if @weapon != nil
+      @weapon.hp -= damage
+      # equip the weapon slot (0) with item 0 (nothing)
+      equip(0, 0) if @weapon.hp < 1 # && weapon_fix == false
+    end
   end
   def damage_armor1(damage)
-    @armors[0].hp -=damage if @armors[0] != nil
+    damage_armor(0, damage)
   end
   def damage_armor2(damage)
-    @armors[1].hp -= damage if @armors[1] != nil
+    damage_armor(1, damage)
   end
   def damage_armor3(damage)
-    @armors[2].hp -= damage if @armors[2] != nil
+    damage_armor(2, damage)
   end
   def damage_armor4(damage)
-    @armors[3].hp -= damage if @armors[3] != nil
+    damage_armor(3, damage)
   end
+  def damage_armor(armor_slot, damage)
+    if @armors[armor_slot] != nil
+      @armors[armor_slot].hp -= damage
+      armor_fix = __send__ "armor#{armor_slot+1}_fix".to_sym
+      # equip armor slot (armor_slot + 1) with item 0 (nothing)
+      equip(armor_slot+1, 0) if @armors[armor_slot].hp < 1 # && armor_fix == false
+    end
+  end  
   
   def do_damage_armor(attacker, modifier, damage, critical)
     if @armors[1] != nil # Shield
@@ -619,9 +631,6 @@ class Game_Battler
       d = [0, d].max
       damage -= d # Remove from the damage pool
       damage_armor2(d)
-      if @armors[1].hp < 1
-        unequip_armor(1) if armor2_fix == false
-      end
     end
     if @armors[2] != nil # Body armor
       d = damage 
@@ -630,9 +639,6 @@ class Game_Battler
       damage -= d
       # Damage modifiers
       damage_armor3(d)
-      if @armors[2].hp < 1
-        unequip_armor(2) if armor3_fix == false
-      end
     end
     if @armors[0] != nil # Helmet
       d = damage 
@@ -640,9 +646,6 @@ class Game_Battler
       d = [0, d].max
       damage -= d
       damage_armor1(d)
-      if @armors[0].hp < 1
-        unequip_armor(0) if armor1_fix == false
-      end
     end
     if @armors[3] != nil # Accessories
       d = damage
@@ -650,9 +653,6 @@ class Game_Battler
       d -= @armors[3].send(modifier)
       damage -= d
       damage_armor4(d)
-      if @armors[3].hp < 1
-        unequip_armor(3) if armor4_fix == false
-      end
     end
   end
   def do_damage_weapon(target, damage, critical)
@@ -665,9 +665,6 @@ class Game_Battler
         #p "#{@weapon.hp} - #{d}"
         damage_weapon(d)
         #p "#{@weapon.hp}"
-      end
-      if @weapon.hp < 1
-        unequip_weapon if weapon_fix == false
       end
     end
   end
