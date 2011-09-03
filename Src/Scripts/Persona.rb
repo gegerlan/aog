@@ -71,9 +71,6 @@ class Persona < Sprite
         actor_name != @old_actor_name ||
         base_modifiers != @old_base_modifiers
       self.bitmap.clear
-
-      modifiers = []
-      modifiers += base_modifiers
       
       layers = []
       layers << [actor_name, actor_class_name].join(" ")
@@ -81,9 +78,12 @@ class Persona < Sprite
       layers += weapon_set if actor_class_name != "Dog" #FIXME!
 
       layers += armor_set if actor_class_name != "Dog" #FIXME!
+      
 
       layers.each do |layer|
         next if layer == nil
+        
+        modifiers = base_modifiers.clone
         
         if layer.is_a?(Array)
           layer_name, layer_condition = layer
