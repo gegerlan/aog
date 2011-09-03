@@ -142,9 +142,9 @@ class Persona < Sprite
   end
   def dispose
     super
-    @old_armor_set.clear
-    @old_weapon_set.clear
-    @old_base_modifiers.clear
+    @old_armor_set.clear if @old_armor_set != nil
+    @old_weapon_set.clear if @old_weapon_set != nil
+    @old_base_modifiers.clear if @old_base_modifiers != nil
   end
 end
 # Extending the default spriteset class for getting the scene map viewport1
