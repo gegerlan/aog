@@ -42,6 +42,9 @@ class Condition_Item
   def int_plus
     return data.int_plus * (condition/100.0)
   end
+  def base_price
+    return data.price
+  end
 end
 class Weapon_Condition < Condition_Item
   def initialize(weapon_id)
