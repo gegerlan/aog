@@ -49,7 +49,13 @@ class Persona < Sprite
     actor_name = @actor.name
     actor_class_name = $data_classes[@actor.class_id].name
     
-    armor_set = @actor.armors.map { |armor| 
+    actor_armors = [] # Organize for draw order
+    actor_armors << @actor.armor3 # Body armor (bottom)
+    actor_armors << @actor.armor2 # Helmet
+    actor_armors << @actor.armor4 # Accessories
+    actor_armors << @actor.armor1 # Shield (top)
+    
+    armor_set = actor_armors.map { |armor| 
       [armor.name, armor.condition] if armor != nil
     }
     
