@@ -46,21 +46,37 @@ class Persona < Sprite
     if !is_visible?
       return
     end
-    shy = @actor.is_shy?
-    cuffs = @actor.is_cuffed?
-    
+    actor_name = @actor.name
     actor_class_name = $data_classes[@actor.class_id].name
     
-    armor_set = @actor.armors.clone || []
+    armor_set = @actor.armors.map { |armor| 
+      [armor.name, armor.condition] if armor != nil
+    }
+    
+    weapon_set = [@actor.weapon].map{ |weapon| 
+      [weapon.name, weapon.condition] if weapon != nil
+    }
 
-    weapon_set = [@actor.weapon] || []
-
+    shy = @actor.is_shy?
+    cuffs = @actor.is_cuffed?    
+    
+    base_modifiers = []
+    base_modifiers << "shy" if shy
+    base_modifiers << "cuffs" if cuffs
+    
     #todo: make a proper hash
-    if weapon_set != @old_weapon_set || armor_set != @old_armor_set || actor_class_name != @old_actor_class_name || @actor != @old_actor
+    if weapon_set != @old_weapon_set || 
+        armor_set != @old_armor_set || 
+        actor_class_name != @old_actor_class_name || 
+        actor_name != @old_actor_name ||
+        base_modifiers != @old_base_modifiers
       self.bitmap.clear
 
+      modifiers = []
+      modifiers += base_modifiers
+      
       layers = []
-      layers << [@actor.name, actor_class_name].join(" ")
+      layers << [actor_name, actor_class_name].join(" ")
 
       layers += weapon_set if actor_class_name != "Dog" #FIXME!
 
@@ -69,29 +85,30 @@ class Persona < Sprite
       layers.each do |layer|
         next if layer == nil
         
-        modifiers = []
-        
-        modifiers << "shy" if shy
-        modifiers << "cuffs" if cuffs
-        
-        if layer.is_a?(String)
+        if layer.is_a?(Array)
+          layer_name, layer_condition = layer
+        elsif layer.is_a?(String)
           layer_name = layer
         elsif layer.is_a?(Condition_Item)
           layer_name = layer.name
-          # These are listed with the worst first, so when the files are
-          # searched for, the worst condition possible will come on top
-          # of the return list.
-          modifiers << "broken" if layer.condition < 25
-          modifiers << "torn" if layer.condition < 50
-          modifiers << "chipped" if layer.condition < 75
+          layer_condition = layer.condition
         else
           return false
         end
         
+        # These are listed with the worst first, so when the files are
+        # searched for, the worst condition possible will come on top
+        # of the return list.
+        if layer_condition != nil
+          modifiers << "broken" if layer_condition < 25
+          modifiers << "torn" if layer_condition < 50
+          modifiers << "chipped" if layer_condition < 75
+        end
+        
         # Try getting actor name + actor class + layer image
-        picture_path = get_picture_name([@actor.name, actor_class_name, layer_name].join(" "), modifiers)
+        picture_path = get_picture_name([actor_name, actor_class_name, layer_name].join(" "), modifiers)
         # Try getting actor name + layer image
-        picture_path = get_picture_name([@actor.name, layer_name].join(" "), modifiers) if picture_path == nil
+        picture_path = get_picture_name([actor_name, layer_name].join(" "), modifiers) if picture_path == nil
         # Try getting layer image
         picture_path = get_picture_name(layer_name, modifiers) if picture_path == nil
         
@@ -101,10 +118,11 @@ class Persona < Sprite
           print "Unable to find %s" % layer if $DEBUG
         end
       end
-      @old_armor_set = armor_set
-      @old_weapon_set = weapon_set
+      @old_armor_set = armor_set.map { |armor| armor.clone if armor != nil }
+      @old_weapon_set = weapon_set.clone
       @old_actor_class_name = actor_class_name
-      @old_actor = @actor
+      @old_actor_name = actor_name
+      @old_base_modifiers = base_modifiers
     end
   end
   def draw(image_path)
@@ -121,6 +139,12 @@ class Persona < Sprite
       @actor = actor
       update
     end
+  end
+  def dispose
+    super
+    @old_armor_set.clear
+    @old_weapon_set.clear
+    @old_base_modifiers.clear
   end
 end
 # Extending the default spriteset class for getting the scene map viewport1
