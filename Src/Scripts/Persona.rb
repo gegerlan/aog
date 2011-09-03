@@ -118,8 +118,8 @@ class Persona < Sprite
           print "Unable to find %s" % layer if $DEBUG
         end
       end
-      @old_armor_set = armor_set.map { |armor| armor.clone if armor != nil }
-      @old_weapon_set = weapon_set.clone
+      @old_armor_set = armor_set
+      @old_weapon_set = weapon_set
       @old_actor_class_name = actor_class_name
       @old_actor_name = actor_name
       @old_base_modifiers = base_modifiers
