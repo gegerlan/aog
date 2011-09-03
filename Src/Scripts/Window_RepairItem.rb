@@ -1,18 +1,12 @@
-#==============================================================================
-# ** Window_EquipItem
-#------------------------------------------------------------------------------
-#  This window displays choices when opting to change equipment on the
-#  equipment screen.
-#==============================================================================
-
 class Window_RepairItem < Window_Selectable
   #--------------------------------------------------------------------------
   # * Object Initialization
   #     actor      : actor
   #     equip_type : equip region (0-3)
   #--------------------------------------------------------------------------
-  def initialize()
+  def initialize(cost)
     super(0, 0, 640, 480)
+    @cost = cost # cost modifier
     refresh
     self.active = false
     self.index = -1
@@ -70,12 +64,15 @@ class Window_RepairItem < Window_Selectable
     x = 4
     y = index * 32
 
+    repair_cost = ((item.condition.to_f / 100.0) * item.base_price * @cost).to_i
+    
     bitmap = RPG::Cache.icon(item.icon_name)
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24))
     self.contents.font.color = normal_color
     self.contents.draw_text(x + 28, y, 50, 32, "#{item.condition}%", 0)
     #self.contents.draw_text(x + 50, y, 16, 32, " ", 1)
-    self.contents.draw_text(x + 40, y, 214, 32, "#{item.name}", 1)
+    self.contents.draw_text(x + 80, y, 214, 32, "#{item.name}", 0)
+    self.contents.draw_text(x + 300, y, 214, 32, "#{repair_cost}g", 1)
   end
   #--------------------------------------------------------------------------
   # * Help Text Update

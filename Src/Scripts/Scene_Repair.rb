@@ -1,7 +1,7 @@
 #==============================================================================
 # ** Scene_Repair
 #------------------------------------------------------------------------------
-#  This class performs equipment screen processing.
+#  This class performs repair screen processing.
 #==============================================================================
 
 class Scene_Repair
@@ -10,8 +10,8 @@ class Scene_Repair
   #     actor_index : actor index
   #     equip_index : equipment index
   #--------------------------------------------------------------------------
-  def initialize(cost = 2)
-    @cost = cost
+  def initialize(cost = 1)
+    @cost = cost # Cost modifier (1 = none)
     main
   end
   #--------------------------------------------------------------------------
@@ -19,14 +19,8 @@ class Scene_Repair
   #--------------------------------------------------------------------------
   def main
     # Make windows
-    #@help_window = Window_Help.new
-    @main_window = Window_RepairItem.new
-    
-    # Associate help window
-    #@main_window.help_window = @help_window
+    @main_window = Window_RepairItem.new(@cost)
 
-    # Set cursor position
-    #@right_window.index = @equip_index
     refresh
     # Execute transition
     Graphics.transition
@@ -50,7 +44,6 @@ class Scene_Repair
     # Prepare for transition
     Graphics.freeze
     # Dispose of windows
-#    @help_window.dispose
     @main_window.dispose
   end
   #--------------------------------------------------------------------------
@@ -111,9 +104,16 @@ class Scene_Repair
         return
       end
       
+      repair_cost = ((item.condition.to_f / 100.0) * item.base_price * @cost).to_i
+      if repair_cost > $game_party.gold
+        # Play buzzer SE
+        $game_system.se_play($data_system.buzzer_se)
+        return
+      end
       # Play decision SE
       $game_system.se_play($data_system.decision_se)
       
+      $game_party.lose_gold(repair_cost)
       item.hp = item.max_hp
       
       @main_window.refresh
