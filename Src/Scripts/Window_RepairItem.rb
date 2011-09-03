@@ -72,7 +72,7 @@ class Window_RepairItem < Window_Selectable
     self.contents.draw_text(x + 28, y, 50, 32, "#{item.condition}%", 0)
     #self.contents.draw_text(x + 50, y, 16, 32, " ", 1)
     self.contents.draw_text(x + 80, y, 214, 32, "#{item.name}", 0)
-    self.contents.draw_text(x + 300, y, 214, 32, "#{repair_cost}g", 1)
+    self.contents.draw_text(x + 300, y, 50, 32, "#{repair_cost}g", 2)
   end
   #--------------------------------------------------------------------------
   # * Help Text Update
