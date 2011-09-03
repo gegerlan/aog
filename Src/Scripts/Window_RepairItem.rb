@@ -64,7 +64,7 @@ class Window_RepairItem < Window_Selectable
     x = 4
     y = index * 32
 
-    repair_cost = (((100 - item.condition.to_f) / 100.0) * item.base_price * @cost).to_i
+    repair_cost = (item.repair_cost * @cost).to_i
     
     bitmap = RPG::Cache.icon(item.icon_name)
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24))

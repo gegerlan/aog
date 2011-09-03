@@ -45,6 +45,9 @@ class Condition_Item
   def base_price
     return data.price
   end
+  def repair_cost
+    return ((100 - condition) / 100.0 * base_price).to_i
+  end
 end
 class Weapon_Condition < Condition_Item
   def initialize(weapon_id)
