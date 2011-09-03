@@ -104,7 +104,7 @@ class Scene_Repair
         return
       end
       
-      repair_cost = ((item.condition.to_f / 100.0) * item.base_price * @cost).to_i
+      repair_cost = (((100 - item.condition.to_f) / 100.0) * item.base_price * @cost).to_i
       if repair_cost > $game_party.gold
         # Play buzzer SE
         $game_system.se_play($data_system.buzzer_se)
