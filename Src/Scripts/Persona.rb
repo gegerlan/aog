@@ -115,7 +115,7 @@ class Persona < Sprite
         if picture_path != nil
           draw(picture_path)
         else
-          print "Unable to find %s" % layer if $DEBUG
+          # print "Unable to find %s" % layer if $DEBUG
         end
       end
       @old_armor_set = armor_set
