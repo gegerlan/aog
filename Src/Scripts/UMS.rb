@@ -1359,7 +1359,7 @@ class Window_Message < Window_Selectable
             @face_frame = 0
           end
         else
-          @face.bitmap = RPG::Cache.picture($game_system.face_graphic)
+          @face.bitmap = RPG::Cache.face($game_system.face_graphic) #RPG::Cache.picture($game_system.face_graphic)
         end
         
         # picture y-coordinate

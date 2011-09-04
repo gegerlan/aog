@@ -23,3 +23,9 @@ def get_picture_name(filename, variation = [], exact = false, path="Graphics/Pic
   return File.basename(f) unless !f || f.empty?
   return nil
 end
+
+ 
+def get_face_name(filename, variation = [], exact = false, extension=['png','gif','jpg','jpeg'])
+  path = "Graphics/Faces"
+  return get_picture_name(filename, variation = [], exact = false, path, extension=['png','gif','jpg','jpeg'])
+end
