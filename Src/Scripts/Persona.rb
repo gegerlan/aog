@@ -7,20 +7,28 @@ class Persona
     :mouth =>  { :x => 53, :y => 84,  :zoom => 0.9},
     :eyes  =>  { :x => 51, :y => 59, :zoom => 0.9},
     :armor3 => { :x => 58, :y => 211, :zoom => 1},
+    :blush => { :x => 52, :y => 75, :zoom => 0.9},
+    :tears => { :x => 52, :y => 72, :zoom => 0.9},
   }
   # Z-index of item. The higher the number, the more to the front
-  ORDER = {
+  ORDER = { # note, must be > 0
+    :hair_back => 1,
     :base   => 5,
-    :mouth  => 10,
-    :eyes   => 10,
-    :armor1 => 20,
-    :armor2 => 50,
-    :armor3 => 30,
-    :armor4 => 40,
+    :blush  => 10,
+    :drool  => 15,
+    :mouth  => 20,
+    :eyes   => 25,
+    :tears   => 27,
+    :stains  => 30,
+    :armor1 => 70,
+    :hair_front => 55,
+    :armor2 => 60,
+    :armor3 => 40,
+    :armor4 => 50,
   }
   
   def initialize(actor = $game_actors[1])
-    @viewport = Viewport.new(0,0,640,480) # Create an empty viewport
+    @viewport = Viewport.new(0,0,300,300) # Create an empty viewport
     @actor = actor
     @layers = {}
     update
@@ -47,6 +55,7 @@ class Persona
   def setup_layers
     # Get the layers
     @layers[:base] = get_base_layer
+    @layers.merge!(get_hair_layers)
     @layers[:weapon] = get_weapon_layer
     @layers.merge!(get_armor_layers)
     @layers.merge!(get_face_layers)
@@ -59,7 +68,7 @@ class Persona
         @layers[index].zoom_y = image_offset[:zoom]
         @layers[index].zoom_x = image_offset[:zoom]
       end
-      if image_depth = ORDER[index]
+      if (image_depth = ORDER[index]) != nil
         @layers[index].z = image_depth
       end
     end
@@ -76,6 +85,27 @@ class Persona
     }
     return Persona_Picture.new(@viewport, proc_value, proc_value_process)
   end
+  def get_hair_layers
+    proc_value = Proc.new { |callee|
+      1
+    }
+    proc_value_process_front = Proc.new { |value, callee|
+      actor_name = @actor.name.strip
+      hair_name = "#{value}"
+      "Graphics/Persona/#{actor_name}/Base/Hair/Front/#{hair_name}"
+    }
+    proc_value_process_back = Proc.new { |value, callee|
+      actor_name = @actor.name.strip
+      hair_name = "#{value}"
+      "Graphics/Persona/#{actor_name}/Base/Hair/Back/#{hair_name}"
+    }
+    
+    return {
+      :hair_front => Persona_Picture.new(@viewport, proc_value, proc_value_process_front),
+      :hair_back => Persona_Picture.new(@viewport, proc_value, proc_value_process_back),
+    }
+  end
+  
   def get_armor_layers
     return {
       :armor1 => get_armor_layer(:armor1_id),
@@ -116,6 +146,7 @@ class Persona
   end
   def get_face_layers
     return {
+      :blush => get_blush_layer,
       :eyes => get_eyes_layer,
       :tears => get_tears_layer,
       :mouth => get_mouth_layer,
@@ -156,6 +187,17 @@ class Persona
     }
     return Persona_Picture.new(@viewport, proc_value, proc_value_process)
   end
+  def get_blush_layer
+    proc_value = Proc.new { |callee|
+      1
+    }
+    proc_value_process = Proc.new { |value, callee|
+      actor_name = @actor.name.strip
+      blush_name = "#{value}".strip
+      "Graphics/Persona/#{actor_name}/Face/Blush/#{blush_name}"
+    }
+    return Persona_Picture.new(@viewport, proc_value, proc_value_process)
+  end
   def get_drool_layer
     proc_value = Proc.new { |callee|
       1
@@ -163,7 +205,7 @@ class Persona
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
       drool_name = "#{value}".strip
-      "Graphics/Persona/#{actor_name}/Face/Tears/#{drool_name}"
+      "Graphics/Persona/#{actor_name}/Face/Drool/#{drool_name}"
     }
     return Persona_Picture.new(@viewport, proc_value, proc_value_process)
   end
@@ -174,7 +216,7 @@ class Persona
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
       stains_name = "#{value}".strip
-      "Graphics/Persona/#{actor_name}/Face/Tears/#{stains_name}"
+      "Graphics/Persona/#{actor_name}/Face/Stains/#{stains_name}"
     }
     return Persona_Picture.new(@viewport, proc_value, proc_value_process)
   end
