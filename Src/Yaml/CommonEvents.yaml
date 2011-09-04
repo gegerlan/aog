@@ -14488,6 +14488,46 @@ root:
     code: 355
     indent: 0
     parameters: 
+    - "# Actor"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - actor = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "# Faceset Index"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - face_index = $game_variables[48]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - ""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "# Set the face"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - Faceset::set(actor, face_index)
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
     - $v = $v || {}
   - !ruby/object:RPG::EventCommand 
     code: 355
