@@ -1032,7 +1032,8 @@ class Game_Actor < Game_Battler
   # * Get Basic Attack Power
   #--------------------------------------------------------------------------
   def base_atk
-    return get_modifiers_weapon(:atk)
+    return get_modifiers_weapon(:atk) if @weapon != nil
+    return base_str * 2
   end
   #--------------------------------------------------------------------------
   # * Get Basic Physical Defense
