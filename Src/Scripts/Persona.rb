@@ -10,6 +10,7 @@ class Persona
     :mouth =>  { :x => 53, :y => 84,  :zoom => 0.9},
     :eyes  =>  { :x => 51, :y => 59, :zoom => 0.9},
     :armor3 => { :x => 63, :y => 211, :zoom => 1},
+    :armor3_arms => { :x => 58, :y => 165, :zoom => 1},
     :blush => { :x => 52, :y => 75, :zoom => 0.9},
     :tears => { :x => 52, :y => 72, :zoom => 0.9},
   }
