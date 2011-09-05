@@ -17,8 +17,6 @@ class Persona
   ORDER = {
     :hair_back => 1,
     :body      => 5,
-    :arms      => 7,
-    :armor3_arms=>8,
     :blush     => 10,
     :drool     => 15,
     :mouth     => 20,
@@ -26,6 +24,8 @@ class Persona
     :tears     => 27,
     :stains    => 30,
     :armor3    => 40,
+    :arms      => 43,
+    :armor3_arms=>46,
     :armor4    => 50,
     :hair_front=> 55,
     :armor2    => 60,
@@ -88,42 +88,51 @@ class Persona
   end
   def get_body_layer
     proc_value = Proc.new { |callee|
-      @actor.class_id
+      [@actor.class_id, @actor.armor3_id == 0]
     }
     proc_value_process = Proc.new { |value, callee|
+      class_id, nude = [@actor.class_id, @actor.armor3_id == 0]
       actor_name = @actor.name.strip
-      class_name = $data_classes[value].name.strip
-      "Graphics/Persona/#{actor_name}/Body/#{class_name}"
+      class_name = $data_classes[class_id].name.strip
+      body_name  = nude ? 1 : 0
+      "Graphics/Persona/#{actor_name}/#{class_name}/#{body_name}"
     }
     return Persona_Picture.new(@viewport, proc_value, proc_value_process)
   end
   def get_arms_layer
     proc_value = Proc.new { |callee|
-      #@actor.state?(STATE_CUFFED) ? 1 : 0
-      @actor.weapon.id == CUFFS ? 1 : 0
+      [@actor.weapon.id == CUFFS ? 1 : 0, @actor.armor3_id == 0]
     }
     proc_value_process = Proc.new { |value, callee|
+      arms_name, nude = value
+      class_id = @actor.class_id
       actor_name = @actor.name.strip
-      arms_name = value
-      "Graphics/Persona/#{actor_name}/Body/Arms/#{arms_name}"
+      class_name = $data_classes[class_id].name.strip
+      body_name  = nude ? 1 : 0
+      "Graphics/Persona/#{actor_name}/#{class_name}/Arms/#{body_name}/#{arms_name}"
     }
     return Persona_Picture.new(@viewport, proc_value, proc_value_process)
   end
   def get_hair_layers
     proc_value = Proc.new { |callee|
-      1
+      [0, @actor.armor3_id == 0]
     }
     proc_value_process_front = Proc.new { |value, callee|
+      hair_name, nude = value
+      class_id = @actor.class_id
       actor_name = @actor.name.strip
-      hair_name = "#{value}"
-      "Graphics/Persona/#{actor_name}/Body/Hair/Front/#{hair_name}"
+      class_name = $data_classes[class_id].name.strip
+      body_name  = nude ? 1 : 0
+      "Graphics/Persona/#{actor_name}/#{class_name}/Hair/#{body_name}/Front/#{hair_name}"
     }
     proc_value_process_back = Proc.new { |value, callee|
+      hair_name, nude = value  
+      class_id = @actor.class_id
       actor_name = @actor.name.strip
-      hair_name = "#{value}"
-      "Graphics/Persona/#{actor_name}/Body/Hair/Back/#{hair_name}"
+      class_name = $data_classes[class_id].name.strip
+      body_name  = nude ? 1 : 0
+      "Graphics/Persona/#{actor_name}/#{class_name}/Hair/#{body_name}/Back/#{hair_name}"
     }
-    
     return {
       :hair_front => Persona_Picture.new(@viewport, proc_value, proc_value_process_front),
       :hair_back => Persona_Picture.new(@viewport, proc_value, proc_value_process_back),
@@ -136,17 +145,19 @@ class Persona
       :armor2 => get_armor_layer(:armor2_id),
       :armor3 => get_armor_layer(:armor3_id),
       :armor4 => get_armor_layer(:armor4_id),
+      :armor3_arms => get_armor3_arms_layer(:armor3_id),
     }
   end
   def get_armor_layer(sym)
     proc_value = Proc.new { |callee|
-      @actor.send(sym)
+      [@actor.send(sym), 0]
     }
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
-      if value != 0
-        armor_name = $data_armors[value].name.strip
-        "Graphics/Persona/#{actor_name}/Equipment/Armor/#{armor_name}"
+      armor_id, armor_index = value
+      if armor_id != 0
+        armor_name = $data_armors[armor_id].name.strip
+        "Graphics/Persona/#{actor_name}/Equipment/Armor/#{armor_name}/#{armor_index}"
       else
         ""
       end
@@ -163,7 +174,7 @@ class Persona
       if armor3_id != 0
         armor_name = $data_armors[armor3_id].name.strip
         arms_name = value
-        "Graphics/Persona/#{actor_name}/Equipment/Armor/#{armor_name}/arms_name"
+        "Graphics/Persona/#{actor_name}/Equipment/Armor/#{armor_name}/Arms/#{arms_name}"
       else
         ""
       end
@@ -178,7 +189,7 @@ class Persona
       actor_name = @actor.name.strip
       if value != 0
         weapon_name = $data_weapons[value].name.strip
-        "Graphics/Persona/#{actor_name}/Equipment/Weapon/#{weapon_name}"
+        "Graphics/Persona/#{actor_name}/Equipment/Weapon/#{weapon_name}/0"
       else
         ""
       end
