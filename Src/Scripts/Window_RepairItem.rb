@@ -60,6 +60,8 @@ class Window_RepairItem < Window_Selectable
   #     index : item number
   #--------------------------------------------------------------------------
   def draw_item(index)
+    stat_change = get_stat_change(index)
+    owner = get_owner(index)
     item = @data[index]
     x = 4
     y = index * 32
@@ -72,8 +74,54 @@ class Window_RepairItem < Window_Selectable
     self.contents.draw_text(x + 28, y, 50, 32, "#{item.condition}%", 0)
     #self.contents.draw_text(x + 50, y, 16, 32, " ", 1)
     self.contents.draw_text(x + 80, y, 214, 32, "#{item.name}", 0)
-    self.contents.draw_text(x + 300, y, 50, 32, "#{repair_cost}g", 2)
+    self.contents.draw_text(x + 300, y, 70, 32, "#{repair_cost}g", 2)
+    self.contents.draw_text(x + 380, y, 100, 32, owner.name, 0) if owner != nil
+    
+    stats = ""
+    
+    stat_change.each { |stat_name, change|
+      stats += " %s+%1d" % [stat_name, change]
+    }
+    
+    self.contents.draw_text(x + 490, y, 115, 32, stats, 0) if stats != nil
   end
+  
+  def get_stat_change(index)
+    item = @data[index]
+    
+    item_clone = item.clone
+    item_clone.hp = item_clone.max_hp
+    
+    stats = %w{pdef mdef str_plus dex_plus agi_plus int_plus}
+    stats << "atk" if item.is_a?(Weapon_Condition)
+    stats << "eva" if item.is_a?(Armor_Condition)
+    
+    stats_change = {}
+    
+    stats.each { |stat_name|
+      stats_change[stat_name] = item_clone.send(stat_name) - item.send(stat_name)
+    }
+    #return stats_change
+    return stats_change.select { |stat_name, change|
+      change != 0
+    }
+  end
+  
+  def get_owner(index)
+    item = @data[index]
+    if item.is_a?(Armor_Condition)
+      haystack = ["armor%d" % (item.kind + 1).to_s]
+    elsif item.is_a?(Weapon_Condition)
+      haystack = ["weapon"]
+    end
+    $game_party.actors.each { |actor|
+      haystack.each { |item_name|
+        return actor if actor.send(item_name) == item
+      }
+    }
+    return nil
+  end
+  
   #--------------------------------------------------------------------------
   # * Help Text Update
   #--------------------------------------------------------------------------
