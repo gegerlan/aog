@@ -89,10 +89,11 @@ class Persona
   end
   def get_body_layer
     proc_value = Proc.new { |callee|
-      [@actor.class_id, @actor.armor3_id == 0]
+      @actor.class_id
     }
     proc_value_process = Proc.new { |value, callee|
-      class_id, nude = [@actor.class_id, @actor.armor3_id == 0]
+      class_id = value
+      nude = @actor.armor3_id == 0
       actor_name = @actor.name.strip
       class_name = $data_classes[class_id].name.strip
       body_name  = nude ? 1 : 0
@@ -102,10 +103,11 @@ class Persona
   end
   def get_arms_layer
     proc_value = Proc.new { |callee|
-      [@actor.weapon.id == CUFFS ? 1 : 0, @actor.armor3_id == 0]
+      @actor.weapon.id == CUFFS ? 1 : 0
     }
     proc_value_process = Proc.new { |value, callee|
-      arms_name, nude = value
+      arms_name = value
+      nude = @actor.armor3_id == 0
       class_id = @actor.class_id
       actor_name = @actor.name.strip
       class_name = $data_classes[class_id].name.strip
@@ -116,10 +118,11 @@ class Persona
   end
   def get_hair_layers
     proc_value = Proc.new { |callee|
-      [0, @actor.armor3_id == 0]
+      0
     }
     proc_value_process_front = Proc.new { |value, callee|
-      hair_name, nude = value
+      hair_name = value
+      nude = @actor.armor3_id == 0
       class_id = @actor.class_id
       actor_name = @actor.name.strip
       class_name = $data_classes[class_id].name.strip
@@ -151,11 +154,12 @@ class Persona
   end
   def get_armor_layer(sym)
     proc_value = Proc.new { |callee|
-      [@actor.send(sym), 0]
+      @actor.send(sym)
     }
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
-      armor_id, armor_index = value
+      armor_id = value
+      armor_index = 0
       if armor_id != 0
         armor_name = $data_armors[armor_id].name.strip
         "Graphics/Persona/#{actor_name}/Equipment/Armor/#{armor_name}/#{armor_index}"
