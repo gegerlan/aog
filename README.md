@@ -46,13 +46,21 @@ Visit our project wiki at https://github.com/gegerlan/aog/wiki to get more infor
 
 ## Known Issues and Workarounds
 
-### Game crashes with: 'Failed to load script' error.
+### Game crashes at start with: 'Failed to load script' error.
 
-Run the Game.bat file. If the problem persists, contact a developer.
+Run the Game.bat file. A small command window should appear and go through the source files, making them playable. 
 
-### Error message during source file conversion: 'rxdatav.exe: Couldn't change directory'
+### Editor crashes at start with: 'Failed to load actor data.'
 
-This is probably caused because you have non latin characters in your profile name. Create a new temporary user without these characters, and run the file again.
+Run the Editor.bat file.
+
+### Game flashes a black window when I try to start the game
+
+There is probably an issue with the location of the game. Try moving it to another folder (e.g. directly to C).
+
+### FATAL ERROR: Failed to open executable
+
+The location of the game is currently causing issues. Try moving it to another folder (e.g. directly to C).
 
 ### Changing equipment may not update the list correctly
 
