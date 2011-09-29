@@ -23,6 +23,12 @@ SVN : http://svn.github.com/gegerlan/aog.git
 
 1. Run Game.bat to convert the source files to the required format.
 
+### SVN users
+
+Download and replace the following files:
+Game\Graphics\Characters\00 (33).png
+Game\Graphics\Characters\00 (81).png
+Game\Graphics\Characters\00 (84).png
 
 ## Getting Started
 
