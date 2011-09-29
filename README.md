@@ -34,7 +34,7 @@ Cancel/Abort : X, F, End, Esc
 
 Settings : F1
 
-Full-screen/windowed : F4
+Full-screen/windowed : Alt+Enter
 
 
 ## Getting Involved
