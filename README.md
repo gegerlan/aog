@@ -25,10 +25,10 @@ SVN : http://svn.github.com/gegerlan/aog.git
 
 ### SVN users
 
-Download and replace the following files:
-Game\Graphics\Characters\00 (33).png
-Game\Graphics\Characters\00 (81).png
-Game\Graphics\Characters\00 (84).png
+Download and replace the following files: 
+[Game\Graphics\Characters\00 (33).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2833%29.png) 
+[Game\Graphics\Characters\00 (81).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2881%29.png) 
+[Game\Graphics\Characters\00 (84).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2884%29.png) 
 
 ## Getting Started
 
@@ -71,6 +71,15 @@ The location of the game is currently causing issues. Try moving it to another f
 ### Changing equipment may not update the list correctly
 
 Leave and return to the equipment view.
+
+### The Dali baths are empty
+
+This probably means that you've retrieved an SVN version of the game. Download and replace the following files: 
+[Game\Graphics\Characters\00 (33).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2833%29.png) 
+[Game\Graphics\Characters\00 (81).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2881%29.png) 
+[Game\Graphics\Characters\00 (84).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2884%29.png) 
+
+### No progression of story in Carthage
 
 ## Contact Information
 
