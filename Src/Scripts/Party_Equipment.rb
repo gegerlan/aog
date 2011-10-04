@@ -358,25 +358,47 @@ class Game_Actor < Game_Battler
   def pierce1_id
     return @armors[4] != nil ? @armors[4].id : 0
   end
+  def pierce1
+    return @armors[4]
+  end
   def pierce2_id
     return @armors[5] != nil ? @armors[5].id : 0
+  end
+  def pierce2
+    return @armors[5]
   end
   def pierce3_id
     return @armors[6] != nil ? @armors[6].id : 0
   end
+  def pierce3
+    return @armors[6]
+  end
   def pierce4_id
     return @armors[7] != nil ? @armors[7].id : 0
+  end
+  def pierce4
+    return @armors[7]
   end
   def pierce5_id
     return @armors[8] != nil ? @armors[8].id : 0
   end
+  def pierce5
+    return @armors[8]
+  end
   def pierce6_id
     return @armors[9] != nil ? @armors[9].id : 0
+  end
+  def pierce6
+    return @armors[9]
   end
   def pierce7_id
     return @armors[10] != nil ? @armors[10].id : 0
   end
-
+  def pierce7
+    return @armors[10]
+  end
+  
+  
   def weapon_id=(id)
     equip(0, id)
   end
