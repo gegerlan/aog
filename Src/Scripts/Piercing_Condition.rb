@@ -172,6 +172,6 @@ class Window_PierceItem < Window_Selectable
     self.contents.font.color = normal_color
     self.contents.draw_text(x + 28, y, 212, 32, item.name, 0)
     self.contents.draw_text(x + 240, y, 16, 32, " ", 1)
-    self.contents.draw_text(x + 256, y, 24, 32, item.condition.to_s, 2)
+    self.contents.draw_text(x + 256, y, 24, 32, item.condition.to_s + "%", 2)
   end
 end
