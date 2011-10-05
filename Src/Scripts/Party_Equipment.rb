@@ -120,21 +120,25 @@ class Game_Party
   #     n         : quantity
   #--------------------------------------------------------------------------
   def gain_weapon(weapon_id, n)
-    if weapon_id.is_a?(Numeric)
-      return if weapon_id == 0
-      return if $data_weapons[weapon_id] == nil
-      weapon = Weapon_Condition.new(weapon_id)
-    elsif weapon_id.is_a?(Condition_Item)
-      weapon = weapon_id
+    if n < 0 
+      lose_weapon(weapon_id, n)
     else
-      return # Invalid
+      if weapon_id.is_a?(Numeric)
+        return if weapon_id == 0
+        return if $data_weapons[weapon_id] == nil
+        weapon = Weapon_Condition.new(weapon_id)
+      elsif weapon_id.is_a?(Condition_Item)
+        weapon = weapon_id
+      else
+        return # Invalid
+      end
+      @weapons << weapon
+      for i in 1..(n-1)
+        @weapons << weapon.clone
+      end
+      @weapons.uniq!
+      weapon
     end
-    @weapons << weapon
-    for i in 1..(n-1)
-      @weapons << weapon.clone
-    end
-    @weapons.uniq!
-    weapon
   end
   #--------------------------------------------------------------------------
   # * Gain Armor
@@ -142,21 +146,25 @@ class Game_Party
   #     n        : quantity
   #--------------------------------------------------------------------------
   def gain_armor(armor_id, n)
-    if armor_id.is_a?(Numeric)
-      return if armor_id == 0
-      return if $data_armors[armor_id] == nil
-      armor = Armor_Condition.new(armor_id)
-    elsif armor_id.is_a?(Condition_Item)
-      armor = armor_id
+    if n < 0
+      lose_armor(armor_id, n)
     else
-      return # Invalid
+      if armor_id.is_a?(Numeric)
+        return if armor_id == 0
+        return if $data_armors[armor_id] == nil
+        armor = Armor_Condition.new(armor_id)
+      elsif armor_id.is_a?(Condition_Item)
+        armor = armor_id
+      else
+        return # Invalid
+      end
+      @armors << armor
+      for i in 1..(n-1)
+        @armors << armor.clone
+      end
+      @armors.uniq!
+      armor
     end
-    @armors << armor
-    for i in 1..(n-1)
-      @armors << armor.clone
-    end
-    @armors.uniq!
-    armor
   end
   #--------------------------------------------------------------------------
   # * Lose Weapons
@@ -491,6 +499,7 @@ class Game_Actor < Game_Battler
       end
       
       unequip_armor(armor_slot)
+      
       equip_armor(id, armor_slot) if id != 0
       case armor_slot
       when 0
