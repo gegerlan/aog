@@ -11175,11 +11175,75 @@ root:
   id: 40
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Called when the dog collar is used
+  - !ruby/object:RPG::EventCommand 
+    code: 225
+    indent: 0
+    parameters: 
+    - 6
+    - 6
+    - 30
+  - !ruby/object:RPG::EventCommand 
+    code: 224
+    indent: 0
+    parameters: 
+    - !ruby/object:Color 
+      alpha: 255.0
+      blue: 255.0
+      green: 255.0
+      red: 255.0
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 225
+    indent: 0
+    parameters: 
+    - 7
+    - 8
+    - 20
+  - !ruby/object:RPG::EventCommand 
+    code: 223
+    indent: 0
+    parameters: 
+    - !ruby/object:Tone 
+      blue: 255.0
+      gray: 0.0
+      green: 255.0
+      red: 255.0
+    - 20
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 20
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 0
+    parameters: 
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 223
+    indent: 0
+    parameters: 
+    - !ruby/object:Tone 
+      blue: 0.0
+      gray: 0.0
+      green: 0.0
+      red: 0.0
+    - 40
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Dog Collar
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
@@ -13985,55 +14049,129 @@ root:
   id: 178
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Item specific commands when first equipped.
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Weapon Check
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 179
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Item specific commands when first equipped.
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Shield Check
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 180
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Item specific commands when first equipped.
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 4
+    - 1
+    - 4
+    - 34
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - If the player isn't a dog (10)
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - $game_party.actors[0].class_id != 10
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 2
+    parameters: 
+    - 40
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Helmet Check
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 181
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Item specific commands when first equipped.
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Body Armor Check
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 182
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Item specific commands when first equipped.
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: Accessories Check
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
@@ -17973,6 +18111,11 @@ root:
     - 19
     - 0
   - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 1
+    parameters: 
+    - 178
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -18012,6 +18155,11 @@ root:
     - 20
     - 20
     - 0
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 1
+    parameters: 
+    - 179
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
@@ -18053,6 +18201,11 @@ root:
     - 21
     - 0
   - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 1
+    parameters: 
+    - 180
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -18093,6 +18246,11 @@ root:
     - 90
     - 1
   - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 1
+    parameters: 
+    - 181
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
     parameters: []
@@ -18125,6 +18283,11 @@ root:
     parameters: 
     - 12
     - $game_party.actors[0].armor4_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 1
+    parameters: 
+    - 182
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 1
