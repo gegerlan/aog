@@ -89,7 +89,7 @@ class Persona
       #@layers[layer_name] = 
       setup_layer(layer_name, layer_index, context)
       if layer_index.is_a?(Hash)
-        setup_layers(layer_index, @layers[layer_name])
+        setup_layers(layer_index, @layers[layer_name.to_sym])
       end
     end
     p @layers
@@ -97,7 +97,7 @@ class Persona
   def setup_layer(layer_name, layer_index, context)
     begin
       method = context.method(layer_name)
-      @layers[layer_name] = Persona_Layer.new(method, layer_name) if method != nil
+      @layers[layer_name.to_sym] = Persona_Layer.new(method, layer_name) if method != nil
     rescue
         
     end
