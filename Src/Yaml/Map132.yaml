@@ -4463,7 +4463,7 @@ root: !ruby/object:RPG::Map
           switch2_id: 1
           switch2_valid: false
           variable_id: 32
-          variable_valid: true
+          variable_valid: false
           variable_value: 18
         direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
@@ -4484,17 +4484,36 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - the last of my library books!
+          - one of my library books!
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 0
+          parameters: 
+          - 1
+          - 32
+          - 0
+          - 18
+          - 0
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 0
+          indent: 1
           parameters: 
           - "\\nm[Garnet] What do you know, the last book was "
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 0
+          indent: 1
           parameters: 
           - here the entire time! Imagine that!
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 122
           indent: 0
