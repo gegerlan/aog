@@ -1211,6 +1211,16 @@ root:
     code: 655
     indent: 3
     parameters: 
+    - f = $game_actors[1].weapon_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
     - "v[40]=\"#{i}: #{n}\""
   - !ruby/object:RPG::EventCommand 
     code: 655
@@ -1243,6 +1253,16 @@ root:
     parameters: 
     - v[41]=""
   - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - f = $game_actors[1].weapon_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 3
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 3
     parameters: []
@@ -1263,11 +1283,17 @@ root:
     parameters: 
     - \v[41]
   - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 2
+    parameters: 
+    - \v[42]
+  - !ruby/object:RPG::EventCommand 
     code: 102
     indent: 2
     parameters: 
     - - Set weapon
       - Set HP
+      - Set removable
     - 5
   - !ruby/object:RPG::EventCommand 
     code: 402
@@ -1424,6 +1450,81 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 2
+    parameters: 
+    - 2
+    - Set removable
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 3
+    parameters: 
+    - Should weapon be removable?
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 3
+    parameters: 
+    - - "Yes"
+      - "No"
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 0
+    - "Yes"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - $game_actors[1].weapon_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 1
+    - "No"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 4
+    parameters: 
+    - $game_actors[1].weapon_fix = true
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 3
+    parameters: 
+    - Weapon
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 403
     indent: 2
     parameters: []
@@ -1514,6 +1615,16 @@ root:
     code: 655
     indent: 4
     parameters: 
+    - f = $game_actors[1].armor2_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
     - "v[40]=\"#{i}: #{n}\""
   - !ruby/object:RPG::EventCommand 
     code: 655
@@ -1546,6 +1657,16 @@ root:
     parameters: 
     - v[41]=""
   - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - f = $game_actors[1].armor2_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 4
     parameters: []
@@ -1566,11 +1687,17 @@ root:
     parameters: 
     - \v[41]
   - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - \v[42]
+  - !ruby/object:RPG::EventCommand 
     code: 102
     indent: 3
     parameters: 
     - - Set helmet
       - Set HP
+      - Set removable
     - 5
   - !ruby/object:RPG::EventCommand 
     code: 402
@@ -1727,6 +1854,81 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 2
+    - Set removable
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Should armor be removable?
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 4
+    parameters: 
+    - - "Yes"
+      - "No"
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 4
+    parameters: 
+    - 0
+    - "Yes"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor2_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 4
+    parameters: 
+    - 1
+    - "No"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor2_fix = true
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor2
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 403
     indent: 3
     parameters: []
@@ -1802,6 +2004,16 @@ root:
     code: 655
     indent: 4
     parameters: 
+    - f = $game_actors[1].armor1_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
     - "v[40]=\"#{i}: #{n}\""
   - !ruby/object:RPG::EventCommand 
     code: 655
@@ -1834,6 +2046,16 @@ root:
     parameters: 
     - v[41]=""
   - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - f = $game_actors[1].armor1_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 4
     parameters: []
@@ -1854,11 +2076,17 @@ root:
     parameters: 
     - \v[41]
   - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - \v[42]
+  - !ruby/object:RPG::EventCommand 
     code: 102
     indent: 3
     parameters: 
     - - Set shield
       - Set HP
+      - Set removable
     - 5
   - !ruby/object:RPG::EventCommand 
     code: 402
@@ -2015,6 +2243,81 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 2
+    - Set removable
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Should armor be removable?
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 4
+    parameters: 
+    - - "Yes"
+      - "No"
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 4
+    parameters: 
+    - 0
+    - "Yes"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor1_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 4
+    parameters: 
+    - 1
+    - "No"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor1_fix = true
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor1
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 403
     indent: 3
     parameters: []
@@ -2097,6 +2400,16 @@ root:
     parameters: 
     - v[41]="#{h}/#{m} hp"
   - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - f = $game_actors[1].armor3_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 4
     parameters: []
@@ -2115,12 +2428,22 @@ root:
     code: 655
     indent: 4
     parameters: 
+    - f = $game_actors[1].armor3_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
     - v[40]="No body armor equipped."
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 4
     parameters: 
     - v[41]=""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 4
@@ -2142,11 +2465,17 @@ root:
     parameters: 
     - \v[41]
   - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - \v[42]
+  - !ruby/object:RPG::EventCommand 
     code: 102
     indent: 3
     parameters: 
     - - Set body armor
       - Set HP
+      - Set removable
     - 5
   - !ruby/object:RPG::EventCommand 
     code: 402
@@ -2303,6 +2632,81 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 2
+    - Set removable
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Should armor be removable?
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 4
+    parameters: 
+    - - "Yes"
+      - "No"
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 4
+    parameters: 
+    - 0
+    - "Yes"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor3_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 4
+    parameters: 
+    - 1
+    - "No"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor3_fix = true
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor3
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 403
     indent: 3
     parameters: []
@@ -2378,6 +2782,16 @@ root:
     code: 655
     indent: 4
     parameters: 
+    - f = $game_actors[1].armor4_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
     - "v[40]=\"#{i}: #{n}\""
   - !ruby/object:RPG::EventCommand 
     code: 655
@@ -2410,6 +2824,16 @@ root:
     parameters: 
     - v[41]=""
   - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - f = $game_actors[1].armor4_fix
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 4
+    parameters: 
+    - "v[42]=\"Removable: #{!f}\""
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 4
     parameters: []
@@ -2430,11 +2854,17 @@ root:
     parameters: 
     - \v[41]
   - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 3
+    parameters: 
+    - \v[42]
+  - !ruby/object:RPG::EventCommand 
     code: 102
     indent: 3
     parameters: 
     - - Set accessory
       - Set HP
+      - Set removable
     - 5
   - !ruby/object:RPG::EventCommand 
     code: 402
@@ -2577,6 +3007,81 @@ root:
 
   - !ruby/object:RPG::EventCommand 
     code: 412
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 119
+    indent: 4
+    parameters: 
+    - Armor4
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 3
+    parameters: 
+    - 2
+    - Set removable
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 4
+    parameters: 
+    - Should armor be removable?
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 4
+    parameters: 
+    - - "Yes"
+      - "No"
+    - 5
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 4
+    parameters: 
+    - 0
+    - "Yes"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor4_fix = false
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 4
+    parameters: 
+    - 1
+    - "No"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 5
+    parameters: 
+    - $game_actors[1].armor4_fix = true
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 403
+    indent: 4
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 5
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
     indent: 4
     parameters: []
 
