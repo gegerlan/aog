@@ -28,6 +28,13 @@ class Scene_Title
     $data_tilesets      = load_data("Data/Tilesets.rxdata")
     $data_common_events = load_data("Data/CommonEvents.rxdata")
     $data_system        = load_data("Data/System.rxdata")
+    $data_maps          = load_data("Data/MapInfos.rxdata")
+    
+    $data_maps_name_index = {}
+    $data_maps.each do |index, map_info|
+      ($data_maps_name_index[map_info.name] ||= []) << index
+    end
+    
     # Make system object
     $game_system = Game_System.new
     # Make title graphic
