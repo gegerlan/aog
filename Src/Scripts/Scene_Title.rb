@@ -32,7 +32,7 @@ class Scene_Title
     
     $data_maps_name_index = {}
     $data_maps.each do |index, map_info|
-      ($data_maps_name_index[map_info.name] ||= []) << index
+      ($data_maps_name_index[map_info.name.downcase.strip] ||= []) << index
     end
     
     # Make system object
