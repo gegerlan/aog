@@ -121,7 +121,7 @@ class Game_Party
   #--------------------------------------------------------------------------
   def gain_weapon(weapon_id, n)
     if n < 0 
-      lose_weapon(weapon_id, n)
+      lose_weapon(weapon_id, -n)
     else
       if weapon_id.is_a?(Numeric)
         return if weapon_id == 0
@@ -147,7 +147,7 @@ class Game_Party
   #--------------------------------------------------------------------------
   def gain_armor(armor_id, n)
     if n < 0
-      lose_armor(armor_id, n)
+      lose_armor(armor_id, -n)
     else
       if armor_id.is_a?(Numeric)
         return if armor_id == 0
@@ -172,13 +172,19 @@ class Game_Party
   #     n         : quantity
   #--------------------------------------------------------------------------
   def lose_weapon(weapon_id, n)
+    lost_weapon = []
     if weapon_id.is_a?(Condition_Item)
-      @weapons.delete(weapon_id)
+      lost_weapon << @weapons.delete(weapon_id)
     elsif weapon_id.is_a?(Numeric)
       weapon = @weapons.first { |weapon| weapon.id == weapon_id }
-      @weapons.delete(weapon) if weapon != nil
+      if weapon.length > 0
+        for i in 0..[n, weapon.length - 1]
+          lost_weapon << @weapons.delete(weapon[i])
+        end
+      end
     end
     @weapons.uniq!
+    lost_weapon
   end
   #--------------------------------------------------------------------------
   # * Lose Armor
@@ -186,13 +192,21 @@ class Game_Party
   #     n        : quantity
   #--------------------------------------------------------------------------
   def lose_armor(armor_id, n)
+    lost_armor = []
     if armor_id.is_a?(Condition_Item)
-      @armors.delete(armor_id)
+      lost_armor << @armors.delete(armor_id)
     elsif armor_id.is_a?(Numeric)
-      armor = @armors.first { |armor| armor.id == armor_id }
-      @armors.delete(armor) if armor != nil
+      armor = @armors.select {
+        |armor| armor.id == armor_id
+      }
+      if armor.length > 0
+        for i in 0..[n, armor.length-1].min
+          lost_armor << @armors.delete(armor[i])
+        end
+      end
     end
     @armors.uniq!
+    lost_armor
   end
   
   def get_equippable_armors(class_id)
