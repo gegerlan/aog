@@ -40929,12 +40929,22 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - e = $game_map.events[@event_id]
+    - if @event_id != nil
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
     parameters: 
-    - e.lock
+    - "  e = $game_map.events[@event_id]"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  e.lock"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - end
   - !ruby/object:RPG::EventCommand 
     code: 224
     indent: 0
@@ -41013,6 +41023,19 @@ root:
     parameters: 
     - *id005
   - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Scream
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 20
+  - !ruby/object:RPG::EventCommand 
     code: 117
     indent: 0
     parameters: 
@@ -41057,7 +41080,93 @@ root:
     code: 106
     indent: 0
     parameters: 
-    - 100
+    - 15
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 30
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 15
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: 1-003
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 15
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 30
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 30
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 30
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
   - !ruby/object:RPG::EventCommand 
     code: 209
     indent: 0
@@ -41093,7 +41202,80 @@ root:
     code: 106
     indent: 0
     parameters: 
-    - 70
+    - 21
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 21
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 21
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 21
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 21
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 21
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
   - !ruby/object:RPG::EventCommand 
     code: 209
     indent: 0
@@ -41129,7 +41311,98 @@ root:
     code: 106
     indent: 0
     parameters: 
-    - 60
+    - 14
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 7
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: 1-006
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 7
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 14
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 14
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 14
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 14
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex1
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 10
   - !ruby/object:RPG::EventCommand 
     code: 209
     indent: 0
@@ -41153,6 +41426,19 @@ root:
     parameters: 
     - *id012
   - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Kai - Yaa (no)
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 106
+    indent: 0
+    parameters: 
+    - 10
+  - !ruby/object:RPG::EventCommand 
     code: 224
     indent: 0
     parameters: 
@@ -41162,6 +41448,14 @@ root:
       green: 255.0
       red: 255.0
     - 10
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex - Cum
+      pitch: 100
+      volume: 80
   - !ruby/object:RPG::EventCommand 
     code: 209
     indent: 0
@@ -41224,6 +41518,14 @@ root:
       red: 255.0
     - 10
   - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex - Cum
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
     code: 209
     indent: 0
     parameters: 
@@ -41285,6 +41587,14 @@ root:
       red: 255.0
     - 10
   - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Sex - Sloppy Cum
+      pitch: 100
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
     code: 209
     indent: 0
     parameters: 
@@ -41335,6 +41645,14 @@ root:
     indent: 0
     parameters: 
     - 50
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 0
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: Panting
+      pitch: 100
+      volume: 80
   - !ruby/object:RPG::EventCommand 
     code: 223
     indent: 0
@@ -41402,12 +41720,22 @@ root:
     code: 655
     indent: 0
     parameters: 
-    - e = $game_map.events[@event_id]
+    - if @event_id
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 0
     parameters: 
-    - e.setup_event_page(e.page)
+    - "  e = $game_map.events[@event_id]"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  e.setup_event_page(e.page)"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - end
   - !ruby/object:RPG::EventCommand 
     code: 209
     indent: 0
@@ -41515,7 +41843,7 @@ root:
     code: 106
     indent: 0
     parameters: 
-    - 5
+    - 120
   - !ruby/object:RPG::EventCommand 
     code: 223
     indent: 0
