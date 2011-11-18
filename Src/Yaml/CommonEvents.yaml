@@ -12889,6 +12889,39 @@ root:
     code: 355
     indent: 1
     parameters: 
+    - a = $game_party.actors[0]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - mhp = a.armors[2].max_hp
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - d = (mhp / 5) - a.armors[2].pdef
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - a.damage_armor3(d)
+  - !ruby/object:RPG::EventCommand 
+    code: 250
+    indent: 1
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: 062-Swing01
+      pitch: 60
+      volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
     - "# Put the pdef in variable 40"
   - !ruby/object:RPG::EventCommand 
     code: 655
