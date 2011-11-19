@@ -24,11 +24,3 @@ module BlizzABS
     end
   end
 end
-class Game_Map
-  def in_battle?
-    for battler in battlers
-      return true if battler.ai.target != nil && battler.update?
-    end
-    return false
-  end
-end
