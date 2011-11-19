@@ -177,7 +177,7 @@ class Game_Party
       lost_weapon << @weapons.delete(weapon_id)
     elsif weapon_id.is_a?(Numeric)
       weapon = @weapons.first { |weapon| weapon.id == weapon_id }
-      if weapon.length > 0
+      if weapon != nil and weapon.length > 0
         for i in 0..[n, weapon.length - 1]
           lost_weapon << @weapons.delete(weapon[i])
         end
@@ -199,7 +199,7 @@ class Game_Party
       armor = @armors.select {
         |armor| armor.id == armor_id
       }
-      if armor.length > 0
+      if armor != nil and armor.length > 0
         for i in 0..[n, armor.length-1].min
           lost_armor << @armors.delete(armor[i])
         end
