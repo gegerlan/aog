@@ -17,10 +17,36 @@ module BlizzABS
     class Data
       include HookExtension
       register_hook :target do |callee, target|
-        if target != nil
-          $game_switches[210] = true
+        if @previous_target != target
+          if @previous_target != nil
+            if @previous_target == $game_player
+              $game_player.remove_watcher(callee)
+            end
+          end
+          if target == $game_player
+            $game_player.add_watcher(callee)
+            $game_switches[Map::State::BATTLE] = true
+          end
+          @previous_target = target
         end
       end
     end
+  end
+end
+
+class Game_Player < Map_Actor
+  alias watcher_pre_initialize initialize
+  def initialize
+    watcher_pre_initialize 
+    @watchers = []
+  end
+  def add_watcher(watcher)
+    @watchers << watcher if @watchers != nil
+  end
+  def remove_watcher(watcher)
+    @watchers.delete(watcher) if @watchers != nil
+  end
+  def is_watched?
+    return !@watchers.empty? if @watchers != nil
   end
 end

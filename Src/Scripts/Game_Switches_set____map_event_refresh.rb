@@ -30,6 +30,9 @@ class Game_Map
         switches[n].push(event)
       end
     end
+    for common_event in @common_events.values
+      (switches[common_event.switch_id]  ||= []) << common_event if common_event.switch_id > 0
+    end
     $game_switches.set_switch_events(switches)
   end
 end
