@@ -38048,6 +38048,13 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 121
+          indent: 0
+          parameters: 
+          - 325
+          - 325
+          - 0
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
           parameters: []
@@ -38066,7 +38073,7 @@ root: !ruby/object:RPG::Map
         numero: 0
         step_anime: false
         through: false
-        trigger: 4
+        trigger: 3
         walk_anime: true
       x: 14
       y: 24
@@ -40492,6 +40499,28 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 0
+          parameters: 
+          - 0
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id010 !ruby/object:RPG::MoveCommand 
+              code: 10
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: true
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id010
+        - !ruby/object:RPG::EventCommand 
           code: 111
           indent: 0
           parameters: 
@@ -41040,7 +41069,7 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 0
+        trigger: 3
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
