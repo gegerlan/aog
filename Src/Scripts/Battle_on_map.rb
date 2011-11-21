@@ -46,7 +46,31 @@ class Game_Player < Map_Actor
   def remove_watcher(watcher)
     @watchers.delete(watcher) if @watchers != nil
   end
+  def clear_watchers
+    @watchers.clear if @watchers != nil
+  end
   def is_watched?
     return !@watchers.empty? if @watchers != nil
+  end
+end
+
+# Clear enemies watching the player 
+class Scene_Map
+  alias pre_watch_clear_transfer transfer_player
+  def transfer_player
+    pre_watch_clear_transfer
+    clear_player_watchers
+  end
+  def clear_player_watchers
+    $game_player.clear_watchers if $game_player != nil
+  end
+end
+module BlizzABS
+  class Processor
+    alias post_watcher_remove_enemy remove_enemy
+    def remove_enemy(enemy)
+      $game_player.remove_watcher(enemy)
+      post_watcher_remove_enemy(enemy)
+    end
   end
 end
