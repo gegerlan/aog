@@ -396,8 +396,7 @@ class Kylock_Time_System
   def update_tint(duration = KTS::FADE_LENGTH)
     return if $BTEST
     #return if $game_temp.transition_processing
-    return if $kts_map_data[$game_map.map_id] == nil
-    if KTS::USE_TONE && !$kts_event_weather && $kts_map_data[$game_map.map_id].outside_tint?
+    if $kts_map_data[$game_map.map_id] != nil && KTS::USE_TONE && !$kts_event_weather && $kts_map_data[$game_map.map_id].outside_tint?
       if @hours >= KTS::T1[0] and @hours <= KTS::T1[1]
         @period = 1    
         tone = KTS::C1
@@ -431,10 +430,10 @@ class Kylock_Time_System
         end
       end
     else
-      if !$kts_map_data[$game_map.map_id].outside_tint? && !$kts_event_tone
+      if ($kts_map_data[$game_map.map_id] == nil || !$kts_map_data[$game_map.map_id].outside_tint?) && !$kts_event_tone
         duration = 0
         tone = @tone_target
-      elsif !$kts_map_data[$game_map.map_id].outside_tint? && $kts_event_tone
+      elsif ($kts_map_data[$game_map.map_id] == nil || !$kts_map_data[$game_map.map_id].outside_tint?) && $kts_event_tone
         tone = @tone_target
         duration = @tone_time
       end
