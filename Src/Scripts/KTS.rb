@@ -396,6 +396,7 @@ class Kylock_Time_System
   def update_tint(duration = KTS::FADE_LENGTH)
     return if $BTEST
     #return if $game_temp.transition_processing
+    return if $kts_map_data[$game_map.map_id] == nil
     if KTS::USE_TONE && !$kts_event_weather && $kts_map_data[$game_map.map_id].outside_tint?
       if @hours >= KTS::T1[0] and @hours <= KTS::T1[1]
         @period = 1    
@@ -465,6 +466,7 @@ class Kylock_Time_System
   #-----------------------------------------------------------------------
   def update_weather(duration = KTS::WEATHER_LENGTH)
     return if $BTEST
+    return if $kts_map_data[$game_map.map_id] == nil
     if KTS::WEATHER_SYSTEM && !$kts_event_weather && $kts_map_data[$game_map.map_id].outside_tint?
       if @month >= KTS::S1[0] and @month <= KTS::S1[1]
         @speriod = 1
@@ -487,7 +489,7 @@ class Kylock_Time_System
   
   # Extra Feature; Change BGS
   def start_bgs
-    return if !$kts_map_data[$game_map.map_id].outside_tint?
+    return if $kts_map_data[$game_map.map_id] == nil or !$kts_map_data[$game_map.map_id].outside_tint?
      if $kts_map_data[$game_map.map_id].outside_tint?
 # This is night BGS, disabled in this MOD
 #~       if $game_switches[KTS::NIGHT] == true
