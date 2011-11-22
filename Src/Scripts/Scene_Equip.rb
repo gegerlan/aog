@@ -5,6 +5,7 @@
 #==============================================================================
 
 class Scene_Equip
+  BATTLE_SWITCH = 210
   #--------------------------------------------------------------------------
   # * Object Initialization
   #     actor_index : actor index
@@ -152,6 +153,11 @@ class Scene_Equip
     if Input.trigger?(Input::C)
       # If equipment is fixed
       if @actor.equip_fix?(@right_window.index)
+        # Play buzzer SE
+        $game_system.se_play($data_system.buzzer_se)
+        return
+      end
+      if @right_window.index == 3 && $game_player.battler == @actor && $game_switches[BATTLE_SWITCH] == true
         # Play buzzer SE
         $game_system.se_play($data_system.buzzer_se)
         return

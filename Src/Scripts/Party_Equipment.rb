@@ -671,7 +671,7 @@ class Game_Battler
       @armors[armor_slot].hp -= damage
       armor_fix = __send__ "armor#{armor_slot+1}_fix".to_sym
       # equip armor slot (armor_slot + 1) with item 0 (nothing)
-      equip(armor_slot+1, 0) if @armors[armor_slot].hp < 1 # && armor_fix == false
+      equip(armor_slot+1, 0) if @armors[armor_slot].hp < 1 && armor_fix == false
     end
   end  
   
