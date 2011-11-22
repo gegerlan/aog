@@ -18,6 +18,7 @@
 module StateTracker
   # State name (upper_case) = Switch ID
   KNOCKOUT = 240
+  HYPNOSIS_OFF = 241
 end
 class Game_Battler
   include HookExtension
@@ -35,6 +36,9 @@ class Game_Battler
           if StateTracker.const_defined?(state_name)
             $game_switches[StateTracker.const_get(state_name)] = callee.state?(state_id)
           end
+          if StateTracker.const_defined?("#{state_name}_ON")
+            $game_switches[StateTracker.const_get("#{state_name}_ON")] = callee.state?(state_id)
+          end
         end
       end
     end
@@ -48,6 +52,9 @@ class Game_Battler
         state_name = state.name.upcase.gsub(/[\s\t]/, '_')
         if StateTracker.const_defined?(state_name)
           $game_switches[StateTracker.const_get(state_name)] = callee.state?(state_id)
+        end
+        if StateTracker.const_defined?("#{state_name}_OFF")
+          $game_switches[StateTracker.const_get("#{state_name}_OFF")] = !callee.state?(state_id)
         end
       end
     end
