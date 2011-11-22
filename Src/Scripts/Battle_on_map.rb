@@ -15,16 +15,17 @@ end
 module BlizzABS
   class AI
     class Data
+      attr_reader :host
       include HookExtension
       register_hook :target do |callee, target|
         if @previous_target != target
           if @previous_target != nil
             if @previous_target == $game_player
-              $game_player.remove_watcher(callee)
+              $game_player.remove_watcher(callee.host)
             end
           end
           if target == $game_player
-            $game_player.add_watcher(callee)
+            $game_player.add_watcher(callee.host)
             $game_switches[Map::State::BATTLE] = true
           end
           @previous_target = target
@@ -41,10 +42,12 @@ class Game_Player < Map_Actor
     @watchers = []
   end
   def add_watcher(watcher)
-    @watchers << watcher if @watchers != nil
+    @watchers << watcher if @watchers != nil && !@watchers.include?(watcher)
+    @watchers.compact!
   end
   def remove_watcher(watcher)
     @watchers.delete(watcher) if @watchers != nil
+    @watchers.compact!
   end
   def clear_watchers
     @watchers.clear if @watchers != nil
