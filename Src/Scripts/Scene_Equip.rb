@@ -6,6 +6,11 @@
 
 class Scene_Equip
   BATTLE_SWITCH = 210
+  ARMOR1_LOCK_SWITCH = 145
+  ARMOR2_LOCK_SWITCH = 146
+  ARMOR3_LOCK_SWITCH = 147
+  ARMOR4_LOCK_SWITCH = 148
+  WEAPON_LOCK_SWITCH = 144
   #--------------------------------------------------------------------------
   # * Object Initialization
   #     actor_index : actor index
@@ -157,11 +162,46 @@ class Scene_Equip
         $game_system.se_play($data_system.buzzer_se)
         return
       end
-      if @right_window.index == 3 && $game_player.battler == @actor && $game_switches[BATTLE_SWITCH] == true
-        # Play buzzer SE
-        $game_system.se_play($data_system.buzzer_se)
-        return
+      if $game_player.battler == @actor
+        case @right_window.index
+        when 0
+          if $game_switches[WEAPON_LOCK_SWITCH] == true
+            # Play buzzer SE
+            $game_system.se_play($data_system.buzzer_se)
+            return  
+          end
+        when 1
+          if $game_switches[ARMOR1_LOCK_SWITCH] == true
+            # Play buzzer SE
+            $game_system.se_play($data_system.buzzer_se)
+            return  
+          end
+        when 2
+          if $game_switches[ARMOR2_LOCK_SWITCH] == true
+            # Play buzzer SE
+            $game_system.se_play($data_system.buzzer_se)
+            return  
+          end
+        when 3
+          if $game_switches[ARMOR3_LOCK_SWITCH] == true
+            # Play buzzer SE
+            $game_system.se_play($data_system.buzzer_se)
+            return  
+          end
+          if $game_switches[BATTLE_SWITCH] == true
+            # Play buzzer SE
+            $game_system.se_play($data_system.buzzer_se)
+            return  
+          end
+        when 4
+          if $game_switches[ARMOR4_LOCK_SWITCH] == true
+            # Play buzzer SE
+            $game_system.se_play($data_system.buzzer_se)
+            return  
+          end
+        end
       end
+      
       # Play decision SE
       $game_system.se_play($data_system.decision_se)
       # Activate item window
