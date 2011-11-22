@@ -3589,12 +3589,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - Hey, Garnet. Wanna help me past the time
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - and earn some cash?
+          - Hey, Garnet. Wanna help me past the time?
         - !ruby/object:RPG::EventCommand 
           code: 111
           indent: 0
@@ -4147,12 +4142,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters: 
-          - "Aaaah, that was good, Garnet. Here's "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - your money, you slutty heroine.
+          - Aaaah, that was good, Garnet.
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
@@ -4169,17 +4159,54 @@ root: !ruby/object:RPG::Map
           parameters: 
           - 20
         - !ruby/object:RPG::EventCommand 
-          code: 101
+          code: 111
           indent: 0
+          parameters: 
+          - 2
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \face[]\nm[Guard]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - Here's your money, you slutty heroine.
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
           parameters: 
           - \nm[]\face[]Got 300 Gold!
         - !ruby/object:RPG::EventCommand 
           code: 125
-          indent: 0
+          indent: 1
           parameters: 
           - 0
           - 0
           - 300
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 117
           indent: 0
@@ -4207,6 +4234,12 @@ root: !ruby/object:RPG::Map
           - 200
           - 200
           - 1
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 0
+          parameters: 
+          - A
+          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
