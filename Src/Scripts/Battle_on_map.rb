@@ -42,12 +42,18 @@ class Game_Player < Map_Actor
     @watchers = []
   end
   def add_watcher(watcher)
-    @watchers << watcher if @watchers != nil && !@watchers.include?(watcher)
-    @watchers.compact!
+    if @watchers != nil
+      @watchers << watcher if @watchers != nil
+      @watchers.compact! if @watchers != nil
+    else
+      @watchers = [watcher]
+    end
   end
   def remove_watcher(watcher)
-    @watchers.delete(watcher) if @watchers != nil
-    @watchers.compact!
+    if @watchers != nil
+      @watchers.delete(watcher)
+      @watchers.compact! 
+    end
   end
   def clear_watchers
     @watchers.clear if @watchers != nil
@@ -72,6 +78,7 @@ module BlizzABS
   class Processor
     alias post_watcher_remove_enemy remove_enemy
     def remove_enemy(enemy)
+      p enemy
       $game_player.remove_watcher(enemy)
       post_watcher_remove_enemy(enemy)
     end
