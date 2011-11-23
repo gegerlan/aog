@@ -78,7 +78,7 @@ module BlizzABS
   class Processor
     alias post_watcher_remove_enemy remove_enemy
     def remove_enemy(enemy)
-      p enemy
+      #p enemy
       $game_player.remove_watcher(enemy)
       post_watcher_remove_enemy(enemy)
     end
