@@ -23,7 +23,7 @@ class Game_Actor < Game_Battler
   attr_reader   :pierce3_id               # Tongue piercing ID
   attr_reader   :pierce4_id               # Nipple piercing ID
   attr_reader   :pierce5_id               # Stomach piercing ID
-  attr_reader   :pierce6_id               # Vaginal piercing ID
+  attr_reader   :pierce6_id               # Labia piercing ID
   attr_reader   :pierce7_id               # Clitoral piercing ID
   attr_reader   :level                    # level
   attr_reader   :exp                      # EXP

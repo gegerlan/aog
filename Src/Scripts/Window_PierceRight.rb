@@ -67,7 +67,7 @@ class Window_PierceRight < Window_Selectable
     if($game_switches[156] == true)
       @list.push(10)
       @data.push($data_armors[@actor.pierce6_id])
-      self.contents.draw_text(4, 32 * (@data.size - 1), 92, 32, "Vagina")
+      self.contents.draw_text(4, 32 * (@data.size - 1), 92, 32, "Labia")
       draw_item_name($data_armors[@actor.pierce6_id], 92, 32 * (@data.size - 1))
     end
     if($game_switches[157] == true)
