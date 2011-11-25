@@ -1,6 +1,10 @@
 module Perversion
   VARIABLE = 49
 end
+module Arousal
+  VARIABLE = 48
+end
+
 class Game_Actor < Game_Battler  
   # Accessor
   attr_reader :perversion
@@ -38,22 +42,33 @@ class Game_Actor < Game_Battler
     return sum
   end
 end
+# Arousal
 class Game_Battler
-=begin
-  alias perv_sp sp=
+  alias pre_arousal_sp sp=
   def sp=(sp)
-    perv_sp(sp)
+    pre_arousal_sp(sp)
     
-    if self == $game_party.actors[0] #If the actor is the leader of the party
-      $game_variables[Perversion::VARIABLE] = (@sp * 10) / maxsp unless 
+    if self == $game_player.battler #If the actor is the leader of the party
+      $game_variables[Arousal::VARIABLE] = (@sp * 10) / maxsp unless 
                                                 !@sp || !maxsp || maxsp == 0
     end
-#    if self == $game_actors[5] 
-#      $game_variables[Perversion::VARIABLE] = (@sp * 10) / maxsp 
-#    end
-#    if self == $game_actors[6] 
-#      $game_variables[Perversion::VARIABLE] = (@sp * 10) / maxsp 
-#    end
   end
-=end
+end
+class Game_Player < Map_Actor
+  alias pre_arousal_initialize initialize
+  def initialize
+    pre_arousal_initialize
+    @arousal_ticker = 0
+  end
+  alias pre_arousal_update update
+  def update
+    pre_arousal_update
+    if @battler.sp > 0
+      @arousal_ticker += 1
+      if @arousal_ticker > ([600, [25 + $game_variables[Perversion::VARIABLE], 25].max].min)
+        @battler.sp -= 1
+        @arousal_ticker = 0
+      end
+    end
+  end
 end
