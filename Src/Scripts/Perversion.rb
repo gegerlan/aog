@@ -55,20 +55,21 @@ class Game_Battler
   end
 end
 class Game_Player < Map_Actor
+  attr_reader  :arousal_ticker
   alias pre_arousal_initialize initialize
   def initialize
     pre_arousal_initialize
     @arousal_ticker = 0
+    #@delta =  ([600, [25 + $game_variables[Perversion::VARIABLE], 25].max].min)
   end
   alias pre_arousal_update update
   def update
     pre_arousal_update
     if @battler.sp > 0
-      @arousal_ticker += 1
-      if @arousal_ticker > ([600, [25 + $game_variables[Perversion::VARIABLE], 25].max].min)
-        @battler.sp -= 1
-        @arousal_ticker = 0
-      end
+      time_diff = Graphics.frame_count - @arousal_ticker
+      rate = Math::PI * (1 - ( @battler.sp.to_f /  @battler.maxsp.to_f  ))
+      @battler.sp -= 0.01 + Math.sin(rate) * time_diff * 0.085
     end
+    @arousal_ticker = Graphics.frame_count
   end
 end
