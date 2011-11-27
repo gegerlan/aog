@@ -90,7 +90,7 @@ class Game_Player < Map_Actor
     if @battler.sp > 0
       time_diff = Graphics.frame_count - @arousal_ticker
       rate = Math::PI * (1 - ( @battler.sp.to_f /  @battler.maxsp.to_f  ))
-      @battler.sp -= 0.01 + Math.sin(rate) * time_diff * 0.085
+      @battler.sp -= 0.01 + Math.sin(rate) * time_diff * 0.005
     end
     @arousal_ticker = Graphics.frame_count
   end
