@@ -14,6 +14,7 @@ class Game_Event < Game_Character
   attr_reader   :list                     # list of event commands
   attr_reader   :starting                 # starting flag
   attr_reader   :page_index               # index of the page with the event commands
+  attr_reader   :event
   #--------------------------------------------------------------------------
   # * Object Initialization
   #     map_id : map ID
@@ -169,6 +170,7 @@ class Game_Event < Game_Character
     @trigger = @page.trigger
     @list = @page.list
     @interpreter = nil
+    
     # If trigger is [parallel process]
     if @trigger == 4
       # Create parallel process interpreter

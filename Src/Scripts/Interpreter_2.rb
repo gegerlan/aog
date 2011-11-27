@@ -259,21 +259,29 @@ class Interpreter
       if @event == nil
         return nil
       end
-      if $game_map.events === @event
-        return @event
-      else
-        # TODO: assign event_id to @event
-        # create a new event_id
-        @event_id = $game_map.events.keys.last.to_i + 1
-        $game_map.events[@event_id] = @event
-        if $scene.is_a?(Scene_Map) || $scene.spriteset == nil
-          # create own sprite
-          sprite = Sprite_Character.new($scene.spriteset.viewport1, @event)
-          # add to spriteset handler
-          $scene.spriteset.character_sprites.push(sprite)
+      if @map_id != $game_map.map_id
+        if not $game_map.events.values.include? @event
+          # extract the event
+          event = @event.event
+          # create a new event_id
+          @event_id = $game_map.events.keys.max.to_i + 1
+          # set the new id to the event
+          event.id = @event_id
+          # assign a new game_event to the interpreter
+          @event = Game_Event.new($game_map.map_id, event)
+          #refresh the event
+          #@event.refresh
+          # add the new game event to the map
+          $game_map.events[@event_id] = @event
+          if $scene.is_a?(Scene_Map) || $scene.spriteset == nil
+            # create own sprite
+            sprite = Sprite_Character.new($scene.spriteset.viewport1, @event)
+            # add to spriteset handler
+            $scene.spriteset.character_sprites.push(sprite)
+          end
         end
-        return $game_map.events[@event_id]
       end
+      return @event
     else  # specific event
       events = $game_map.events
       return events == nil ? nil : events[parameter]
