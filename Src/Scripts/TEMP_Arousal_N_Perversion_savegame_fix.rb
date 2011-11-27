@@ -11,13 +11,13 @@ end
 
 class Game_Actor < Game_Battler  
   alias add_perversion_original_init add_perversion
-  def add_perversion(value, unique_id = 0, event_id = 0, map_id = $game_map.map_id)
+  def add_perversion(value, unique_id, event_id, map_id)
     if @perversion == nil
       @perversion = {}
       @perversion[[0,0,0]] = $game_variables[49]
       $game_variables[49]  = sum_perversion
     else
-      add_perversion_original_init(value, unique_id = 0, event_id = 0, map_id = $game_map.map_id)
+      add_perversion_original_init(value, unique_id, event_id, map_id = $game_map.map_id)
     end
     alias add_perversion add_perversion_original_init
   end
