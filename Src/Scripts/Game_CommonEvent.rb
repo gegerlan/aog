@@ -61,7 +61,7 @@ class Game_CommonEvent
       # If not running
       unless @interpreter.running?
         # Set up event
-        @interpreter.setup(self.list, 0)
+        @interpreter.setup(self.list, 0, @common_event_id)
       end
       # Update interpreter
       @interpreter.update
