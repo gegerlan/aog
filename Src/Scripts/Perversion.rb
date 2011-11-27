@@ -42,6 +42,24 @@ class Game_Actor < Game_Battler
     return sum
   end
 end
+class Interpreter
+  alias perversion_command_122 command_122
+  def command_122
+    if (@parameters[0] .. @parameters[1]) === Perversion::VARIABLE 
+      old_value = $game_variables[Perversion::VARIABLE]
+    end
+    perversion_command_122
+    if old_value != nil
+      new_value = $game_variables[Perversion::VARIABLE]
+      $game_variables[Perversion::VARIABLE] = old_value
+      delta = new_value - old_value
+      if delta != 0
+        $game_player.battler.add_perversion(delta, @page_id, @event_id, @map_id)
+      end
+    end
+    return true
+  end
+end
 # Arousal
 class Game_Battler
   alias pre_arousal_sp sp=
