@@ -28,6 +28,7 @@ class Interpreter
   def clear
     @map_id = 0                       # map ID when starting up
     @event_id = 0                     # event ID
+    @page_id = 0                      # page ID
     @message_waiting = false          # waiting for message to end
     @move_route_waiting = false       # waiting for move completion
     @button_input_variable_id = 0     # button input variable ID
@@ -40,13 +41,15 @@ class Interpreter
   #     list     : list of event commands
   #     event_id : event ID
   #--------------------------------------------------------------------------
-  def setup(list, event_id)
+  def setup(list, event_id, page_id)
     # Clear inner situation of interpreter
     clear
     # Remember map ID
     @map_id = $game_map.map_id
     # Remember event ID
     @event_id = event_id
+    # Remember page ID
+    @page_id = page_id
     # Remember list of event commands
     @list = list
     # Initialize index
@@ -88,17 +91,19 @@ class Interpreter
           event.lock
         end
         # Set up event
-        setup(event.list, event.id)
+        setup(event.list, event.id, event.page_index + 1)
         return
       end
     end
     # Loop (common events)
+    common_event_page = 0
     for common_event in $data_common_events.compact
+      common_event_page += 1
       # If trigger is auto run, and condition switch is ON
       if common_event.trigger == 1 and
          $game_switches[common_event.switch_id] == true
         # Set up event
-        setup(common_event.list, 0)
+        setup(common_event.list, 0, common_event_page)
         return
       end
     end

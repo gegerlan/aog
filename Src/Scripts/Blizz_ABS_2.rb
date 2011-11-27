@@ -7740,9 +7740,9 @@ class Interpreter
   # override setup
   #----------------------------------------------------------------------------
   alias setup_blizzabs_later setup
-  def setup(list, event_id)
+  def setup(list, event_id, page_number)
     # call original method
-    setup_blizzabs_later(list, event_id)
+    setup_blizzabs_later(list, event_id, page_number)
     # for battleflow control commands
     @SELF = @event_id
   end

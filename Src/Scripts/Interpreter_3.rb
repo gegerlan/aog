@@ -402,7 +402,7 @@ class Interpreter
     if common_event != nil
       # Make child interpreter
       @child_interpreter = Interpreter.new(@depth + 1)
-      @child_interpreter.setup(common_event.list, @event_id)
+      @child_interpreter.setup(common_event.list, @event_id, @parameters[0])
     end
     # Continue
     return true
