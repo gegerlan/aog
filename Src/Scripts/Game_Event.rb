@@ -13,6 +13,7 @@ class Game_Event < Game_Character
   attr_reader   :trigger                  # trigger
   attr_reader   :list                     # list of event commands
   attr_reader   :starting                 # starting flag
+  attr_reader   :page_index               # index of the page with the event commands
   #--------------------------------------------------------------------------
   # * Object Initialization
   #     map_id : map ID
@@ -26,6 +27,7 @@ class Game_Event < Game_Character
     @erased = false
     @starting = false
     @through = true
+    @page_index = -1
     # Move to starting position
     moveto(@event.x, @event.y)
     refresh
@@ -79,7 +81,9 @@ class Game_Event < Game_Character
     # If not temporarily erased
     unless @erased
       # Check in order of large event pages
+      @page_index = @event.pages.length
       for page in @event.pages.reverse
+        @page_index-= 1
         # Make possible referrence for event condition with c
         c = page.condition
         # Switch 1 condition confirmation
@@ -217,7 +221,7 @@ class Game_Event < Game_Character
       # If not running
       unless @interpreter.running?
         # Set up event
-        @interpreter.setup(@list, @event.id)
+        @interpreter.setup(@list, @event.id, @page_index + 1)
       end
       # Update interpreter
       @interpreter.update
