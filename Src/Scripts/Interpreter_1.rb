@@ -28,6 +28,7 @@ class Interpreter
   def clear
     @map_id = 0                       # map ID when starting up
     @event_id = 0                     # event ID
+    @event = nil
     @page_id = 0                      # page ID
     @message_waiting = false          # waiting for message to end
     @move_route_waiting = false       # waiting for move completion
@@ -48,6 +49,7 @@ class Interpreter
     @map_id = $game_map.map_id
     # Remember event ID
     @event_id = event_id
+    @event = $game_map.events[@event_id] if @event_id != 0
     # Remember page ID
     @page_id = page_id
     # Remember list of event commands

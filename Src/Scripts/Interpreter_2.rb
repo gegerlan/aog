@@ -256,8 +256,24 @@ class Interpreter
     when -1  # player
       return $game_player
     when 0  # this event
-      events = $game_map.events
-      return events == nil ? nil : events[@event_id]
+      if @event == nil
+        return nil
+      end
+      if $game_map.events === @event
+        return @event
+      else
+        # TODO: assign event_id to @event
+        # create a new event_id
+        @event_id = $game_map.events.keys.last.to_i + 1
+        $game_map.events[@event_id] = @event
+        if $scene.is_a?(Scene_Map) || $scene.spriteset == nil
+          # create own sprite
+          sprite = Sprite_Character.new($scene.spriteset.viewport1, @event)
+          # add to spriteset handler
+          $scene.spriteset.character_sprites.push(sprite)
+        end
+        return $game_map.events[@event_id]
+      end
     else  # specific event
       events = $game_map.events
       return events == nil ? nil : events[parameter]
