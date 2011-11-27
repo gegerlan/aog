@@ -143,7 +143,7 @@ module BlizzABS
     A_ACTION_SPRITES = true
     A_WEAPON_SPRITES = false
     A_DEFEND_SPRITES = false
-    A_SKILL_SPRITES = true
+    A_SKILL_SPRITES = false
     A_ITEM_SPRITES = false
     A_IDLE_SPRITES = true
     A_CHARGE_SPRITES = true
