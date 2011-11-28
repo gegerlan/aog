@@ -78,7 +78,7 @@ class Interpreter
     return false if commands.empty?
     # Make child interpreter (i.e. make it running under the current interpreter)
     @child_interpreter = Interpreter.new(@depth + 1)
-    @child_interpreter.setup(commands, @event_id)
+    @child_interpreter.setup(commands, @event_id, 0)
     return true
   end
 end

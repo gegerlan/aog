@@ -42,7 +42,7 @@ class Interpreter
   #     list     : list of event commands
   #     event_id : event ID
   #--------------------------------------------------------------------------
-  def setup(list, event_id, page_id)
+  def setup(list, event_id, page_id = 0)
     # Clear inner situation of interpreter
     clear
     # Remember map ID
