@@ -11,7 +11,7 @@ class Map_Battler < Game_Character
       # temporary variable
       common_event = $data_common_events[object.common_event_id]
       # setup common event execution
-      $game_system.map_interpreter.setup(common_event.list, callee_id)
+      $game_system.map_interpreter.setup(common_event.list, callee_id, object.common_event_id)
     end
   end
 end
