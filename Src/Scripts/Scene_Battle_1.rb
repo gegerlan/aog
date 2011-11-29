@@ -205,7 +205,7 @@ class Scene_Battle
         end
       end
       # Set up event
-      $game_system.battle_interpreter.setup(page.list, 0)
+      $game_system.battle_interpreter.setup(page.list, 0, index + 1)
       # If this page span is [battle] or [turn]
       if page.span <= 1
         # Set action completed flag

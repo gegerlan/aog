@@ -444,7 +444,7 @@ class Scene_Battle
     if @common_event_id > 0
       # Set up event
       common_event = $data_common_events[@common_event_id]
-      $game_system.battle_interpreter.setup(common_event.list, 0)
+      $game_system.battle_interpreter.setup(common_event.list, 0, @common_event_id)
     end
     # Shift to step 1
     @phase4_step = 1

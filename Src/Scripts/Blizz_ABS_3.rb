@@ -730,7 +730,7 @@ class Map_Battler < Game_Character
       # temporary variable
       common_event = $data_common_events[object.common_event_id]
       # setup common event execution
-      $game_system.map_interpreter.setup(common_event.list, 0)
+      $game_system.map_interpreter.setup(common_event.list, 0, object.common_event_id)
     end
   end
   #----------------------------------------------------------------------------
@@ -1217,8 +1217,6 @@ class Map_Battler < Game_Character
       # get frame animation data
       data = BlizzABS::Items.frames(type[4, type.size - 4].to_i)
     end
-    # set spriteset name
-    @character_name = @character_name_org + @current_sprite
     # setup frames
     setup_frames(data)
   end
