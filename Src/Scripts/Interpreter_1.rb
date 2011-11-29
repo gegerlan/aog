@@ -76,7 +76,7 @@ class Interpreter
     # If common event call is reserved
     if $game_temp.common_event_id > 0
       # Set up event
-      setup($data_common_events[$game_temp.common_event_id].list, 0)
+      setup($data_common_events[$game_temp.common_event_id].list, 0, $game_temp.common_event_id)
       # Release reservation
       $game_temp.common_event_id = 0
       return
