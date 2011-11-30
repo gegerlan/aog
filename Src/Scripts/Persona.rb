@@ -1,4 +1,13 @@
 class Persona
+  HAIR_VARIABLE   = 80
+  STAINS_VARIABLE = 81
+  DROOL_VARIABLE  = 82
+  BLUSH_VARIABLE  = 83
+  TEARS_VARIABLE  = 84
+  MOUTH_VARIABLE  = 85
+  EYES_VARIABLE   = 86
+  
+  
   SCREEN_WIDTH  = 640
   SCREEN_HEIGHT = 480
   
@@ -14,6 +23,7 @@ class Persona
     :blush => { :x => 52, :y => 75, :zoom => 0.9},
     :tears => { :x => 52, :y => 72, :zoom => 0.9},
   }
+  
   # Z-index of item. The higher the number, the more to the front
   ORDER = {
     :hair_back => 1,
@@ -118,7 +128,7 @@ class Persona
   end
   def get_hair_layers
     proc_value = Proc.new { |callee|
-      0
+      $game_variables[HAIR_VARIABLE]
     }
     proc_value_process_front = Proc.new { |value, callee|
       hair_name = value
@@ -194,7 +204,7 @@ class Persona
       actor_name = @actor.name.strip
       if value != 0
         weapon_name = $data_weapons[value].name.strip
-        "Graphics/Persona/#{actor_name}/Equipment/Weapon/#{weapon_name}/0"
+        "Graphics/Persona/#{actor_name}/Equipment/Weapon/#{weapon_name}/#{weapon_name}"
       else
         ""
       end
@@ -213,7 +223,7 @@ class Persona
   end
   def get_eyes_layer
     proc_value = Proc.new { |callee|
-      1
+      $game_variables[EYES_VARIABLE]
     }
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
@@ -224,7 +234,7 @@ class Persona
   end
   def get_mouth_layer
     proc_value = Proc.new { |callee|
-      1
+      $game_variables[MOUTH_VARIABLE]
     }
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
@@ -235,7 +245,7 @@ class Persona
   end
   def get_tears_layer
     proc_value = Proc.new { |callee|
-      0
+      $game_variables[TEARS_VARIABLE]
     }
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
@@ -246,7 +256,7 @@ class Persona
   end
   def get_blush_layer
     proc_value = Proc.new { |callee|
-      0
+      $game_variables[BLUSH_VARIABLE]
     }
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
@@ -257,7 +267,7 @@ class Persona
   end
   def get_drool_layer
     proc_value = Proc.new { |callee|
-      1
+      $game_variables[DROOL_VARIABLE]
     }
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
@@ -268,7 +278,7 @@ class Persona
   end
   def get_stains_layer
     proc_value = Proc.new { |callee|
-      1
+      $game_variables[STAINS_VARIABLE]
     }
     proc_value_process = Proc.new { |value, callee|
       actor_name = @actor.name.strip
