@@ -122,7 +122,7 @@ module BlizzABS
     
     # 2.5. # Enemy Behavior Configuration
     AI_DEFAULT_ATTRIBUTES = '00000000'
-    AI_DELAY_TIME = 40
+    AI_DELAY_TIME = 120
     VIEW_RANGE = 5
     HEARING_RANGE_RATIO = 40
     RESPAWN_TIME = 0
