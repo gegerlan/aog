@@ -34,7 +34,7 @@ module Cold
   Window_Fichas_y = 32
   
   #Aki é qual switch você usa para ativar a loja por fichas
-  Switch_que_ativa_o_uso_da_loja_por_fichas = 85
+  Switch_que_ativa_o_uso_da_loja_por_fichas = 185
 end  
 
 #==============================================================================
