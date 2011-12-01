@@ -2,8 +2,8 @@ class Window_Table < Window_Base
  def initialize
    super(0, 64, 512, 416)
    self.contents = Bitmap.new(width - 32, height - 32)
-   self.contents.font.name = $defaultfonttype
-   self.contents.font.size = $defaultfontsize
+   #self.contents.font.name = $defaultfonttype
+   #self.contents.font.size = $defaultfontsize
    refresh
  end
 #--------------------------------------------------------------------------
@@ -90,8 +90,8 @@ class Window_Table2 < Window_Selectable
    @frame_width = 71
    @frame_height = 96
    self.contents = Bitmap.new(width - 32, height - 32)
-   self.contents.font.name = $defaultfonttype
-   self.contents.font.size = $defaultfontsize
+   #self.contents.font.name = $defaultfonttype
+   #self.contents.font.size = $defaultfontsize
    refresh()
    self.index = 0    
  end
@@ -205,8 +205,8 @@ class Window_Table3 < Window_Selectable
  def initialize
    super(0, 64, 512, 416)
    self.contents = Bitmap.new(width - 32, height - 32)
-   self.contents.font.name = $defaultfonttype
-   self.contents.font.size = $defaultfontsize
+   #self.contents.font.name = $defaultfonttype
+   #self.contents.font.size = $defaultfontsize
    @item_max = 48
    @column_max = 3
    refresh
@@ -271,8 +271,8 @@ end
 def initialize
    super(512, 288, 128, 96)
    self.contents = Bitmap.new(width - 32, height - 32)
-   self.contents.font.name = $defaultfonttype
-   self.contents.font.size = $defaultfontsize    
+   #self.contents.font.name = $defaultfonttype
+   #self.contents.font.size = $defaultfontsize    
    @bet = 0
    refresh(@bet)
  end
