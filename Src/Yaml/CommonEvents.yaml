@@ -13122,35 +13122,397 @@ root:
   id: 46
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Setup the default data structure
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - default = {
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  :value => 0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  :bet => 0,"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  :result => [0,0,0]"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "}"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $slot_machine ||= {}
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $slot_machine[[e,m]]||=default.merge\
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - ($slot_machine[[e,m]] ||= {})
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Store the specific slot machine in @machine
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - $slot_machine ||= {}
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "@machine = ($slot_machine[[e,m]]||={})"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Get bet from variable 36 and put in :bet
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "@machine[:bet] = $game_variables[36]"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@machine[:bet] <= 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - If an illegal bet has been entered
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:bet] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - "\\nm[]\\face[]You need to put one or more gold coins "
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - into the machine for it to work.
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 1
+    parameters: 
+    - 51
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 40
+    - 40
+    - 0
+    - 7
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@machine[:bet] > $game_variables[40]"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - If more gold has been bet than the player has
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - ignore
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Ranomize values for slot machine
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - "@machine[:result] = ["
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  1 + rand(6),"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  1 + rand(6),"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  1 + rand(6)"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "]"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Visualize result
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 0
+    parameters: 
+    - 47
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 0
+    parameters: 
+    - 48
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 0
+    parameters: 
+    - 49
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Store value in @machine:value
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 0
+    parameters: 
+    - 50
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - $slot_machine[[@event_id,@map_id]][:value] > 0
+  - !ruby/object:RPG::EventCommand 
+    code: 249
+    indent: 1
+    parameters: 
+    - !ruby/object:RPG::AudioFile 
+      name: 001-Victory01
+      pitch: 100
+      volume: 100
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - bet = $slot_machine[[e,m]][:bet]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - value = $slot_machine[[e,m]][:value]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - gold = bet*value
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $game_party.gain_gold(gold)
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $game_variables[40] = gold
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - \nm[]\face[]You won \V[40] gold!
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 411
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - bet = $slot_machine[[e,m]][:bet]
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - gold = -bet
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $game_party.gain_gold(gold)
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - $game_variables[40] = gold
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - \nm[]\face[]You lost \V[40] gold!
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - Reset variables and images
+  - !ruby/object:RPG::EventCommand 
+    code: 117
+    indent: 0
+    parameters: 
+    - 51
+  - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: ""
+  name: "Slot Machine: Start"
   switch_id: 1
   trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 47
   list: 
   - !ruby/object:RPG::EventCommand 
-    code: 122
+    code: 355
     indent: 0
     parameters: 
-    - 29
-    - 29
-    - 0
-    - 2
-    - 0
-    - 6
+    - $slot_machine ||= {}
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "@slot_col1 = \\"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $slot_machine[[e,m]][:result][0]"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
-    - 1
-    - 29
-    - 0
-    - 0
-    - 0
+    - 12
+    - "@slot_col1 == 0"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 1
@@ -13179,11 +13541,8 @@ root:
     code: 111
     indent: 1
     parameters: 
-    - 1
-    - 29
-    - 0
-    - 1
-    - 0
+    - 12
+    - "@slot_col1 == 1"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 2
@@ -13212,11 +13571,8 @@ root:
     code: 111
     indent: 2
     parameters: 
-    - 1
-    - 29
-    - 0
-    - 2
-    - 0
+    - 12
+    - "@slot_col1 == 2"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 3
@@ -13247,11 +13603,8 @@ root:
     code: 111
     indent: 3
     parameters: 
-    - 1
-    - 29
-    - 0
-    - 3
-    - 0
+    - 12
+    - "@slot_col1 == 3"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 4
@@ -13282,11 +13635,8 @@ root:
     code: 111
     indent: 4
     parameters: 
-    - 1
-    - 29
-    - 0
-    - 4
-    - 0
+    - 12
+    - "@slot_col1 == 4"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 5
@@ -13315,11 +13665,8 @@ root:
     code: 111
     indent: 5
     parameters: 
-    - 1
-    - 29
-    - 0
-    - 5
-    - 0
+    - 12
+    - "@slot_col1 == 5"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 6
@@ -13348,11 +13695,8 @@ root:
     code: 111
     indent: 6
     parameters: 
-    - 1
-    - 29
-    - 0
-    - 6
-    - 0
+    - 12
+    - "@slot_col1 == 6"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 7
@@ -13452,31 +13796,43 @@ root:
     indent: 0
     parameters: []
 
-  name: Caca-Niqueis
+  name: "Slot Machine: Display 1"
   switch_id: 86
-  trigger: 2
+  trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 48
   list: 
   - !ruby/object:RPG::EventCommand 
-    code: 122
+    code: 355
     indent: 0
     parameters: 
-    - 30
-    - 30
-    - 0
-    - 2
-    - 0
-    - 6
+    - $slot_machine ||= {}
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "@slot_col2 = \\"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $slot_machine[[e,m]][:result][1]"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
-    - 1
-    - 30
-    - 0
-    - 0
-    - 0
+    - 12
+    - "@slot_col2 == 0"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 1
@@ -13505,11 +13861,8 @@ root:
     code: 111
     indent: 1
     parameters: 
-    - 1
-    - 30
-    - 0
-    - 1
-    - 0
+    - 12
+    - "@slot_col2 == 1"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 2
@@ -13538,11 +13891,8 @@ root:
     code: 111
     indent: 2
     parameters: 
-    - 1
-    - 30
-    - 0
-    - 2
-    - 0
+    - 12
+    - "@slot_col2 == 2"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 3
@@ -13571,11 +13921,8 @@ root:
     code: 111
     indent: 3
     parameters: 
-    - 1
-    - 30
-    - 0
-    - 3
-    - 0
+    - 12
+    - "@slot_col2 == 3"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 4
@@ -13606,11 +13953,8 @@ root:
     code: 111
     indent: 4
     parameters: 
-    - 1
-    - 30
-    - 0
-    - 4
-    - 0
+    - 12
+    - "@slot_col2 == 4"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 5
@@ -13641,11 +13985,8 @@ root:
     code: 111
     indent: 5
     parameters: 
-    - 1
-    - 30
-    - 0
-    - 5
-    - 0
+    - 12
+    - "@slot_col2 == 5"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 6
@@ -13674,11 +14015,8 @@ root:
     code: 111
     indent: 6
     parameters: 
-    - 1
-    - 30
-    - 0
-    - 6
-    - 0
+    - 12
+    - "@slot_col2 == 6"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 7
@@ -13778,31 +14116,43 @@ root:
     indent: 0
     parameters: []
 
-  name: Caca-Niqueis
+  name: "Slot Machine: Display 2"
   switch_id: 86
-  trigger: 2
+  trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 49
   list: 
   - !ruby/object:RPG::EventCommand 
-    code: 122
+    code: 355
     indent: 0
     parameters: 
-    - 31
-    - 31
-    - 0
-    - 2
-    - 0
-    - 6
+    - $slot_machine ||= {}
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "@slot_col3 = \\"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "  $slot_machine[[e,m]][:result][2]"
   - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
-    - 1
-    - 31
-    - 0
-    - 0
-    - 0
+    - 12
+    - "@slot_col3 == 0"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 1
@@ -13833,11 +14183,8 @@ root:
     code: 111
     indent: 1
     parameters: 
-    - 1
-    - 31
-    - 0
-    - 1
-    - 0
+    - 12
+    - "@slot_col3 == 1"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 2
@@ -13866,11 +14213,8 @@ root:
     code: 111
     indent: 2
     parameters: 
-    - 1
-    - 31
-    - 0
-    - 2
-    - 0
+    - 12
+    - "@slot_col3 == 2"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 3
@@ -13899,11 +14243,8 @@ root:
     code: 111
     indent: 3
     parameters: 
-    - 1
-    - 31
-    - 0
-    - 3
-    - 0
+    - 12
+    - "@slot_col3 == 3"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 4
@@ -13934,11 +14275,8 @@ root:
     code: 111
     indent: 4
     parameters: 
-    - 1
-    - 31
-    - 0
-    - 4
-    - 0
+    - 12
+    - "@slot_col3 == 4"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 5
@@ -13967,11 +14305,8 @@ root:
     code: 111
     indent: 5
     parameters: 
-    - 1
-    - 31
-    - 0
-    - 5
-    - 0
+    - 12
+    - "@slot_col3 == 5"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 6
@@ -14000,11 +14335,8 @@ root:
     code: 111
     indent: 6
     parameters: 
-    - 1
-    - 31
-    - 0
-    - 6
-    - 0
+    - 12
+    - "@slot_col3 == 6"
   - !ruby/object:RPG::EventCommand 
     code: 231
     indent: 7
@@ -14104,13 +14436,957 @@ root:
     indent: 0
     parameters: []
 
-  name: Caca-Niqueis
+  name: "Slot Machine: Display 3"
   switch_id: 86
-  trigger: 2
+  trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 50
   list: 
   - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 0
+    parameters: 
+    - $slot_machine ||= {}
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "@machine = $slot_machine[[e,m]]"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "@slot_col1, @slot_col2, \\"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - "@slot_col3 = *@machine[:result]"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - 0XX
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col1 == 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "012"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 1 && @slot_col3 == 2"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "1000"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 1000"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "011"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 1 && @slot_col3 == 1"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "500"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 500"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "022"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 2 && @slot_col3 == 2"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "500"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 500"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - 0XX
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - X21
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col2 == 2 && @slot_col3 == 1"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "121"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col1 == 1"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "1000"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 1000"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "021"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col1 == 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - X21
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "250"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 250"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - 1X1
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col1 == 1 && @slot_col3 == 1"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "101"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "111"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 1"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "121"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 2"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "1000"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 1000"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - 1X1
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "250"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 250"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - 12X
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col1 == 1 && @slot_col2 == 2"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "121"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col3 == 1"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "1000"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 1000"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "122"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col3 == 2"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - 12X
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "250"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 250"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - 2XX
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col1 == 2"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "230"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 3 && @slot_col3 == 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "100"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 100"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - 2XX
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - 3XX
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col1 == 3"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "343"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 4 && @slot_col3 == 3"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "100"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 100"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - 3XX
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - 4XX
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col1 == 4"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "405"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 0 && @slot_col3 == 5"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "100"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 100"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - 4XX
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - 5XX
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col1 == 5"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "564"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 6 && @slot_col3 == 4"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "100"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 100"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - 5XX
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 0
+    parameters: 
+    - 6XX
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 0
+    parameters: 
+    - 12
+    - "@slot_col1 == 6"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "656"
+  - !ruby/object:RPG::EventCommand 
+    code: 111
+    indent: 1
+    parameters: 
+    - 12
+    - "@slot_col2 == 5 && @slot_col3 == 6"
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 2
+    parameters: 
+    - "100"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
+    parameters: 
+    - "@machine[:value] = 100"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - 6XX
+  - !ruby/object:RPG::EventCommand 
+    code: 108
+    indent: 1
+    parameters: 
+    - "0"
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 1
+    parameters: 
+    - "@machine[:value] = 0"
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 1
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 115
+    indent: 0
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
     code: 111
     indent: 0
     parameters: 
@@ -17267,39 +18543,64 @@ root:
     indent: 0
     parameters: []
 
-  name: sorteio
+  name: "Slot Machine: Get value"
   switch_id: 87
-  trigger: 2
+  trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 51
   list: 
   - !ruby/object:RPG::EventCommand 
-    code: 106
+    code: 235
     indent: 0
     parameters: 
-    - 40
+    - 1
   - !ruby/object:RPG::EventCommand 
-    code: 121
+    code: 235
     indent: 0
     parameters: 
-    - 87
-    - 87
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 235
+    indent: 0
+    parameters: 
+    - 3
+  - !ruby/object:RPG::EventCommand 
+    code: 122
+    indent: 0
+    parameters: 
+    - 36
+    - 36
+    - 0
+    - 0
     - 0
   - !ruby/object:RPG::EventCommand 
-    code: 121
+    code: 355
     indent: 0
     parameters: 
-    - 86
-    - 86
-    - 1
+    - $slot_machine ||= {}
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - m = @map_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - e = @event_id
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 0
+    parameters: 
+    - $slot_machine.delete([e,m])
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
     parameters: []
 
-  name: comando
+  name: "Slot Machine: Reset"
   switch_id: 86
-  trigger: 2
+  trigger: 0
 - !ruby/object:RPG::CommonEvent 
   id: 52
   list: 
