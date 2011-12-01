@@ -19,7 +19,7 @@ class Scene_Roulette
    @help_window = Window_Help.new
    @table_window = Window_Table3.new
    @table_window.active = false
-   @bet_window = Window_Command.new(128,["1","10","50","100","To bet","Exist"])
+   @bet_window = Window_Command.new(128,["1","10","50","100","Place bet","Exit"])
    @bet_window.x = 512
    @bet_window.y = 64
    @bet_window.index = 0
@@ -71,7 +71,7 @@ class Scene_Roulette
  end
  
  def update_bet
-   @help_window.set_text("Make its bet")
+   @help_window.set_text("Place your bet")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      @bet_window.index = 5
@@ -213,7 +213,7 @@ class Scene_Roulette
      end
      
        @table_window.active = false
-       @help_window.set_text("Rotating...")
+       @help_window.set_text("Spinning...")
        delay(2)
        spin
      
@@ -281,7 +281,7 @@ class Scene_Roulette
    $game_party.gain_fichas(@prize)
    @currentbet = 0
    @money_window.refresh(@currentbet)
-   @help_window.set_text("It dropped in the number  "+@num.to_s+", you expired! Does want to play again? ")
+   @help_window.set_text("The ball landed on number  "+@num.to_s+", you win! Do you want to play again? ")
    delay(1)
    playagain
  end
@@ -289,7 +289,7 @@ class Scene_Roulette
  def lose
    @currentbet = 0
    @money_window.refresh(@currentbet)    
-   @help_window.set_text("It dropped in the number  "+@num.to_s+", you lost... Does want to play again? ")
+   @help_window.set_text("The ball landed on number  "+@num.to_s+", you lost... Do you want to play again? ")
    delay(1)
    playagain
  end

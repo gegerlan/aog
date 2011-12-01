@@ -48,12 +48,12 @@ class Scene_Blackjack
    Audio.bgm_play("Audio/BGM/"+@music, 100, 100)
    @help_window = Window_Help.new
    @table_window = Window_Table.new
-   @bet_window = Window_Command.new(128,["25","50","100","500","To bet","Exist"])
+   @bet_window = Window_Command.new(128,["25","50","100","500","Place bet","Exit"])
    @bet_window.x = 512
    @bet_window.y = 64
    @bet_window.index = 0
    @money_window = Window_Money.new
-   @hitstay_window = Window_Command.new(128,["Plus one!","Ready"])
+   @hitstay_window = Window_Command.new(128,["Call!","Stay"])
    @hitstay_window.x = 512
    @hitstay_window.y = 384    
    @hitstay_window.active = false
@@ -110,7 +110,7 @@ class Scene_Blackjack
  end
  
  def update_bet
-   @help_window.set_text("Bet")
+   @help_window.set_text("Plaace your bet")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      @bet_window.index = 5
@@ -176,7 +176,7 @@ class Scene_Blackjack
  end
  
  def update_hitstay
-   @help_window.set_text("To ask more an or to stop")
+   @help_window.set_text("Call or stay")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      @hitstay_window.index = 1
@@ -193,7 +193,7 @@ class Scene_Blackjack
  end
  
  def update_yesno
-   @help_window.set_text("To play again?")
+   @help_window.set_text("Do you want to play again?")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      $scene = Scene_Map.new
@@ -515,7 +515,7 @@ class Scene_Blackjack
    $game_party.gain_fichas(@currentbet*2)
    @currentbet = 0
    @money_window.refresh(@currentbet)
-   @help_window.set_text("It expired!!! ")
+   @help_window.set_text("You win!!! ")
    if @sound == true
      $game_system.me_play($game_system.battle_end_me)
    end
@@ -526,7 +526,7 @@ class Scene_Blackjack
  def lose
    @currentbet = 0
    @money_window.refresh(@currentbet)    
-   @help_window.set_text("Lost...")
+   @help_window.set_text("You lost...")
    if @sound == true
      $game_system.me_play($data_system.gameover_me)
    end

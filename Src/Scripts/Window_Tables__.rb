@@ -33,7 +33,7 @@ class Window_Table < Window_Base
    
    self.contents.clear
    
-   self.contents.draw_text(32, 320, 128, 32, "Its hand: " + @total.to_s)
+   self.contents.draw_text(32, 320, 128, 32, "Your hand: " + @total.to_s)
    
    graphic
  end
@@ -168,20 +168,20 @@ class Window_Table2 < Window_Selectable
    self.contents.blt(96*3,192,bitmap,src_rect_hand4)
    self.contents.blt(96*4,192,bitmap,src_rect_hand5)
    
-   self.contents.draw_text(128+80, 288, 204, 64, "Fact", 0)
+   self.contents.draw_text(128+80, 288, 204, 64, "Done", 0)
    
    x = 16
    y = 16
    
    self.contents.draw_text(x, y, 400, 24,   "ROYAL FLUSH - "+@currentbet.to_s+"x1000", 0)
    self.contents.draw_text(x, y*2, 400, 24, "Straight Flush - - -"+@currentbet.to_s+"x100", 0)
-   self.contents.draw_text(x, y*3, 400, 24, "Block - - - - - - - -"+@currentbet.to_s+"x50", 0)
+   self.contents.draw_text(x, y*3, 400, 24, "Four of a kind - - -"+@currentbet.to_s+"x50", 0)
    self.contents.draw_text(x, y*4, 400, 24, "Full House - - - - - "+@currentbet.to_s+"x30", 0)
    self.contents.draw_text(x, y*5, 400, 24, "Flush - - - - - - - - - "+@currentbet.to_s+"x20", 0)
    self.contents.draw_text(x, y*6, 400, 24, "Straight - - - - - - - -"+@currentbet.to_s+"x12", 0)
-   self.contents.draw_text(x, y*7, 400, 24, "Trine - - - - - - - - -"+@currentbet.to_s+"x10", 0)
-   self.contents.draw_text(x, y*8, 400, 24, "Two Equal - - - - - "+@currentbet.to_s+"x5", 0)
-   self.contents.draw_text(x, y*9, 400, 24, "Equal - - - - - - - - - - -"+@currentbet.to_s+"x2", 0)
+   self.contents.draw_text(x, y*7, 400, 24, "Three of a kind- - -"+@currentbet.to_s+"x10", 0)
+   self.contents.draw_text(x, y*8, 400, 24, "Two pairs - - - - - - "+@currentbet.to_s+"x5", 0)
+   self.contents.draw_text(x, y*9, 400, 24, "Pair - - - - - - - - - - -"+@currentbet.to_s+"x2", 0)
 
    
  end
@@ -218,7 +218,7 @@ class Window_Table3 < Window_Selectable
    s1 = "1-18"
    s2 = "19-36"
    s3 = ""
-   s4 = "Equal"
+   s4 = "Even"
    s5 = "Odd"
    s6 = ""
    s7 = "1-12"

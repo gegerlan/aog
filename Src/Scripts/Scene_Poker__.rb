@@ -19,7 +19,7 @@ class Scene_Poker
    @help_window = Window_Help.new
    @table_window = Window_Table2.new
    @table_window.active = false
-   @bet_window = Window_Command.new(128,["10","50","100","500","Ready","Exist"])
+   @bet_window = Window_Command.new(128,["10","50","100","500","Ready","Exit"])
    @bet_window.x = 512
    @bet_window.y = 64
    @bet_window.index = 0
@@ -76,7 +76,7 @@ class Scene_Poker
  end
  
  def update_bet
-   @help_window.set_text("Make its bet")
+   @help_window.set_text("Place your bet")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      @bet_window.index = 5
@@ -142,7 +142,7 @@ class Scene_Poker
  end
  
  def update_table
-   @help_window.set_text("Choose cards to change")
+   @help_window.set_text("Choose cards to discard")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      @table_window.index = 5
@@ -194,7 +194,7 @@ class Scene_Poker
  end
  
  def update_yesno
-   @help_window.set_text("To play again?")
+   @help_window.set_text("Do you want to play again?")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      $scene = Scene_Map.new
@@ -379,7 +379,7 @@ class Scene_Poker
      @text = "Straight Flush"
    elsif @status == 3
      @currentbet *= 50
-     @text = "Block"
+     @text = "Four of a Kind"
    elsif @status == 4
      @currentbet *= 30
      @text = "Full House"
@@ -391,13 +391,13 @@ class Scene_Poker
      @text = "Straight"
    elsif @status == 7
      @currentbet *= 10
-     @text = "Trine"
+     @text = "Three of a Kind"
    elsif @status == 8
      @currentbet *= 5
-     @text = "Two Equal"
+     @text = "Two Pairs"
    elsif @status == 9
      @currentbet *= 2
-     @text = "Equal"
+     @text = "Pair"
    end
    
    win

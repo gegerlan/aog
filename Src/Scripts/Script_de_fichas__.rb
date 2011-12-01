@@ -113,11 +113,11 @@ class Window_Fichas < Window_Base
   end
   def refresh
     self.contents.clear
-    cx = contents.text_size("Records ").width
+    cx = contents.text_size("Tokens ").width
     self.contents.font.color = normal_color
     self.contents.draw_text(4, 0, 120-cx-2, 32, $game_party.fichas.to_s, 2)
     self.contents.font.color = system_color
-    self.contents.draw_text(124-cx, 0, cx, 32, "Records ", 2)
+    self.contents.draw_text(124-cx, 0, cx, 32, "Tokens ", 2)
   end
 end
 
@@ -158,7 +158,7 @@ class Window_ShopNumberFichas < Window_Base
     self.contents.draw_text(272, 96, 32, 32, "~")
     self.contents.draw_text(308, 96, 24, 32, @number.to_s, 2)
     self.cursor_rect.set(304, 96, 32, 32)
-    domination = "Records"
+    domination = "Tokens"
     cx = contents.text_size(domination).width
     total_price = @pricefichas * @number
     self.contents.font.color = normal_color
