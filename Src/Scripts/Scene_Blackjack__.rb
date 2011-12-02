@@ -53,7 +53,7 @@ class Scene_Blackjack
    @bet_window.y = 64
    @bet_window.index = 0
    @money_window = Window_Money.new
-   @hitstay_window = Window_Command.new(128,["Call!","Stay"])
+   @hitstay_window = Window_Command.new(128,["Hit!","Stay"])
    @hitstay_window.x = 512
    @hitstay_window.y = 384    
    @hitstay_window.active = false
@@ -110,7 +110,7 @@ class Scene_Blackjack
  end
  
  def update_bet
-   @help_window.set_text("Plaace your bet")
+   @help_window.set_text("Place your bet")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      @bet_window.index = 5
@@ -176,7 +176,7 @@ class Scene_Blackjack
  end
  
  def update_hitstay
-   @help_window.set_text("Call or stay")
+   @help_window.set_text("Hit or stay")
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      @hitstay_window.index = 1
@@ -538,7 +538,7 @@ class Scene_Blackjack
    $game_party.gain_fichas(@currentbet)
    @currentbet = 0
    @money_window.refresh(@currentbet)
-   @help_window.set_text("Tie")
+   @help_window.set_text("Push")
    delay(2)
    playagain
  end
