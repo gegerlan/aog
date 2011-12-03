@@ -176,9 +176,9 @@ class Game_Party
     if weapon_id.is_a?(Condition_Item)
       lost_weapon << @weapons.delete(weapon_id)
     elsif weapon_id.is_a?(Numeric)
-      weapon = @weapons.first { |weapon| weapon.id == weapon_id }
+      weapon = @weapons.select { |weapon| weapon.id == weapon_id }
       if weapon != nil and weapon.length > 0
-        for i in 0..[n, weapon.length - 1]
+        for i in 0..[n, weapon.length - 1].min
           lost_weapon << @weapons.delete(weapon[i])
         end
       end
