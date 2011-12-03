@@ -92,8 +92,12 @@ class Interpreter
           # Lock
           event.lock
         end
-        # Set up event
-        setup(event.list, event.id, event.page_index + 1)
+        if event.respond_to? :page_index
+          uid = event.page_index + 1
+        else
+          uid = 0
+        end
+        setup(event.list, event.id, uid)
         return
       end
     end
