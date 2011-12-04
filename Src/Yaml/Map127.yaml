@@ -1593,9 +1593,9 @@ root: !ruby/object:RPG::Map
     - 8524
     - 8524
     - 8524
-    - 8524
+    - 449
     - 452
-    - 8524
+    - 449
     - 8524
     - 8524
     - 8524
@@ -2722,311 +2722,7 @@ root: !ruby/object:RPG::Map
   events: 
     1: !ruby/object:RPG::Event 
       id: 1
-      name: EV001
-      numero: 1
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: D
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: true
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 173-Door04
-          direction: 2
-          opacity: 255
-          pattern: 1
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 8
-          - 23
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - "*\\c[6]Garnet\\c[0] used Key"
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 1
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 1
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - The door is locked.
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
-          indent: 0
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: false
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 173-Door04
-          direction: 4
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 173-Door04
-          direction: 6
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: C
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 173-Door04
-          direction: 8
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 3
-        step_anime: false
-        through: true
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: D
-          self_switch_valid: false
-          switch1_id: 200
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: true
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 173-Door04
-          direction: 2
-          opacity: 255
-          pattern: 1
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 4
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: false
-      x: 14
-      y: 6
-    2: !ruby/object:RPG::Event 
-      id: 2
-      name: EV002
-      numero: 2
+      name: Autorun
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -3040,158 +2736,14 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: true
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 173-Door04
-          direction: 2
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id001 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 173-Door04
-              - 0
-              - 4
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id001
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id002 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 173-Door04
-              - 0
-              - 6
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id002
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id003 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 173-Door04
-              - 0
-              - 8
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id003
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: false
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
         direction_fix: false
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 173-Door04
-          direction: 8
+          character_name: 00 (124)
+          direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 3
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
@@ -3210,18 +2762,10 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 1
         step_anime: false
-        through: true
-        trigger: 3
-        walk_anime: false
-      x: 22
-      y: 22
-    3: !ruby/object:RPG::Event 
-      id: 3
-      name: EV003
-      numero: 3
-      pages: 
+        through: false
+        trigger: 0
+        walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
@@ -3245,15 +2789,64 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 201
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 204
           indent: 0
           parameters: 
+          - 1
+          - 001-Fog01
           - 0
-          - 24
-          - 18
-          - 18
-          - 6
+          - 16
           - 0
+          - 100
+          - 0
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 116
+          indent: 0
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3270,17 +2863,16 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 0
         step_anime: false
         through: false
-        trigger: 1
+        trigger: 4
         walk_anime: true
-      x: 3
-      y: 18
-    4: !ruby/object:RPG::Event 
-      id: 4
-      name: EV004
-      numero: 4
+      x: 0
+      y: 0
+    2: !ruby/object:RPG::Event 
+      id: 2
+      name: Zombie
+      numero: 21
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -3294,21 +2886,16 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: true
+        direction_fix: false
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 170-Door01
+          character_name: 052-Undead02
           direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \face[]\nm[]The door is locked.
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3335,9 +2922,9 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
           self_switch_valid: false
-          switch1_id: 355
+          switch1_id: 124
           switch1_valid: true
-          switch2_id: 1
+          switch2_id: 176
           switch2_valid: false
           variable_id: 1
           variable_valid: false
@@ -3346,108 +2933,12 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 170-Door01
+          character_name: ""
           direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id004 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 170-Door01
-              - 0
-              - 4
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id004
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id005 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 170-Door01
-              - 0
-              - 6
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id005
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id006 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 170-Door01
-              - 0
-              - 8
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id006
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3469,83 +2960,35 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 355
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 8
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: true
-        trigger: 0
-        walk_anime: true
-      x: 14
-      y: 16
-    5: !ruby/object:RPG::Event 
-      id: 5
-      name: EV005
-      numero: 5
+      x: 26
+      y: 19
+    3: !ruby/object:RPG::Event 
+      id: 3
+      name: Zombie
+      numero: 21
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
           self_switch_valid: false
-          switch1_id: 356
+          switch1_id: 1
           switch1_valid: false
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: true
+        direction_fix: false
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 173-Door04
+          character_name: 052-Undead02
           direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \face[]\nm[]The door is locked.
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3572,9 +3015,9 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
           self_switch_valid: false
-          switch1_id: 356
+          switch1_id: 124
           switch1_valid: true
-          switch2_id: 1
+          switch2_id: 176
           switch2_valid: false
           variable_id: 1
           variable_valid: false
@@ -3583,113 +3026,12 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 173-Door04
+          character_name: ""
           direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id007 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 173-Door04
-              - 0
-              - 4
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id007
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id008 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 173-Door04
-              - 0
-              - 6
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id008
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 0
-          parameters: 
-          - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id009 !ruby/object:RPG::MoveCommand 
-              code: 41
-              parameters: 
-              - 173-Door04
-              - 0
-              - 8
-              - 2
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 0
-          parameters: 
-          - *id009
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3710,14 +3052,21 @@ root: !ruby/object:RPG::Map
         step_anime: false
         through: false
         trigger: 0
-        walk_anime: false
+        walk_anime: true
+      x: 24
+      y: 21
+    4: !ruby/object:RPG::Event 
+      id: 4
+      name: Zombie
+      numero: 21
+      pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 356
-          switch1_valid: true
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -3727,10 +3076,10 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 173-Door04
-          direction: 8
+          character_name: 052-Undead02
+          direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
@@ -3749,13 +3098,149 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 2
+        numero: 0
         step_anime: false
-        through: true
-        trigger: 3
+        through: false
+        trigger: 0
         walk_anime: false
-      x: 3
-      y: 11
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 124
+          switch1_valid: true
+          switch2_id: 176
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 1
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 28
+      y: 20
+    5: !ruby/object:RPG::Event 
+      id: 5
+      name: Zombie
+      numero: 21
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 052-Undead02
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: false
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 124
+          switch1_valid: true
+          switch2_id: 176
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 1
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 19
+      y: 19
     6: !ruby/object:RPG::Event 
       id: 6
       name: EV006
@@ -3874,13 +3359,13 @@ root: !ruby/object:RPG::Map
       y: 26
     7: !ruby/object:RPG::Event 
       id: 7
-      name: EV007
-      numero: 7
+      name: Zombie
+      numero: 21
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: D
+          self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
           switch1_valid: false
@@ -3893,23 +3378,12 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 174-Chest01
+          character_name: 052-Undead02
           direction: 2
           opacity: 255
-          pattern: 1
+          pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3935,10 +3409,10 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
+          self_switch_valid: false
+          switch1_id: 124
+          switch1_valid: true
+          switch2_id: 176
           switch2_valid: false
           variable_id: 1
           variable_valid: false
@@ -3947,57 +3421,12 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 174-Chest01
-          direction: 8
+          character_name: ""
+          direction: 2
           opacity: 255
-          pattern: 1
+          pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \face[]\nm[]*Garnet found Key*
-        - !ruby/object:RPG::EventCommand 
-          code: 126
-          indent: 0
-          parameters: 
-          - 23
-          - 0
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - Why would someone keep a key in an
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - unlocked chest?
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \face[]
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4017,57 +3446,14 @@ root: !ruby/object:RPG::Map
         numero: 1
         step_anime: false
         through: false
-        trigger: 3
-        walk_anime: false
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 174-Chest01
-          direction: 8
-          opacity: 255
-          pattern: 1
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: false
-      x: 9
-      y: 17
+        trigger: 0
+        walk_anime: true
+      x: 17
+      y: 21
     8: !ruby/object:RPG::Event 
       id: 8
-      name: EV008
-      numero: 8
+      name: Zombie
+      numero: 21
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -4085,29 +3471,12 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: 052-Undead02
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 354
-          - 354
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 26
-          - 12
-          - 3
-          - 4
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4127,19 +3496,62 @@ root: !ruby/object:RPG::Map
         numero: 0
         step_anime: false
         through: false
-        trigger: 1
+        trigger: 0
+        walk_anime: false
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 124
+          switch1_valid: true
+          switch2_id: 176
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 1
+        step_anime: false
+        through: false
+        trigger: 0
         walk_anime: true
-      x: 3
-      y: 2
+      x: 16
+      y: 18
     9: !ruby/object:RPG::Event 
       id: 9
-      name: EV009
-      numero: 9
+      name: Zombie
+      numero: 17
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: D
+          self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
           switch1_valid: false
@@ -4152,23 +3564,12 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 175-Chest02
+          character_name: 051-Undead01
           direction: 2
           opacity: 255
-          pattern: 1
+          pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4186,132 +3587,21 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         move_type: 0
         numero: 0
-        step_anime: false
+        step_anime: true
         through: false
         trigger: 0
-        walk_anime: false
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 175-Chest02
-          direction: 8
-          opacity: 255
-          pattern: 1
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \face[]\nm[]*Garnet found a Potion*
-        - !ruby/object:RPG::EventCommand 
-          code: 126
-          indent: 0
-          parameters: 
-          - 1
-          - 0
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: false
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 175-Chest02
-          direction: 8
-          opacity: 255
-          pattern: 1
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: false
-      x: 28
-      y: 13
+        walk_anime: true
+      x: 26
+      y: 21
     10: !ruby/object:RPG::Event 
       id: 10
-      name: EV010
-      numero: 10
+      name: Zombie
+      numero: 17
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: D
+          self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
           switch1_valid: false
@@ -4324,23 +3614,62 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 175-Chest02
+          character_name: 051-Undead01
           direction: 2
           opacity: 255
-          pattern: 1
+          pattern: 0
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 106
+          code: 0
           indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: true
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 18
+      y: 20
+    11: !ruby/object:RPG::Event 
+      id: 11
+      name: Zombie
+      numero: 21
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 052-Undead02
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4366,127 +3695,10 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 175-Chest02
-          direction: 8
-          opacity: 255
-          pattern: 1
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \face[]\nm[]*Garnet found 10g*
-        - !ruby/object:RPG::EventCommand 
-          code: 125
-          indent: 0
-          parameters: 
-          - 0
-          - 0
-          - 10
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: false
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 175-Chest02
-          direction: 8
-          opacity: 255
-          pattern: 1
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: false
-      x: 28
-      y: 19
-    11: !ruby/object:RPG::Event 
-      id: 11
-      name: placeholder boss
-      numero: 11
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
           self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
+          switch1_id: 124
+          switch1_valid: true
+          switch2_id: 176
           switch2_valid: false
           variable_id: 1
           variable_valid: false
@@ -4502,79 +3714,6 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 356
-          - 356
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - \nm[]Boss battle
-        - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 0
-          parameters: 
-          - 301
-          - 301
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - Something unlocked.
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 1
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 301
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 053-Undead03
-          direction: 8
-          opacity: 255
-          pattern: 3
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
           parameters: []
@@ -4593,14 +3732,14 @@ root: !ruby/object:RPG::Map
         numero: 1
         step_anime: false
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
-      x: 14
-      y: 7
+      x: 22
+      y: 18
     12: !ruby/object:RPG::Event 
       id: 12
-      name: EV012
-      numero: 12
+      name: Zombie
+      numero: 17
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -4618,25 +3757,12 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: 051-Undead01
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 241
-          indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
-            name: 040-Dungeon06
-            pitch: 100
-            volume: 50
-        - !ruby/object:RPG::EventCommand 
-          code: 116
-          indent: 0
-          parameters: []
-
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4654,12 +3780,12 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         move_type: 0
         numero: 0
-        step_anime: false
+        step_anime: true
         through: false
-        trigger: 4
-        walk_anime: false
-      x: 0
-      y: 14
+        trigger: 0
+        walk_anime: true
+      x: 24
+      y: 19
     13: !ruby/object:RPG::Event 
       id: 13
       name: EV013
@@ -4977,8 +4103,8 @@ root: !ruby/object:RPG::Map
       y: 6
     16: !ruby/object:RPG::Event 
       id: 16
-      name: Zombie \e[9]
-      numero: 16
+      name: EV016
+      numero: 2
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -4996,10 +4122,10 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 052-Undead02
-          direction: 2
+          character_name: 173-Door04
+          direction: 8
           opacity: 255
-          pattern: 0
+          pattern: 2
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
@@ -5018,16 +4144,16 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 0
+        numero: 1
         step_anime: false
-        through: false
-        trigger: 4
-        walk_anime: true
-      x: 3
-      y: 25
+        through: true
+        trigger: 3
+        walk_anime: false
+      x: 22
+      y: 22
     17: !ruby/object:RPG::Event 
       id: 17
-      name: Zombie \e[9]
+      name: Zombie
       numero: 17
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -5069,62 +4195,12 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         move_type: 0
         numero: 0
-        step_anime: false
+        step_anime: true
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
-      x: 15
-      y: 18
-    18: !ruby/object:RPG::Event 
-      id: 18
-      name: Zombie \e[9]
-      numero: 18
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 051-Undead01
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 4
-        walk_anime: true
-      x: 9
-      y: 12
+      x: 21
+      y: 20
     19: !ruby/object:RPG::Event 
       id: 19
       name: EV019
@@ -5164,7 +4240,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id010 !ruby/object:RPG::MoveCommand 
+            - &id001 !ruby/object:RPG::MoveCommand 
               code: 33
               parameters: []
 
@@ -5178,7 +4254,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id010
+          - *id001
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 0
@@ -5233,10 +4309,10 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - !ruby/object:Tone 
-            blue: 0.0
-            gray: 0.0
-            green: 0.0
-            red: 0.0
+            blue: -40.0
+            gray: 20.0
+            green: -68.0
+            red: -68.0
           - 20
         - !ruby/object:RPG::EventCommand 
           code: 106
@@ -5425,7 +4501,7 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id011 !ruby/object:RPG::MoveCommand 
+            - &id002 !ruby/object:RPG::MoveCommand 
               code: 30
               parameters: 
               - 4
@@ -5439,7 +4515,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id011
+          - *id002
         - !ruby/object:RPG::EventCommand 
           code: 250
           indent: 0
@@ -5903,7 +4979,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id012 !ruby/object:RPG::MoveCommand 
+            - &id003 !ruby/object:RPG::MoveCommand 
               code: 34
               parameters: []
 
@@ -5917,7 +4993,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id012
+          - *id003
         - !ruby/object:RPG::EventCommand 
           code: 224
           indent: 0
@@ -6000,7 +5076,7 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id013 !ruby/object:RPG::MoveCommand 
+            - &id004 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Garnet - Cum
@@ -6017,7 +5093,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id013
+          - *id004
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 0
@@ -6120,10 +5196,10 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - !ruby/object:Tone 
-            blue: 0.0
-            gray: 0.0
-            green: 0.0
-            red: 0.0
+            blue: -40.0
+            gray: 20.0
+            green: -68.0
+            red: -68.0
           - 20
         - !ruby/object:RPG::EventCommand 
           code: 106
@@ -6764,56 +5840,6 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 23
       y: 5
-    21: !ruby/object:RPG::Event 
-      id: 21
-      name: Zombie \e[9]
-      numero: 21
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 052-Undead02
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 4
-        walk_anime: true
-      x: 3
-      y: 6
   height: 30
   numero: 127
   tileset_id: 27
