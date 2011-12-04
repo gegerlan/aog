@@ -3286,10 +3286,10 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - !ruby/object:Tone 
-            blue: 0.0
-            gray: 0.0
-            green: 0.0
-            red: 0.0
+            blue: -40.0
+            gray: 40.0
+            green: -68.0
+            red: -68.0
           - 20
         - !ruby/object:RPG::EventCommand 
           code: 121
@@ -3494,6 +3494,21 @@ root: !ruby/object:RPG::Map
           parameters: 
           - \nm[] *Garnet has obtained Muramasa (broken)*
         - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 0
+          parameters: 
+          - !ruby/object:Tone 
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 0
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
           code: 208
           indent: 0
           parameters: 
@@ -3507,7 +3522,7 @@ root: !ruby/object:RPG::Map
           - 12
           - 4
           - 0
-          - 0
+          - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4646,10 +4661,10 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - !ruby/object:Tone 
-            blue: 0.0
+            blue: -40.0
             gray: 221.0
-            green: 0.0
-            red: 0.0
+            green: -68.0
+            red: -68.0
           - 20
         - !ruby/object:RPG::EventCommand 
           code: 224
@@ -4678,10 +4693,10 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - !ruby/object:Tone 
-            blue: 0.0
-            gray: 0.0
-            green: 0.0
-            red: 0.0
+            blue: -40.0
+            gray: 51.0
+            green: -68.0
+            red: -68.0
           - 20
         - !ruby/object:RPG::EventCommand 
           code: 209
@@ -5045,6 +5060,155 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 9
       y: 14
+    9: !ruby/object:RPG::Event 
+      id: 9
+      name: Autorun
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 00 (124)
+          direction: 2
+          opacity: 255
+          pattern: 3
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 204
+          indent: 0
+          parameters: 
+          - 1
+          - 005-Sandstorm01
+          - 0
+          - 32
+          - 0
+          - 200
+          - 0
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 116
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 4
+        walk_anime: true
+      x: 0
+      y: 0
     10: !ruby/object:RPG::Event 
       id: 10
       name: EV010
