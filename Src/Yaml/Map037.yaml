@@ -2885,15 +2885,81 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 355
+          code: 209
           indent: 0
           parameters: 
-          - "# Open world door"
+          - 2
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id038 !ruby/object:RPG::MoveCommand 
+              code: 36
+              parameters: []
+
+            - &id039 !ruby/object:RPG::MoveCommand 
+              code: 17
+              parameters: []
+
+            - &id040 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 2
+            - &id041 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - &id042 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 2
+            - &id043 !ruby/object:RPG::MoveCommand 
+              code: 19
+              parameters: []
+
+            - &id044 !ruby/object:RPG::MoveCommand 
+              code: 35
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
         - !ruby/object:RPG::EventCommand 
-          code: 655
+          code: 509
           indent: 0
           parameters: 
-          - switch_on(2, "A")
+          - *id038
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id039
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id040
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id041
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id042
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id043
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id044
         - !ruby/object:RPG::EventCommand 
           code: 111
           indent: 0
@@ -2902,15 +2968,10 @@ root: !ruby/object:RPG::Map
           - 32
           - 0
         - !ruby/object:RPG::EventCommand 
-          code: 355
+          code: 119
           indent: 1
           parameters: 
-          - "# Unblock world door"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 1
-          parameters: 
-          - switch_off(1, "B")
+          - Open Deeper door
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -2929,15 +2990,10 @@ root: !ruby/object:RPG::Map
           - 110
           - 0
         - !ruby/object:RPG::EventCommand 
-          code: 355
+          code: 119
           indent: 1
           parameters: 
-          - "# Unblock world door"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 1
-          parameters: 
-          - switch_off(1, "B")
+          - Open Deeper door
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -2948,6 +3004,122 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
 
+        - !ruby/object:RPG::EventCommand 
+          code: 119
+          indent: 0
+          parameters: 
+          - Set Switches
+        - !ruby/object:RPG::EventCommand 
+          code: 118
+          indent: 0
+          parameters: 
+          - Open Deeper door
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 0
+          parameters: 
+          - 1
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id045 !ruby/object:RPG::MoveCommand 
+              code: 36
+              parameters: []
+
+            - &id046 !ruby/object:RPG::MoveCommand 
+              code: 17
+              parameters: []
+
+            - &id047 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 2
+            - &id048 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - &id049 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 2
+            - &id050 !ruby/object:RPG::MoveCommand 
+              code: 19
+              parameters: []
+
+            - &id051 !ruby/object:RPG::MoveCommand 
+              code: 35
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id045
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id046
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id047
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id048
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id049
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id050
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id051
+        - !ruby/object:RPG::EventCommand 
+          code: 118
+          indent: 0
+          parameters: 
+          - Set Switches
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 0
+          parameters: 
+          - 5
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "# Open world door"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - switch_on(2, "A")
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "# Unblock world door"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - switch_off(1, "B")
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
