@@ -10510,7 +10510,7 @@ root: !ruby/object:RPG::Map
       y: 30
     42: !ruby/object:RPG::Event 
       id: 42
-      name: Tunnel Entrance
+      name: Proxy - Event 43
       numero: 42
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -10536,64 +10536,10 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 101
+          code: 355
           indent: 0
           parameters: 
-          - It looks like the entrance to a sewer tunnel.
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 0
-          parameters: 
-          - A horrible smell waifts in from the depths.
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 0
-          parameters: 
-          - Do you enter?
-        - !ruby/object:RPG::EventCommand 
-          code: 102
-          indent: 0
-          parameters: 
-          - - "Yes"
-            - "No"
-          - 2
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 0
-          parameters: 
-          - 0
-          - "Yes"
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 1
-          parameters: 
-          - 0
-          - 146
-          - 53
-          - 111
-          - 8
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 402
-          indent: 0
-          parameters: 
-          - 1
-          - "No"
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 404
-          indent: 0
-          parameters: []
-
+          - $game_map.events[43].start
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -10673,6 +10619,21 @@ root: !ruby/object:RPG::Map
           - 0
           - "Yes"
         - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 1
+          parameters: 
+          - !ruby/object:Tone 
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 1
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
           code: 201
           indent: 1
           parameters: 
@@ -10681,7 +10642,7 @@ root: !ruby/object:RPG::Map
           - 53
           - 111
           - 8
-          - 0
+          - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -10728,7 +10689,7 @@ root: !ruby/object:RPG::Map
       y: 13
     44: !ruby/object:RPG::Event 
       id: 44
-      name: Tunnel Entrance
+      name: Proxy - Event 43
       numero: 44
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -10833,11 +10794,59 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[43].start
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
       x: 22
       y: 14
     45: !ruby/object:RPG::Event 
       id: 45
-      name: Tunnel Entrance
+      name: "Proxy - Event 43 "
       numero: 45
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -10921,6 +10930,54 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[43].start
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
