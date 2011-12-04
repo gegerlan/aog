@@ -1279,7 +1279,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
@@ -1327,7 +1327,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
@@ -1337,16 +1337,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 48
-          - 9
-          - 23
-          - 0
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
@@ -1372,7 +1362,7 @@ root: !ruby/object:RPG::Map
         numero: 1
         step_anime: false
         through: false
-        trigger: 1
+        trigger: 3
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -1397,16 +1387,6 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 48
-          - 9
-          - 23
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
           parameters: 
@@ -1431,13 +1411,13 @@ root: !ruby/object:RPG::Map
         numero: 1
         step_anime: false
         through: false
-        trigger: 1
+        trigger: 3
         walk_anime: true
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
-          self_switch_valid: true
+          self_switch_valid: false
           switch1_id: 32
           switch1_valid: false
           switch2_id: 1
@@ -1445,7 +1425,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
@@ -1456,6 +1436,21 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 0
+          parameters: 
+          - !ruby/object:Tone 
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 0
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
           code: 201
           indent: 0
           parameters: 
@@ -1464,7 +1459,7 @@ root: !ruby/object:RPG::Map
           - 9
           - 23
           - 0
-          - 0
+          - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -1607,6 +1602,21 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 0
+          parameters: 
+          - !ruby/object:Tone 
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 0
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
           code: 201
           indent: 0
           parameters: 
@@ -1615,7 +1625,7 @@ root: !ruby/object:RPG::Map
           - 5
           - 13
           - 0
-          - 0
+          - 1
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3371,7 +3381,7 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 3
+        trigger: 4
         walk_anime: true
       x: 2
       y: 0
