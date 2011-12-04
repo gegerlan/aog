@@ -1755,7 +1755,8 @@ class Map_Battler < Game_Character
     # find new coordinates
     nx, ny = @x + x_plus * pix, @y + y_plus * pix
     # if can't jump to new location
-    if jump_passable?(nx, ny, d) && $game_map.jump_passable?(@x, @y, nx, ny)
+    #if jump_passable?(nx, ny, d) && 
+    if $game_map.jump_passable?(@x, @y, nx, ny)
       # set new coordinates
       @x, @y = nx, ny
     else
