@@ -1912,8 +1912,7 @@ root: !ruby/object:RPG::Map
   events: 
     1: !ruby/object:RPG::Event 
       id: 1
-      name: Goblin \e[3] \ai[01000001]
-      numero: 1
+      name: EV001
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -1927,22 +1926,135 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 068-Goblin02
-          direction: 4
+          character_name: 174-Chest01
+          direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 0
+          parameters: 
+          - 0
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id001 !ruby/object:RPG::MoveCommand 
+              code: 36
+              parameters: []
+
+            - &id002 !ruby/object:RPG::MoveCommand 
+              code: 16
+              parameters: []
+
+            - &id003 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id004 !ruby/object:RPG::MoveCommand 
+              code: 17
+              parameters: []
+
+            - &id005 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id006 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - &id007 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id008 !ruby/object:RPG::MoveCommand 
+              code: 19
+              parameters: []
+
+            - &id009 !ruby/object:RPG::MoveCommand 
+              code: 35
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id001
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id002
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id003
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id004
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id005
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id006
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id007
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id008
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id009
+        - !ruby/object:RPG::EventCommand 
+          code: 126
+          indent: 0
+          parameters: 
+          - 1
+          - 0
+          - 0
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[]\face[]\c[6]Garnet\c[0] found two health potions.
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 0
+          parameters: 
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
           parameters: []
 
-        move_frequency: 4
+        move_frequency: 3
         move_route: !ruby/object:RPG::MoveRoute 
           list: 
           - !ruby/object:RPG::MoveCommand 
@@ -1951,25 +2063,17 @@ root: !ruby/object:RPG::Map
 
           repeat: true
           skippable: false
-        move_speed: 4
-        move_type: 2
-        numero: 0
+        move_speed: 3
+        move_type: 0
         step_anime: false
         through: false
-        trigger: 4
-        walk_anime: true
-      x: 13
-      y: 6
-    2: !ruby/object:RPG::Event 
-      id: 2
-      name: Goblin \e[3] \ai[01000001]
-      numero: 2
-      pages: 
+        trigger: 0
+        walk_anime: false
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
-          self_switch_valid: false
+          self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
           switch2_id: 1
@@ -1977,12 +2081,12 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 068-Goblin02
-          direction: 4
+          character_name: 174-Chest01
+          direction: 8
           opacity: 255
           pattern: 0
           tile_id: 0
@@ -1992,7 +2096,7 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
 
-        move_frequency: 4
+        move_frequency: 3
         move_route: !ruby/object:RPG::MoveRoute 
           list: 
           - !ruby/object:RPG::MoveCommand 
@@ -2001,15 +2105,14 @@ root: !ruby/object:RPG::Map
 
           repeat: true
           skippable: false
-        move_speed: 4
-        move_type: 2
-        numero: 0
+        move_speed: 3
+        move_type: 0
         step_anime: false
         through: false
-        trigger: 4
+        trigger: 0
         walk_anime: true
-      x: 30
-      y: 5
+      x: 31
+      y: 14
     3: !ruby/object:RPG::Event 
       id: 3
       name: Goblin \e[3] \ai[01000001]
@@ -2058,58 +2161,8 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 4
         walk_anime: true
-      x: 21
+      x: 24
       y: 4
-    4: !ruby/object:RPG::Event 
-      id: 4
-      name: Goblin \e[3] \ai[01000001]
-      numero: 4
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 068-Goblin02
-          direction: 4
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 4
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 4
-        move_type: 2
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 4
-        walk_anime: true
-      x: 16
-      y: 14
     5: !ruby/object:RPG::Event 
       id: 5
       name: EV005
