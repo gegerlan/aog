@@ -7,7 +7,7 @@ end
 
 class Game_Actor < Game_Battler  
   # Accessor
-  attr_reader :perversion
+  attr_accessor :perversion
   
   alias pre_attribute_initialize initialize
   def initialize(actor_id)
