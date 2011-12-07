@@ -12956,28 +12956,34 @@ root:
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
-    code: 355
+    code: 111
     indent: 1
+    parameters: 
+    - 12
+    - $game_player.battler.armor3_id != 0
+  - !ruby/object:RPG::EventCommand 
+    code: 355
+    indent: 2
     parameters: 
     - a = $game_party.actors[0]
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - mhp = a.armors[2].max_hp
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - d = (mhp / 5) - a.armors[2].pdef
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - a.damage_armor3(d)
   - !ruby/object:RPG::EventCommand 
     code: 250
-    indent: 1
+    indent: 2
     parameters: 
     - !ruby/object:RPG::AudioFile 
       name: 062-Swing01
@@ -12985,67 +12991,67 @@ root:
       volume: 80
   - !ruby/object:RPG::EventCommand 
     code: 115
-    indent: 1
+    indent: 2
     parameters: []
 
   - !ruby/object:RPG::EventCommand 
     code: 355
-    indent: 1
+    indent: 2
     parameters: 
     - "# Put the pdef in variable 40"
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - aid = $game_party.actors[0].armor3_id
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - $gv = $game_variables
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - da = $data_armors[aid]
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - "$gv[40] = da == nil ? 0 : da.pdef"
   - !ruby/object:RPG::EventCommand 
     code: 355
-    indent: 1
+    indent: 2
     parameters: 
     - "# Put the str of enemy in variable 41"
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - e = $game_map.events[@event_id]
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - eid = e.battler.id
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - da = $data_enemies[eid]
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - $gv = $game_variables
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 1
+    indent: 2
     parameters: 
     - "$gv[41] = da==nil ? 0 : da.str"
   - !ruby/object:RPG::EventCommand 
     code: 122
-    indent: 1
+    indent: 2
     parameters: 
     - 41
     - 41
@@ -13055,7 +13061,7 @@ root:
     - 50
   - !ruby/object:RPG::EventCommand 
     code: 111
-    indent: 1
+    indent: 2
     parameters: 
     - 1
     - 41
@@ -13064,32 +13070,42 @@ root:
     - 3
   - !ruby/object:RPG::EventCommand 
     code: 355
-    indent: 2
+    indent: 3
     parameters: 
     - a = $game_party.actors[0]
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 2
+    indent: 3
     parameters: 
     - mhp = a.armors[2].max_hp
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 2
+    indent: 3
     parameters: 
     - d = (mhp / 5) - a.armors[2].pdef
   - !ruby/object:RPG::EventCommand 
     code: 655
-    indent: 2
+    indent: 3
     parameters: 
     - a.damage_armor3(d)
   - !ruby/object:RPG::EventCommand 
     code: 250
-    indent: 2
+    indent: 3
     parameters: 
     - !ruby/object:RPG::AudioFile 
       name: ""
       pitch: 100
       volume: 80
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 3
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 412
+    indent: 2
+    parameters: []
+
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 2
