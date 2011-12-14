@@ -67,14 +67,26 @@ class Sprite_Character < RPG::Sprite
           self.oy = 32
         # If tile ID value is invalid
         else
-          char_bitmap = RPG::Cache.character(@character.character_name,
-            @character.character_hue)
-          bitmap["base"] = char_bitmap
+          
+          begin
+            char_bitmap = RPG::Cache.character(@character.character_name,
+              @character.character_hue)
+            @old_character_name = @character.character_name
+            @old_character_hue = @character.character_hue
+          rescue
+            if @old_character_name != nil
+              char_bitmap = RPG::Cache.character(@old_character_name,
+                @old_character_hue)
+            else
+              char_bitmap = Bitmap.new(32,32)
+            end
+          end
           @cw = char_bitmap.width / 4
           @ch = char_bitmap.height / 4
           self.bitmap = Bitmap.new(char_bitmap.width, char_bitmap.height)
           self.ox = @cw / 2
           self.oy = @ch
+          bitmap["base"] = char_bitmap
         end
         
         

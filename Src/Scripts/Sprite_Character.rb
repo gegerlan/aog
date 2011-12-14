@@ -29,21 +29,36 @@ class Sprite_Character < RPG::Sprite
     if @tile_id != @character.tile_id or
        @character_name != @character.character_name or
        @character_hue != @character.character_hue
-      # Remember tile ID, file name, and hue
-      @tile_id = @character.tile_id
-      @character_name = @character.character_name
-      @character_hue = @character.character_hue
+       
+      @tile_id = @character.tile_id if @tile_id == nil
+      @character_name = @character.character_name if @character_name == nil
+      @character_hue = @character.character_hue if @character_hue == nil
+      
       # If tile ID value is valid
-      if @tile_id >= 384
-        self.bitmap = RPG::Cache.tile($game_map.tileset_name,
-          @tile_id, @character.character_hue)
+      if @character.tile_id >= 384
+        begin
+          self.bitmap = RPG::Cache.tile($game_map.tileset_name,
+            @character.tile_id, @character.character_hue)
+          @tile_id = @character.tile_id
+          @character_hue = @character.character_hue
+        rescue
+          self.bitmap = RPG::Cache.tile($game_map.tileset_name,
+            @tile_id, @character_hue)
+        end
         self.src_rect.set(0, 0, 32, 32)
         self.ox = 16
         self.oy = 32
       # If tile ID value is invalid
       else
-        self.bitmap = RPG::Cache.character(@character.character_name,
-          @character.character_hue)
+        begin
+          self.bitmap = RPG::Cache.character(@character.character_name,
+            @character.character_hue)
+          @character_name = @character.character_name
+          @character_hue = @character.character_hue
+        rescue
+          self.bitmap = RPG::Cache.character(@character_name ,
+            @character_hue)
+        end
         @cw = bitmap.width / 4
         @ch = bitmap.height / 4
         self.ox = @cw / 2

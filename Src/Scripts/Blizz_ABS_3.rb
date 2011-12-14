@@ -4594,7 +4594,7 @@ class Sprite_Character
     # call original method
     upd_player_blizzabs_later
     # if changed and valid bitmap and valid character
-    if change && self.bitmap != nil && @character != nil && @tile_id < 384
+    if change && self.bitmap != nil && @character != nil && @character.tile_id < 384
       # if graphic is an icon
       if @icon
         # use whole image

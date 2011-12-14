@@ -141,7 +141,7 @@ module BlizzABS
     
     # 2.7. # Sprite Control Configuration
     A_ACTION_SPRITES = true
-    A_WEAPON_SPRITES = false
+    A_WEAPON_SPRITES = true
     A_DEFEND_SPRITES = false
     A_SKILL_SPRITES = false
     A_ITEM_SPRITES = false
@@ -150,10 +150,10 @@ module BlizzABS
     A_CHARGE_WEAPON_SPRITES = false
     A_CHARGE_SKILL_SPRITES = false
     A_CHARGE_ITEM_SPRITES = false
-    E_ACTION_SPRITES = false
+    E_ACTION_SPRITES = true
     E_SKILL_SPRITES = false
     E_IDLE_SPRITES = false
-    E_CHARGE_SPRITES = true
+    E_CHARGE_SPRITES = false
     E_CHARGE_SKILL_SPRITES = false
     RUNNING_SPRITES = true
     SNEAKING_SPRITES = true
