@@ -4774,7 +4774,13 @@ class Sprite_CharacterWeapon < RPG::Sprite
     # get the sprite file name
     weapon_sprite = @character.character_name_org + @character.weapon_sprite
     # load bitmap
-    self.bitmap = RPG::Cache.character(weapon_sprite, 0)
+    begin
+      self.bitmap = RPG::Cache.character(weapon_sprite, 0)
+    rescue
+      if self.bitmap == nil
+        self.bitmap = Bitmap.new(1,1)
+      end
+    end
     # get dimesions
     @cw = bitmap.width / @character.pattern_size
     @ch = bitmap.height / 4
