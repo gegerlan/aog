@@ -1200,6 +1200,77 @@ root: !ruby/object:RPG::Map
           - 399
           - 0
         - !ruby/object:RPG::EventCommand 
+          code: 250
+          indent: 1
+          parameters: 
+          - !ruby/object:RPG::AudioFile 
+            name: 016-Jump02
+            pitch: 80
+            volume: 80
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 1
+          parameters: 
+          - 0
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id001 !ruby/object:RPG::MoveCommand 
+              code: 17
+              parameters: []
+
+            - &id002 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id003 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - &id004 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id005 !ruby/object:RPG::MoveCommand 
+              code: 19
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id001
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id002
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id003
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id004
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id005
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 1
+          parameters: 
+          - 10
+        - !ruby/object:RPG::EventCommand 
           code: 201
           indent: 1
           parameters: 
@@ -1537,6 +1608,77 @@ root: !ruby/object:RPG::Map
           indent: 1
           parameters: 
           - But maybe one little peek...
+        - !ruby/object:RPG::EventCommand 
+          code: 250
+          indent: 1
+          parameters: 
+          - !ruby/object:RPG::AudioFile 
+            name: 016-Jump02
+            pitch: 80
+            volume: 80
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 1
+          parameters: 
+          - 0
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id006 !ruby/object:RPG::MoveCommand 
+              code: 17
+              parameters: []
+
+            - &id007 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id008 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - &id009 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id010 !ruby/object:RPG::MoveCommand 
+              code: 19
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id006
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id007
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id008
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id009
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id010
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 1
+          parameters: 
+          - 10
         - !ruby/object:RPG::EventCommand 
           code: 201
           indent: 1
