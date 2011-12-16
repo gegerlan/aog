@@ -56,8 +56,14 @@ class Sprite_Character < RPG::Sprite
           @character_name = @character.character_name
           @character_hue = @character.character_hue
         rescue
-          self.bitmap = RPG::Cache.character(@character_name ,
-            @character_hue)
+          if self.bitmap != nil
+            self.bitmap = RPG::Cache.character(@character_name,
+              @character_hue)
+            @character.character_name = @character_name
+            @character.character_hue = @character_hue
+          else
+            self.bitmap = Bitmap.new(1,1)
+          end
         end
         @cw = bitmap.width / 4
         @ch = bitmap.height / 4

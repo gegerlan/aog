@@ -27,7 +27,7 @@ class Sprite_Character < RPG::Sprite
   alias sprite_update update
   def update
     super
-    if @character != $game_player
+    if @character != $game_player.battler && @character != $game_player
       sprite_update
     else
       player_update
@@ -77,6 +77,8 @@ class Sprite_Character < RPG::Sprite
             if @old_character_name != nil
               char_bitmap = RPG::Cache.character(@old_character_name,
                 @old_character_hue)
+              @character.character_name = @old_character_name
+              @character.character_name = @old_character_hue
             else
               char_bitmap = Bitmap.new(32,32)
             end
