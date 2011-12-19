@@ -7509,6 +7509,58 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
           self_switch_valid: false
+          switch1_id: 24
+          switch1_valid: true
+          switch2_id: 113
+          switch2_valid: true
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: true
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 022-Hunter03
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Madison]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - I wonder what \N[1] is doing, right now.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
           switch1_id: 113
           switch1_valid: true
           switch2_id: 176
