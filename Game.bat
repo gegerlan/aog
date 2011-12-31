@@ -48,6 +48,6 @@ REM #=======================
 
 CD %PREV_DIR%
 
-Game.exe
+start Game.exe
 
 CD ..
