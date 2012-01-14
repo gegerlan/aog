@@ -2439,6 +2439,337 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 9
       y: 11
+    6: !ruby/object:RPG::Event 
+      id: 6
+      name: Bookshelf
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Garnet]\face[]Alice's collection of books.
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 0
+          parameters: 
+          - -1
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id002 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id002
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Garnet]\face[]Billy was never the reading kind.
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 0
+          parameters: 
+          - -1
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id003 !ruby/object:RPG::MoveCommand 
+              code: 19
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id003
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 140
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 0
+          parameters: 
+          - 12
+          - switch_on?("Billy", "B")
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 1
+          parameters: 
+          - If the player has retrieved the book.
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Garnet]\face[]Alice's collection of books.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 1
+          parameters: 
+          - 12
+          - switch_on?("Billy", "A")
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 2
+          parameters: 
+          - Player knows that Billy has a library book.
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]Hm, I can't find the book here.
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 2
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]Maybe Billy is carrying it with him.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 2
+          parameters: 
+          - Player doesn't know that Billy has a library book.
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]Didn't I let Nicky borrow one of my books?
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 2
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]I can't find it here.
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 2
+          parameters: 
+          - -1
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id004 !ruby/object:RPG::MoveCommand 
+              code: 16
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 2
+          parameters: 
+          - *id004
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - "\\nm[Garnet]I should go down and ask if he got it on "
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - him.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 3
+      y: 4
+    7: !ruby/object:RPG::Event 
+      id: 7
+      name: Proxy - Event 6
+      pages: 
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $game_map.events[6].start
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 4
+      y: 4
   height: 15
   numero: 68
   tileset_id: 57
