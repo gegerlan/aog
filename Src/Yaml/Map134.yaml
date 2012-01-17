@@ -9769,6 +9769,11 @@ root: !ruby/object:RPG::Map
           parameters: 
           - may use the equipment here.
         - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 0
+          parameters: 
+          - 132
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
           parameters: 
@@ -9782,7 +9787,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters: 
-          - \nm[Gai]
+          - \nm[Gai]\face[]
         - !ruby/object:RPG::EventCommand 
           code: 401
           indent: 0
@@ -9793,6 +9798,434 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: 
           - technique till you take the initiation.
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Gai]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - Will you take the initiation?
+        - !ruby/object:RPG::EventCommand 
+          code: 102
+          indent: 0
+          parameters: 
+          - - Yes, I will
+            - Sorry, too busy
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 0
+          - Yes, I will
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Gai]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - YOSH! START THE SPECIAL ADULT
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - SPARRING MATCH!!
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 1
+          parameters: 
+          - 1
+          - 49
+          - 0
+          - 75
+          - 4
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 134
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - Wait, what!?
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 1
+          parameters: 
+          - 6
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id026 !ruby/object:RPG::MoveCommand 
+              code: 14
+              parameters: 
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id026
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Ray]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - YOSH!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 1
+          parameters: 
+          - 1
+          - 49
+          - 0
+          - 75
+          - 4
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 135
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - Hey, don't get carried away!
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 1
+          parameters: 
+          - 7
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id027 !ruby/object:RPG::MoveCommand 
+              code: 14
+              parameters: 
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 1
+          parameters: 
+          - *id027
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Stone]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - YOSH!!! OUR FLAME OF YOUTH SHALL
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - EXPLODE WITHIN HER!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 1
+          parameters: 
+          - 1
+          - 49
+          - 0
+          - 75
+          - 4
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 141
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - ...
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 135
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - OK, that's it, I'm leaving!
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 2
+          parameters: 
+          - -1
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id028 !ruby/object:RPG::MoveCommand 
+              code: 1
+              parameters: []
+
+            - &id029 !ruby/object:RPG::MoveCommand 
+              code: 1
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 2
+          parameters: 
+          - *id028
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 2
+          parameters: 
+          - *id029
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 2
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 2
+          parameters: 
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - Maybe this was a mistake.
+        - !ruby/object:RPG::EventCommand 
+          code: 201
+          indent: 2
+          parameters: 
+          - 0
+          - 134
+          - 10
+          - 6
+          - 6
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 121
+          indent: 2
+          parameters: 
+          - 200
+          - 200
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 208
+          indent: 2
+          parameters: 
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 2
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 2
+          parameters: 
+          - B
+          - 1
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 1
+          - Sorry, too busy
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Gai]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - Later, then.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 1
+          parameters: 
+          - 131
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 1
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 1
+          parameters: 
+          - Yes... Much later...
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 404
+          indent: 0
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: guizuo
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - \nm[Gai]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - Young Garnet. You came back!
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 0
@@ -9832,43 +10265,429 @@ root: !ruby/object:RPG::Map
           parameters: 
           - SPARRING MATCH!!
         - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 1
+          parameters: 
+          - 1
+          - 49
+          - 0
+          - 75
+          - 4
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 2
+          parameters: 
+          - 2
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 3
+          parameters: 
+          - If Garnet turned down the initiation before.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 3
+          parameters: 
+          - 134
+        - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
-          parameters: 
-          - \nm[Ray]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - YOSH!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
-          parameters: 
-          - \nm[Stone]
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - YOSH!!! OUR FLAME OF YOUTH SHALL
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - EXPLODE WITHIN HER!!!
-        - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
+          indent: 3
           parameters: 
           - \nm[Garnet]
         - !ruby/object:RPG::EventCommand 
           code: 401
+          indent: 3
+          parameters: 
+          - Nope!
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 3
+          parameters: 
+          - -1
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id030 !ruby/object:RPG::MoveCommand 
+              code: 1
+              parameters: []
+
+            - &id031 !ruby/object:RPG::MoveCommand 
+              code: 1
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id030
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id031
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 3
+          parameters: 
+          - 6
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id032 !ruby/object:RPG::MoveCommand 
+              code: 14
+              parameters: 
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id032
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 3
+          parameters: 
+          - \nm[Ray]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - YOSH!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 3
+          parameters: 
+          - 7
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id033 !ruby/object:RPG::MoveCommand 
+              code: 17
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id033
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 3
+          parameters: 
+          - \nm[Stone]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - Shut up, Ray!
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 3
+          parameters: 
+          - 7
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id034 !ruby/object:RPG::MoveCommand 
+              code: 16
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id034
+        - !ruby/object:RPG::EventCommand 
+          code: 115
+          indent: 3
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 3
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 3
+          parameters: 
+          - If it's the first time Garnet agreed on the initation.
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 3
+          parameters: 
+          - 134
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 3
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - Wait, what!?
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 3
+          parameters: 
+          - 6
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id035 !ruby/object:RPG::MoveCommand 
+              code: 14
+              parameters: 
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id035
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 3
+          parameters: 
+          - \nm[Ray]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - YOSH!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 3
+          parameters: 
+          - 1
+          - 49
+          - 0
+          - 75
+          - 4
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 4
+          parameters: 
+          - 135
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 4
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 4
+          parameters: 
+          - Hey, don't get carried away!
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 4
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 3
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 3
+          parameters: 
+          - 7
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id036 !ruby/object:RPG::MoveCommand 
+              code: 14
+              parameters: 
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id036
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 3
+          parameters: 
+          - \nm[Stone]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - YOSH!!! OUR FLAME OF YOUTH SHALL
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - EXPLODE WITHIN HER!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 3
+          parameters: 
+          - 141
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 3
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - ...
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 3
+          parameters: 
+          - 135
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 3
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - OK, that's it, I'm leaving!
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 3
+          parameters: 
+          - -1
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id037 !ruby/object:RPG::MoveCommand 
+              code: 1
+              parameters: []
+
+            - &id038 !ruby/object:RPG::MoveCommand 
+              code: 1
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: true
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id037
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 3
+          parameters: 
+          - *id038
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 3
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 3
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
           indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 2
+          parameters: 
+          - If perversion is greater then set value
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Ray]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - YOSH!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Stone]\face[]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - YOSH!!! OUR FLAME OF YOUTH SHALL
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - EXPLODE WITHIN HER!!!
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
           parameters: 
           - Maybe this was a mistake.
         - !ruby/object:RPG::EventCommand 
           code: 201
-          indent: 1
+          indent: 2
           parameters: 
           - 0
           - 134
@@ -9878,16 +10697,43 @@ root: !ruby/object:RPG::Map
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 121
-          indent: 1
+          indent: 2
           parameters: 
           - 200
           - 200
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 208
-          indent: 1
+          indent: 2
           parameters: 
           - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 2
+          parameters: 
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 2
+          parameters: 
+          - B
+          - 1
+        - !ruby/object:RPG::EventCommand 
+          code: 115
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
@@ -9910,6 +10756,43 @@ root: !ruby/object:RPG::Map
           parameters: 
           - Later, then.
         - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 1
+          parameters: 
+          - 2
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 134
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 411
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 117
+          indent: 2
+          parameters: 
+          - 131
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 2
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 1
           parameters: 
@@ -9919,6 +10802,12 @@ root: !ruby/object:RPG::Map
           indent: 1
           parameters: 
           - Yes... Much later...
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
+          parameters: 
+          - A
+          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
