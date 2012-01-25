@@ -2756,41 +2756,50 @@ root: !ruby/object:RPG::Map
           parameters: 
           - Really? Maybe we can have little fun just us girls?
         - !ruby/object:RPG::EventCommand 
-          code: 102
+          code: 111
           indent: 1
+          parameters: 
+          - 1
+          - 49
+          - 0
+          - 40
+          - 1
+        - !ruby/object:RPG::EventCommand 
+          code: 102
+          indent: 2
           parameters: 
           - - Yes, I want that.
             - No thank you.
           - 2
         - !ruby/object:RPG::EventCommand 
           code: 402
-          indent: 1
+          indent: 2
           parameters: 
           - 0
           - Yes, I want that.
         - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 2
+          indent: 3
           parameters: 
           - \nm[Garnet]
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 2
+          indent: 3
           parameters: 
           - Hm sounds interesting. So how we start? :)
         - !ruby/object:RPG::EventCommand 
           code: 106
-          indent: 2
+          indent: 3
           parameters: 
           - 20
         - !ruby/object:RPG::EventCommand 
           code: 208
-          indent: 2
+          indent: 3
           parameters: 
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 201
-          indent: 2
+          indent: 3
           parameters: 
           - 0
           - 62
@@ -2800,21 +2809,76 @@ root: !ruby/object:RPG::Map
           - 1
         - !ruby/object:RPG::EventCommand 
           code: 123
-          indent: 2
+          indent: 3
           parameters: 
           - A
           - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 3
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 2
+          parameters: 
+          - 1
+          - No thank you.
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 3
+          parameters: 
+          - \face[]\nm[Girl]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 3
+          parameters: 
+          - Well then, see you.
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 3
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 404
+          indent: 2
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 402
+          code: 411
           indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
           parameters: 
-          - 1
-          - No thank you.
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - What... no!
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - I... I didn't mean it like that!
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 2
+          parameters: 
+          - \face[]\nm[Girl]
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 2
+          parameters: 
+          - Oh...
         - !ruby/object:RPG::EventCommand 
           code: 101
           indent: 2
@@ -2831,7 +2895,7 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 404
+          code: 412
           indent: 1
           parameters: []
 
