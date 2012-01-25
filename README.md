@@ -16,19 +16,12 @@ Archived (zip/tar) : https://github.com/gegerlan/aog/archives/master
 
 Git : git://github.com/gegerlan/aog.git
 
-SVN : http://svn.github.com/gegerlan/aog.git
+SVN : https://github.com/gegerlan/aog/trunk
 
 
 ## Installation
 
 1. Run Game.bat to convert the source files to the required format.
-
-### SVN users
-
-Download and replace the following files: 
-[Game\Graphics\Characters\00 (33).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2833%29.png) 
-[Game\Graphics\Characters\00 (81).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2881%29.png) 
-[Game\Graphics\Characters\00 (84).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2884%29.png) 
 
 ## Getting Started
 
@@ -74,7 +67,7 @@ Leave and return to the equipment view.
 
 ### The Dali baths are empty
 
-This probably means that you've retrieved an SVN version of the game. Download and replace the following files: 
+This probably means that you've used the old SVN respository address for the game. Download and replace the following files: 
 [Game\Graphics\Characters\00 (33).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2833%29.png) 
 [Game\Graphics\Characters\00 (81).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2881%29.png) 
 [Game\Graphics\Characters\00 (84).png](https://github.com/gegerlan/aog/raw/master/Game/Graphics/Characters/00%20%2884%29.png) 
