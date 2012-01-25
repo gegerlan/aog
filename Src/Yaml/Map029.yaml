@@ -1974,6 +1974,21 @@ root: !ruby/object:RPG::Map
           - 379
           - 0
         - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 3
+          parameters: 
+          - !ruby/object:Tone 
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 3
+          parameters: 
+          - 30
+        - !ruby/object:RPG::EventCommand 
           code: 319
           indent: 3
           parameters: 
@@ -2001,43 +2016,6 @@ root: !ruby/object:RPG::Map
           - 1
           - 3
           - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 223
-          indent: 3
-          parameters: 
-          - !ruby/object:Tone 
-            blue: -255.0
-            gray: 0.0
-            green: -255.0
-            red: -255.0
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 3
-          parameters: 
-          - 30
-        - !ruby/object:RPG::EventCommand 
-          code: 209
-          indent: 3
-          parameters: 
-          - -1
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id001 !ruby/object:RPG::MoveCommand 
-              code: 42
-              parameters: 
-              - 0
-            - !ruby/object:RPG::MoveCommand 
-              code: 0
-              parameters: []
-
-            repeat: false
-            skippable: false
-        - !ruby/object:RPG::EventCommand 
-          code: 509
-          indent: 3
-          parameters: 
-          - *id001
         - !ruby/object:RPG::EventCommand 
           code: 208
           indent: 3
@@ -2152,13 +2130,6 @@ root: !ruby/object:RPG::Map
           - 0
           - 1
         - !ruby/object:RPG::EventCommand 
-          code: 121
-          indent: 3
-          parameters: 
-          - 379
-          - 379
-          - 0
-        - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 3
           parameters: 
@@ -2173,6 +2144,13 @@ root: !ruby/object:RPG::Map
           indent: 3
           parameters: 
           - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 121
+          indent: 3
+          parameters: 
+          - 379
+          - 379
+          - 0
         - !ruby/object:RPG::EventCommand 
           code: 223
           indent: 3
@@ -2410,53 +2388,46 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition 
           self_switch_ch: A
           self_switch_valid: false
-          switch1_id: 1
+          switch1_id: 379
           switch1_valid: false
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: 170-Door01
           direction: 2
           opacity: 255
-          pattern: 0
+          pattern: 2
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 0
-          - 376
-          - 1
-        - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
+          indent: 0
           parameters: 
           - "*The old woman catches your attention.*"
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 0
           parameters: 
           - Stranger, you must ask permission before
         - !ruby/object:RPG::EventCommand 
           code: 401
-          indent: 1
+          indent: 0
           parameters: 
           - entering another person's house.
         - !ruby/object:RPG::EventCommand 
           code: 209
-          indent: 1
+          indent: 0
           parameters: 
           - -1
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id002 !ruby/object:RPG::MoveCommand 
+            - &id001 !ruby/object:RPG::MoveCommand 
               code: 1
               parameters: []
 
@@ -2468,42 +2439,163 @@ root: !ruby/object:RPG::Map
             skippable: false
         - !ruby/object:RPG::EventCommand 
           code: 509
-          indent: 1
+          indent: 0
           parameters: 
-          - *id002
-        - !ruby/object:RPG::EventCommand 
-          code: 115
-          indent: 1
-          parameters: []
-
+          - *id001
         - !ruby/object:RPG::EventCommand 
           code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
           indent: 0
           parameters: []
 
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 1
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: false
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 376
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: true
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 170-Door01
+          direction: 2
+          opacity: 255
+          pattern: 2
+          tile_id: 0
+        list: 
         - !ruby/object:RPG::EventCommand 
-          code: 108
-          indent: 1
+          code: 209
+          indent: 0
           parameters: 
-          - This is where the transition to the basement starts.
+          - 0
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id002 !ruby/object:RPG::MoveCommand 
+              code: 36
+              parameters: []
+
+            - &id003 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 5
+            - &id004 !ruby/object:RPG::MoveCommand 
+              code: 16
+              parameters: []
+
+            - &id005 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id006 !ruby/object:RPG::MoveCommand 
+              code: 17
+              parameters: []
+
+            - &id007 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 2
+            - &id008 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - &id009 !ruby/object:RPG::MoveCommand 
+              code: 15
+              parameters: 
+              - 1
+            - &id010 !ruby/object:RPG::MoveCommand 
+              code: 19
+              parameters: []
+
+            - &id011 !ruby/object:RPG::MoveCommand 
+              code: 35
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
         - !ruby/object:RPG::EventCommand 
-          code: 101
-          indent: 1
+          code: 509
+          indent: 0
           parameters: 
-          - "*Garnet passes through the house and"
+          - *id002
         - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
+          code: 509
+          indent: 0
           parameters: 
-          - enters the basement.*
+          - *id003
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id004
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id005
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id006
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id007
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id008
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id009
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id010
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id011
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 0
+          parameters: 
+          - 10
         - !ruby/object:RPG::EventCommand 
           code: 223
-          indent: 1
+          indent: 0
           parameters: 
           - !ruby/object:Tone 
             blue: -255.0
@@ -2512,13 +2604,34 @@ root: !ruby/object:RPG::Map
             red: -255.0
           - 20
         - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 0
+          parameters: 
+          - This is where the transition to the basement starts.
+        - !ruby/object:RPG::EventCommand 
+          code: 101
+          indent: 0
+          parameters: 
+          - "*Garnet passes through the house and"
+        - !ruby/object:RPG::EventCommand 
+          code: 401
+          indent: 0
+          parameters: 
+          - enters the basement.*
+        - !ruby/object:RPG::EventCommand 
           code: 106
-          indent: 1
+          indent: 0
           parameters: 
           - 20
         - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 0
+          parameters: 
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand 
           code: 201
-          indent: 1
+          indent: 0
           parameters: 
           - 0
           - 30
@@ -2528,14 +2641,77 @@ root: !ruby/object:RPG::Map
           - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 412
           indent: 0
           parameters: []
 
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: false
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 376
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: true
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: ""
+          direction: 2
+          opacity: 255
+          pattern: 3
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 223
+          indent: 0
+          parameters: 
+          - !ruby/object:Tone 
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 0
+          parameters: 
+          - This is where the transition to the basement starts.
+        - !ruby/object:RPG::EventCommand 
+          code: 106
+          indent: 0
+          parameters: 
+          - 20
+        - !ruby/object:RPG::EventCommand 
+          code: 201
+          indent: 0
+          parameters: 
+          - 0
+          - 30
+          - 1
+          - 4
+          - 2
+          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -2556,7 +2732,7 @@ root: !ruby/object:RPG::Map
         step_anime: false
         through: false
         trigger: 2
-        walk_anime: true
+        walk_anime: false
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
@@ -2569,7 +2745,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
@@ -2599,7 +2775,7 @@ root: !ruby/object:RPG::Map
         step_anime: false
         through: false
         trigger: 0
-        walk_anime: true
+        walk_anime: false
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
@@ -2612,7 +2788,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
@@ -2647,7 +2823,7 @@ root: !ruby/object:RPG::Map
         step_anime: false
         through: false
         trigger: 0
-        walk_anime: true
+        walk_anime: false
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
@@ -2660,7 +2836,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
@@ -2690,7 +2866,7 @@ root: !ruby/object:RPG::Map
         step_anime: false
         through: false
         trigger: 0
-        walk_anime: true
+        walk_anime: false
       x: 9
       y: 13
     3: !ruby/object:RPG::Event 
@@ -2847,18 +3023,18 @@ root: !ruby/object:RPG::Map
           - 6
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id003 !ruby/object:RPG::MoveCommand 
+            - &id012 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - Kai_raped
               - 0
               - 2
               - 0
-            - &id004 !ruby/object:RPG::MoveCommand 
+            - &id013 !ruby/object:RPG::MoveCommand 
               code: 31
               parameters: []
 
-            - &id005 !ruby/object:RPG::MoveCommand 
+            - &id014 !ruby/object:RPG::MoveCommand 
               code: 29
               parameters: 
               - 3
@@ -2872,17 +3048,17 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id003
+          - *id012
         - !ruby/object:RPG::EventCommand 
           code: 509
           indent: 0
           parameters: 
-          - *id004
+          - *id013
         - !ruby/object:RPG::EventCommand 
           code: 509
           indent: 0
           parameters: 
-          - *id005
+          - *id014
         - !ruby/object:RPG::EventCommand 
           code: 241
           indent: 0
@@ -3020,7 +3196,7 @@ root: !ruby/object:RPG::Map
           - 6
           - !ruby/object:RPG::MoveRoute 
             list: 
-            - &id006 !ruby/object:RPG::MoveCommand 
+            - &id015 !ruby/object:RPG::MoveCommand 
               code: 41
               parameters: 
               - ""
@@ -3037,7 +3213,7 @@ root: !ruby/object:RPG::Map
           code: 509
           indent: 0
           parameters: 
-          - *id006
+          - *id015
         - !ruby/object:RPG::EventCommand 
           code: 208
           indent: 0
