@@ -1546,6 +1546,16 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - p = "Gameover - Dog"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - Scene_Gameover.set_picture(p)
+        - !ruby/object:RPG::EventCommand 
           code: 353
           indent: 0
           parameters: []
