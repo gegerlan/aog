@@ -30,7 +30,7 @@ class Interpreter
     if state.is_a?(Array)
       return !state.include?(true)
     end
-    return !!state
+    return !state
   end
 =begin
   switch_on?(<event_id>, <switch_name>, <map_id = $game_map.map_id>)
