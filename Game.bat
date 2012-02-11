@@ -23,6 +23,9 @@ SET SCRIPTS_DIR="../Utility"
 REM # The path to the project dir relative to the utility scripts
 SET PROJECT_DIR=".."
 
+REM # The path to the data dir relative to the Game folder
+SET DATA_DIR="Data"
+
 REM #===============================
 REM #  Change to Scripts Directory
 REM #===============================
@@ -42,12 +45,34 @@ REM #======================
 
 rxdatav.exe data_importer %PROJECT_DIR%
 
-REM #=======================
-REM #  Start Game
-REM #=======================
+REM #======================
+REM #  Return to Game directory
+REM #======================
 
 CD %PREV_DIR%
 
-start Game.exe
+REM #=======================
+REM #  See if import was successful
+REM #=======================
 
+CD %DATA_DIR%
+
+FOR /f %%n in ('DIR /b ^| FIND ".rxdata" /c') DO SET RXDATA_FILES=%%n
+
+CD %PREV_DIR%
+
+IF %RXDATA_FILES% GTR 1 (
+  REM #=======================
+  REM #  Start Game
+  REM #=======================
+  START Game.exe
+) ELSE (
+  ECHO.
+  ECHO Unable to find imported files required.
+  ECHO.
+  ECHO Make sure that rxdatav.exe has not been blocked
+  ECHO by antivirus or a similar application.
+  ECHO.
+  PAUSE
+)
 CD ..
