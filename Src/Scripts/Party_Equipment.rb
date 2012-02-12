@@ -12,8 +12,11 @@ class Condition_Item
   def method_missing(sym, *argz)
     return data.__send__ sym, *argz if data != nil
   end
+  def hp=(hp)
+    @hp = [[hp, 0].max, max_hp].min
+  end
   def max_hp
-    return 1
+    return [data.pdef, 1].max * [data.price, 1].max
   end
   def data
     return nil
@@ -54,12 +57,6 @@ class Weapon_Condition < Condition_Item
     super(weapon_id)
     @data = $data_weapons[@id]
   end
-  def hp=(hp)
-    @hp = [[hp, 0].max, max_hp].min
-  end
-  def max_hp
-    return [data.pdef, 1].max * [data.price, 1].max
-  end
   def data
     return $data_weapons[@id]
   end
@@ -67,12 +64,6 @@ end
 class Armor_Condition < Condition_Item
   def initialize(armor_id)
     super(armor_id)
-  end
-  def hp=(hp)
-    @hp = [[hp, 0].max, max_hp].min
-  end
-  def max_hp
-    return [data.pdef, 1].max * [data.price, 1].max
   end
   def data
     return $data_armors[@id]
