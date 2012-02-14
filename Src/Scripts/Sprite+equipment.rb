@@ -77,6 +77,15 @@ class Sprite_Character < RPG::Sprite
             if @old_character_name != nil
               char_bitmap = RPG::Cache.character(@old_character_name,
                 @old_character_hue)
+
+              # Set the characters sprite to the original one
+              if @character.is_a?(Game_Character)
+                @character.set_graphics(@character_name, 
+                  @character_hue, 
+                  @character.direction, 
+                  @character.pattern)
+              end
+
             else
               char_bitmap = Bitmap.new(1,1)
             end
