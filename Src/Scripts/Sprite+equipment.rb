@@ -77,13 +77,6 @@ class Sprite_Character < RPG::Sprite
             if @old_character_name != nil
               char_bitmap = RPG::Cache.character(@old_character_name,
                 @old_character_hue)
-              if @character.is_a?(Game_Character)
-                move_route = RPG::MoveRoute.new
-                move_route.repeat = false
-                change_graphics = RPG::MoveCommand.new(41, [@character_name, @character_hue, @character.direction, @character.pattern])
-                move_route.list.insert(-2, change_graphics)
-                @character.force_move_route(move_route)
-              end
             else
               char_bitmap = Bitmap.new(1,1)
             end
