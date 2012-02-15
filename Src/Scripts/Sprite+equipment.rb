@@ -98,30 +98,39 @@ class Sprite_Character < RPG::Sprite
           bitmap["base"] = char_bitmap
         end
         
-        
-        if @character_armor2 != 0
-          bitmap["accessory"] =
-            RPG::Cache.character("Garnet Slave Collar.png", 
+        if actor.class_id != 10 # If the player isn't a dog
+          if @character_armor2 != 0
+            bitmap["accessory"] =
+              RPG::Cache.character("Garnet Slave Collar.png", 
+                  @character.character_hue)
+          end
+          if @character_weapon != 0
+            bitmap["weapon"] =
+              RPG::Cache.character("Garnet Sword.png", 
                 @character.character_hue)
-        end
-        if @character_weapon != 0
-          bitmap["weapon"] =
-            RPG::Cache.character("Garnet Sword.png", 
-              @character.character_hue)
-        end
-        if @character_armor1 != 0
-          bitmap["shield"] =
-            RPG::Cache.character("Garnet Shield.png", 
-                @character.character_hue)
-        end
+          end
+          if @character_armor1 != 0
+            bitmap["shield"] =
+              RPG::Cache.character("Garnet Shield.png", 
+                  @character.character_hue)
+          end
         
-        draw_order = 
-        {
-          2 => ["base", "accessory", "shield", "weapon"], #facing down
-          4 => ["weapon", "base", "accessory", "shield"], #facing left (shield in left hand)
-          6 => ["shield", "base", "accessory", "weapon"], #facing right (weapon in right hand)
-          8 => ["weapon", "accessory", "base", "shield"]  #facing up
-        }
+          draw_order = 
+          {
+            2 => ["base", "accessory", "shield", "weapon"], #facing down
+            4 => ["weapon", "base", "accessory", "shield"], #facing left (shield in left hand)
+            6 => ["shield", "base", "accessory", "weapon"], #facing right (weapon in right hand)
+            8 => ["weapon", "accessory", "base", "shield"]  #facing up
+          }
+        else
+          draw_order = 
+          {
+            2 => ["base"], #facing down
+            4 => ["base"], #facing left (shield in left hand)
+            6 => ["base"], #facing right (weapon in right hand)
+            8 => ["base"]  #facing up
+          }
+        end
 =begin
         draw_order[@character.direction].each do |layer_name|
           layer = bitmap[layer_name]
