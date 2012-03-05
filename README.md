@@ -53,9 +53,13 @@ Run the Game.bat file. A small command window should appear and go through the s
 
 Run the Editor.bat file.
 
-### Game flashes a black window when I try to start the game
+### Game.bat won't work, it just disappears and nothing happens.
 
-There is probably an issue with the location of the game. Try moving it to another folder (e.g. directly to C).
+If you get an error message that "'rxdatav.exe' is not recognized as an internal or external command...", a required file is missing or corrupted.
+
+First make sure that the file rxdatav.exe can be found in the Utility folder.
+
+If the required file can be found in the Utility folder, there may be an issue with another application interfering with the executable. Try replacing the Utility folder with the old rxdatav (utility_old.zip), that can be downloaded from the projects [Downloads section](https://github.com/gegerlan/aog/downloads).
 
 ### FATAL ERROR: Failed to open executable
 
