@@ -2620,11 +2620,6 @@ root: !ruby/object:RPG::Map
           - 1
           - "No"
         - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 3
-          parameters: 
-          - "@janela.dispose"
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 3
           parameters: []
@@ -2650,11 +2645,6 @@ root: !ruby/object:RPG::Map
           parameters: 
           - "You don't have money. "
         - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 2
-          parameters: 
-          - "@janela.dispose"
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 2
           parameters: []
@@ -2676,11 +2666,6 @@ root: !ruby/object:RPG::Map
           - 1
           - "No"
         - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 1
-          parameters: 
-          - "@janela.dispose"
-        - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 1
           parameters: []
@@ -2690,6 +2675,16 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
 
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "@janela.dispose"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "@janela = nil"
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
