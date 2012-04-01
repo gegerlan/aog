@@ -216,9 +216,9 @@ module BlizzABS
   end
 end
 class Game_Actor
-  # Is the actor shy? Only if no body armor, nudity is not OK and perversion is less than 5
+  # Is the actor shy? Only if no body armor, nudity is not OK and perversion is less than 250
   def is_shy?
-     return is_nude? && $game_switches[89] == FALSE && $game_variables[49] < 5
+     return is_nude? && $game_switches[89] == FALSE && $game_variables[49] < 250
   end
   def is_nude?
     return armor3_id == 0
