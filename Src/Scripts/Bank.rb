@@ -735,7 +735,7 @@ class Scene_Bank
         else
           $game_system.se_play($data_system.decision_se)
           $game_party.gain_gold(current_bond.mature_value)
-          $game_bank.saving_bonds.delete_at[@own_bond_command.index]
+          $game_bank.saving_bonds.delete_at(@own_bond_command.index)
           refresh_windows
           @phase = 0
         end
