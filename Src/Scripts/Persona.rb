@@ -218,13 +218,20 @@ end
 class Game_Actor
   # Is the actor shy? Only if no body armor, nudity is not OK and perversion is less than 250
   def is_shy?
-     return is_nude? && $game_switches[89] == FALSE && $game_variables[49] < 250
+    return is_nude? && $game_map.nudity_ok? == false && sum_perversion < 250
   end
+  # Is the actor nude?
   def is_nude?
     return armor3_id == 0
   end
   # Is the actor cuffed? Only if the weapon worn is 33.
   def is_cuffed?
     return weapon_id == 33
+  end
+end
+class Game_Map
+  # If the map considers nudity AOK (e.g. public baths)
+  def nudity_ok?
+    return $game_switches[89]
   end
 end
