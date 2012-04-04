@@ -1647,6 +1647,49 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 1
         walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: B
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: true
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 173-Door04
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: false
       x: 11
       y: 2
     3: !ruby/object:RPG::Event 
@@ -1950,12 +1993,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters: 
-          - "# Close south exit"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[13].start
+          - switch_on(2, "B")
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 0
@@ -2761,55 +2799,15 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 355
+          code: 108
           indent: 0
           parameters: 
-          - $game_map.rename_event(
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - "  4, # Goblin"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - "  \"Goblin \\\\e[3] \\\\ai[01000001]\")"
+          - Make the goblin an enemy.
         - !ruby/object:RPG::EventCommand 
           code: 355
           indent: 0
           parameters: 
-          - $BlizzABS.enemy_force_action(
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - "  4, # Goblin"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - "  ACTORS,"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - "  0, # Player"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - "  ATTACK,"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - "  nil"
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - )
+          - switch_on(4, "C")
         - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
@@ -2893,8 +2891,51 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
+          self_switch_ch: C
           self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 068-Goblin02
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 4
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 4
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: C
+          self_switch_valid: true
           switch1_id: 1
           switch1_valid: false
           switch2_id: 1
@@ -2916,12 +2957,101 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters: 
-          - "# Open south exit"
+          - $game_map.rename_event(
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 0
           parameters: 
-          - $game_map.events[13].start
+          - "  @event_id, # Goblin"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "  \"Goblin \\\\e[3] \\\\ai[01000001]\")"
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - $BlizzABS.enemy_force_action(
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "  @event_id, # Goblin"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "  ACTORS,"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "  0, # Player"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "  ATTACK,"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - "  nil"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - )
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 0
+          parameters: 
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 0
+          parameters: []
+
+        move_frequency: 4
+        move_route: !ruby/object:RPG::MoveRoute 
+          list: 
+          - !ruby/object:RPG::MoveCommand 
+            code: 0
+            parameters: []
+
+          repeat: true
+          skippable: false
+        move_speed: 4
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 3
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page 
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition 
+          self_switch_ch: B
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic 
+          blend_type: 0
+          character_hue: 0
+          character_name: 068-Goblin02
+          direction: 4
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list: 
         - !ruby/object:RPG::EventCommand 
           code: 250
           indent: 0
@@ -3137,6 +3267,16 @@ root: !ruby/object:RPG::Map
           parameters: 
           - *id051
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 0
+          parameters: 
+          - "# Open deeper door"
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 0
+          parameters: 
+          - switch_off(1, "B")
+        - !ruby/object:RPG::EventCommand 
           code: 118
           indent: 0
           parameters: 
@@ -3155,17 +3295,12 @@ root: !ruby/object:RPG::Map
           code: 655
           indent: 0
           parameters: 
-          - switch_on(2, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - "# Unblock world door"
+          - switch_off(2, "B")
         - !ruby/object:RPG::EventCommand 
           code: 655
           indent: 0
           parameters: 
-          - switch_off(1, "B")
+          - switch_on(2, "A")
         - !ruby/object:RPG::EventCommand 
           code: 123
           indent: 0
@@ -4313,7 +4448,7 @@ root: !ruby/object:RPG::Map
       y: 14
     13: !ruby/object:RPG::Event 
       id: 13
-      name: South door
+      name: Autorun
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -4332,11 +4467,21 @@ root: !ruby/object:RPG::Map
           blend_type: 0
           character_hue: 0
           character_name: 00 (124)
-          direction: 4
+          direction: 2
           opacity: 255
-          pattern: 0
+          pattern: 3
           tile_id: 0
         list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 108
+          indent: 0
+          parameters: 
+          - "See if the goblin is in attack mode (i.e. from leaving "
+        - !ruby/object:RPG::EventCommand 
+          code: 408
+          indent: 0
+          parameters: 
+          - the map and returning)
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4380,203 +4525,36 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
+          code: 111
+          indent: 0
+          parameters: 
+          - 12
+          - switch_on?(4, "B")
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - switch_on(4, "C")
+        - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 1
+          parameters: 
+          - switch_off(4, "B")
+        - !ruby/object:RPG::EventCommand 
           code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 412
           indent: 0
           parameters: []
 
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
+        - !ruby/object:RPG::EventCommand 
+          code: 116
+          indent: 0
+          parameters: []
 
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - switch_on(12, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on( 7, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on( 6, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - ""
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on(10, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on( 8, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on( 9, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - $game_map.events[12].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[7].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[6].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - ""
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[10].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[8].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[9].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 3
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - switch_on(12, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on( 7, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on( 6, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - ""
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on(10, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on( 8, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_on( 9, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - $game_map.events[12].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[7].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[6].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - ""
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[10].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[8].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[9].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4595,205 +4573,7 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 20
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - switch_off(12, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off( 7, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off( 6, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - ""
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off(10, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off( 8, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off( 9, "B")
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - $game_map.events[12].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[7].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[6].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - ""
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[10].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[8].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[9].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 3
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - switch_off(12, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off( 7, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off( 6, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - ""
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off(10, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off( 8, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - switch_off( 9, "A")
-        - !ruby/object:RPG::EventCommand 
-          code: 355
-          indent: 0
-          parameters: 
-          - $game_map.events[12].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[7].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[6].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - ""
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[10].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[8].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 655
-          indent: 0
-          parameters: 
-          - $game_map.events[9].refresh
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
+        trigger: 3
         walk_anime: true
       x: 3
       y: 0
