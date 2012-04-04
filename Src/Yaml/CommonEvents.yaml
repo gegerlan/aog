@@ -18701,9 +18701,58 @@ root:
     indent: 0
     parameters: 
     - 11
-    - 14
+    - 12
+  - !ruby/object:RPG::EventCommand 
+    code: 101
+    indent: 1
+    parameters: 
+    - \nm[]\face[]
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - "Skip scene and go directly to the "
+  - !ruby/object:RPG::EventCommand 
+    code: 401
+    indent: 1
+    parameters: 
+    - game over screen?
+  - !ruby/object:RPG::EventCommand 
+    code: 102
+    indent: 1
+    parameters: 
+    - - Skip
+      - Cancel
+    - 2
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 0
+    - Skip
   - !ruby/object:RPG::EventCommand 
     code: 353
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 402
+    indent: 1
+    parameters: 
+    - 1
+    - Cancel
+  - !ruby/object:RPG::EventCommand 
+    code: 0
+    indent: 2
+    parameters: []
+
+  - !ruby/object:RPG::EventCommand 
+    code: 404
     indent: 1
     parameters: []
 
@@ -18717,11 +18766,6 @@ root:
     indent: 0
     parameters: []
 
-  - !ruby/object:RPG::EventCommand 
-    code: 106
-    indent: 0
-    parameters: 
-    - 5
   - !ruby/object:RPG::EventCommand 
     code: 0
     indent: 0
