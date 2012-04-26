@@ -11322,7 +11322,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 2159
+    - 0
     - 0
     - 0
     - 0
@@ -26643,11 +26643,50 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 123
+          code: 101
           indent: 0
+          parameters: 
+          - Steal from the poor children ?
+        - !ruby/object:RPG::EventCommand 
+          code: 102
+          indent: 0
+          parameters: 
+          - - "Yes"
+            - "No"
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 0
+          - "Yes"
+        - !ruby/object:RPG::EventCommand 
+          code: 123
+          indent: 1
           parameters: 
           - A
           - 0
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 1
+          - "No"
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 404
+          indent: 0
+          parameters: []
+
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
