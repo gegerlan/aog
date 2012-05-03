@@ -8463,32 +8463,23 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 111
-          indent: 0
-          parameters: 
-          - 4
-          - 5
-          - 0
-        - !ruby/object:RPG::EventCommand 
           code: 101
-          indent: 1
-          parameters: 
-          - "*\\c[6]Garnet\\c[0] scratches at the door but can't "
-        - !ruby/object:RPG::EventCommand 
-          code: 401
-          indent: 1
-          parameters: 
-          - open it*
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 1
-          parameters: []
-
-        - !ruby/object:RPG::EventCommand 
-          code: 411
           indent: 0
-          parameters: []
-
+          parameters: 
+          - Sneak into Mrs. Potts' house ?
+        - !ruby/object:RPG::EventCommand 
+          code: 102
+          indent: 0
+          parameters: 
+          - - "Yes"
+            - "No"
+          - 2
+        - !ruby/object:RPG::EventCommand 
+          code: 402
+          indent: 0
+          parameters: 
+          - 0
+          - "Yes"
         - !ruby/object:RPG::EventCommand 
           code: 106
           indent: 1
@@ -8514,7 +8505,18 @@ root: !ruby/object:RPG::Map
           parameters: []
 
         - !ruby/object:RPG::EventCommand 
-          code: 412
+          code: 402
+          indent: 0
+          parameters: 
+          - 1
+          - "No"
+        - !ruby/object:RPG::EventCommand 
+          code: 0
+          indent: 1
+          parameters: []
+
+        - !ruby/object:RPG::EventCommand 
+          code: 404
           indent: 0
           parameters: []
 
@@ -14808,8 +14810,8 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 3
         walk_anime: true
-      x: 54
-      y: 14
+      x: 50
+      y: 13
     22: !ruby/object:RPG::Event 
       id: 22
       name: EV022
