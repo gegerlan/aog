@@ -1,6 +1,7 @@
 class Window_Perversion < Window_Selectable
-  def initialize
-    super(0, 0, 640, 480)
+  def initialize(actor)
+    super(0, 64, 640, 416)
+    @actor = actor
     refresh
     self.active = false
     self.index = -1
@@ -20,7 +21,7 @@ class Window_Perversion < Window_Selectable
       self.contents = nil
     end
     @data = []
-    $game_party.actors[0].perversion.each do |k, deltas|
+    @actor.perversion.each do |k, deltas|
       unique_id, event_id, map_id = k
       deltas.each do |delta|
         @data << [unique_id, event_id, map_id, delta]
@@ -81,11 +82,18 @@ class Window_Perversion < Window_Selectable
     end
     return @@event_name_cache[map_id][event_id]
   end
-  
-  #--------------------------------------------------------------------------
-  # * Help Text Update
-  #--------------------------------------------------------------------------
-  def update_help
-    @help_window.set_text(self.item == nil ? "" : "")
+end
+class Window_SkillStatus < Window_Base
+  def initialize(actor)
+    super(0, 0, 640, 64)
+    self.contents = Bitmap.new(width - 32, height - 32)
+    @actor = actor
+    refresh
+  end
+  def refresh
+    self.contents.clear
+    draw_actor_name(@actor, 4, 0)
+    self.contents.draw_text(130, 0, 120, 32, @actor.sum_perversion.to_s, 2)
+    draw_actor_sp(@actor, 260, 0)
   end
 end

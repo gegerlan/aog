@@ -17,9 +17,13 @@ class Scene_Perversion
   # * Main Processing
   #--------------------------------------------------------------------------
   def main
+    
+    actor = $game_party.actors[0]
+    
     # Make windows
-    @main_window = Window_Perversion.new
-
+    @main_window = Window_Perversion.new(actor)
+    @status_window = Window_SkillStatus.new(actor)
+    
     refresh
     # Execute transition
     Graphics.transition
@@ -44,6 +48,7 @@ class Scene_Perversion
     Graphics.freeze
     # Dispose of windows
     @main_window.dispose
+    @status_window.dispose
   end
   #--------------------------------------------------------------------------
   # * Refresh
@@ -63,6 +68,7 @@ class Scene_Perversion
   def update
     # Update windows
     @main_window.update
+    @status_window.update
     refresh
 
     # If right window is active: call update_right
