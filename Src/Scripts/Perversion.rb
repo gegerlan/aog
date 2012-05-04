@@ -23,9 +23,9 @@ class Game_Actor < Game_Battler
     map_id = location, default the map the player is on.
 =end
   def add_perversion(value, unique_id, event_id, map_id)
-    e_perversion = (@perversion[[unique_id, event_id, map_id]] ||= [])
+    container = (@perversion[[unique_id, event_id, map_id]] ||= [])
     if event_id != 0 && unique_id != 0
-      mod_value = value.abs / (e_perversion.length + 1)
+      mod_value = value.abs / (container.length + 1)
     else
       mod_value = value.abs
     end
@@ -33,7 +33,7 @@ class Game_Actor < Game_Battler
     if value < 0
       mod_value = -mod_value
     end
-    e_perversion << mod_value
+    container << mod_value
     if $game_player.battler == self
       $game_variables[Perversion::VARIABLE] += mod_value
     end
