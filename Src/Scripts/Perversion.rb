@@ -40,7 +40,7 @@ class Game_Actor < Game_Battler
   end
   def sum_perversion
     sum = 0
-    @perversion.each do |v|
+    @perversion.each do |k, v|
       sum += v.sum
     end
     return sum
