@@ -259,7 +259,7 @@ class Window_Base < Window
     # Draw SP
     self.contents.font.color = actor.sp == 0 ? knockout_color :
       actor.sp <= actor.maxsp / 4 ? crisis_color : normal_color
-    self.contents.draw_text(sp_x, y, 48, 32, actor.sp.to_s, 2)
+    self.contents.draw_text(sp_x, y, 48, 32, actor.sp.to_i.to_s, 2)
     # Draw MaxSP
     if flag
       self.contents.font.color = normal_color
