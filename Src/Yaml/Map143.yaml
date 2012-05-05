@@ -305,6 +305,9 @@ root: !ruby/object:RPG::Map
     - 1977
     - 1977
     - 1977
+    - 1978
+    - 3259
+    - 1976
     - 1977
     - 1977
     - 1977
@@ -314,12 +317,9 @@ root: !ruby/object:RPG::Map
     - 1977
     - 1977
     - 1977
-    - 1977
-    - 1977
-    - 1977
-    - 1977
-    - 1977
-    - 1977
+    - 1978
+    - 3259
+    - 1976
     - 1977
     - 1977
     - 1977
@@ -345,6 +345,9 @@ root: !ruby/object:RPG::Map
     - 1985
     - 1985
     - 1985
+    - 1986
+    - 3259
+    - 1984
     - 1985
     - 1985
     - 1985
@@ -354,12 +357,9 @@ root: !ruby/object:RPG::Map
     - 1985
     - 1985
     - 1985
-    - 1985
-    - 1985
-    - 1985
-    - 1985
-    - 1985
-    - 1985
+    - 1986
+    - 3259
+    - 1984
     - 1985
     - 1985
     - 1985
@@ -386,7 +386,7 @@ root: !ruby/object:RPG::Map
     - 3249
     - 3249
     - 3249
-    - 3249
+    - 3259
     - 3249
     - 3249
     - 3249
@@ -545,9 +545,9 @@ root: !ruby/object:RPG::Map
     - 1976
     - 1977
     - 1977
-    - 1977
-    - 1977
-    - 1977
+    - 1978
+    - 3259
+    - 1976
     - 1977
     - 1977
     - 1977
@@ -557,9 +557,9 @@ root: !ruby/object:RPG::Map
     - 1977
     - 1977
     - 1977
-    - 1977
-    - 1977
-    - 1977
+    - 1978
+    - 3259
+    - 1976
     - 1977
     - 1977
     - 1978
@@ -585,9 +585,9 @@ root: !ruby/object:RPG::Map
     - 1984
     - 1985
     - 1985
-    - 1985
-    - 1985
-    - 1985
+    - 1986
+    - 3259
+    - 1984
     - 1985
     - 1985
     - 1985
@@ -597,9 +597,9 @@ root: !ruby/object:RPG::Map
     - 1985
     - 1985
     - 1985
-    - 1985
-    - 1985
-    - 1985
+    - 1986
+    - 3259
+    - 1984
     - 1985
     - 1985
     - 1986
@@ -626,7 +626,7 @@ root: !ruby/object:RPG::Map
     - 3249
     - 3249
     - 3249
-    - 3249
+    - 3259
     - 3249
     - 3249
     - 3249
@@ -655,9 +655,9 @@ root: !ruby/object:RPG::Map
     - 246
     - 273
     - 273
-    - 285
-    - 3259
-    - 283
+    - 273
+    - 273
+    - 273
     - 273
     - 273
     - 273
@@ -726,9 +726,9 @@ root: !ruby/object:RPG::Map
     - 272
     - 1976
     - 1977
-    - 1977
-    - 1977
-    - 1977
+    - 1978
+    - 3259
+    - 1976
     - 1977
     - 1978
     - 256
@@ -766,9 +766,9 @@ root: !ruby/object:RPG::Map
     - 272
     - 1984
     - 1985
-    - 1985
-    - 1985
-    - 1985
+    - 1986
+    - 3259
+    - 1984
     - 1985
     - 1986
     - 256
@@ -3622,8 +3622,8 @@ root: !ruby/object:RPG::Map
   events: 
     1: !ruby/object:RPG::Event 
       id: 1
-      name: EV001
-      numero: 1
+      name: NPC Blocker
+      numero: 7
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -3641,31 +3641,27 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 170-Door01
+          character_name: ""
           direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 106
+          code: 108
           indent: 0
           parameters: 
-          - 4
+          - Events can't walk over other events by default,
         - !ruby/object:RPG::EventCommand 
-          code: 250
+          code: 408
           indent: 0
           parameters: 
-          - !ruby/object:RPG::AudioFile 
-            name: 024-Door01
-            pitch: 90
-            volume: 80
+          - "we use this fact to make the actors stay in their "
         - !ruby/object:RPG::EventCommand 
-          code: 123
+          code: 408
           indent: 0
           parameters: 
-          - A
-          - 0
+          - rooms, as they walk around randomly.
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3682,201 +3678,16 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 0
         step_anime: false
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 4
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 6
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: C
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 8
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 35
-          - 15
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 3
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      x: 35
-      y: 18
+      x: 14
+      y: 8
     2: !ruby/object:RPG::Event 
       id: 2
-      name: EV002
-      numero: 2
+      name: NPC Blocker
+      numero: 7
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -3894,31 +3705,27 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 170-Door01
+          character_name: ""
           direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 106
+          code: 108
           indent: 0
           parameters: 
-          - 4
+          - Events can't walk over other events by default,
         - !ruby/object:RPG::EventCommand 
-          code: 250
+          code: 408
           indent: 0
           parameters: 
-          - !ruby/object:RPG::AudioFile 
-            name: 024-Door01
-            pitch: 90
-            volume: 80
+          - "we use this fact to make the actors stay in their "
         - !ruby/object:RPG::EventCommand 
-          code: 123
+          code: 408
           indent: 0
           parameters: 
-          - A
-          - 0
+          - rooms, as they walk around randomly.
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -3935,201 +3742,16 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 0
         step_anime: false
         through: false
         trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 4
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 6
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: C
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 8
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 26
-          - 5
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 3
-        step_anime: false
-        through: false
-        trigger: 3
         walk_anime: true
       x: 26
       y: 8
     3: !ruby/object:RPG::Event 
       id: 3
-      name: EV003
-      numero: 3
+      name: NPC Blocker
+      numero: 7
       pages: 
       - !ruby/object:RPG::Event::Page 
         always_on_top: false
@@ -4147,31 +3769,27 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 170-Door01
+          character_name: ""
           direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 106
+          code: 108
           indent: 0
           parameters: 
-          - 4
+          - Events can't walk over other events by default,
         - !ruby/object:RPG::EventCommand 
-          code: 250
+          code: 408
           indent: 0
           parameters: 
-          - !ruby/object:RPG::AudioFile 
-            name: 024-Door01
-            pitch: 90
-            volume: 80
+          - "we use this fact to make the actors stay in their "
         - !ruby/object:RPG::EventCommand 
-          code: 123
+          code: 408
           indent: 0
           parameters: 
-          - A
-          - 0
+          - rooms, as they walk around randomly.
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -4188,700 +3806,9 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 0
         step_anime: false
         through: false
         trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 4
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 6
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: C
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 8
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 14
-          - 5
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 3
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      x: 14
-      y: 8
-    4: !ruby/object:RPG::Event 
-      id: 4
-      name: EV004
-      numero: 4
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 2
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 250
-          indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
-            name: 024-Door01
-            pitch: 90
-            volume: 80
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 4
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 6
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: C
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 8
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 14
-          - 11
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 3
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      x: 14
-      y: 14
-    5: !ruby/object:RPG::Event 
-      id: 5
-      name: EV005
-      numero: 5
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 2
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 250
-          indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
-            name: 024-Door01
-            pitch: 90
-            volume: 80
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 4
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 1
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: B
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 6
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 2
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: C
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: 170-Door01
-          direction: 8
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 106
-          indent: 0
-          parameters: 
-          - 4
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - A
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - B
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 123
-          indent: 0
-          parameters: 
-          - C
-          - 1
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 26
-          - 11
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 3
-        step_anime: false
-        through: false
-        trigger: 3
         walk_anime: true
       x: 26
       y: 14
@@ -5140,7 +4067,7 @@ root: !ruby/object:RPG::Map
       y: 18
     7: !ruby/object:RPG::Event 
       id: 7
-      name: EV007
+      name: NPC Blocker
       numero: 7
       pages: 
       - !ruby/object:RPG::Event::Page 
@@ -5166,15 +4093,20 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list: 
         - !ruby/object:RPG::EventCommand 
-          code: 201
+          code: 108
           indent: 0
           parameters: 
-          - 0
-          - 143
-          - 14
-          - 15
-          - 0
-          - 0
+          - Events can't walk over other events by default,
+        - !ruby/object:RPG::EventCommand 
+          code: 408
+          indent: 0
+          parameters: 
+          - "we use this fact to make the actors stay in their "
+        - !ruby/object:RPG::EventCommand 
+          code: 408
+          indent: 0
+          parameters: 
+          - rooms, as they walk around randomly.
         - !ruby/object:RPG::EventCommand 
           code: 0
           indent: 0
@@ -5191,253 +4123,12 @@ root: !ruby/object:RPG::Map
           skippable: false
         move_speed: 3
         move_type: 0
-        numero: 0
         step_anime: false
         through: false
-        trigger: 1
+        trigger: 0
         walk_anime: true
       x: 14
-      y: 12
-    8: !ruby/object:RPG::Event 
-      id: 8
-      name: EV008
-      numero: 8
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 14
-          - 9
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 1
-        walk_anime: true
-      x: 14
-      y: 6
-    9: !ruby/object:RPG::Event 
-      id: 9
-      name: EV009
-      numero: 9
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 26
-          - 9
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 1
-        walk_anime: true
-      x: 26
-      y: 6
-    10: !ruby/object:RPG::Event 
-      id: 10
-      name: EV010
-      numero: 10
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 26
-          - 15
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 1
-        walk_anime: true
-      x: 26
-      y: 12
-    11: !ruby/object:RPG::Event 
-      id: 11
-      name: EV011
-      numero: 11
-      pages: 
-      - !ruby/object:RPG::Event::Page 
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
-          blend_type: 0
-          character_hue: 0
-          character_name: ""
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
-          code: 201
-          indent: 0
-          parameters: 
-          - 0
-          - 143
-          - 35
-          - 19
-          - 0
-          - 0
-        - !ruby/object:RPG::EventCommand 
-          code: 0
-          indent: 0
-          parameters: []
-
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
-            code: 0
-            parameters: []
-
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        numero: 0
-        step_anime: false
-        through: false
-        trigger: 1
-        walk_anime: true
-      x: 35
-      y: 16
+      y: 14
     12: !ruby/object:RPG::Event 
       id: 12
       name: EV012
