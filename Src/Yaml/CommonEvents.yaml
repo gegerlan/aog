@@ -12969,12 +12969,17 @@ root:
     code: 655
     indent: 1
     parameters: 
-    - $game_variablies[40] = agi
+    - $game_variables[40] = agi
   - !ruby/object:RPG::EventCommand 
     code: 355
     indent: 1
     parameters: 
     - "# Add dice roll for agi var"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - gv = $game_variables
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 1
@@ -13015,6 +13020,11 @@ root:
     indent: 1
     parameters: 
     - "# Add dice roll for str var"
+  - !ruby/object:RPG::EventCommand 
+    code: 655
+    indent: 1
+    parameters: 
+    - gv = $game_variables
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 1
@@ -13063,7 +13073,7 @@ root:
     code: 655
     indent: 2
     parameters: 
-    - ""
+    - mhp = a.armor3.max_hp
   - !ruby/object:RPG::EventCommand 
     code: 655
     indent: 2
