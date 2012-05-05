@@ -26636,7 +26636,7 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 174-Chest01
+          character_name: 177-Chest04
           direction: 2
           opacity: 255
           pattern: 1
@@ -26724,12 +26724,87 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 174-Chest01
-          direction: 8
+          character_name: 177-Chest04
+          direction: 2
           opacity: 255
           pattern: 1
           tile_id: 0
         list: 
+        - !ruby/object:RPG::EventCommand 
+          code: 250
+          indent: 0
+          parameters: 
+          - !ruby/object:RPG::AudioFile 
+            name: 044-Chest01
+            pitch: 120
+            volume: 80
+        - !ruby/object:RPG::EventCommand 
+          code: 209
+          indent: 0
+          parameters: 
+          - 0
+          - !ruby/object:RPG::MoveRoute 
+            list: 
+            - &id021 !ruby/object:RPG::MoveCommand 
+              code: 36
+              parameters: []
+
+            - &id022 !ruby/object:RPG::MoveCommand 
+              code: 16
+              parameters: []
+
+            - &id023 !ruby/object:RPG::MoveCommand 
+              code: 17
+              parameters: []
+
+            - &id024 !ruby/object:RPG::MoveCommand 
+              code: 18
+              parameters: []
+
+            - &id025 !ruby/object:RPG::MoveCommand 
+              code: 19
+              parameters: []
+
+            - &id026 !ruby/object:RPG::MoveCommand 
+              code: 35
+              parameters: []
+
+            - !ruby/object:RPG::MoveCommand 
+              code: 0
+              parameters: []
+
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id021
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id022
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id023
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id024
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id025
+        - !ruby/object:RPG::EventCommand 
+          code: 509
+          indent: 0
+          parameters: 
+          - *id026
         - !ruby/object:RPG::EventCommand 
           code: 125
           indent: 0
@@ -26800,7 +26875,7 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic 
           blend_type: 0
           character_hue: 0
-          character_name: 174-Chest01
+          character_name: 177-Chest04
           direction: 8
           opacity: 255
           pattern: 1
