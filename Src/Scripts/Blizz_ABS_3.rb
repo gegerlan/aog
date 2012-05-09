@@ -5616,7 +5616,7 @@ class Hud < Sprite
     # set current variables
     @sp, @maxsp = actor.sp, actor.maxsp
     # set fill rate
-    rate = (@maxsp > 0 ? @sp.to_f / @maxsp : 0)
+    rate = (@maxsp > 0 ? @sp / @maxsp : 0)
     # draw gradient bar
     self.bitmap.gradient_bar_hud(@sp_x+32, @sp_y+3, 114, rate, 'hud_blue_bar', 2)
     # set font color depending on how many SP left
@@ -5857,7 +5857,7 @@ class Hud < Sprite
   #----------------------------------------------------------------------------
   def test_sp
     # draw new SP if SP or max SP have changed
-    draw_sp if actor.sp != @sp || actor.maxsp != @maxsp
+    draw_sp if actor.sp.to_i != @sp.to_i || actor.maxsp != @maxsp
   end
   #----------------------------------------------------------------------------
   # test_hskill

@@ -190,7 +190,7 @@ class Hud
       self.bitmap.blt(@hp_x, @hp_y, b1, Rect.new(0, 0, w1, b1.height))
       self.bitmap.blt(@hp_x + w1, @hp_y, b2, Rect.new(w1, 0, w2, b2.height))
     end
-    draw_sp
+    #draw_sp
   end
   
   def draw_sp
