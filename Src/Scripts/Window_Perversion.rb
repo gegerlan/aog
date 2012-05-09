@@ -83,7 +83,7 @@ class Window_Perversion < Window_Selectable
     return @@event_name_cache[map_id][event_id]
   end
 end
-class Window_SkillStatus < Window_Base
+class Window_PerversityStatus < Window_Base
   def initialize(actor)
     super(0, 0, 640, 64)
     self.contents = Bitmap.new(width - 32, height - 32)

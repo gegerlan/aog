@@ -22,7 +22,7 @@ class Scene_Perversion
     
     # Make windows
     @main_window = Window_Perversion.new(actor)
-    @status_window = Window_SkillStatus.new(actor)
+    @status_window = Window_PerversityStatus.new(actor)
     
     refresh
     # Execute transition
