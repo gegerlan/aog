@@ -207,7 +207,7 @@ class Window_BankNumber < Window_Base
       # Draws Game Party Gold
       contents.draw_text(4, 48, contents.width, 24, "Current #{$data_system.words.gold}:")
       contents.font.color = normal_color
-      contents.draw_text(-4, 48, contents.width, 24, $game_party.gold.to_s, 2)
+      contents.draw_text(-4, 48, contents.width, 24, $game_party.gold.to_i.to_s, 2)
     else
       # Draws Account Balance
       contents.draw_text(4, 48, contents.width, 24, "Account Balance:")
@@ -269,7 +269,7 @@ class Window_BankBio < Window_Base
     contents.font.color = system_color
     contents.draw_text(4, 32, contents.width, 24, "Current #{$data_system.words.gold}:")
     contents.font.color = normal_color
-    contents.draw_text(-4, 32, contents.width, 24, $game_party.gold.to_s, 2)
+    contents.draw_text(-4, 32, contents.width, 24, $game_party.gold.to_i.to_s, 2)
     # Draws Account Balance
     contents.font.color = system_color
     contents.draw_text(4, 56, contents.width, 24, "Account Balance:")

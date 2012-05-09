@@ -37,8 +37,8 @@ class Window_BattleResult < Window_Base
     self.contents.draw_text(x, 0, 64, 32, "EXP")
     x += cx + 16
     self.contents.font.color = normal_color
-    cx = contents.text_size(@gold.to_s).width
-    self.contents.draw_text(x, 0, cx, 32, @gold.to_s)
+    cx = contents.text_size(@gold.to_i.to_s).width
+    self.contents.draw_text(x, 0, cx, 32, @gold.to_i.to_s)
     x += cx + 4
     self.contents.font.color = system_color
     self.contents.draw_text(x, 0, 128, 32, $data_system.words.gold)
