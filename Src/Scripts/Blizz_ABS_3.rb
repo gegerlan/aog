@@ -5714,7 +5714,7 @@ class Hud < Sprite
     # infinite
     return -1 if sp_cost == 0
     # calculate skills left to use
-    return (@sp / sp_cost)
+    return (@sp / sp_cost).to_i
   end
   #----------------------------------------------------------------------------
   # draw_hitem
