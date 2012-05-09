@@ -4089,6 +4089,16 @@ root: !ruby/object:RPG::Map
           - 0
           - 2
         - !ruby/object:RPG::EventCommand 
+          code: 355
+          indent: 2
+          parameters: 
+          - "$game_variables[40] = "
+        - !ruby/object:RPG::EventCommand 
+          code: 655
+          indent: 2
+          parameters: 
+          - "  $game_variables[40].to_i"
+        - !ruby/object:RPG::EventCommand 
           code: 118
           indent: 2
           parameters: 
