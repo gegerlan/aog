@@ -2586,7 +2586,7 @@ root: !ruby/object:RPG::Map
     - 797
     - 0
     - 0
-    - 725
+    - 0
     - 0
     - 0
     - 0
@@ -2662,7 +2662,7 @@ root: !ruby/object:RPG::Map
     - 789
     - 0
     - 0
-    - 1460
+    - 0
     - 0
     - 1182
     - 1165
@@ -4144,9 +4144,9 @@ root: !ruby/object:RPG::Map
     - 380
     - 0
     - 0
-    - 0
     - 1002
     - 1003
+    - 0
     - 0
     - 696
     - 1640
@@ -4184,9 +4184,9 @@ root: !ruby/object:RPG::Map
     - 986
     - 987
     - 0
-    - 0
     - 1010
     - 1011
+    - 0
     - 697
     - 724
     - 1648
@@ -4260,13 +4260,13 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 799
     - 0
     - 0
+    - 822
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 799
+    - 822
     - 0
     - 822
     - 799
@@ -4945,6 +4945,31 @@ root: !ruby/object:RPG::Map
             red: 0.0
           - 10
         - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 0
+          parameters:
+          - 21
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! 'What is this place? '
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - ! 'I''ve never seen it on any '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - maps before...
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
@@ -5127,48 +5152,15 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
-          code: 111
-          indent: 0
-          parameters:
-          - 6
-          - -1
-          - 4
-        - !ruby/object:RPG::EventCommand
           code: 201
-          indent: 1
+          indent: 0
           parameters:
           - 0
-          - 150
-          - 38
-          - 15
-          - 4
+          - 5
+          - 11
+          - 27
+          - 8
           - 0
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 1
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 411
-          indent: 0
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 201
-          indent: 1
-          parameters:
-          - 0
-          - 150
-          - 1
-          - 15
-          - 6
-          - 0
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 1
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 412
-          indent: 0
-          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -5188,47 +5180,7 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 1
         walk_anime: false
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: ''
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 14
+      x: 13
       y: 24
     5: !ruby/object:RPG::Event
       id: 5
@@ -5371,7 +5323,7 @@ root: !ruby/object:RPG::Map
       y: 30
     7: !ruby/object:RPG::Event
       id: 7
-      name: Step1 Desert
+      name: Tree
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -5393,18 +5345,8 @@ root: !ruby/object:RPG::Map
           direction: 2
           opacity: 255
           pattern: 0
-          tile_id: 0
+          tile_id: 823
         list:
-        - !ruby/object:RPG::EventCommand
-          code: 201
-          indent: 0
-          parameters:
-          - 0
-          - 153
-          - 1
-          - 6
-          - 6
-          - 0
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -5421,10 +5363,10 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 1
+        trigger: 0
         walk_anime: true
-      x: 27
-      y: 31
+      x: 15
+      y: 24
     8: !ruby/object:RPG::Event
       id: 8
       name: EV008
@@ -5459,7 +5401,7 @@ root: !ruby/object:RPG::Map
           - 0
           - 89
           - 19
-          - 13
+          - 11
           - 4
           - 0
         - !ruby/object:RPG::EventCommand
@@ -5471,7 +5413,7 @@ root: !ruby/object:RPG::Map
             list:
             - !ruby/object:RPG::MoveCommand
               code: 12
-              parameters: &18285468 []
+              parameters: &18481092 []
             - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
@@ -5483,7 +5425,7 @@ root: !ruby/object:RPG::Map
           parameters:
           - !ruby/object:RPG::MoveCommand
             code: 12
-            parameters: *18285468
+            parameters: *18481092
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -5831,6 +5773,60 @@ root: !ruby/object:RPG::Map
         walk_anime: false
       x: 9
       y: 25
+    14: !ruby/object:RPG::Event
+      id: 14
+      name: BGM
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 00 (124)
+          direction: 2
+          opacity: 255
+          pattern: 3
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 241
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 018-Field01
+            pitch: 100
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 4
+        walk_anime: true
+      x: 0
+      y: 39
   height: 40
   tileset_id: 52
   width: 40
