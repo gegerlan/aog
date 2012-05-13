@@ -1,17 +1,17 @@
---- 
-root: !ruby/object:RPG::Map 
+---
+root: !ruby/object:RPG::Map
   autoplay_bgm: false
   autoplay_bgs: false
-  bgm: !ruby/object:RPG::AudioFile 
-    name: ""
+  bgm: !ruby/object:RPG::AudioFile
+    name: ''
     pitch: 100
     volume: 100
-  bgs: !ruby/object:RPG::AudioFile 
-    name: ""
+  bgs: !ruby/object:RPG::AudioFile
+    name: ''
     pitch: 100
     volume: 80
-  data: !ruby/object:Table 
-    data: 
+  data: !ruby/object:Table
+    data:
     - 3264
     - 3265
     - 3265
@@ -917,17 +917,16 @@ root: !ruby/object:RPG::Map
     ysize: 15
     zsize: 3
   encounter_list: []
-
   encounter_step: 30
-  events: 
-    1: !ruby/object:RPG::Event 
+  events:
+    1: !ruby/object:RPG::Event
       id: 1
       name: EV001
       numero: 1
-      pages: 
-      - !ruby/object:RPG::Event::Page 
+      pages:
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
@@ -938,7 +937,7 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
           character_name: 106-Civilian06
@@ -946,298 +945,287 @@ root: !ruby/object:RPG::Map
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 108
           indent: 0
-          parameters: 
+          parameters:
           - Condition check
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 111
           indent: 0
-          parameters: 
+          parameters:
           - 0
           - 71
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 119
           indent: 1
-          parameters: 
+          parameters:
           - Play
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 412
           indent: 0
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 111
           indent: 0
-          parameters: 
+          parameters:
           - 0
           - 72
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 119
           indent: 1
-          parameters: 
+          parameters:
           - Play
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 412
           indent: 0
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 111
           indent: 0
-          parameters: 
+          parameters:
           - 0
           - 74
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 119
           indent: 1
-          parameters: 
+          parameters:
           - Play
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 412
           indent: 0
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 119
           indent: 0
-          parameters: 
+          parameters:
           - Default
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 108
           indent: 0
-          parameters: 
+          parameters:
           - Events
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 118
           indent: 0
-          parameters: 
+          parameters:
           - Play
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Hey, Big Sis. Mind if I play with your
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - pussy while you're here?
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 102
           indent: 0
-          parameters: 
+          parameters:
           - - Of course.
             - Sorry, I'm busy.
           - 2
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 402
           indent: 0
-          parameters: 
+          parameters:
           - 0
           - Of course.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - Of course. You know my legs are
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - always open for you kids.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - Yay!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 208
           indent: 1
-          parameters: 
+          parameters:
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 121
           indent: 1
-          parameters: 
+          parameters:
           - 200
           - 200
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 201
           indent: 1
-          parameters: 
+          parameters:
           - 0
           - 138
           - 0
           - 10
           - 0
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 402
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - Sorry, I'm busy.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
-          - "Sorry, John. I'm a little busy at the "
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! 'Sorry, John. I''m a little busy at the '
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - moment.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - Oh yeah. Rape play. You love that stuff.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - Err... EKKKK!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
-          parameters: 
+          parameters:
           - Garnet allows John to forcefully molest her
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - and drag her to the downstairs bed.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 208
           indent: 1
-          parameters: 
+          parameters:
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 121
           indent: 1
-          parameters: 
+          parameters:
           - 199
           - 199
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 201
           indent: 1
-          parameters: 
+          parameters:
           - 0
           - 138
           - 0
           - 10
           - 0
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 119
           indent: 1
-          parameters: 
+          parameters:
           - Unload
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 404
           indent: 0
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 118
           indent: 0
-          parameters: 
+          parameters:
           - Default
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Hi, Big Sis. Here to babysit me again?
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 119
           indent: 0
-          parameters: 
+          parameters:
           - Unload
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 118
           indent: 0
-          parameters: 
+          parameters:
           - Unload
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -1247,9 +1235,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 176
@@ -1260,27 +1248,25 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -1290,9 +1276,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 24
@@ -1303,27 +1289,25 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -1332,9 +1316,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 200
@@ -1345,27 +1329,25 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -1375,9 +1357,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 199
@@ -1388,27 +1370,25 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -1420,14 +1400,14 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 6
       y: 8
-    2: !ruby/object:RPG::Event 
+    2: !ruby/object:RPG::Event
       id: 2
       name: EV002
       numero: 2
-      pages: 
-      - !ruby/object:RPG::Event::Page 
+      pages:
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 176
@@ -1438,7 +1418,7 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 30
           character_name: 038-Mage06
@@ -1446,19 +1426,17 @@ root: !ruby/object:RPG::Map
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -1468,9 +1446,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 176
@@ -1481,7 +1459,7 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 30
           character_name: 038-Mage06
@@ -1489,19 +1467,17 @@ root: !ruby/object:RPG::Map
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -1511,9 +1487,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
@@ -1524,27 +1500,25 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -1555,14 +1529,14 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 9
       y: 6
-    3: !ruby/object:RPG::Event 
+    3: !ruby/object:RPG::Event
       id: 3
       name: EV003
       numero: 3
-      pages: 
-      - !ruby/object:RPG::Event::Page 
+      pages:
+      - !ruby/object:RPG::Event::Page
         always_on_top: true
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 199
@@ -1573,7 +1547,7 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
           character_name: maid_SEX0001
@@ -1581,1706 +1555,1709 @@ root: !ruby/object:RPG::Map
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id001 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 33
-              parameters: []
-
-            - !ruby/object:RPG::MoveCommand 
+              parameters: &17995596 []
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id001
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 33
+            parameters: *17995596
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 80
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Kai - Yaa (no)
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]Ohhhhh...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: 0.0
             gray: 0.0
             green: 0.0
             red: 0.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]Ohhhh.. stoppp... ahhhhh... it....
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Ooohhh so tight. This lucky bandit... ahhhh...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - caught a tight whore...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Kai - Yaa (no)
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 80
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Kai - Yaa (no)
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]I....ooohhhhh... not... ahhh... game...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - ahhhh... stoppppp
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Big Sis... ughhh... your pussy is squeezing
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - me.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - Garnet, realizing she has no willpower
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - to stop this, she gives in to her lust and
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - plays along.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
-          - "OOOHHHHHHHHH!!! HARDER!!! "
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! 'OOOHHHHHHHHH!!! HARDER!!! '
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - HARDERRRR!!!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - -1
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id002 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 30
-              parameters: 
+              parameters: &17991336
               - 5
-            - &id003 !ruby/object:RPG::MoveCommand 
+            - !ruby/object:RPG::MoveCommand
               code: 29
-              parameters: 
+              parameters: &17991312
               - 5
-            - !ruby/object:RPG::MoveCommand 
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id002
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 30
+            parameters: *17991336
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id003
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 29
+            parameters: *17991312
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Big Sis... ahhhh... I was suppose to ughh...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - rape you.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - I... ahhhh... love your pussy, slut... ahhhh
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - gonna keep you forever...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - AAHHHHHHHH!!!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Oohhhhh You are getting tighter.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Uh...uhhh! I LOVE YOU SIS!!!!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
-          - "*cums in her pussy*"
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! '*cums in her pussy*'
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - AAAAHHHHHHHH C..CCC...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - CUUUMMMIIINNGGG
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 80
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Kai - Yaa (no)
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id004 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 34
-              parameters: []
-
-            - !ruby/object:RPG::MoveCommand 
+              parameters: &18000744 []
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id004
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 34
+            parameters: *18000744
+        - !ruby/object:RPG::EventCommand
           code: 122
           indent: 0
-          parameters: 
+          parameters:
           - 49
           - 49
           - 1
           - 0
           - 15
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 117
           indent: 0
-          parameters: 
+          parameters:
           - 7
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
-          - "*Pants*"
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! '*Pants*'
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: -255.0
             gray: 0.0
             green: -255.0
             red: -255.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id005 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 41
-              parameters: 
+              parameters: &17999844
               - Garnet - Cum
               - 0
               - 6
               - 3
-            - !ruby/object:RPG::MoveCommand 
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id005
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters: *17999844
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: 0.0
             gray: 0.0
             green: 0.0
             red: 0.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: -255.0
             gray: 0.0
             green: -255.0
             red: -255.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: 0.0
             gray: 0.0
             green: 0.0
             red: 0.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 121
           indent: 0
-          parameters: 
+          parameters:
           - 199
           - 199
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 208
           indent: 0
-          parameters: 
+          parameters:
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Anything for my Big Sis.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Thanks for raping me, John. I needed that.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - -1
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id006 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 29
-              parameters: 
+              parameters: &18016080
               - 4
-            - !ruby/object:RPG::MoveCommand 
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id006
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 29
+            parameters: *18016080
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -3290,9 +3267,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 3
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: true
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 200
@@ -3303,7 +3280,7 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
           character_name: maid_SEX0001
@@ -3311,1212 +3288,1215 @@ root: !ruby/object:RPG::Map
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id007 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 33
-              parameters: []
-
-            - !ruby/object:RPG::MoveCommand 
+              parameters: &18015648 []
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id007
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 33
+            parameters: *18015648
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 80
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Kai - Yaa (no)
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]Ohhhhh...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: 0.0
             gray: 0.0
             green: 0.0
             red: 0.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]Ohhhh.. that's... ahhhhh... it....
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Ooohhh so tight.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Kai - Yaa (no)
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 80
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Kai - Yaa (no)
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]I....ooohhhhh... love... ahhh... your cock...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - ahhhh...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Big Sis... ughhh... your pussy is squeezing
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - me.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
-          - "OOOHHHHHHHHH!!! HARDER!!! "
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! 'OOOHHHHHHHHH!!! HARDER!!! '
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - HARDERRRR!!!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - -1
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id008 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 30
-              parameters: 
+              parameters: &18012120
               - 5
-            - &id009 !ruby/object:RPG::MoveCommand 
+            - !ruby/object:RPG::MoveCommand
               code: 29
-              parameters: 
+              parameters: &18012060
               - 5
-            - !ruby/object:RPG::MoveCommand 
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id008
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 30
+            parameters: *18012120
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id009
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 29
+            parameters: *18012060
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - This is better than last time... ahhhh...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - I... ahhhh... love you Sis...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - AAHHHHHHHH!!!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Oohhhhh you're getting tighter.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[John]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Uh... uhhh! I'm cumming!!!!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - AAAAHHHHHHHH C..CCC...
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - CUUUMMMIIINNGGG
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: 4-046
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 80
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Kai - Yaa (no)
             pitch: 85
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Sex1
             pitch: 100
             volume: 100
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id010 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 34
-              parameters: []
-
-            - !ruby/object:RPG::MoveCommand 
+              parameters: &18023520 []
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id010
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 34
+            parameters: *18023520
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 117
           indent: 0
-          parameters: 
+          parameters:
           - 7
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
-          - "*Pants*"
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! '*Pants*'
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: -255.0
             gray: 0.0
             green: -255.0
             red: -255.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - 0
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id011 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 41
-              parameters: 
+              parameters: &18022584
               - Garnet - Cum
               - 0
               - 6
               - 3
-            - !ruby/object:RPG::MoveCommand 
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id011
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters: *18022584
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: 0.0
             gray: 0.0
             green: 0.0
             red: 0.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 312
           indent: 0
-          parameters: 
+          parameters:
           - 1
           - 0
           - 0
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: -255.0
             gray: 0.0
             green: -255.0
             red: -255.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
-          parameters: 
-          - !ruby/object:Tone 
+          parameters:
+          - !ruby/object:Tone
             blue: 0.0
             gray: 0.0
             green: 0.0
             red: 0.0
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 121
           indent: 0
-          parameters: 
+          parameters:
           - 200
           - 200
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 20
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 208
           indent: 0
-          parameters: 
+          parameters:
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - That was so fun.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
-          parameters: 
+          parameters:
           - -1
-          - !ruby/object:RPG::MoveRoute 
-            list: 
-            - &id012 !ruby/object:RPG::MoveCommand 
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
               code: 29
-              parameters: 
+              parameters: &18020508
               - 4
-            - !ruby/object:RPG::MoveCommand 
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-
             repeat: false
             skippable: false
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
-          parameters: 
-          - *id012
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 29
+            parameters: *18020508
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -4528,14 +4508,14 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 0
       y: 10
-    4: !ruby/object:RPG::Event 
+    4: !ruby/object:RPG::Event
       id: 4
       name: EV004
       numero: 4
-      pages: 
-      - !ruby/object:RPG::Event::Page 
+      pages:
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 176
@@ -4546,7 +4526,7 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
           character_name: ASNpc04-Edgar01
@@ -4554,19 +4534,17 @@ root: !ruby/object:RPG::Map
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -4576,9 +4554,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 176
@@ -4589,7 +4567,7 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
           character_name: ASNpc04-Edgar01
@@ -4597,19 +4575,17 @@ root: !ruby/object:RPG::Map
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -4619,9 +4595,9 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      - !ruby/object:RPG::Event::Page 
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
@@ -4632,27 +4608,25 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -4663,14 +4637,14 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 10
       y: 8
-    5: !ruby/object:RPG::Event 
+    5: !ruby/object:RPG::Event
       id: 5
       name: EV005
       numero: 5
-      pages: 
-      - !ruby/object:RPG::Event::Page 
+      pages:
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
@@ -4681,37 +4655,35 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 201
           indent: 0
-          parameters: 
+          parameters:
           - 0
           - 130
           - 47
           - 13
           - 0
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -4723,14 +4695,14 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 9
       y: 14
-    6: !ruby/object:RPG::Event 
+    6: !ruby/object:RPG::Event
       id: 6
       name: EV006
       numero: 6
-      pages: 
-      - !ruby/object:RPG::Event::Page 
+      pages:
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
@@ -4741,37 +4713,35 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 201
           indent: 0
-          parameters: 
+          parameters:
           - 0
           - 130
           - 47
           - 13
           - 0
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
@@ -4783,14 +4753,14 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 10
       y: 14
-    7: !ruby/object:RPG::Event 
+    7: !ruby/object:RPG::Event
       id: 7
       name: EV007
       numero: 7
-      pages: 
-      - !ruby/object:RPG::Event::Page 
+      pages:
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
@@ -4801,42 +4771,40 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Oh, right. Mr. Keni says I can't go
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - upstairs yet.
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3

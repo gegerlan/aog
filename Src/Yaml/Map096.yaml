@@ -1,17 +1,17 @@
---- 
-root: !ruby/object:RPG::Map 
+---
+root: !ruby/object:RPG::Map
   autoplay_bgm: false
   autoplay_bgs: false
-  bgm: !ruby/object:RPG::AudioFile 
-    name: ""
+  bgm: !ruby/object:RPG::AudioFile
+    name: ''
     pitch: 100
     volume: 100
-  bgs: !ruby/object:RPG::AudioFile 
-    name: ""
+  bgs: !ruby/object:RPG::AudioFile
+    name: ''
     pitch: 100
     volume: 80
-  data: !ruby/object:Table 
-    data: 
+  data: !ruby/object:Table
+    data:
     - 516
     - 516
     - 516
@@ -917,17 +917,16 @@ root: !ruby/object:RPG::Map
     ysize: 15
     zsize: 3
   encounter_list: []
-
   encounter_step: 30
-  events: 
-    1: !ruby/object:RPG::Event 
+  events:
+    1: !ruby/object:RPG::Event
       id: 1
       name: EV001
       numero: 1
-      pages: 
-      - !ruby/object:RPG::Event::Page 
+      pages:
+      - !ruby/object:RPG::Event::Page
         always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition 
+        condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 50
@@ -938,217 +937,213 @@ root: !ruby/object:RPG::Map
           variable_valid: false
           variable_value: 0
         direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic 
+        graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ""
+          character_name: ''
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
-        list: 
-        - !ruby/object:RPG::EventCommand 
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet](Sure is dark in here.)
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
-          - "\\nm[Garnet](I wonder when the cart will start "
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! '\nm[Garnet](I wonder when the cart will start '
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - moving...)
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Cloth Movement
             pitch: 100
             volume: 80
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 25
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Cloth Movement
             pitch: 100
             volume: 80
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 250
           indent: 0
-          parameters: 
-          - !ruby/object:RPG::AudioFile 
+          parameters:
+          - !ruby/object:RPG::AudioFile
             name: Breath
             pitch: 120
             volume: 55
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 117
           indent: 0
-          parameters: 
+          parameters:
           - 136
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet](H-hey! Is someone else here?)
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \face[] \nm[Slave]Mmph! Mmhph!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 117
           indent: 0
-          parameters: 
+          parameters:
           - 137
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
-          - "\\nm[Garnet](W-wha?! There's a tied up woman "
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! '\nm[Garnet](W-wha?! There''s a tied up woman '
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - over there!)
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet](What's going on here?!)
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 224
           indent: 0
-          parameters: 
-          - !ruby/object:Color 
+          parameters:
+          - !ruby/object:Color
             alpha: 255.0
             blue: 17.0
             green: 17.0
             red: 17.0
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 225
           indent: 0
-          parameters: 
+          parameters:
           - 8
           - 5
           - 15
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \face[] \nm[Guard]All right, let's open her up,
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - and get the slaves off!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
-          parameters: 
+          parameters:
           - 30
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 224
           indent: 0
-          parameters: 
-          - !ruby/object:Color 
+          parameters:
+          - !ruby/object:Color
             alpha: 255.0
             blue: 17.0
             green: 17.0
             red: 17.0
           - 10
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 225
           indent: 0
-          parameters: 
+          parameters:
           - 8
           - 5
           - 15
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 111
           indent: 0
-          parameters: 
+          parameters:
           - 0
           - 4
           - 1
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
-          parameters: 
-          - "\\face[] \\nm[Guard]Hey! One of them's not wearing a "
-        - !ruby/object:RPG::EventCommand 
+          parameters:
+          - ! '\face[] \nm[Guard]Hey! One of them''s not wearing a '
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - collar!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
-          parameters: 
+          parameters:
           - \face[] \nm[Guard]What? Grab her, quick!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
-          parameters: 
+          parameters:
           - She must be trying to escape!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 412
           indent: 0
           parameters: []
-
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 117
           indent: 0
-          parameters: 
+          parameters:
           - 135
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
-          parameters: 
+          parameters:
           - \nm[Garnet]Hey! What's going on?!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
-          parameters: 
+          parameters:
           - Get off of me!
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 201
           indent: 0
-          parameters: 
+          parameters:
           - 0
           - 98
           - 10
           - 6
           - 0
           - 0
-        - !ruby/object:RPG::EventCommand 
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
-
         move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute 
-          list: 
-          - !ruby/object:RPG::MoveCommand 
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
             code: 0
             parameters: []
-
           repeat: true
           skippable: false
         move_speed: 3
