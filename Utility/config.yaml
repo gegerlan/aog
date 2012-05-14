@@ -44,3 +44,19 @@ verbose: true
 # If, for any reason, this causes problems, you can disable the default magic
 # number functionality by setting the value -1.
 magic_number: 77323823
+
+# This is the value used for System object's edit_map_id field.  RMXP changes
+# this value whenever the  user changes the map  active, so having a default 
+# value prevents unnecessary  conflicts when versioning the System.yaml file.
+# If, for any  reason,  this causes problems,  you can  disable the  default 
+# edit map id by setting the value -1.
+edit_map_id: 1
+
+# This is the value used for MapInfo object's expanded field for a map. RMXP 
+# changes this value whenever  the  user  changes the map's visibilty in the 
+# tree,  so  having  a  default  value  prevents unnecessary  conflicts when 
+# versioning the MapInfos.yaml file.
+# If, for any  reason,  this causes problems,  you can  disable the  default 
+# expanded state by removing it, or by setting the value to nil.
+#   Valid values:  [true || false]
+map_expanded: false
