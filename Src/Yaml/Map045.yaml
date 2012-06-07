@@ -1,9 +1,9 @@
 ---
 root: !ruby/object:RPG::Map
-  autoplay_bgm: false
+  autoplay_bgm: true
   autoplay_bgs: false
   bgm: !ruby/object:RPG::AudioFile
-    name: ''
+    name: 018-Field01
     pitch: 100
     volume: 100
   bgs: !ruby/object:RPG::AudioFile
@@ -5773,60 +5773,6 @@ root: !ruby/object:RPG::Map
         walk_anime: false
       x: 9
       y: 25
-    14: !ruby/object:RPG::Event
-      id: 14
-      name: BGM
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 00 (124)
-          direction: 2
-          opacity: 255
-          pattern: 3
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 241
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::AudioFile
-            name: 018-Field01
-            pitch: 100
-            volume: 100
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 4
-        walk_anime: true
-      x: 0
-      y: 39
     15: !ruby/object:RPG::Event
       id: 15
       name: EV015
