@@ -5616,6 +5616,121 @@ root: !ruby/object:RPG::Map
           parameters:
           - \face[]\nm[Demeter]Oh, what is it you wanted John?
         - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 1
+          parameters:
+          - 12
+          - $game_variables[50] & (1 << 8) == 0
+        - !ruby/object:RPG::EventCommand
+          code: 209
+          indent: 2
+          parameters:
+          - 10
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
+              code: 25
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
+              code: 14
+              parameters:
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand
+              code: 0
+              parameters: []
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 2
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 25
+            parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 2
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 14
+            parameters:
+            - 0
+            - 0
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - ! '\face[]\nm[Farmers Son John]Water for me, and more '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - of the best vodka for her!
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 2
+          parameters:
+          - ! '# Index - description'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 1 : Waitress quest started'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 2 : Old man'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 3 : Foreigner'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 4 : Guard captain'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 5 : Soldier A'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 6 : Soldier B'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 7 : Demeter'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 8 : John'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ''
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - $game_variables[50] |= (1 << 8)
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
@@ -6648,27 +6763,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters:
-          - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 1
-          parameters:
-          - which one was table 4?
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 1
-          parameters:
-          - \face[] \nm[Bartender]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 1
-          parameters:
-          - ! 'Garnet, now is not the time or place '
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 1
-          parameters:
-          - for jokes.
+          - \nm[\N[1]]Water for John.
         - !ruby/object:RPG::EventCommand
           code: 355
           indent: 1
@@ -8126,6 +8221,85 @@ root: !ruby/object:RPG::Map
           parameters:
           - of the best vodka for her!
         - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 1
+          parameters:
+          - 12
+          - $game_variables[50] & (1 << 7) == 0
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 2
+          parameters:
+          - ! '# Index - description'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 1 : Waitress quest started'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 2 : Old man'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 3 : Foreigner'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 4 : Guard captain'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 5 : Soldier A'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 6 : Soldier B'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 7 : Demeter'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ! '# 8 : John'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - ''
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - $game_variables[50] |= (1 << 7)
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \face[]\nm[Demeter]Oh, John...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - What are you trying to do?
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
           code: 355
           indent: 1
           parameters:
@@ -8435,7 +8609,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 1
           parameters:
-          - becuase its always free!
+          - becuase it's always free!
         - !ruby/object:RPG::EventCommand
           code: 355
           indent: 1
@@ -10091,12 +10265,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - with
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - me, best decision I ever made.
+          - with me, best decision I ever made.
         - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
@@ -10259,12 +10428,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters:
-          - \face[]\nm[Soldier]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 1
-          parameters:
-          - Sorry about him.
+          - \face[]\nm[Soldier]Don't mind the rest of the lot.
         - !ruby/object:RPG::EventCommand
           code: 355
           indent: 1
@@ -11150,7 +11314,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 1
           parameters:
-          - I already got his order.
+          - I think he's already had enough.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
