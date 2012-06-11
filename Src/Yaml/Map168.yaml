@@ -5982,6 +5982,11 @@ root: !ruby/object:RPG::Map
           - !ruby/object:RPG::MoveRoute
             list:
             - !ruby/object:RPG::MoveCommand
+              code: 14
+              parameters:
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand
               code: 25
               parameters: []
             - !ruby/object:RPG::MoveCommand
@@ -5989,6 +5994,15 @@ root: !ruby/object:RPG::Map
               parameters: []
             repeat: false
             skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 14
+            parameters:
+            - 0
+            - 0
         - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
