@@ -6346,6 +6346,16 @@ root: !ruby/object:RPG::Map
           - 10
           - 66
         - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 3
+          parameters:
+          - ! '\face[] \nm[Bartender]Remember to wear your '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 3
+          parameters:
+          - uniform, \N[1].
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 3
           parameters: []
@@ -6353,6 +6363,26 @@ root: !ruby/object:RPG::Map
           code: 411
           indent: 2
           parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 3
+          parameters:
+          - ! '\face[] \nm[Bartender]Oh and you''ll need a uniform, '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 3
+          parameters:
+          - \N[1].
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 3
+          parameters:
+          - Here, take this.
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 3
+          parameters:
+          - $game_variables[50] |= (1 << 1)
         - !ruby/object:RPG::EventCommand
           code: 128
           indent: 3
@@ -6370,12 +6400,45 @@ root: !ruby/object:RPG::Map
           indent: 2
           parameters: []
         - !ruby/object:RPG::EventCommand
+          code: 223
+          indent: 2
+          parameters:
+          - !ruby/object:Tone
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 2
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 2
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: Cloth Movement
+            pitch: 100
+            volume: 80
+        - !ruby/object:RPG::EventCommand
           code: 319
           indent: 2
           parameters:
           - 1
           - 3
           - 66
+        - !ruby/object:RPG::EventCommand
+          code: 223
+          indent: 2
+          parameters:
+          - !ruby/object:Tone
+            blue: 0.0
+            gray: 0.0
+            green: 0.0
+            red: 0.0
+          - 10
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 2
@@ -6491,7 +6554,12 @@ root: !ruby/object:RPG::Map
           code: 655
           indent: 0
           parameters:
-          - ! '# 1 : Waitress quest started'
+          - ! '# 0 : Waitress quest started'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 0
+          parameters:
+          - ! '# 1 : was given a uniform'
         - !ruby/object:RPG::EventCommand
           code: 655
           indent: 0
@@ -6531,12 +6599,7 @@ root: !ruby/object:RPG::Map
           code: 655
           indent: 0
           parameters:
-          - ! '# 1X - The above, but reported, e.g.'
-        - !ruby/object:RPG::EventCommand
-          code: 655
-          indent: 0
-          parameters:
-          - ! '#      12 = Old man reported'
+          - ! '# 1X - The above, but reported'
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -6805,22 +6868,588 @@ root: !ruby/object:RPG::Map
           parameters:
           - \face[]\nm[Bartender]That's it, girl days done!
         - !ruby/object:RPG::EventCommand
-          code: 401
+          code: 108
           indent: 1
           parameters:
-          - Here is your gold!
+          - Base reward of 100
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 122
           indent: 1
           parameters:
-          - \nm[]\N[1] was payed 100 gold.
-        - !ruby/object:RPG::EventCommand
-          code: 125
-          indent: 1
-          parameters:
+          - 40
+          - 40
           - 0
           - 0
           - 100
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 1
+          parameters:
+          - 12
+          - $game_variables[50] & (1 << 1) != 0
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 2
+          parameters:
+          - If the player was given a uniform at the beginning
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 2
+          parameters:
+          - 4
+          - 1
+          - 4
+          - 66
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 3
+          parameters:
+          - If the player is wearing the uniform
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 3
+          parameters:
+          - a = $data_armors[66]
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 3
+          parameters:
+          - $game_variables[41] = a.price
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 3
+          parameters:
+          - ! '\nm[Bartender]\face[]You know, \N[1]. '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 3
+          parameters:
+          - ! 'That uniform looks great on you. '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 3
+          parameters:
+          - Would you like to keep it for \V[41] gold?
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 3
+          parameters:
+          - - Keep the maid uniform
+            - Return the maid unform
+          - 2
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 3
+          parameters:
+          - 0
+          - Keep the maid uniform
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 4
+          parameters:
+          - 12
+          - $game_variables[40] + $game_party.gold >= $data_armors[66].price
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 5
+          parameters:
+          - Deduct the price of the maid uniform
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 5
+          parameters:
+          - p = $data_armors[66].price
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 5
+          parameters:
+          - $game_variables[40] -= p
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 5
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 4
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 5
+          parameters:
+          - \nm[Bartender]\face[]I'm sorry, \N[1], buy you don't
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 5
+          parameters:
+          - have enough money to buy it.
+        - !ruby/object:RPG::EventCommand
+          code: 119
+          indent: 5
+          parameters:
+          - Return uniform
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 5
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 4
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 4
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 3
+          parameters:
+          - 1
+          - Return the maid unform
+        - !ruby/object:RPG::EventCommand
+          code: 118
+          indent: 4
+          parameters:
+          - Return uniform
+        - !ruby/object:RPG::EventCommand
+          code: 223
+          indent: 4
+          parameters:
+          - !ruby/object:Tone
+            blue: -255.0
+            gray: 0.0
+            green: -255.0
+            red: -255.0
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 4
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 319
+          indent: 4
+          parameters:
+          - 1
+          - 3
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 128
+          indent: 4
+          parameters:
+          - 66
+          - 1
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 4
+          parameters:
+          - Wear a random piece of clothes from the inventory
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 4
+          parameters:
+          - gp = $game_party
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - p = $game_party.actors[0]
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - ''
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - c = p.class_id
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - arm=gp.get_equippable_armors(c)
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - ''
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - ! '# Only get body armors'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - arm.delete_if{|i| i.kind != 2 }
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - if not arm.empty?
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - ! '  p.equip(3, arm[rand(arm.length)])'
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - end
+        - !ruby/object:RPG::EventCommand
+          code: 223
+          indent: 4
+          parameters:
+          - !ruby/object:Tone
+            blue: 0.0
+            gray: 0.0
+            green: 0.0
+            red: 0.0
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 4
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 3
+          parameters:
+          - 10
+          - 66
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 4
+          parameters:
+          - If the player has the uniform in their inventory
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 4
+          parameters:
+          - ! '\nm[Bartender]\face[]Oh, \N[1]. You were supposed '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 4
+          parameters:
+          - to wear the uniform while you were here.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 4
+          parameters:
+          - ! '\nm[Bartender]\face[]What was wrong with it? Didn''t '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 4
+          parameters:
+          - you like it?
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 4
+          parameters:
+          - ! '\nm[Bartender]\face[]Never mind, just return it and '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 4
+          parameters:
+          - you'll won't have to see it again.
+        - !ruby/object:RPG::EventCommand
+          code: 128
+          indent: 4
+          parameters:
+          - 66
+          - 1
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 4
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 4
+          parameters:
+          - If the player doesn't have the uniform
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 4
+          parameters:
+          - ! '\nm[Bartender]\face[]Where is that uniform I gave '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 4
+          parameters:
+          - you, \N[1]?
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 4
+          parameters:
+          - ! '\nm[Bartender]\face[]I''m afraid I have to deduct the '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 4
+          parameters:
+          - cost on your pay.
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 4
+          parameters:
+          - Deduct the price of the maid uniform
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 4
+          parameters:
+          - p = $data_armors[66].price
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 4
+          parameters:
+          - $game_variables[40] -= p
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 4
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 1
+          parameters:
+          - 1
+          - 40
+          - 0
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 2
+          parameters:
+          - If she is being rewarded
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \face[]\nm[Bartender]Here is your gold!
+        - !ruby/object:RPG::EventCommand
+          code: 125
+          indent: 2
+          parameters:
+          - 0
+          - 1
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[]\N[1] was payed \v[40] gold.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 2
+          parameters:
+          - If she is in debt
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 2
+          parameters:
+          - gv = $game_variables
+        - !ruby/object:RPG::EventCommand
+          code: 655
+          indent: 2
+          parameters:
+          - gv[40] = gv[40].abs
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - ! '\nm[Bartender]\face[]I''m afraid you owe me \v[40], '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - \N[1].
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 2
+          parameters:
+          - 12
+          - $game_party.gold >= $game_variables[40].abs
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 3
+          parameters:
+          - If she has the money to pay the debt
+        - !ruby/object:RPG::EventCommand
+          code: 125
+          indent: 3
+          parameters:
+          - 1
+          - 1
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 3
+          parameters:
+          - \nm[]\N[1] lost \v[40] gold.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 3
+          parameters:
+          - If she doesn't have the money to pay the debt
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 3
+          parameters:
+          - \nm[Bartender]\face[]Money you don't have.
+        - !ruby/object:RPG::EventCommand
+          code: 203
+          indent: 3
+          parameters:
+          - 6
+          - 3
+          - 4
+        - !ruby/object:RPG::EventCommand
+          code: 209
+          indent: 3
+          parameters:
+          - 0
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
+              code: 18
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
+              code: 0
+              parameters: []
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 3
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 18
+            parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 209
+          indent: 3
+          parameters:
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 10
+            - !ruby/object:RPG::MoveCommand
+              code: 18
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
+              code: 0
+              parameters: []
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 3
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 10
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 3
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 18
+            parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 3
+          parameters:
+          - ! '\nm[Bartender]\face[]I''m afraid I have to write this up, '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 3
+          parameters:
+          - and give it to my friend in purple over there.
+        - !ruby/object:RPG::EventCommand
+          code: 122
+          indent: 3
+          parameters:
+          - 4
+          - 4
+          - 1
+          - 1
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 121
           indent: 1
@@ -16889,6 +17518,57 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 14
       y: 8
+    27: !ruby/object:RPG::Event
+      id: 27
+      name: NPC blocker
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 0
+          parameters:
+          - Stops NPCs from wandering in here.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 8
+      y: 4
   height: 15
   numero: 7
   tileset_id: 56
