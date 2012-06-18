@@ -919,265 +919,6 @@ root: !ruby/object:RPG::Map
   encounter_list: []
   encounter_step: 30
   events:
-    1: !ruby/object:RPG::Event
-      id: 1
-      name: EV001
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 451
-          switch1_valid: true
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: sm_dom0002
-          direction: 6
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 209
-          indent: 0
-          parameters:
-          - -1
-          - !ruby/object:RPG::MoveRoute
-            list:
-            - !ruby/object:RPG::MoveCommand
-              code: 41
-              parameters:
-              - sm_dom0002
-              - 0
-              - 6
-              - 0
-            - !ruby/object:RPG::MoveCommand
-              code: 15
-              parameters:
-              - 4
-            - !ruby/object:RPG::MoveCommand
-              code: 41
-              parameters:
-              - sm_dom0002
-              - 0
-              - 6
-              - 1
-            - !ruby/object:RPG::MoveCommand
-              code: 15
-              parameters:
-              - 4
-            - !ruby/object:RPG::MoveCommand
-              code: 41
-              parameters:
-              - sm_dom0002
-              - 0
-              - 6
-              - 2
-            - !ruby/object:RPG::MoveCommand
-              code: 15
-              parameters:
-              - 4
-            - !ruby/object:RPG::MoveCommand
-              code: 41
-              parameters:
-              - sm_dom0002
-              - 0
-              - 6
-              - 3
-            - !ruby/object:RPG::MoveCommand
-              code: 15
-              parameters:
-              - 4
-            - !ruby/object:RPG::MoveCommand
-              code: 0
-              parameters: []
-            repeat: true
-            skippable: false
-        - !ruby/object:RPG::EventCommand
-          code: 509
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::MoveCommand
-            code: 41
-            parameters:
-            - sm_dom0002
-            - 0
-            - 6
-            - 0
-        - !ruby/object:RPG::EventCommand
-          code: 509
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::MoveCommand
-            code: 15
-            parameters:
-            - 4
-        - !ruby/object:RPG::EventCommand
-          code: 509
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::MoveCommand
-            code: 41
-            parameters:
-            - sm_dom0002
-            - 0
-            - 6
-            - 1
-        - !ruby/object:RPG::EventCommand
-          code: 509
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::MoveCommand
-            code: 15
-            parameters:
-            - 4
-        - !ruby/object:RPG::EventCommand
-          code: 509
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::MoveCommand
-            code: 41
-            parameters:
-            - sm_dom0002
-            - 0
-            - 6
-            - 2
-        - !ruby/object:RPG::EventCommand
-          code: 509
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::MoveCommand
-            code: 15
-            parameters:
-            - 4
-        - !ruby/object:RPG::EventCommand
-          code: 509
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::MoveCommand
-            code: 41
-            parameters:
-            - sm_dom0002
-            - 0
-            - 6
-            - 3
-        - !ruby/object:RPG::EventCommand
-          code: 509
-          indent: 0
-          parameters:
-          - !ruby/object:RPG::MoveCommand
-            code: 15
-            parameters:
-            - 4
-        - !ruby/object:RPG::EventCommand
-          code: 312
-          indent: 0
-          parameters:
-          - 0
-          - 0
-          - 0
-          - 10
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - \nm[Poochi]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - slurp... slurp... lick...
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - Woof... M... master's pussy gets wet so easily...
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - \nm[Garnet]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - B... but I'm not your master...
-        - !ruby/object:RPG::EventCommand
-          code: 312
-          indent: 0
-          parameters:
-          - 0
-          - 0
-          - 0
-          - 10
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - \nm[Poochi]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - Woof... all girls are Poochi's master...
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - Slurp... slurp... lick...
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - \nm[Poochi]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - Poochi wll do anything for master... woof...
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - slurp... slurp... lick...
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - ''
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - ''
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      x: 5
-      y: 8
     2: !ruby/object:RPG::Event
       id: 2
       name: EV002
@@ -1346,6 +1087,466 @@ root: !ruby/object:RPG::Map
         walk_anime: false
       x: 8
       y: 14
+    5: !ruby/object:RPG::Event
+      id: 5
+      name: EV005
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 451
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: sm0001_1
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Poochi]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Woof... What do you want to play?
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 0
+          parameters:
+          - - Lick my pussy.
+            - Rub our pussies together.
+          - 2
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 0
+          parameters:
+          - 0
+          - Lick my pussy.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Poochi]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Woof... okay.
+        - !ruby/object:RPG::EventCommand
+          code: 208
+          indent: 1
+          parameters:
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 209
+          indent: 1
+          parameters:
+          - 0
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
+              code: 41
+              parameters:
+              - sm_dom0002
+              - 0
+              - 6
+              - 0
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 4
+            - !ruby/object:RPG::MoveCommand
+              code: 41
+              parameters:
+              - sm_dom0002
+              - 0
+              - 6
+              - 1
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 4
+            - !ruby/object:RPG::MoveCommand
+              code: 41
+              parameters:
+              - sm_dom0002
+              - 0
+              - 6
+              - 2
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 4
+            - !ruby/object:RPG::MoveCommand
+              code: 41
+              parameters:
+              - sm_dom0002
+              - 0
+              - 6
+              - 3
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 4
+            - !ruby/object:RPG::MoveCommand
+              code: 44
+              parameters:
+              - !ruby/object:RPG::AudioFile
+                name: Lick02
+                pitch: 100
+                volume: 80
+            - !ruby/object:RPG::MoveCommand
+              code: 0
+              parameters: []
+            repeat: true
+            skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters:
+            - sm_dom0002
+            - 0
+            - 6
+            - 0
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 4
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters:
+            - sm_dom0002
+            - 0
+            - 6
+            - 1
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 4
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters:
+            - sm_dom0002
+            - 0
+            - 6
+            - 2
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 4
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters:
+            - sm_dom0002
+            - 0
+            - 6
+            - 3
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 4
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 44
+            parameters:
+            - !ruby/object:RPG::AudioFile
+              name: Lick02
+              pitch: 100
+              volume: 80
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 1
+          parameters:
+          - 20
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Aaah... you're doing great...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Ahh... K... keep licking...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - ! 'Woof... sure... '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Woof... I'll lick your pussy as long as you want...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - That's great...
+        - !ruby/object:RPG::EventCommand
+          code: 118
+          indent: 1
+          parameters:
+          - Lick
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 1
+          parameters:
+          - 20
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 1
+          parameters:
+          - - Keep licking.
+            - I think that's enough
+          - 2
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 1
+          parameters:
+          - 0
+          - Keep licking.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[Poochi]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - Woof... sure...
+        - !ruby/object:RPG::EventCommand
+          code: 119
+          indent: 2
+          parameters:
+          - Lick
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 1
+          parameters:
+          - 1
+          - I think that's enough
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[Poochi]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - ! 'Woof... okay... Talk to me again if you want me to lick '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - your pussy... woof...
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 208
+          indent: 1
+          parameters:
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 1
+          parameters:
+          - 451
+          - 451
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 0
+          parameters:
+          - 1
+          - Rub our pussies together.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 0
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 3
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 176
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: sm0001_1
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 4
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 4
+        move_type: 1
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 9
+      y: 7
   height: 15
   tileset_id: 56
   width: 20
