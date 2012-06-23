@@ -571,8 +571,8 @@ root: !ruby/object:RPG::Map
     - 384
     - 384
     - 384
-    - 384
-    - 137
+    - 131
+    - 127
     - 129
     - 129
     - 129
@@ -582,16 +582,6 @@ root: !ruby/object:RPG::Map
     - 129
     - 127
     - 133
-    - 384
-    - 384
-    - 384
-    - 384
-    - 384
-    - 384
-    - 384
-    - 384
-    - 384
-    - 384
     - 384
     - 384
     - 384
@@ -641,6 +631,7 @@ root: !ruby/object:RPG::Map
     - 384
     - 384
     - 384
+    - 128
     - 384
     - 384
     - 384
@@ -672,6 +663,15 @@ root: !ruby/object:RPG::Map
     - 384
     - 384
     - 384
+    - 384
+    - 384
+    - 384
+    - 384
+    - 384
+    - 384
+    - 384
+    - 384
+    - 140
     - 384
     - 384
     - 384
@@ -4641,7 +4641,7 @@ root: !ruby/object:RPG::Map
           - 0
           - 1
           - 0
-          - 50
+          - 25
           - false
         - !ruby/object:RPG::EventCommand
           code: 101
@@ -4720,7 +4720,7 @@ root: !ruby/object:RPG::Map
           - 0
           - 1
           - 0
-          - 75
+          - 50
           - false
         - !ruby/object:RPG::EventCommand
           code: 101
@@ -5926,7 +5926,7 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: 118-Civilian18
+          character_name: C_Alicia
           direction: 4
           opacity: 255
           pattern: 0
@@ -6343,7 +6343,7 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: 118-Civilian18
+          character_name: C_Alicia
           direction: 4
           opacity: 255
           pattern: 0
@@ -6461,12 +6461,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - I am a slave...
+          - Garnet is a slave...
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
           parameters:
-          - I... I can't refuse...
+          - Garnet can't refuse...
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -6484,6 +6484,32 @@ root: !ruby/object:RPG::Map
           - 0
           - 90
           - 0
+        - !ruby/object:RPG::EventCommand
+          code: 209
+          indent: 1
+          parameters:
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
+              code: 14
+              parameters:
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand
+              code: 0
+              parameters: []
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 14
+            parameters:
+            - 0
+            - 0
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
@@ -6592,7 +6618,7 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: 118-Civilian18
+          character_name: C_Alicia
           direction: 4
           opacity: 255
           pattern: 0
@@ -6672,7 +6698,7 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: 118-Civilian18
+          character_name: C_Alicia
           direction: 4
           opacity: 255
           pattern: 0
@@ -6717,41 +6743,19 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - I don't even know your name...
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - \nm[]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - What should Alicia call you?
+          - What should I call you?
         - !ruby/object:RPG::EventCommand
           code: 102
           indent: 0
           parameters:
-          - - Stupid.
-            - Garnet.
+          - - Garnet.
             - Ass-plough Girl.
-            - Master.
           - 2
         - !ruby/object:RPG::EventCommand
           code: 402
           indent: 0
           parameters:
           - 0
-          - Stupid.
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 1
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 402
-          indent: 0
-          parameters:
-          - 1
           - Garnet.
         - !ruby/object:RPG::EventCommand
           code: 0
@@ -6761,18 +6765,43 @@ root: !ruby/object:RPG::Map
           code: 402
           indent: 0
           parameters:
-          - 2
+          - 1
           - Ass-plough Girl.
         - !ruby/object:RPG::EventCommand
-          code: 0
+          code: 101
           indent: 1
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 402
-          indent: 0
           parameters:
-          - 3
-          - Master.
+          - \nm[Alicia]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - B... but that's embarassing...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - ! 'Not as embarassing as having a plough stuck up my '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - ass and having to pull it naked on the field...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - I... I'm sorry I... I'll call you whatever you want...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - A... Ass-plough Girl.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -7320,40 +7349,79 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: 116-Civilian16
+          character_name: C_Erica
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 111
           indent: 0
+          parameters:
+          - 0
+          - 4
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
           parameters:
           - \nm[Erica]
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
-          - Do you want to feed the pigs?
+          - Ah, a slave...
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
-          - The pay is 150 gold.
+          - Good... now I can get some work done!
         - !ruby/object:RPG::EventCommand
-          code: 102
-          indent: 0
+          code: 101
+          indent: 1
           parameters:
-          - - Sure.
-            - Maybe later.
-          - 2
+          - \nm[Erica]
         - !ruby/object:RPG::EventCommand
-          code: 402
-          indent: 0
+          code: 401
+          indent: 1
           parameters:
-          - 0
-          - Sure.
+          - I want you to make the pigs happy...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - I'll give you 150 gold if you do it well.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - I am a slave...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - I have no rights to refuse your request...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Erica]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Good... but don't touch anything else in the pen...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - I don't want a dirty slave like you messing things up.
         - !ruby/object:RPG::EventCommand
           code: 121
           indent: 1
@@ -7362,6 +7430,14 @@ root: !ruby/object:RPG::Map
           - 460
           - 0
         - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 0
+          parameters: []
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
           parameters:
@@ -7370,28 +7446,71 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 1
           parameters:
-          - The pigs are in the pen.
+          - Do you want to feed the pigs?
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
           parameters:
+          - The pay is 150 gold.
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 1
+          parameters:
+          - - Sure.
+            - Maybe later.
+          - 2
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 1
+          parameters:
+          - 0
+          - Sure.
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 2
+          parameters:
+          - 460
+          - 460
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[Erica]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - Good... The pigs are in the pen.
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
           - The pig feed are in the sacks.
         - !ruby/object:RPG::EventCommand
           code: 0
-          indent: 1
+          indent: 2
           parameters: []
         - !ruby/object:RPG::EventCommand
           code: 402
-          indent: 0
+          indent: 1
           parameters:
           - 1
           - Maybe later.
         - !ruby/object:RPG::EventCommand
           code: 0
-          indent: 1
+          indent: 2
           parameters: []
         - !ruby/object:RPG::EventCommand
           code: 404
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
           indent: 0
           parameters: []
         - !ruby/object:RPG::EventCommand
@@ -7428,7 +7547,7 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: 116-Civilian16
+          character_name: C_Erica
           direction: 2
           opacity: 255
           pattern: 0
@@ -7444,20 +7563,58 @@ root: !ruby/object:RPG::Map
           - 8
           - 4
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 111
           indent: 1
+          parameters:
+          - 0
+          - 4
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
           parameters:
           - \nm[Erica]
         - !ruby/object:RPG::EventCommand
           code: 401
+          indent: 2
+          parameters:
+          - What are you doing slave?
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - Hurry up and make the pigs happy...
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
           indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[Erica]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
           parameters:
           - The pigs need feeding...
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - If it's too hard... try to make them happy...
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -7476,6 +7633,13 @@ root: !ruby/object:RPG::Map
           indent: 1
           parameters:
           - Good job. Here's your pay.
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 1
+          parameters:
+          - 460
+          - 460
+          - 1
         - !ruby/object:RPG::EventCommand
           code: 122
           indent: 1
@@ -7510,6 +7674,46 @@ root: !ruby/object:RPG::Map
           code: 412
           indent: 0
           parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 176
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
