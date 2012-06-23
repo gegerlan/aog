@@ -1512,7 +1512,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -1599,7 +1599,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -1662,7 +1662,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -2712,52 +2712,24 @@ root: !ruby/object:RPG::Map
           code: 111
           indent: 0
           parameters:
-          - 8
-          - 40
+          - 0
+          - 4
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
           parameters:
-          - \nm[]\face[]You already have some food.
+          - \nm[Garnet]
         - !ruby/object:RPG::EventCommand
-          code: 102
+          code: 401
           indent: 1
           parameters:
-          - - Leave
-            - Return food
-          - 1
+          - Garnet is not allowed to touch the pig food...
         - !ruby/object:RPG::EventCommand
-          code: 402
+          code: 401
           indent: 1
           parameters:
-          - 0
-          - Leave
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 2
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 402
-          indent: 1
-          parameters:
-          - 1
-          - Return food
-        - !ruby/object:RPG::EventCommand
-          code: 126
-          indent: 2
-          parameters:
-          - 40
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 2
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 404
-          indent: 1
-          parameters: []
+          - Garnet is a dirty slave that will only spoil the food.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -2767,23 +2739,89 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 111
           indent: 1
+          parameters:
+          - 8
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[]\face[]You already have some food.
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 2
+          parameters:
+          - - Leave
+            - Return food
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 0
+          - Leave
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 1
+          - Return food
+        - !ruby/object:RPG::EventCommand
+          code: 126
+          indent: 3
+          parameters:
+          - 40
+          - 1
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
           parameters:
           - \nm[]\face[]You retrieve some food from
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - the sack.
         - !ruby/object:RPG::EventCommand
           code: 126
-          indent: 1
+          indent: 2
           parameters:
           - 40
           - 0
           - 0
           - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -2844,52 +2882,24 @@ root: !ruby/object:RPG::Map
           code: 111
           indent: 0
           parameters:
-          - 8
-          - 40
+          - 0
+          - 4
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
           parameters:
-          - \nm[]\face[]You already have some food.
+          - \nm[Garnet]
         - !ruby/object:RPG::EventCommand
-          code: 102
+          code: 401
           indent: 1
           parameters:
-          - - Leave
-            - Return food
-          - 1
+          - Garnet is not allowed to touch the pig food...
         - !ruby/object:RPG::EventCommand
-          code: 402
+          code: 401
           indent: 1
           parameters:
-          - 0
-          - Leave
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 2
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 402
-          indent: 1
-          parameters:
-          - 1
-          - Return food
-        - !ruby/object:RPG::EventCommand
-          code: 126
-          indent: 2
-          parameters:
-          - 40
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 2
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 404
-          indent: 1
-          parameters: []
+          - Garnet is a dirty slave that will only spoil the food.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -2899,23 +2909,89 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 111
           indent: 1
+          parameters:
+          - 8
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[]\face[]You already have some food.
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 2
+          parameters:
+          - - Leave
+            - Return food
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 0
+          - Leave
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 1
+          - Return food
+        - !ruby/object:RPG::EventCommand
+          code: 126
+          indent: 3
+          parameters:
+          - 40
+          - 1
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
           parameters:
           - \nm[]\face[]You retrieve some food from
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - the sack.
         - !ruby/object:RPG::EventCommand
           code: 126
-          indent: 1
+          indent: 2
           parameters:
           - 40
           - 0
           - 0
           - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -2976,52 +3052,24 @@ root: !ruby/object:RPG::Map
           code: 111
           indent: 0
           parameters:
-          - 8
-          - 40
+          - 0
+          - 4
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
           parameters:
-          - \nm[]\face[]You already have some food.
+          - \nm[Garnet]
         - !ruby/object:RPG::EventCommand
-          code: 102
+          code: 401
           indent: 1
           parameters:
-          - - Leave
-            - Return food
-          - 1
+          - Garnet is not allowed to touch the pig food...
         - !ruby/object:RPG::EventCommand
-          code: 402
+          code: 401
           indent: 1
           parameters:
-          - 0
-          - Leave
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 2
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 402
-          indent: 1
-          parameters:
-          - 1
-          - Return food
-        - !ruby/object:RPG::EventCommand
-          code: 126
-          indent: 2
-          parameters:
-          - 40
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 2
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 404
-          indent: 1
-          parameters: []
+          - Garnet is a dirty slave that will only spoil the food.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -3031,23 +3079,89 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 111
           indent: 1
+          parameters:
+          - 8
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[]\face[]You already have some food.
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 2
+          parameters:
+          - - Leave
+            - Return food
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 0
+          - Leave
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 1
+          - Return food
+        - !ruby/object:RPG::EventCommand
+          code: 126
+          indent: 3
+          parameters:
+          - 40
+          - 1
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
           parameters:
           - \nm[]\face[]You retrieve some food from
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - the sack.
         - !ruby/object:RPG::EventCommand
           code: 126
-          indent: 1
+          indent: 2
           parameters:
           - 40
           - 0
           - 0
           - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -3108,52 +3222,24 @@ root: !ruby/object:RPG::Map
           code: 111
           indent: 0
           parameters:
-          - 8
-          - 40
+          - 0
+          - 4
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
           parameters:
-          - \nm[]\face[]You already have some food.
+          - \nm[Garnet]
         - !ruby/object:RPG::EventCommand
-          code: 102
+          code: 401
           indent: 1
           parameters:
-          - - Leave
-            - Return food
-          - 1
+          - Garnet is not allowed to touch the pig food...
         - !ruby/object:RPG::EventCommand
-          code: 402
+          code: 401
           indent: 1
           parameters:
-          - 0
-          - Leave
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 2
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 402
-          indent: 1
-          parameters:
-          - 1
-          - Return food
-        - !ruby/object:RPG::EventCommand
-          code: 126
-          indent: 2
-          parameters:
-          - 40
-          - 1
-          - 0
-          - 1
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 2
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 404
-          indent: 1
-          parameters: []
+          - Garnet is a dirty slave that will only spoil the food.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -3163,23 +3249,89 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 111
           indent: 1
+          parameters:
+          - 8
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[]\face[]You already have some food.
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 2
+          parameters:
+          - - Leave
+            - Return food
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 0
+          - Leave
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 1
+          - Return food
+        - !ruby/object:RPG::EventCommand
+          code: 126
+          indent: 3
+          parameters:
+          - 40
+          - 1
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
           parameters:
           - \nm[]\face[]You retrieve some food from
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - the sack.
         - !ruby/object:RPG::EventCommand
           code: 126
-          indent: 1
+          indent: 2
           parameters:
           - 40
           - 0
           - 0
           - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -3440,7 +3592,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -3527,7 +3679,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -3590,7 +3742,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -4516,7 +4668,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -4603,7 +4755,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -4666,7 +4818,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -5592,7 +5744,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -5679,7 +5831,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -5742,7 +5894,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -6668,7 +6820,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -6755,7 +6907,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -6818,7 +6970,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -7744,7 +7896,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -7831,7 +7983,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -7894,7 +8046,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -8820,7 +8972,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -8907,7 +9059,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -8970,7 +9122,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -9896,7 +10048,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 2
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -9983,7 +10135,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -10046,7 +10198,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - /nm[]
+          - \nm[]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
