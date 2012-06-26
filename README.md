@@ -67,6 +67,10 @@ If the required file can be found in the Utility folder, there may be an issue w
 
 The location of the game is currently causing issues. Try moving it to another folder (e.g. directly to C).
 
+### Buttons doesn't work properly.
+
+If there's an issue with button presses not being registered or getting sticky, re- or uninstall any RPG Maker RTP you may have previously installed on your system.
+
 ### Changing equipment may not update the list correctly
 
 Leave and return to the equipment view.
