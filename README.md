@@ -12,7 +12,9 @@ The Adventures of Garnet is an adult eroge game made in RPG Maker XP, created by
 
 Latest updates to the game can be downloaded from Github at http://github.com/gegerlan/aog
 
-Archived (zip/tar) : https://github.com/gegerlan/aog/archives/master
+Nightlies : https://www.dropbox.com/sh/pq9hmtttr052xz4/QrUUfrBdE7
+
+Archived Snapshot (zip/tar) : https://github.com/gegerlan/aog/archives/master
 
 Git : git://github.com/gegerlan/aog.git
 
@@ -64,6 +66,10 @@ If the required file can be found in the Utility folder, there may be an issue w
 ### FATAL ERROR: Failed to open executable
 
 The location of the game is currently causing issues. Try moving it to another folder (e.g. directly to C).
+
+### Buttons doesn't work properly.
+
+If there's an issue with button presses not being registered or getting sticky, re- or uninstall any RPG Maker RTP you may have previously installed on your system.
 
 ### Changing equipment may not update the list correctly
 
