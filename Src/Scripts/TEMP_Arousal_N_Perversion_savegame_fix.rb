@@ -5,7 +5,7 @@ class Game_Player < Map_Actor
       @arousal_ticker = 0
     end
     update_original_arousal_init
-    alias update update_original_arousal_init
+    #alias update update_original_arousal_init
   end
 end
 
