@@ -13,6 +13,10 @@ class Hud < Sprite
   end
 end
 
+module BlizzCFG 
+  Z_ITEM_FILE = "hud_HP"
+  Z_ITEM_FILE_EMPTY = "hud_HP_empty"
+end
 class Hud
   DEFAULT_CURRENT = 0
   DEFAULT_MAX     = 100
@@ -26,6 +30,7 @@ class Hud
     @bar_items[item_name] = {
       :current => nil,
       :max     => nil,
+      :name    => item_name,
       :x       => @sp_x,
       :y       => (@sp_y - @hp_y) * ( (@bar_items.length) + 2 ),
       :get     => state_collector
@@ -54,9 +59,16 @@ class Hud
     max     = item_data[:max]     || DEFAULT_MAX
     
     rate = (max > 0 ? current.to_f / max : 0)
-    b1 = RPG::Cache.picture(BlizzCFG::Z_HP_FILE) # TODO: Z_HP_FILE
-    b2 = RPG::Cache.picture(BlizzCFG::Z_HP_FILE_EMPTY) # TODO: Z_HP_FILE_EMPTY
-    if BlizzCFG::Z_HP_TILING
+    if item_data[:name] != nil
+      filled_bar_image = "hud_#{item_data[:name]}"
+      empty_bar_image = "hud_#{item_data[:name]}_empty"
+    else
+      filled_bar_image = BlizzCFG::Z_ITEM_FILE
+      empty_bar_image  = BlizzCFG::Z_ITEM_FILE_EMPTY
+    end
+    b1 = RPG::Cache.picture(filled_bar_image)
+    b2 = RPG::Cache.picture(empty_bar_image)
+    if BlizzCFG::Z_HP_TILING # Not in use
       tiles = max / BlizzCFG::Z_HP_PER_TILE # TODO: Z_HP_PER_TILE
       rows = (tiles.to_f / BlizzCFG::Z_HP_TILE_COLUMNS).ceil # TODO: Z_HP_TILE_COLUMNS
       w, h = b1.width, b1.height
