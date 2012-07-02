@@ -5367,7 +5367,7 @@ root: !ruby/object:RPG::Map
           code: 209
           indent: 1
           parameters:
-          - -1
+          - 0
           - !ruby/object:RPG::MoveRoute
             list:
             - !ruby/object:RPG::MoveCommand
@@ -5553,7 +5553,7 @@ root: !ruby/object:RPG::Map
           code: 209
           indent: 1
           parameters:
-          - -1
+          - 0
           - !ruby/object:RPG::MoveRoute
             list:
             - !ruby/object:RPG::MoveCommand
@@ -5721,7 +5721,7 @@ root: !ruby/object:RPG::Map
           code: 209
           indent: 1
           parameters:
-          - -1
+          - 0
           - !ruby/object:RPG::MoveRoute
             list:
             - !ruby/object:RPG::MoveCommand
@@ -5907,7 +5907,7 @@ root: !ruby/object:RPG::Map
           code: 209
           indent: 1
           parameters:
-          - -1
+          - 0
           - !ruby/object:RPG::MoveRoute
             list:
             - !ruby/object:RPG::MoveCommand
@@ -6936,12 +6936,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - ! 'The maiden of purity... '
+          - The maiden of fertility...
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
           parameters:
-          - She has the power to remove blessings and curses.
+          - She has the power to give women babies...
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -6962,6 +6962,260 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 25
       y: 5
+    9: !ruby/object:RPG::Event
+      id: 9
+      name: EV009
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 030-Cleric06
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 21
+      y: 8
+    10: !ruby/object:RPG::Event
+      id: 10
+      name: EV010
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 031-Cleric07
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 26
+      y: 6
+    11: !ruby/object:RPG::Event
+      id: 11
+      name: EV011
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 120-Civilian20
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: MaidSex01
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 30
+      y: 8
+    12: !ruby/object:RPG::Event
+      id: 12
+      name: EV012
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: C_Slave 7 - Church
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Slave]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Clairia is different from other towns and cities...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Here, slaves are allowed to have faith.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Slave]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! 'However, since we are slaves... we have to stay in '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - this small outer hall when we pray...
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 21
+      y: 26
   height: 35
   tileset_id: 56
   width: 50
