@@ -84,7 +84,7 @@ class Game_Map
     if not @events_to_refresh.empty?
       events_done = []
       for event in @events_to_refresh
-        event.refresh unless event === events_done
+        event.refresh unless events_done === event
         events_done << event
       end
       @events_to_refresh = []
