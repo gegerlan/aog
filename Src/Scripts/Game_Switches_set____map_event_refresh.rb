@@ -16,7 +16,7 @@ class Game_Variables
     (@triggers[variable] ||= []) << event_handler
   end
   def clear_triggers
-    for trigger in @triggers
+    for trigger in @triggers || []
       for event_handler in trigger || []
         trigger.delete(event_handler)
       end
@@ -43,7 +43,7 @@ class Game_Switches
     (@triggers[switch] ||= []) << event_handler
   end
   def clear_triggers
-    for trigger in @triggers
+    for trigger in @triggers || []
       for event_handler in trigger || []
         trigger.delete(event_handler)
       end
