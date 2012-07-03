@@ -51,7 +51,6 @@ class Game_Player < Map_Actor # With (or after) Blizz-ABS
     new_value = [[bladder += change, Bladder::MAX].min, Bladder::MIN].max
     new_value = new_value.to_i if Bladder::FORCE_INTEGER
     $game_variables[ Bladder::TRACK_VARIABLE ] = new_value
-    $game_switches[ Bladder::MAX_SWITCH ] = new_value == Bladder::MAX
   end
 end
 
@@ -67,5 +66,23 @@ class Hud
           :max     => Bladder::MAX
         }
     end
+  end
+end
+
+class Switch_Event
+  def initialize(switch_id, trigger_value)
+    @switch_id = switch_id # switch to trigger
+    @trigger_value = trigger_value # at what value (or above) should be switch be ON
+  end
+  def call(context, value)
+    $game_switches[@switch_id] = value >= @trigger_value
+  end
+end
+
+class Game_Map
+  alias pre_bladder_switch_tracker_setup setup
+  def setup(id)
+    pre_bladder_switch_tracker_setup(id)
+    $game_variables.add_trigger(Bladder::TRACK_VARIABLE, Switch_Event.new(Bladder::MAX_SWITCH, Bladder::MAX))
   end
 end
