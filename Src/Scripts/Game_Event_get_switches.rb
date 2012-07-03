@@ -8,4 +8,12 @@ class Game_Event
     end
     return switches
   end
+  def get_variables
+    variables = []
+    for page in @event.pages.reverse
+      condition = page.condition
+      variables.push(condition.variable_id) if condition.variable_valid
+    end
+    return switches
+  end
 end

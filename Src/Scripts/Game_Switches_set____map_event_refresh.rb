@@ -1,38 +1,84 @@
+class Game_Variables
+  alias game_variables_event_trigger_initialize initialize
+  def initialize
+    game_variables_event_trigger_initialize
+    @triggers = []
+  end
+  alias game_variables_event_trigger_set []=
+  def []=(variable, value)
+    new_value = game_variables_event_trigger_set(variable, value)
+    for event in @triggers[variable] || [] do 
+      event.call(self, new_value)
+    end
+    new_value
+  end
+  def add_trigger(variable, event_handler)
+    (@triggers[variable] ||= []) << event_handler
+  end
+end
+
 class Game_Switches
   alias game_switches_event_trigger_initialize initialize
   def initialize
     game_switches_event_trigger_initialize
     @triggers = []
   end
+  alias game_switches_event_trigger_set []=
   def []=(switch_id, value)
-    if switch_id <= 5000
-      @data[switch_id] = value
+    new_value = game_switches_event_trigger_set(switch_id, value)
+    for event in @triggers[switch_id] || [] do 
+      event.call(self, new_value)
     end
-    if @triggers[switch_id] != nil
-      for event in @triggers[switch_id]
-        event.refresh
-      end
-    end
+    new_value
   end
-  def set_switch_events(triggers)
-    @triggers = triggers
+  def add_trigger(switch, event_handler)
+    (@triggers[switch] ||= []) << event_handler
   end
 end
 class Game_Map
+  attr_accessor :events_to_refresh
+  alias game_map_event_switch_tracker_init initialize
+  def initialize
+    @events_to_refresh = []
+    game_map_event_switch_tracker_init
+  end
   alias game_map_event_switch_tracker_setup setup
   def setup(map_id)
     game_map_event_switch_tracker_setup(map_id)
-    switches = []
     for event in @events.values
       triggers = event.get_switches
-      for n in triggers
-        switches[n] = [] if switches[n] == nil
-        switches[n].push(event)
+      event_handler = Event_Condition_Update.new(event)
+      for switch in triggers
+        $game_switches.add_trigger(switch, event_handler)
       end
     end
     for common_event in @common_events.values
-      (switches[common_event.switch_id]  ||= []) << common_event if common_event.switch_id > 0
+      if common_event.switch_id > 0
+        event_handler = Event_Condition_Update.new(common_event)
+        $game_switches.add_trigger(common_event.switch_id, event_handler)
+      end
     end
-    $game_switches.set_switch_events(switches)
+  end
+  alias game_map_event_switch_tracker_update update
+  def update
+    if not @events_to_refresh.empty?
+      events_done = []
+      for event in @events_to_refresh
+        event.refresh unless event === events_done
+        events_done << event
+      end
+      @events_to_refresh = []
+      events_done = []
+    end
+    game_map_event_switch_tracker_update
+  end
+end
+
+class Event_Condition_Update
+  def initialize(event)
+    @event = event
+  end
+  def call(context, *values)
+    $game_map.events_to_refresh << @event
   end
 end
