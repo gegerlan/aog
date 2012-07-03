@@ -15,6 +15,14 @@ class Game_Variables
   def add_trigger(variable, event_handler)
     (@triggers[variable] ||= []) << event_handler
   end
+  def clear_triggers
+    for trigger in @triggers
+      for event_handler in trigger || []
+        trigger.delete(event_handler)
+      end
+    end
+    @triggers.clear
+  end
 end
 
 class Game_Switches
@@ -34,6 +42,14 @@ class Game_Switches
   def add_trigger(switch, event_handler)
     (@triggers[switch] ||= []) << event_handler
   end
+  def clear_triggers
+    for trigger in @triggers
+      for event_handler in trigger || []
+        trigger.delete(event_handler)
+      end
+    end
+    @triggers.clear
+  end
 end
 class Game_Map
   attr_accessor :events_to_refresh
@@ -45,6 +61,10 @@ class Game_Map
   alias game_map_event_switch_tracker_setup setup
   def setup(map_id)
     game_map_event_switch_tracker_setup(map_id)
+    # Remove previous event handlers
+    $game_switches.clear_triggers
+    $game_variables.clear_triggers
+    # Add event handlers for map events and common events
     for event in @events.values
       triggers = event.get_switches
       event_handler = Event_Condition_Update.new(event)
