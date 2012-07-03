@@ -2,6 +2,7 @@ class Hud < Sprite
   alias bar_item_update update
   def update
     hud_refresh = $game_temp.hud_refresh
+    bitmap.clear if hud_refresh
     bar_item_update
     if actor != nil
       if hud_refresh
@@ -16,6 +17,14 @@ end
 module BlizzCFG 
   Z_ITEM_FILE = "hud_HP"
   Z_ITEM_FILE_EMPTY = "hud_HP_empty"
+
+  # Bar start position
+  ITEM_X = 0
+  ITEM_Y = 0
+  
+  # Offset for each bar drawn
+  ITEM_OFFSET_Y = 16 # sp.y - hp.y = 33-17 
+  ITEM_OFFSET_X = 0  # vertical line
 end
 class Hud
   DEFAULT_CURRENT = 0
@@ -31,8 +40,8 @@ class Hud
       :current => nil,
       :max     => nil,
       :name    => item_name,
-      :x       => @sp_x,
-      :y       => (@sp_y - @hp_y) * ( (@bar_items.length) + 2 ),
+      :x       => BlizzCFG::ITEM_X,
+      :y       => BlizzCFG::ITEM_Y,
       :get     => state_collector
     }
   end
@@ -40,13 +49,26 @@ class Hud
     @bar_items.delete(item_name)
   end
   def draw_bar_items(force_draw = false)
-    
+    items_drawn = 2 # Initial offset since SP and HP is separate
     for item_name, saved_state in @bar_items
       item_state = saved_state[:get].call self
-      if item_state[:current] != saved_state[:current] || item_state[:max] != saved_state[:max] || force_draw == true  
+      if item_state[:current] != saved_state[:current] || 
+          item_state[:max] != saved_state[:max] || force_draw == true ||
+          item_state[:visible] != saved_state[:visible]
+
+        if (not item_state[:visible]) && (saved_state[:visible] != item_state[:visible])
+          # If we changed the bar to not be visible, force an update
+          $game_temp.hud_refresh = true
+        end
         saved_state[:current] = item_state[:current]
         saved_state[:max] = item_state[:max]
-        draw_bar_item(saved_state)
+        saved_state[:visible] = item_state[:visible]
+        
+        if item_state[:visible]
+          saved_state[:y] = BlizzCFG::ITEM_OFFSET_Y * items_drawn
+          draw_bar_item(saved_state)
+          items_drawn += 1
+        end
       end
     end
   end

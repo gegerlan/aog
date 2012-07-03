@@ -63,7 +63,8 @@ class Hud
     add_bar_item("bladder") do |callee|
         {
           :current => $game_variables[ Bladder::TRACK_VARIABLE ],
-          :max     => Bladder::MAX
+          :max     => Bladder::MAX,
+          :visible => $game_switches[ Bladder::ON_SWITCH ]
         }
     end
   end
