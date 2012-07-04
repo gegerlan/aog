@@ -3,7 +3,7 @@ class Game_Party
     for actor in @actors
       if actor.hp > 0 and actor.slip_damage?
         actor.hp -= [actor.maxhp / 100, 1].max
-        if actor.hp == 0
+        if actor.hp == 1
           $game_system.se_play($data_system.actor_collapse_se)
         end
         $game_screen.start_flash(Color.new(255,0,0,128), 4)
