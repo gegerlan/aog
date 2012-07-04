@@ -21,7 +21,7 @@ class Game_Variables
         trigger.delete(event_handler)
       end
     end
-    @triggers.clear
+    @triggers.clear unless @triggers == nil
   end
 end
 
@@ -48,7 +48,7 @@ class Game_Switches
         trigger.delete(event_handler)
       end
     end
-    @triggers.clear
+    @triggers.clear unless @triggers == nil
   end
 end
 class Game_Map
