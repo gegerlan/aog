@@ -81,7 +81,9 @@ class Game_Map
   end
   alias game_map_event_switch_tracker_update update
   def update
-    if not @events_to_refresh.empty?
+    full_refresh = @need_refresh
+    game_map_event_switch_tracker_update
+    if @map_id > 0 and (not @full_refresh) and (not @events_to_refresh.empty?)
       events_done = []
       for event in @events_to_refresh
         event.refresh unless events_done === event
@@ -89,8 +91,9 @@ class Game_Map
       end
       @events_to_refresh.clear
       events_done.clear
+    else
+      @events_to_refresh = []
     end
-    game_map_event_switch_tracker_update
   end
 end
 
