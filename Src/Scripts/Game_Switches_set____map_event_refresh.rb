@@ -87,8 +87,8 @@ class Game_Map
         event.refresh unless events_done === event
         events_done << event
       end
-      @events_to_refresh = []
-      events_done = []
+      @events_to_refresh.clear
+      events_done.clear
     end
     game_map_event_switch_tracker_update
   end
