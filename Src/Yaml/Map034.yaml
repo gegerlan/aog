@@ -1878,6 +1878,54 @@ root: !ruby/object:RPG::Map
               code: 3
               parameters: []
             - !ruby/object:RPG::MoveCommand
+              code: 3
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
+              code: 3
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
+              code: 3
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
+              code: 3
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
+              code: 42
+              parameters:
+              - 200
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 1
+            - !ruby/object:RPG::MoveCommand
+              code: 42
+              parameters:
+              - 150
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 1
+            - !ruby/object:RPG::MoveCommand
+              code: 42
+              parameters:
+              - 100
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 1
+            - !ruby/object:RPG::MoveCommand
+              code: 42
+              parameters:
+              - 50
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 1
+            - !ruby/object:RPG::MoveCommand
+              code: 42
+              parameters:
+              - 0
+            - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
             repeat: false
@@ -1939,6 +1987,106 @@ root: !ruby/object:RPG::Map
             code: 3
             parameters: []
         - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 3
+            parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 3
+            parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 3
+            parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 3
+            parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 42
+            parameters:
+            - 200
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 1
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 42
+            parameters:
+            - 150
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 1
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 42
+            parameters:
+            - 100
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 1
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 42
+            parameters:
+            - 50
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 1
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 42
+            parameters:
+            - 0
+        - !ruby/object:RPG::EventCommand
           code: 210
           indent: 0
           parameters: []
@@ -1960,11 +2108,11 @@ root: !ruby/object:RPG::Map
             parameters: []
           repeat: true
           skippable: false
-        move_speed: 3
+        move_speed: 4
         move_type: 2
         numero: 0
         step_anime: false
-        through: false
+        through: true
         trigger: 4
         walk_anime: true
       - !ruby/object:RPG::Event::Page
@@ -2011,221 +2159,8 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 3
         walk_anime: true
-      x: 19
-      y: 3
-    2: !ruby/object:RPG::Event
-      id: 2
-      name: EV002
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 00 (124)
-          direction: 2
-          opacity: 255
-          pattern: 3
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: ''
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: ''
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 203
-          indent: 0
-          parameters:
-          - 8
-          - 1
-          - 4
-        - !ruby/object:RPG::EventCommand
-          code: 203
-          indent: 0
-          parameters:
-          - 6
-          - 7
-          - 4
-        - !ruby/object:RPG::EventCommand
-          code: 123
-          indent: 0
-          parameters:
-          - A
-          - 0
-        - !ruby/object:RPG::EventCommand
-          code: 106
-          indent: 0
-          parameters:
-          - 60
-        - !ruby/object:RPG::EventCommand
-          code: 203
-          indent: 0
-          parameters:
-          - 2
-          - 1
-          - 5
-        - !ruby/object:RPG::EventCommand
-          code: 203
-          indent: 0
-          parameters:
-          - 4
-          - 7
-          - 5
-        - !ruby/object:RPG::EventCommand
-          code: 116
-          indent: 0
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 3
-        walk_anime: true
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: ''
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 116
-          indent: 0
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 1
-      y: 0
+      x: 17
+      y: 4
     3: !ruby/object:RPG::Event
       id: 3
       name: Goblin \e[3]
@@ -2624,7 +2559,7 @@ root: !ruby/object:RPG::Map
     8: !ruby/object:RPG::Event
       id: 8
       name: EV008
-      numero: 8
+      numero: 9
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -2655,8 +2590,8 @@ root: !ruby/object:RPG::Map
           - 0
           - 36
           - 1
-          - 13
-          - 0
+          - 11
+          - 6
           - 0
         - !ruby/object:RPG::EventCommand
           code: 0
@@ -2713,8 +2648,8 @@ root: !ruby/object:RPG::Map
           - 0
           - 36
           - 1
-          - 12
-          - 0
+          - 11
+          - 6
           - 0
         - !ruby/object:RPG::EventCommand
           code: 0
@@ -2904,7 +2839,7 @@ root: !ruby/object:RPG::Map
     13: !ruby/object:RPG::Event
       id: 13
       name: EV013
-      numero: 8
+      numero: 9
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -2935,8 +2870,8 @@ root: !ruby/object:RPG::Map
           - 0
           - 36
           - 1
-          - 13
-          - 0
+          - 11
+          - 6
           - 0
         - !ruby/object:RPG::EventCommand
           code: 0
@@ -2962,7 +2897,7 @@ root: !ruby/object:RPG::Map
     14: !ruby/object:RPG::Event
       id: 14
       name: EV014
-      numero: 8
+      numero: 9
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -2993,8 +2928,8 @@ root: !ruby/object:RPG::Map
           - 0
           - 36
           - 1
-          - 13
-          - 0
+          - 11
+          - 6
           - 0
         - !ruby/object:RPG::EventCommand
           code: 0
@@ -3020,7 +2955,7 @@ root: !ruby/object:RPG::Map
     15: !ruby/object:RPG::Event
       id: 15
       name: EV015
-      numero: 8
+      numero: 9
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -3051,8 +2986,8 @@ root: !ruby/object:RPG::Map
           - 0
           - 36
           - 1
-          - 13
-          - 0
+          - 11
+          - 6
           - 0
         - !ruby/object:RPG::EventCommand
           code: 0
