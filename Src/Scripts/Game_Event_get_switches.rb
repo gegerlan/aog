@@ -14,6 +14,6 @@ class Game_Event
       condition = page.condition
       variables.push(condition.variable_id) if condition.variable_valid
     end
-    return switches
+    return variables
   end
 end
