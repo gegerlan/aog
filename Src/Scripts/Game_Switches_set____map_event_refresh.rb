@@ -66,10 +66,14 @@ class Game_Map
     $game_variables.clear_triggers
     # Add event handlers for map events and common events
     for event in @events.values
-      triggers = event.get_switches
+      switch_triggers = event.get_switches
+      variable_triggers = event.get_variables
       event_handler = Event_Condition_Update.new(event)
-      for switch in triggers
+      for switch in switch_triggers
         $game_switches.add_trigger(switch, event_handler)
+      end
+      for variable in variable_triggers
+        $game_variables.add_trigger(variable, event_handler)
       end
     end
     for common_event in @common_events.values
