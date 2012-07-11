@@ -1446,7 +1446,7 @@ root: !ruby/object:RPG::Map
     - 2714
     - 2715
     - 2716
-    - 2675
+    - 1723
     - 2712
     - 2713
     - 2714
@@ -1538,7 +1538,7 @@ root: !ruby/object:RPG::Map
     - 2734
     - 2735
     - 2740
-    - 2675
+    - 1723
     - 2736
     - 2733
     - 2734
@@ -1961,7 +1961,7 @@ root: !ruby/object:RPG::Map
     - 2717
     - 2718
     - 2719
-    - 0
+    - 1723
     - 2741
     - 2742
     - 2742
@@ -2361,17 +2361,15 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 2672
-    - 2673
+    - 0
+    - 0
     - 2674
-    - 2675
-    - 2676
     - 0
-    - 2672
-    - 2673
+    - 0
+    - 0
+    - 0
+    - 0
     - 2674
-    - 2675
-    - 2676
     - 0
     - 0
     - 0
@@ -2389,11 +2387,13 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 2680
+    - 0
+    - 0
+    - 0
     - 2681
     - 2682
     - 2683
-    - 2684
+    - 0
     - 0
     - 0
     - 0
@@ -2694,7 +2694,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
+    - 1249
     - 0
     - 0
     - 0
@@ -3157,7 +3157,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
+    - 1249
     - 0
     - 0
     - 0
@@ -5619,6 +5619,57 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[]\face[]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - The Door is sealed.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 479
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 173-Door04
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
           code: 106
           indent: 0
           parameters:
@@ -5812,7 +5863,7 @@ root: !ruby/object:RPG::Map
           - 0
           - 191
           - 33
-          - 3
+          - 4
           - 0
           - 0
         - !ruby/object:RPG::EventCommand
@@ -5882,118 +5933,6 @@ root: !ruby/object:RPG::Map
         walk_anime: false
       x: 37
       y: 20
-    22: !ruby/object:RPG::Event
-      id: 22
-      name: EV022
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 014-Warrior02
-          direction: 6
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - \nm[Hikari Guard]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - This section of the city is closed
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 1
-      y: 12
-    23: !ruby/object:RPG::Event
-      id: 23
-      name: EV023
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 014-Warrior02
-          direction: 6
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - \nm[Hikari Guard]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - This section of the city is closed
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 1
-      y: 13
     24: !ruby/object:RPG::Event
       id: 24
       name: EV024
@@ -6126,22 +6065,22 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: 014-Warrior02
-          direction: 4
+          character_name: ''
+          direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 201
           indent: 0
           parameters:
-          - \nm[Hikari Guard]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - This section of the city is closed
+          - 0
+          - 193
+          - 18
+          - 27
+          - 0
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -6158,10 +6097,10 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 0
+        trigger: 1
         walk_anime: true
-      x: 44
-      y: 4
+      x: 0
+      y: 12
     27: !ruby/object:RPG::Event
       id: 27
       name: EV027
@@ -6182,22 +6121,22 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: 014-Warrior02
-          direction: 4
+          character_name: ''
+          direction: 2
           opacity: 255
-          pattern: 2
+          pattern: 0
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 201
           indent: 0
           parameters:
-          - \nm[Hikari Guard]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - This section of the city is closed
+          - 0
+          - 193
+          - 18
+          - 27
+          - 0
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -6214,10 +6153,10 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 0
+        trigger: 1
         walk_anime: true
-      x: 44
-      y: 5
+      x: 0
+      y: 13
     28: !ruby/object:RPG::Event
       id: 28
       name: EV028
@@ -6363,7 +6302,7 @@ root: !ruby/object:RPG::Map
           - 0
           - 192
           - 1
-          - 7
+          - 19
           - 0
           - 0
         - !ruby/object:RPG::EventCommand
@@ -6419,7 +6358,7 @@ root: !ruby/object:RPG::Map
           - 0
           - 192
           - 1
-          - 7
+          - 19
           - 0
           - 0
         - !ruby/object:RPG::EventCommand
@@ -6442,9 +6381,192 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 45
       y: 5
-    32: !ruby/object:RPG::Event
-      id: 32
-      name: EV032
+    34: !ruby/object:RPG::Event
+      id: 34
+      name: EV034
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 3
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 4
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - Slave Outside Catch
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 3
+        walk_anime: true
+      x: 0
+      y: 0
+    35: !ruby/object:RPG::Event
+      id: 35
+      name: EV035
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 193-Support01
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 10
+      y: 19
+    36: !ruby/object:RPG::Event
+      id: 36
+      name: EV036
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 193-Support01
+          direction: 2
+          opacity: 255
+          pattern: 1
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 12
+      y: 19
+    37: !ruby/object:RPG::Event
+      id: 37
+      name: EV037
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -6473,9 +6595,9 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters:
           - 0
-          - 193
-          - 18
-          - 7
+          - 192
+          - 1
+          - 36
           - 0
           - 0
         - !ruby/object:RPG::EventCommand
@@ -6496,11 +6618,57 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 1
         walk_anime: true
-      x: 0
-      y: 12
-    33: !ruby/object:RPG::Event
-      id: 33
-      name: EV033
+      x: 45
+      y: 21
+    38: !ruby/object:RPG::Event
+      id: 38
+      name: EV038
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 193-Support01
+          direction: 2
+          opacity: 255
+          pattern: 2
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 33
+      y: 11
+    39: !ruby/object:RPG::Event
+      id: 39
+      name: EV039
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -6529,9 +6697,9 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters:
           - 0
-          - 193
-          - 18
-          - 7
+          - 192
+          - 1
+          - 36
           - 0
           - 0
         - !ruby/object:RPG::EventCommand
@@ -6552,8 +6720,8 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 1
         walk_anime: true
-      x: 0
-      y: 13
+      x: 45
+      y: 22
   height: 25
   tileset_id: 56
   width: 46
