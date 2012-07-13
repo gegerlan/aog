@@ -6989,6 +6989,21 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Cherys]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! 'I really would love to see the naked body of the '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - goddess...
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
@@ -7034,6 +7049,89 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Sister Aria]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Oh... this is bad...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - A holy ritual needs to be performed for the godess...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Sister Aria]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - If only we can find a suitable virgin to perform it...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Can you help me find someone?
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 0
+          parameters:
+          - - Sure...
+            - Sorry.
+          - 2
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 0
+          parameters:
+          - 0
+          - Sure...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Sister Aria]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Thank you...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Please hurry...
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 1
+          parameters:
+          - 465
+          - 465
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 0
+          parameters:
+          - 1
+          - Sorry.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 0
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -7081,6 +7179,36 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - The godess granted a virgin like me with a child...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - She surely can perform great wonders...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - I come here every day to thank the goddess...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Giving birth to Pamela was my happiest moment.
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
           parameters: []
@@ -7102,9 +7230,9 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
+          self_switch_valid: false
+          switch1_id: 465
+          switch1_valid: true
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -7114,12 +7242,51 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: MaidSex01
-          direction: 2
+          character_name: 120-Civilian20
+          direction: 8
           opacity: 255
           pattern: 0
           tile_id: 0
         list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Um... I heard your conversation with the nun...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - I... I'm a virgin... maybe I can help...
+        - !ruby/object:RPG::EventCommand
+          code: 224
+          indent: 0
+          parameters:
+          - !ruby/object:Color
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 0
+          parameters:
+          - 465
+          - 465
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 0
+          parameters:
+          - 466
+          - 466
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -7195,7 +7362,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - this small outer hall when we pray...
+          - this small hall when we pray...
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -7216,6 +7383,273 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 21
       y: 26
+    13: !ruby/object:RPG::Event
+      id: 13
+      name: EV013
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 118-Civilian18
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 31
+      y: 11
+    14: !ruby/object:RPG::Event
+      id: 14
+      name: EV014
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 131-Noble06
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 20
+      y: 11
+    15: !ruby/object:RPG::Event
+      id: 15
+      name: EV015
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 113-Civilian13
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Pamela]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! 'Hi, I''m Pamela. '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Mom always comes here to thank the goddess...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Pamela]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - I really dont want to be in this boring place...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - But, I have no choice but to follow mom...
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 29
+      y: 8
+    16: !ruby/object:RPG::Event
+      id: 16
+      name: EV016
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 133-Noble08
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 21
+      y: 11
+    17: !ruby/object:RPG::Event
+      id: 17
+      name: EV017
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 466
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: true
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 0
+          parameters:
+          - 466
+          - 466
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 3
+        walk_anime: false
+      x: 25
+      y: 6
   height: 35
   tileset_id: 56
   width: 50
