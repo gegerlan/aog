@@ -75,7 +75,8 @@ class Interpreter
   end
   # execute list passed
   def call_command(*commands)
-    return false if commands.empty?
+    # Return false if the list of commands is empty, or starts with an empty command
+    return false if commands.empty? or commands[0].code == 0
     # Make child interpreter (i.e. make it running under the current interpreter)
     @child_interpreter = Interpreter.new(@depth + 1)
     @child_interpreter.setup(commands, @event_id, 0)

@@ -1606,10 +1606,11 @@ root: !ruby/object:RPG::Map
           parameters:
           - \nm[Garnet] Okay...
         - !ruby/object:RPG::EventCommand
-          code: 123
+          code: 121
           indent: 0
           parameters:
-          - A
+          - 140
+          - 140
           - 0
         - !ruby/object:RPG::EventCommand
           code: 0
@@ -1634,9 +1635,9 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
-          self_switch_valid: true
+          self_switch_valid: false
           switch1_id: 140
-          switch1_valid: false
+          switch1_valid: true
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -1653,8 +1654,20 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
-          code: 122
+          code: 111
           indent: 0
+          parameters:
+          - 2
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 1
+          parameters:
+          - Garnet tries to convince her for the first time.
+        - !ruby/object:RPG::EventCommand
+          code: 122
+          indent: 1
           parameters:
           - 48
           - 48
@@ -1663,42 +1676,42 @@ root: !ruby/object:RPG::Map
           - 5
         - !ruby/object:RPG::EventCommand
           code: 117
-          indent: 0
+          indent: 1
           parameters:
           - 193
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 0
+          indent: 1
           parameters:
           - \nm[Garnet] Please, pleaase let me borrow some books!
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - It's not because I'm bored, I really need to learn
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - magic to go rescue my father.
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 0
+          indent: 1
           parameters:
           - \face[] \nm[Celine] You're finally getting around
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - ! 'to learning spells?  Its about time, the rest '
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - of us girls were getting a bit concerned.
         - !ruby/object:RPG::EventCommand
           code: 122
-          indent: 0
+          indent: 1
           parameters:
           - 48
           - 48
@@ -1707,37 +1720,37 @@ root: !ruby/object:RPG::Map
           - 8
         - !ruby/object:RPG::EventCommand
           code: 117
-          indent: 0
+          indent: 1
           parameters:
           - 193
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 0
+          indent: 1
           parameters:
           - \nm[Garnet] What are you talking about?
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 0
+          indent: 1
           parameters:
           - \nm[Celine] \face[] Teehee... don't you worry about that
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - ! 'just yet. You just find and return your '
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - ! 'old books, and since I''m feeling nice '
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - I'll just ignore the late fees.
         - !ruby/object:RPG::EventCommand
           code: 122
-          indent: 0
+          indent: 1
           parameters:
           - 48
           - 48
@@ -1746,21 +1759,75 @@ root: !ruby/object:RPG::Map
           - 2
         - !ruby/object:RPG::EventCommand
           code: 117
-          indent: 0
+          indent: 1
           parameters:
           - 193
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 0
+          indent: 1
           parameters:
           - \nm[Garnet] Thanks, I'll be back.
         - !ruby/object:RPG::EventCommand
-          code: 121
-          indent: 0
+          code: 123
+          indent: 1
           parameters:
-          - 140
-          - 140
+          - A
           - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 0
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 108
+          indent: 1
+          parameters:
+          - Garnet failed to convince her.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - ! '\nm[Celine] \face[]Just find and return your '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - old books, and since I'm feeling nice,
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - I'll just ignore the late fees.
+        - !ruby/object:RPG::EventCommand
+          code: 122
+          indent: 1
+          parameters:
+          - 48
+          - 48
+          - 0
+          - 0
+          - 2
+        - !ruby/object:RPG::EventCommand
+          code: 117
+          indent: 1
+          parameters:
+          - 193
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Garnet] Thanks, I'll be back.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 0
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -5572,7 +5639,7 @@ root: !ruby/object:RPG::Map
       y: 15
     26: !ruby/object:RPG::Event
       id: 26
-      name: Event 1 proxy
+      name: Notes
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -5596,11 +5663,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 8000
         list:
-        - !ruby/object:RPG::EventCommand
-          code: 355
-          indent: 0
-          parameters:
-          - $game_map.events[1].start
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
