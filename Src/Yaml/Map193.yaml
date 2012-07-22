@@ -3028,8 +3028,8 @@ root: !ruby/object:RPG::Map
     - 356
     - 356
     - 356
-    - 337
-    - 360
+    - 341
+    - 374
     - 0
     - 0
     - 3116
@@ -3068,7 +3068,6 @@ root: !ruby/object:RPG::Map
     - 364
     - 364
     - 364
-    - 364
     - 374
     - 0
     - 0
@@ -3090,6 +3089,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 0
     - 352
     - 336
     - 0
@@ -3102,17 +3102,17 @@ root: !ruby/object:RPG::Map
     - 5459
     - 5459
     - 0
-    - 3143
-    - 3143
-    - 3143
-    - 3143
-    - 3143
-    - 3143
-    - 3143
-    - 3143
-    - 3143
-    - 3143
-    - 3143
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -3142,17 +3142,17 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3151
-    - 3151
-    - 3151
-    - 3151
-    - 3151
-    - 3151
-    - 3151
-    - 3151
-    - 3151
-    - 3151
-    - 3151
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -3182,17 +3182,17 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3157
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 3158
-    - 3158
-    - 3158
-    - 3158
-    - 3158
-    - 3158
-    - 3158
-    - 3158
-    - 3158
-    - 3159
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -3222,17 +3222,17 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3165
+    - 0
+    - 0
+    - 0
+    - 0
     - 3166
     - 3166
     - 3166
-    - 3166
-    - 3166
-    - 3166
-    - 3166
-    - 3166
-    - 3166
-    - 3167
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -3262,17 +3262,17 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3176
-    - 3177
-    - 3178
-    - 3179
-    - 3178
-    - 3178
+    - 0
+    - 0
+    - 0
+    - 0
     - 3178
     - 3178
     - 3178
-    - 3178
-    - 3180
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -3302,17 +3302,17 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3184
-    - 3185
-    - 3186
-    - 3187
-    - 3186
-    - 3186
+    - 0
+    - 0
+    - 0
+    - 0
     - 3186
     - 3186
     - 3186
-    - 3186
-    - 3188
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -8258,6 +8258,59 @@ root: !ruby/object:RPG::Map
         walk_anime: false
       x: 20
       y: 48
+    20: !ruby/object:RPG::Event
+      id: 20
+      name: EV020
+      numero: 7
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 170-Door01
+          direction: 2
+          opacity: 255
+          pattern: 3
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - This door seems to be locked.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 33
+      y: 8
     21: !ruby/object:RPG::Event
       id: 21
       name: EV021
@@ -8541,13 +8594,19 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
-          code: 106
+          code: 111
           indent: 0
+          parameters:
+          - 8
+          - 75
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 1
           parameters:
           - 4
         - !ruby/object:RPG::EventCommand
           code: 250
-          indent: 0
+          indent: 1
           parameters:
           - !ruby/object:RPG::AudioFile
             name: 024-Door01
@@ -8555,10 +8614,31 @@ root: !ruby/object:RPG::Map
             volume: 80
         - !ruby/object:RPG::EventCommand
           code: 123
-          indent: 0
+          indent: 1
           parameters:
           - A
           - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 0
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - This door is locked.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 0
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -8758,210 +8838,6 @@ root: !ruby/object:RPG::Map
         walk_anime: true
       x: 26
       y: 8
-    22: !ruby/object:RPG::Event
-      id: 22
-      name: EV022
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 186-Bulletin01
-          direction: 6
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - ! 'Coming Soon: Adventurer''s Guild, Hikari Chapter.'
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 15
-      y: 25
-    23: !ruby/object:RPG::Event
-      id: 23
-      name: EV023
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 186-Bulletin01
-          direction: 6
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - Go Away.
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 25
-      y: 22
-    24: !ruby/object:RPG::Event
-      id: 24
-      name: EV024
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 186-Bulletin01
-          direction: 6
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - No Solicitation!
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 25
-      y: 24
-    25: !ruby/object:RPG::Event
-      id: 25
-      name: EV025
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 186-Bulletin01
-          direction: 6
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
-          - ! 'Tresspassers will be turned into a newt. '
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 27
-      y: 22
   height: 60
   tileset_id: 56
   width: 40

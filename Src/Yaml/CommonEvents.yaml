@@ -18082,27 +18082,52 @@ root:
     - 0
     - 0
   - !ruby/object:RPG::EventCommand
-    code: 106
+    code: 355
     indent: 0
     parameters:
-    - 500
+    - switch_on(12, "A")
+  - !ruby/object:RPG::EventCommand
+    code: 101
+    indent: 0
+    parameters:
+    - \nm[Guard]\face[] You are jailed!
   - !ruby/object:RPG::EventCommand
     code: 108
     indent: 0
     parameters:
     - fucked by guard
   - !ruby/object:RPG::EventCommand
+    code: 106
+    indent: 0
+    parameters:
+    - 100
+  - !ruby/object:RPG::EventCommand
     code: 108
     indent: 0
     parameters:
     - open door
+  - !ruby/object:RPG::EventCommand
+    code: 101
+    indent: 0
+    parameters:
+    - ! '\nm[Guard]\face[] You are free to '
+  - !ruby/object:RPG::EventCommand
+    code: 401
+    indent: 0
+    parameters:
+    - ! 'go. '
+  - !ruby/object:RPG::EventCommand
+    code: 355
+    indent: 0
+    parameters:
+    - switch_off(12, "A")
   - !ruby/object:RPG::EventCommand
     code: 0
     indent: 0
     parameters: []
   name: Hikari Jailtime
   switch_id: 1
-  trigger: 0
+  trigger: 2
 - !ruby/object:RPG::CommonEvent
   id: 83
   list:
@@ -22822,6 +22847,36 @@ root:
     parameters:
     - 1
     - kai_meid
+    - 0
+    - ''
+    - 0
+  - !ruby/object:RPG::EventCommand
+    code: 119
+    indent: 1
+    parameters:
+    - Enter
+  - !ruby/object:RPG::EventCommand
+    code: 0
+    indent: 1
+    parameters: []
+  - !ruby/object:RPG::EventCommand
+    code: 412
+    indent: 0
+    parameters: []
+  - !ruby/object:RPG::EventCommand
+    code: 111
+    indent: 0
+    parameters:
+    - 4
+    - 1
+    - 4
+    - 67
+  - !ruby/object:RPG::EventCommand
+    code: 322
+    indent: 1
+    parameters:
+    - 1
+    - Garnet - slime
     - 0
     - ''
     - 0
