@@ -6895,52 +6895,6 @@ root: !ruby/object:RPG::Map
     3: !ruby/object:RPG::Event
       id: 3
       name: EV003
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: 171-Door02
-          direction: 2
-          opacity: 255
-          pattern: 2
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 9
-      y: 21
-    4: !ruby/object:RPG::Event
-      id: 4
-      name: EV004
       numero: 16
       pages:
       - !ruby/object:RPG::Event::Page
@@ -6949,7 +6903,7 @@ root: !ruby/object:RPG::Map
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 460
-          switch1_valid: true
+          switch1_valid: false
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -7153,6 +7107,270 @@ root: !ruby/object:RPG::Map
           - C
           - 1
         - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 3
+        step_anime: false
+        through: false
+        trigger: 3
+        walk_anime: true
+      x: 9
+      y: 21
+    4: !ruby/object:RPG::Event
+      id: 4
+      name: EV004
+      numero: 16
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 460
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 170-Door01
+          direction: 2
+          opacity: 255
+          pattern: 3
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 0
+          parameters:
+          - 0
+          - 460
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 1
+          parameters:
+          - 4
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 1
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 024-Door01
+            pitch: 100
+            volume: 80
+        - !ruby/object:RPG::EventCommand
+          code: 123
+          indent: 1
+          parameters:
+          - A
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 0
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 123
+          indent: 1
+          parameters:
+          - D
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 0
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 170-Door01
+          direction: 4
+          opacity: 255
+          pattern: 2
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 0
+          parameters:
+          - 4
+        - !ruby/object:RPG::EventCommand
+          code: 123
+          indent: 0
+          parameters:
+          - B
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 1
+        step_anime: false
+        through: false
+        trigger: 3
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: B
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 170-Door01
+          direction: 6
+          opacity: 255
+          pattern: 2
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 0
+          parameters:
+          - 4
+        - !ruby/object:RPG::EventCommand
+          code: 123
+          indent: 0
+          parameters:
+          - C
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        numero: 2
+        step_anime: false
+        through: false
+        trigger: 3
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: C
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: 170-Door01
+          direction: 8
+          opacity: 255
+          pattern: 2
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 0
+          parameters:
+          - 4
+        - !ruby/object:RPG::EventCommand
+          code: 123
+          indent: 0
+          parameters:
+          - A
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 123
+          indent: 0
+          parameters:
+          - B
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 123
+          indent: 0
+          parameters:
+          - C
+          - 1
+        - !ruby/object:RPG::EventCommand
           code: 201
           indent: 0
           parameters:
@@ -7184,8 +7402,8 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
-          self_switch_valid: false
+          self_switch_ch: D
+          self_switch_valid: true
           switch1_id: 460
           switch1_valid: false
           switch2_id: 1
@@ -7193,7 +7411,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
@@ -7230,8 +7448,8 @@ root: !ruby/object:RPG::Map
         numero: 0
         step_anime: false
         through: false
-        trigger: 0
-        walk_anime: true
+        trigger: 3
+        walk_anime: false
       x: 18
       y: 9
     5: !ruby/object:RPG::Event
@@ -7429,79 +7647,182 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
+          code: 122
+          indent: 0
+          parameters:
+          - 40
+          - 40
+          - 0
+          - 2
+          - 1
+          - 3
+        - !ruby/object:RPG::EventCommand
           code: 111
           indent: 0
+          parameters:
+          - 1
+          - 40
+          - 0
+          - 1
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 1
           parameters:
           - 0
           - 4
           - 0
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 1
+          indent: 2
           parameters:
           - \nm[Erica]
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - Ah, a slave...
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - Good... now I can get some work done!
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 1
+          indent: 2
           parameters:
           - \nm[Erica]
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - I want you to make the pigs happy...
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - I'll give you 150 gold if you do it well.
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 1
+          indent: 2
           parameters:
           - \nm[Garnet]
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - Yes, mistress...
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
-          - I have no rights to refuse your request...
+          - I have no rights to refuse...
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 1
+          indent: 2
           parameters:
           - \nm[Erica]
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - Good... but don't touch anything else in the pen...
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 1
+          indent: 2
           parameters:
           - I don't want a dirty slave like you messing things up.
         - !ruby/object:RPG::EventCommand
           code: 121
-          indent: 1
+          indent: 2
           parameters:
           - 460
           - 460
           - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[Erica]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - Do you want to feed the pigs?
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - The pay is 150 gold.
+        - !ruby/object:RPG::EventCommand
+          code: 102
+          indent: 2
+          parameters:
+          - - Sure.
+            - Maybe later.
+          - 2
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 0
+          - Sure.
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 3
+          parameters:
+          - 460
+          - 460
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 3
+          parameters:
+          - \nm[Erica]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 3
+          parameters:
+          - Good... The pigs are in the pen.
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 3
+          parameters:
+          - The pig feed are in the sacks.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 2
+          parameters:
+          - 1
+          - Maybe later.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 3
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 412
+          indent: 1
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -7511,39 +7832,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
         - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 1
-          parameters:
-          - \nm[Erica]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 1
-          parameters:
-          - Do you want to feed the pigs?
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 1
-          parameters:
-          - The pay is 150 gold.
-        - !ruby/object:RPG::EventCommand
-          code: 102
-          indent: 1
-          parameters:
-          - - Sure.
-            - Maybe later.
-          - 2
-        - !ruby/object:RPG::EventCommand
-          code: 402
+          code: 111
           indent: 1
           parameters:
           - 0
-          - Sure.
-        - !ruby/object:RPG::EventCommand
-          code: 121
-          indent: 2
-          parameters:
-          - 460
-          - 460
+          - 4
           - 0
         - !ruby/object:RPG::EventCommand
           code: 101
@@ -7554,28 +7847,51 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters:
-          - Good... The pigs are in the pen.
+          - I have no need for you slave...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[Garnet]
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
           parameters:
-          - The pig feed are in the sacks.
+          - Yes mistress...
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 2
           parameters: []
         - !ruby/object:RPG::EventCommand
-          code: 402
+          code: 411
           indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
           parameters:
-          - 1
-          - Maybe later.
+          - \nm[Erica]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - Do you need anything in this farm?
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[Garnet]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - Um... no.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 2
           parameters: []
         - !ruby/object:RPG::EventCommand
-          code: 404
+          code: 412
           indent: 1
           parameters: []
         - !ruby/object:RPG::EventCommand
