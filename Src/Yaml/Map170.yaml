@@ -6588,7 +6588,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - You can't regret your desicion now mortal...
+          - You can't regret your desicion now.
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
@@ -6667,7 +6667,7 @@ root: !ruby/object:RPG::Map
             - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-            repeat: false
+            repeat: true
             skippable: false
         - !ruby/object:RPG::EventCommand
           code: 509
@@ -6738,6 +6738,16 @@ root: !ruby/object:RPG::Map
             - 4
             - 3
         - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Event incomplete...
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
@@ -6747,6 +6757,16 @@ root: !ruby/object:RPG::Map
           parameters:
           - 1
           - At the top.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[Devil]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Very well...
         - !ruby/object:RPG::EventCommand
           code: 209
           indent: 1
@@ -6797,7 +6817,7 @@ root: !ruby/object:RPG::Map
             - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
-            repeat: false
+            repeat: true
             skippable: false
         - !ruby/object:RPG::EventCommand
           code: 509
@@ -6867,6 +6887,16 @@ root: !ruby/object:RPG::Map
             - 0
             - 4
             - 3
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
+          parameters:
+          - \nm[]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - Event incomlete...
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -7090,48 +7120,115 @@ root: !ruby/object:RPG::Map
           tile_id: 0
         list:
         - !ruby/object:RPG::EventCommand
-          code: 101
+          code: 122
           indent: 0
+          parameters:
+          - 40
+          - 40
+          - 0
+          - 2
+          - 1
+          - 3
+        - !ruby/object:RPG::EventCommand
+          code: 111
+          indent: 0
+          parameters:
+          - 1
+          - 40
+          - 0
+          - 1
+          - 2
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 1
           parameters:
           - \nm[Sister Aria]
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - A holy ritual needs to be performed for the goddess...
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - But I can't find a suitable virgin.
         - !ruby/object:RPG::EventCommand
           code: 101
-          indent: 0
+          indent: 1
           parameters:
           - \nm[Sister Aria]
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - It will displease the goddess if the ritual isn't done.
         - !ruby/object:RPG::EventCommand
           code: 401
-          indent: 0
+          indent: 1
           parameters:
           - Can you help me find someone?
         - !ruby/object:RPG::EventCommand
           code: 102
-          indent: 0
+          indent: 1
           parameters:
           - - Sure...
             - Sorry.
           - 2
         - !ruby/object:RPG::EventCommand
           code: 402
-          indent: 0
+          indent: 1
           parameters:
           - 0
           - Sure...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 2
+          parameters:
+          - \nm[Sister Aria]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - Thank you...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 2
+          parameters:
+          - Please hurry...
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 2
+          parameters:
+          - 465
+          - 465
+          - 0
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 402
+          indent: 1
+          parameters:
+          - 1
+          - Sorry.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 404
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 1
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 411
+          indent: 0
+          parameters: []
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
@@ -7141,35 +7238,33 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 1
           parameters:
-          - Thank you...
+          - ! 'One day I hope to be a great nun like the Sister''s Emi '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 1
           parameters:
-          - Please hurry...
+          - and Ami.
         - !ruby/object:RPG::EventCommand
-          code: 121
+          code: 101
           indent: 1
           parameters:
-          - 465
-          - 465
-          - 0
+          - \nm[Sister Aria] *blush*
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - ! 'How sinful of me to wish for something I''m '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 1
+          parameters:
+          - so unworthy of.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
           parameters: []
         - !ruby/object:RPG::EventCommand
-          code: 402
-          indent: 0
-          parameters:
-          - 1
-          - Sorry.
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 1
-          parameters: []
-        - !ruby/object:RPG::EventCommand
-          code: 404
+          code: 412
           indent: 0
           parameters: []
         - !ruby/object:RPG::EventCommand
@@ -7354,6 +7449,10 @@ root: !ruby/object:RPG::Map
           parameters:
           - That's great I'll tell the nun.
         - !ruby/object:RPG::EventCommand
+          code: 221
+          indent: 0
+          parameters: []
+        - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
           parameters:
@@ -7364,6 +7463,11 @@ root: !ruby/object:RPG::Map
             red: 255.0
           - 20
         - !ruby/object:RPG::EventCommand
+          code: 222
+          indent: 0
+          parameters:
+          - 016-Diamond02
+        - !ruby/object:RPG::EventCommand
           code: 201
           indent: 0
           parameters:
@@ -7373,11 +7477,6 @@ root: !ruby/object:RPG::Map
           - 6
           - 6
           - 0
-        - !ruby/object:RPG::EventCommand
-          code: 106
-          indent: 0
-          parameters:
-          - 20
         - !ruby/object:RPG::EventCommand
           code: 121
           indent: 0
@@ -8194,12 +8293,410 @@ root: !ruby/object:RPG::Map
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
-          character_name: ''
+          character_name: 120-Civilian20
           direction: 2
           opacity: 255
           pattern: 0
           tile_id: 0
         list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Sister Aria]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - You found a virgin that is willing to perform the ritual!
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - That's great who is she?
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - I... It's me...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Sister Aria]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Oh... It's you again Iris.
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Are you ready to perform the ritual?
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Y... yes.
+        - !ruby/object:RPG::EventCommand
+          code: 209
+          indent: 0
+          parameters:
+          - 0
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
+              code: 41
+              parameters:
+              - MaidSex01
+              - 0
+              - 2
+              - 0
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 4
+            - !ruby/object:RPG::MoveCommand
+              code: 41
+              parameters:
+              - MaidSex01
+              - 0
+              - 2
+              - 1
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 4
+            - !ruby/object:RPG::MoveCommand
+              code: 41
+              parameters:
+              - MaidSex01
+              - 0
+              - 2
+              - 2
+            - !ruby/object:RPG::MoveCommand
+              code: 15
+              parameters:
+              - 4
+            - !ruby/object:RPG::MoveCommand
+              code: 41
+              parameters:
+              - MaidSex01
+              - 0
+              - 2
+              - 3
+            - !ruby/object:RPG::MoveCommand
+              code: 0
+              parameters: []
+            repeat: true
+            skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters:
+            - MaidSex01
+            - 0
+            - 2
+            - 0
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 4
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters:
+            - MaidSex01
+            - 0
+            - 2
+            - 1
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 4
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters:
+            - MaidSex01
+            - 0
+            - 2
+            - 2
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 15
+            parameters:
+            - 4
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 41
+            parameters:
+            - MaidSex01
+            - 0
+            - 2
+            - 3
+        - !ruby/object:RPG::EventCommand
+          code: 224
+          indent: 0
+          parameters:
+          - !ruby/object:Color
+            alpha: 255.0
+            blue: 255.0
+            green: 255.0
+            red: 255.0
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 225
+          indent: 0
+          parameters:
+          - 5
+          - 5
+          - 5
+        - !ruby/object:RPG::EventCommand
+          code: 209
+          indent: 0
+          parameters:
+          - 18
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
+              code: 14
+              parameters:
+              - 0
+              - 0
+            - !ruby/object:RPG::MoveCommand
+              code: 0
+              parameters: []
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 14
+            parameters:
+            - 0
+            - 0
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Cilia]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! 'Mommy... '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Y... you are doing the ritual again mommy...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Ah... aaahh... Ye...yes Cilia...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Ci... Cilia is watching mommy aaah...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Aaaahh... just look at me Cilia...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! 'Look at mommy''s breasts and pussy... '
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Cilia]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! '*blush*'
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Y... yes mommy I'm looking...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Look at mommy's wet pussy Cilia...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Cilia came from mommy's pussy... aaaahh...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Cilia]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Y... yes mommy... you already told me...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - I... It always makes me wet mommy...
+        - !ruby/object:RPG::EventCommand
+          code: 223
+          indent: 0
+          parameters:
+          - !ruby/object:Tone
+            blue: 255.0
+            gray: 0.0
+            green: 255.0
+            red: 255.0
+          - 20
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Aaaaaaaahhh...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Mommy is so happy... Cilia.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Sister Aria]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - The ritual is complete...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - The offering has had an orgasm...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Sister Aria]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! 'All present for the ceremony gets a vial of the '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - offering's Holy Juice.
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Garnet got a vial of holy juice...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - It was collected from Iris' wet pussy.
+        - !ruby/object:RPG::EventCommand
+          code: 126
+          indent: 0
+          parameters:
+          - 61
+          - 0
+          - 0
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 0
+          parameters:
+          - 466
+          - 466
+          - 1
+        - !ruby/object:RPG::EventCommand
+          code: 223
+          indent: 0
+          parameters:
+          - !ruby/object:Tone
+            blue: 0.0
+            gray: 0.0
+            green: 0.0
+            red: 0.0
+          - 20
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -8396,21 +8893,6 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters:
-          - \nm[Iris]
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - I... I cant control my body aaah...
-        - !ruby/object:RPG::EventCommand
-          code: 401
-          indent: 0
-          parameters:
-          - My hand is moving on its own... ah aaah...
-        - !ruby/object:RPG::EventCommand
-          code: 101
-          indent: 0
-          parameters:
           - \nm[Sister Aria]
         - !ruby/object:RPG::EventCommand
           code: 401
@@ -8422,6 +8904,21 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters:
           - in this ritual...
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Iris]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - I... I cant control my body aaah...
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - My hand is moving on its own... ah aaah...
         - !ruby/object:RPG::EventCommand
           code: 209
           indent: 0
@@ -8486,10 +8983,8 @@ root: !ruby/object:RPG::Map
           - !ruby/object:RPG::MoveRoute
             list:
             - !ruby/object:RPG::MoveCommand
-              code: 14
-              parameters:
-              - 0
-              - 0
+              code: 4
+              parameters: []
             - !ruby/object:RPG::MoveCommand
               code: 0
               parameters: []
@@ -8500,10 +8995,8 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters:
           - !ruby/object:RPG::MoveCommand
-            code: 14
-            parameters:
-            - 0
-            - 0
+            code: 4
+            parameters: []
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -8533,7 +9026,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - ! 'Just watch mommy Cilia... '
+          - ! 'J... Just watch mommy Cilia... '
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -8688,6 +9181,13 @@ root: !ruby/object:RPG::Map
           - 0
           - 1
         - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 0
+          parameters:
+          - 466
+          - 466
+          - 1
+        - !ruby/object:RPG::EventCommand
           code: 123
           indent: 0
           parameters:
@@ -8698,13 +9198,6 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters:
           - B
-          - 1
-        - !ruby/object:RPG::EventCommand
-          code: 121
-          indent: 0
-          parameters:
-          - 466
-          - 466
           - 1
         - !ruby/object:RPG::EventCommand
           code: 223
@@ -8982,7 +9475,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
@@ -9045,8 +9538,8 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 0
-        walk_anime: true
+        trigger: 1
+        walk_anime: false
       x: 24
       y: 22
     24: !ruby/object:RPG::Event
@@ -9065,7 +9558,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
@@ -9128,8 +9621,8 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 0
-        walk_anime: true
+        trigger: 1
+        walk_anime: false
       x: 25
       y: 22
     25: !ruby/object:RPG::Event
@@ -9148,7 +9641,7 @@ root: !ruby/object:RPG::Map
           variable_id: 1
           variable_valid: false
           variable_value: 0
-        direction_fix: false
+        direction_fix: true
         graphic: !ruby/object:RPG::Event::Page::Graphic
           blend_type: 0
           character_hue: 0
@@ -9211,8 +9704,8 @@ root: !ruby/object:RPG::Map
         move_type: 0
         step_anime: false
         through: false
-        trigger: 0
-        walk_anime: true
+        trigger: 1
+        walk_anime: false
       x: 26
       y: 22
   height: 35
