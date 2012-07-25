@@ -7978,7 +7978,7 @@ root: !ruby/object:RPG::Map
       y: 41
     20: !ruby/object:RPG::Event
       id: 20
-      name: Tree
+      name: EV020
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -7986,6 +7986,108 @@ root: !ruby/object:RPG::Map
           self_switch_ch: A
           self_switch_valid: false
           switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 0
+          parameters:
+          - $game_map.events[22].start
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 32
+      y: 9
+    21: !ruby/object:RPG::Event
+      id: 21
+      name: EV021
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 355
+          indent: 0
+          parameters:
+          - $game_map.events[22].start
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 33
+      y: 9
+    22: !ruby/object:RPG::Event
+      id: 22
+      name: climb_tree
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 489
           switch1_valid: false
           switch2_id: 1
           switch2_valid: false
@@ -8011,9 +8113,9 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - ! 'branches. '
+          - branches. It looks like a bundle of some sort.
         - !ruby/object:RPG::EventCommand
-          code: 401
+          code: 101
           indent: 0
           parameters:
           - Attempt to climb up?
@@ -8182,6 +8284,17 @@ root: !ruby/object:RPG::Map
           - 0
           - 200
         - !ruby/object:RPG::EventCommand
+          code: 116
+          indent: 2
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 121
+          indent: 2
+          parameters:
+          - 489
+          - 489
+          - 0
+        - !ruby/object:RPG::EventCommand
           code: 0
           indent: 2
           parameters: []
@@ -8266,55 +8379,9 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
-          self_switch_valid: true
-          switch1_id: 1
-          switch1_valid: false
-          switch2_id: 1
-          switch2_valid: false
-          variable_id: 1
-          variable_valid: false
-          variable_value: 0
-        direction_fix: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          blend_type: 0
-          character_hue: 0
-          character_name: ''
-          direction: 2
-          opacity: 255
-          pattern: 0
-          tile_id: 0
-        list:
-        - !ruby/object:RPG::EventCommand
-          code: 0
-          indent: 0
-          parameters: []
-        move_frequency: 3
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            code: 0
-            parameters: []
-          repeat: true
-          skippable: false
-        move_speed: 3
-        move_type: 0
-        step_anime: false
-        through: false
-        trigger: 0
-        walk_anime: true
-      x: 32
-      y: 9
-    21: !ruby/object:RPG::Event
-      id: 21
-      name: EV021
-      pages:
-      - !ruby/object:RPG::Event::Page
-        always_on_top: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          self_switch_ch: A
           self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
+          switch1_id: 489
+          switch1_valid: true
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -8330,11 +8397,6 @@ root: !ruby/object:RPG::Map
           pattern: 0
           tile_id: 0
         list:
-        - !ruby/object:RPG::EventCommand
-          code: 355
-          indent: 0
-          parameters:
-          - call_events_by_name("Tree")
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -8353,8 +8415,8 @@ root: !ruby/object:RPG::Map
         through: false
         trigger: 0
         walk_anime: true
-      x: 33
-      y: 9
+      x: 1
+      y: 0
   height: 55
   tileset_id: 56
   width: 40
