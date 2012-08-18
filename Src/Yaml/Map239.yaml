@@ -1094,7 +1094,7 @@ root: !ruby/object:RPG::Map
         trigger: 1
         walk_anime: true
       x: 10
-      y: 15
+      y: 16
     2: !ruby/object:RPG::Event
       id: 2
       name: Noel
@@ -1135,7 +1135,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters:
-          - \nm[Garent] Haven't I seen this girl before?
+          - \nm[Garnet] Haven't I seen this girl before?
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -1237,7 +1237,57 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 0
           parameters:
-          - \nm[Garent] Ok sorry
+          - \nm[Garnet] Ok sorry
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 1
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 444
+          switch1_valid: true
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 201
+          indent: 0
+          parameters:
+          - 0
+          - 241
+          - 16
+          - 3
+          - 0
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -1313,7 +1363,7 @@ root: !ruby/object:RPG::Map
         trigger: 1
         walk_anime: true
       x: 11
-      y: 15
+      y: 16
     5: !ruby/object:RPG::Event
       id: 5
       name: Lizzie
@@ -1708,7 +1758,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - ! '\nm[Lizzie]\face[] Hmmm yes what a lovely necklance '
+          - ! '\nm[Lizzie]\face[] Hmmm yes what a lovely necklace '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 3
@@ -1736,7 +1786,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 3
           parameters:
-          - \nm[Garent].........
+          - \nm[Garnet].........
         - !ruby/object:RPG::EventCommand
           code: 117
           indent: 3
@@ -2168,7 +2218,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - \nm[Lizzie]\face[] Now then whats your name?
+          - \nm[Lizzie]\face[] Now then what is your name?
         - !ruby/object:RPG::EventCommand
           code: 117
           indent: 4
@@ -2178,7 +2228,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - \nm[Garent]  My name is Garent
+          - \nm[Garnet]  My name is Garnet
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 4
@@ -2203,7 +2253,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - \nm[Garent] Yes Master
+          - \nm[Garnet] Yes Master
         - !ruby/object:RPG::EventCommand
           code: 250
           indent: 4
@@ -2328,12 +2378,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 4
           parameters:
-          - sleepy garent
+          - sleepy Garnet
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 4
           parameters:
-          - \nm[Garent]\face[]....zzz......zzzzzzzz
+          - \nm[Garnet]\face[]....zzz......zzzzzzzz
         - !ruby/object:RPG::EventCommand
           code: 250
           indent: 4
@@ -2508,7 +2558,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - \nm[Garent]\face[]zzzzzzzzzzzzzzzzzzzzzzzzzzz
+          - \nm[Garnet]\face[]zzzzzzzzzzzzzzzzzzzzzzzzzzz
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 4
@@ -2583,7 +2633,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - \nm[Garent] Yes Master
+          - \nm[Garnet] Yes Master
         - !ruby/object:RPG::EventCommand
           code: 208
           indent: 4
@@ -2750,28 +2800,6 @@ root: !ruby/object:RPG::Map
           parameters:
           - 8
         - !ruby/object:RPG::EventCommand
-          code: 121
-          indent: 4
-          parameters:
-          - 90
-          - 90
-          - 0
-        - !ruby/object:RPG::EventCommand
-          code: 106
-          indent: 4
-          parameters:
-          - 8
-        - !ruby/object:RPG::EventCommand
-          code: 117
-          indent: 4
-          parameters:
-          - 23
-        - !ruby/object:RPG::EventCommand
-          code: 106
-          indent: 4
-          parameters:
-          - 8
-        - !ruby/object:RPG::EventCommand
           code: 209
           indent: 4
           parameters:
@@ -2810,7 +2838,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 4
           parameters:
-          - closer Garent won't be going anyway where now.
+          - closer Garnet won't be going any where now.
         - !ruby/object:RPG::EventCommand
           code: 209
           indent: 4
@@ -2899,7 +2927,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - ! '\nm[Lizzie]\face[] Hmmm Garent I will let you show us '
+          - ! '\nm[Lizzie]\face[] Hmmm Garnet I will let you show us '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 4
@@ -2914,7 +2942,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - \nm[Garent] Thank you master I will do right away
+          - \nm[Garnet] Thank you master I will do right away
         - !ruby/object:RPG::EventCommand
           code: 209
           indent: 4
@@ -3095,7 +3123,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 4
           parameters:
-          - watching you Granet but what should I do?
+          - watching you Garnet but what should I do?
         - !ruby/object:RPG::EventCommand
           code: 106
           indent: 4
@@ -3434,7 +3462,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 4
           parameters:
-          - you Garent you can leave now but first......
+          - you Garnet you can leave now but first......
         - !ruby/object:RPG::EventCommand
           code: 250
           indent: 4
@@ -3496,7 +3524,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - ! '\nm[Garent] Yes master I will only remember coming '
+          - ! '\nm[Garnet] Yes master I will only remember coming '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 4
@@ -3981,11 +4009,13 @@ root: !ruby/object:RPG::Map
           parameters:
           - sometime.
         - !ruby/object:RPG::EventCommand
-          code: 115
+          code: 123
           indent: 4
-          parameters: []
+          parameters:
+          - A
+          - 0
         - !ruby/object:RPG::EventCommand
-          code: 113
+          code: 115
           indent: 4
           parameters: []
         - !ruby/object:RPG::EventCommand
@@ -4545,7 +4575,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 4
           parameters:
-          - \nm[Garent] Huh thats it you call this a trick?
+          - \nm[Garnet] Huh that's it you call this a trick?
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 4
@@ -4710,7 +4740,31 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 4
           parameters:
-          - sleepy garent
+          - sleepy Garnet
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 4
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 55
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 4
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 4
+          parameters:
+          - -1
+          - 59
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 4
+          parameters:
+          - 40
         - !ruby/object:RPG::EventCommand
           code: 250
           indent: 4
@@ -5215,7 +5269,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - ! '\nm[Garent] What but why is she here as well what '
+          - ! '\nm[Garnet] What but why is she here as well what '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 5
@@ -5225,12 +5279,12 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - ! '\nm[Lizzie]\face[] Whats going on? I just have poeple '
+          - ! '\nm[Lizzie]\face[] What is going on? I just have people '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 5
           parameters:
-          - ! 'that obey me here and now its your turn how luckly '
+          - ! 'that obey me here and now its your turn how lucky '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 5
@@ -5245,7 +5299,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - \nm[Garent] Wait what noooo let go of me stop
+          - \nm[Garnet] Wait what noooo let go of me stop
         - !ruby/object:RPG::EventCommand
           code: 209
           indent: 5
@@ -5707,7 +5761,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - ! '\nm[Garent] No please stop this I''ll do whatever you '
+          - ! '\nm[Garnet] No please stop this I''ll do whatever you '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 5
@@ -5722,7 +5776,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 5
           parameters:
-          - ! 'anything I want thats the whole point in this how '
+          - ! 'anything I want that is the whole point in this how '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 5
@@ -5737,7 +5791,31 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 5
           parameters:
-          - front of Garent
+          - front of Garnet
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 100
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
         - !ruby/object:RPG::EventCommand
           code: 250
           indent: 5
@@ -5762,6 +5840,30 @@ root: !ruby/object:RPG::Map
           indent: 5
           parameters:
           - \nm[Lizzie]\face[] You will obey me.
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 90
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
         - !ruby/object:RPG::EventCommand
           code: 106
           indent: 5
@@ -5821,10 +5923,58 @@ root: !ruby/object:RPG::Map
           - -1
           - 59
         - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 80
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 5
           parameters:
           - \nm[Lizzie]\face[] You will obey me.
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 70
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
         - !ruby/object:RPG::EventCommand
           code: 106
           indent: 5
@@ -5858,7 +6008,31 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - \nm[Garent] No No stop this I don't want to
+          - \nm[Garnet] No No stop this I don't want to
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 60
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
         - !ruby/object:RPG::EventCommand
           code: 106
           indent: 5
@@ -5913,6 +6087,30 @@ root: !ruby/object:RPG::Map
           - -1
           - 59
         - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 55
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
+        - !ruby/object:RPG::EventCommand
           code: 117
           indent: 5
           parameters:
@@ -5921,7 +6119,31 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - \nm[Garent] Obey?
+          - \nm[Garnet] Obey?
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 50
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
         - !ruby/object:RPG::EventCommand
           code: 106
           indent: 5
@@ -5981,6 +6203,30 @@ root: !ruby/object:RPG::Map
           - -1
           - 95
         - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 50
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 95
+        - !ruby/object:RPG::EventCommand
           code: 117
           indent: 5
           parameters:
@@ -5989,7 +6235,31 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - \nm[Garent] Yes I must obey you.
+          - \nm[Garnet] Yes I must obey you.
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 50
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
         - !ruby/object:RPG::EventCommand
           code: 106
           indent: 5
@@ -6049,6 +6319,30 @@ root: !ruby/object:RPG::Map
           - -1
           - 59
         - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 50
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
+        - !ruby/object:RPG::EventCommand
           code: 117
           indent: 5
           parameters:
@@ -6057,7 +6351,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - ! '\nm[Garent] Yes I must obey you and only you I must '
+          - ! '\nm[Garnet] Yes I must obey you and only you I must '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 5
@@ -6088,10 +6382,34 @@ root: !ruby/object:RPG::Map
           - -1
           - 59
         - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 40
+        - !ruby/object:RPG::EventCommand
+          code: 250
+          indent: 5
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            name: 065-Swing04
+            pitch: 50
+            volume: 100
+        - !ruby/object:RPG::EventCommand
+          code: 106
+          indent: 5
+          parameters:
+          - 10
+        - !ruby/object:RPG::EventCommand
+          code: 207
+          indent: 5
+          parameters:
+          - -1
+          - 59
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 5
           parameters:
-          - ! '\nm[Lizzie]\face[] Yes thats good now when i snap '
+          - ! '\nm[Lizzie]\face[] Yes that is good now when i snap '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 5
@@ -6130,13 +6448,6 @@ root: !ruby/object:RPG::Map
           code: 121
           indent: 5
           parameters:
-          - 444
-          - 444
-          - 0
-        - !ruby/object:RPG::EventCommand
-          code: 121
-          indent: 5
-          parameters:
           - 446
           - 446
           - 0
@@ -6167,7 +6478,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - \nm[Garnet] Yes master my name is Garent.
+          - \nm[Garnet] Yes master my name is Garnet.
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 5
@@ -6216,7 +6527,7 @@ root: !ruby/object:RPG::Map
           code: 101
           indent: 5
           parameters:
-          - ! '\nm[Lizzie]\face[] again do you understand Garent my '
+          - ! '\nm[Lizzie]\face[] again do you understand Garnet my '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 5
@@ -6250,6 +6561,12 @@ root: !ruby/object:RPG::Map
           indent: 5
           parameters:
           - remember that I must come here again.
+        - !ruby/object:RPG::EventCommand
+          code: 123
+          indent: 5
+          parameters:
+          - A
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 5
@@ -6680,6 +6997,50 @@ root: !ruby/object:RPG::Map
         step_anime: false
         through: false
         trigger: 1
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: true
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 116
+          indent: 0
+          parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
         walk_anime: true
       x: 9
       y: 11
