@@ -4154,6 +4154,28 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters: []
         - !ruby/object:RPG::EventCommand
+          code: 209
+          indent: 0
+          parameters:
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - !ruby/object:RPG::MoveCommand
+              code: 19
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
+              code: 0
+              parameters: []
+            repeat: false
+            skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 19
+            parameters: []
+        - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
           parameters:
