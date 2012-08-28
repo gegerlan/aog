@@ -6770,6 +6770,9 @@ root: !ruby/object:RPG::Map
           - !ruby/object:RPG::MoveRoute
             list:
             - !ruby/object:RPG::MoveCommand
+              code: 34
+              parameters: []
+            - !ruby/object:RPG::MoveCommand
               code: 41
               parameters:
               - sm0004
@@ -6781,6 +6784,13 @@ root: !ruby/object:RPG::Map
               parameters: []
             repeat: false
             skippable: false
+        - !ruby/object:RPG::EventCommand
+          code: 509
+          indent: 0
+          parameters:
+          - !ruby/object:RPG::MoveCommand
+            code: 34
+            parameters: []
         - !ruby/object:RPG::EventCommand
           code: 509
           indent: 0
@@ -6929,7 +6939,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - helping with how horning you were just feeling?
+          - helping with how horny you were just feeling?
         - !ruby/object:RPG::EventCommand
           code: 117
           indent: 0
@@ -6954,7 +6964,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - Garnet I might let leon cum in you would you like that?
+          - ! 'Garnet I might let Leon cum in you would you like '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - that?
         - !ruby/object:RPG::EventCommand
           code: 117
           indent: 0
@@ -7330,6 +7345,12 @@ root: !ruby/object:RPG::Map
           - !ruby/object:RPG::MoveCommand
             code: 18
             parameters: []
+        - !ruby/object:RPG::EventCommand
+          code: 104
+          indent: 0
+          parameters:
+          - 2
+          - 0
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
