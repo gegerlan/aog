@@ -43,6 +43,17 @@ REM #======================
 
 rxdatav.exe data_importer %PROJECT_DIR%
 
+REM #======================
+REM #  Copy required files
+REM #  to the Game folder
+REM #======================
+
+CD %PREV_DIR%
+
+CD ..
+
+COPY Src\Required\* Game\. /Y
+
 REM #=======================
 REM #  Start RPG Maker XP
 REM #=======================
@@ -56,6 +67,8 @@ CD %SCRIPTS_DIR%
 REM #======================
 REM #  RMXP Data Exporter
 REM #======================
+
+CD
 
 rxdatav.exe data_exporter %PROJECT_DIR%
 
