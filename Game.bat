@@ -46,6 +46,17 @@ REM #======================
 rxdatav.exe data_importer %PROJECT_DIR%
 
 REM #======================
+REM #  Copy required files
+REM #  to the Game folder
+REM #======================
+
+CD %PREV_DIR%
+
+CD ..
+
+COPY Src\Required\* Game\. /Y
+
+REM #======================
 REM #  Return to Game directory
 REM #======================
 
