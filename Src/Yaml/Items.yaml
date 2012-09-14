@@ -1715,7 +1715,7 @@ root:
   animation2_id: 22
   common_event_id: 0
   consumable: true
-  description: Human milk. Hand squeezed from Soft Tits' nipples.
+  description: Human milk. Squeezed from Soft Tits' nipples.
   element_set: []
   hit: 100
   icon_name: renru
@@ -1734,9 +1734,9 @@ root:
   plus_state_set: []
   price: 10
   recover_hp: 300
-  recover_hp_rate: 20
+  recover_hp_rate: 0
   recover_sp: 100
-  recover_sp_rate: 20
+  recover_sp_rate: 0
   scope: 3
   variance: 0
 - !ruby/object:RPG::Item
@@ -1773,7 +1773,7 @@ root:
   animation2_id: 21
   common_event_id: 0
   consumable: true
-  description: Pussy Juice. Obtained from Iris' pussy durring a holy church ritual.
+  description: Pussy Juice. Obtained from a virgin's pussy during a holy ritual.
   element_set: []
   hit: 100
   icon_name: zhendi
@@ -1783,7 +1783,22 @@ root:
     name: ''
     pitch: 100
     volume: 80
-  minus_state_set: []
+  minus_state_set:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 21
   name: Holy Juice.
   occasion: 0
   parameter_points: 0
@@ -1791,21 +1806,21 @@ root:
   pdef_f: 0
   plus_state_set: []
   price: 100
-  recover_hp: 150
-  recover_hp_rate: 10
-  recover_sp: 50
-  recover_sp_rate: 5
+  recover_hp: 0
+  recover_hp_rate: 50
+  recover_sp: 0
+  recover_sp_rate: 50
   scope: 3
   variance: 0
 - !ruby/object:RPG::Item
-  animation1_id: 0
-  animation2_id: 0
+  animation1_id: 3
+  animation2_id: 21
   common_event_id: 0
   consumable: true
-  description: ''
+  description: Crystallized liquid injected into human pussy by queen bees.
   element_set: []
   hit: 100
-  icon_name: ''
+  icon_name: huangjinzhizhong
   id: 62
   mdef_f: 0
   menu_se: !ruby/object:RPG::AudioFile
@@ -1813,16 +1828,16 @@ root:
     pitch: 100
     volume: 80
   minus_state_set: []
-  name: ''
+  name: Rare Honey
   occasion: 0
   parameter_points: 0
   parameter_type: 0
   pdef_f: 0
   plus_state_set: []
-  price: 0
-  recover_hp: 0
+  price: 150
+  recover_hp: 150
   recover_hp_rate: 0
-  recover_sp: 0
+  recover_sp: 50
   recover_sp_rate: 0
   scope: 0
   variance: 0
