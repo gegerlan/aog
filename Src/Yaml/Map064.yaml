@@ -2774,7 +2774,7 @@ root: !ruby/object:RPG::Map
       y: 4
     4: !ruby/object:RPG::Event
       id: 4
-      name: EV004
+      name: Little Nicky
       numero: 4
       pages:
       - !ruby/object:RPG::Event::Page
@@ -2967,27 +2967,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters:
-          - ! 'ev = 2 #EID Billy'
-        - !ruby/object:RPG::EventCommand
-          code: 655
-          indent: 0
-          parameters:
-          - ! 'map = 68 #MID F2'
-        - !ruby/object:RPG::EventCommand
-          code: 655
-          indent: 0
-          parameters:
-          - ! 'sw = "A" #Self Switch'
-        - !ruby/object:RPG::EventCommand
-          code: 655
-          indent: 0
-          parameters:
-          - ''
-        - !ruby/object:RPG::EventCommand
-          code: 655
-          indent: 0
-          parameters:
-          - switch_on(ev, sw, map)
+          - switch_on("Billy", "A")
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -3034,7 +3014,7 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters:
           - 12
-          - switch_on?(2, "A", 68)
+          - switch_on?("Billy", "A")
         - !ruby/object:RPG::EventCommand
           code: 108
           indent: 1
@@ -3227,7 +3207,7 @@ root: !ruby/object:RPG::Map
       y: 12
     6: !ruby/object:RPG::Event
       id: 6
-      name: EV006
+      name: Wife
       numero: 5
       pages:
       - !ruby/object:RPG::Event::Page
@@ -3275,7 +3255,7 @@ root: !ruby/object:RPG::Map
       y: 12
     7: !ruby/object:RPG::Event
       id: 7
-      name: EV007
+      name: Sleeping Billy
       numero: 4
       pages:
       - !ruby/object:RPG::Event::Page
@@ -3346,7 +3326,7 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters:
           - 12
-          - switch_off?(2, "A")
+          - switch_off?("Billy", "A")
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 1
@@ -3559,7 +3539,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters:
-          - switch_on(4, "B", 64)
+          - switch_on("Little Nicky", "B")
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -4025,7 +4005,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters:
-          - switch_on(9, "A")
+          - switch_on("Garnet on her knees", "A")
         - !ruby/object:RPG::EventCommand
           code: 115
           indent: 0
@@ -4292,12 +4272,12 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters:
-          - switch_off(2,"A")
+          - switch_off("Billy","A")
         - !ruby/object:RPG::EventCommand
           code: 355
           indent: 0
           parameters:
-          - switch_on(2,"B")
+          - switch_on("Billy","B")
         - !ruby/object:RPG::EventCommand
           code: 122
           indent: 0
@@ -4389,12 +4369,12 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters:
-          - switch_off(2,"A")
+          - switch_off("Billy","A")
         - !ruby/object:RPG::EventCommand
           code: 355
           indent: 0
           parameters:
-          - switch_on(2,"B")
+          - switch_on("Billy","B")
         - !ruby/object:RPG::EventCommand
           code: 122
           indent: 0
@@ -4473,7 +4453,7 @@ root: !ruby/object:RPG::Map
       y: 12
     8: !ruby/object:RPG::Event
       id: 8
-      name: EV008
+      name: Garnet on her knees
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -4539,7 +4519,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 1
           parameters:
-          - switch_on(4,"B")
+          - switch_on("Sleeping Billy","B")
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
@@ -4594,7 +4574,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 1
           parameters:
-          - switch_off(2,"A")
+          - switch_off("Billy","A")
         - !ruby/object:RPG::EventCommand
           code: 208
           indent: 1
@@ -4828,7 +4808,7 @@ root: !ruby/object:RPG::Map
           indent: 2
           parameters:
           - 12
-          - switch_on?(4, "B", 64)
+          - switch_on?("Little Nicky", "B")
         - !ruby/object:RPG::EventCommand
           code: 108
           indent: 3
@@ -4945,7 +4925,7 @@ root: !ruby/object:RPG::Map
       y: 4
     10: !ruby/object:RPG::Event
       id: 10
-      name: Proxy - Event 6
+      name: Proxy - Event 9
       pages:
       - !ruby/object:RPG::Event::Page
         always_on_top: false
@@ -4973,7 +4953,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 0
           parameters:
-          - $game_map.events[6].start
+          - $game_map.events[9].start
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -5760,7 +5740,7 @@ root: !ruby/object:RPG::Map
       y: 6
     12: !ruby/object:RPG::Event
       id: 12
-      name: EV012
+      name: Sex against wall
       numero: 3
       pages:
       - !ruby/object:RPG::Event::Page
@@ -6107,7 +6087,7 @@ root: !ruby/object:RPG::Map
           indent: 0
           parameters:
           - 12
-          - $game_switches[140] and switch_on?(2, "A")
+          - $game_switches[140] and switch_on?("Billy", "A")
         - !ruby/object:RPG::EventCommand
           code: 223
           indent: 1
@@ -6218,7 +6198,7 @@ root: !ruby/object:RPG::Map
           code: 355
           indent: 1
           parameters:
-          - switch_off(2,"A")
+          - switch_off("Billy","A")
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 1
