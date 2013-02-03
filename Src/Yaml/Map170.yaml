@@ -81,6 +81,7 @@ root: !ruby/object:RPG::Map
     - 6126
     - 6126
     - 6126
+    - 6150
     - 6126
     - 6126
     - 6126
@@ -92,8 +93,7 @@ root: !ruby/object:RPG::Map
     - 6126
     - 6126
     - 6126
-    - 6126
-    - 6126
+    - 6151
     - 6126
     - 6126
     - 6126
@@ -131,6 +131,7 @@ root: !ruby/object:RPG::Map
     - 6134
     - 6134
     - 6134
+    - 6158
     - 6134
     - 6134
     - 6134
@@ -142,8 +143,7 @@ root: !ruby/object:RPG::Map
     - 6134
     - 6134
     - 6134
-    - 6134
-    - 6134
+    - 6159
     - 6134
     - 6134
     - 6134
@@ -181,6 +181,7 @@ root: !ruby/object:RPG::Map
     - 6142
     - 6142
     - 6142
+    - 6166
     - 6142
     - 6142
     - 6142
@@ -192,8 +193,7 @@ root: !ruby/object:RPG::Map
     - 6142
     - 6142
     - 6142
-    - 6142
-    - 6142
+    - 6167
     - 6142
     - 6142
     - 6142
@@ -1833,7 +1833,6 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3546
     - 0
     - 0
     - 0
@@ -1841,7 +1840,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3546
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -1883,7 +1883,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 3554
+    - 0
     - 0
     - 0
     - 9416
@@ -1891,7 +1891,7 @@ root: !ruby/object:RPG::Map
     - 9418
     - 0
     - 0
-    - 3554
+    - 0
     - 0
     - 0
     - 0
@@ -2781,6 +2781,19 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 3546
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 3546
     - 0
     - 0
     - 0
@@ -2818,6 +2831,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 3554
     - 0
     - 0
     - 0
@@ -2829,21 +2843,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 3554
     - 0
     - 0
     - 0
@@ -5466,7 +5466,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters:
-          - Oh my... My peversion increased...
+          - Ahh...
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -5520,7 +5520,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters:
-          - Oh my... My peversion increased...
+          - Ahh...
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -5820,7 +5820,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters:
-          - Oh my... My peversion increased...
+          - Ahh...
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -5874,7 +5874,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 2
           parameters:
-          - Oh my... My peversion increased...
+          - Ahh...
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 2
@@ -7432,12 +7432,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - Um... I heard your conversation with the nun...
+          - Um, I heard your conversation with the nun...
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
           parameters:
-          - I'm a virgin... maybe I can help...
+          - I... I'm a virgin, maybe I can help.
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -7560,8 +7560,8 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           self_switch_ch: A
           self_switch_valid: false
-          switch1_id: 1
-          switch1_valid: false
+          switch1_id: 4
+          switch1_valid: true
           switch2_id: 1
           switch2_valid: false
           variable_id: 1
@@ -7601,12 +7601,67 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - ! 'However, since we are slaves... we have to stay in '
+          - ! 'However, since we are slaves, we are not allowed '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
           parameters:
-          - this small hall when we pray...
+          - to enter the main hall...
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: C_Slave 7 - Church
+          direction: 8
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[Slave]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - ! 'Whenever I visit this church, I feel happier serving my '
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - mistress.
         - !ruby/object:RPG::EventCommand
           code: 0
           indent: 0
@@ -7834,7 +7889,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - Mom always comes here to thank the goddess...
+          - Mom always comes here to thank the goddess.
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -8101,7 +8156,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - That's great... you're more than perfect.
+          - That's great! You're more than perfect.
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
@@ -8526,7 +8581,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - Y... you are doing the ritual again mommy...
+          - Y... you are doing the ritual again mommy.
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -8586,7 +8641,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - Cilia came from mommy's pussy... aaaahh...
+          - Cilia came out of mommy's pussy... aaaahh...
         - !ruby/object:RPG::EventCommand
           code: 101
           indent: 0
@@ -8601,7 +8656,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - I... It always makes me wet mommy...
+          - I... It always makes my pussy wet mommy...
         - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
@@ -8666,12 +8721,12 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - Garnet got a vial of holy juice...
+          - ! 'Garnet got a vial of holy juice... collected from Iris'' '
         - !ruby/object:RPG::EventCommand
           code: 401
           indent: 0
           parameters:
-          - It was collected from Iris' wet pussy.
+          - wet pussy.
         - !ruby/object:RPG::EventCommand
           code: 126
           indent: 0
@@ -9101,7 +9156,7 @@ root: !ruby/object:RPG::Map
           code: 401
           indent: 0
           parameters:
-          - Cilia is wet too mommy...
+          - Cilia's pussy is wet too mommy...
         - !ruby/object:RPG::EventCommand
           code: 223
           indent: 0
@@ -9707,6 +9762,118 @@ root: !ruby/object:RPG::Map
         trigger: 1
         walk_anime: false
       x: 26
+      y: 22
+    26: !ruby/object:RPG::Event
+      id: 26
+      name: EV026
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Thy slave must obey all thy mistress' wishes.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 19
+      y: 22
+    27: !ruby/object:RPG::Event
+      id: 27
+      name: EV027
+      pages:
+      - !ruby/object:RPG::Event::Page
+        always_on_top: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          self_switch_ch: A
+          self_switch_valid: false
+          switch1_id: 1
+          switch1_valid: false
+          switch2_id: 1
+          switch2_valid: false
+          variable_id: 1
+          variable_valid: false
+          variable_value: 0
+        direction_fix: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          blend_type: 0
+          character_hue: 0
+          character_name: ''
+          direction: 2
+          opacity: 255
+          pattern: 0
+          tile_id: 0
+        list:
+        - !ruby/object:RPG::EventCommand
+          code: 101
+          indent: 0
+          parameters:
+          - \nm[]
+        - !ruby/object:RPG::EventCommand
+          code: 401
+          indent: 0
+          parameters:
+          - Thy body is only made to serve thy mistress.
+        - !ruby/object:RPG::EventCommand
+          code: 0
+          indent: 0
+          parameters: []
+        move_frequency: 3
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            code: 0
+            parameters: []
+          repeat: true
+          skippable: false
+        move_speed: 3
+        move_type: 0
+        step_anime: false
+        through: false
+        trigger: 0
+        walk_anime: true
+      x: 31
       y: 22
   height: 35
   tileset_id: 56
