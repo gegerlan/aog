@@ -88,7 +88,7 @@ This probably means that you've used the old SVN respository address for the gam
 
 Project Maintainer:
 
-Gegerlan (gegerlan2@hotmail.com) http://github.com/gegerlan
+Gegerlan http://github.com/gegerlan
 
 
 General Discussions:
